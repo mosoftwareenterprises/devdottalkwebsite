@@ -10,9 +10,18 @@ html, body {
 }
 
 main {
-  margin: auto;
+  margin: auto;  
   padding: 20px;
 }
+
+/* Apply width limits when get to big screens */
+@media (min-width: 30em)
+{
+main {
+  width: 50%;
+}
+}
+
 
 main > h1 {
   text-align: center;
