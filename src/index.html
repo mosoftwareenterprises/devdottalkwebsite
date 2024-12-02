@@ -1,366 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bluesky.css">    
+    <title>{dev.talk} a FREE monthly meetup for software engineers and related disciplines in the south of the UK run by
+      volunteers within the community.</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>{dev.talk} a FREE monthly meetup for software engineers and related disciplines in the south of the UK run by
-    volunteers within the community.</title>
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-</head>
+  <body>
+    <script src="bluesky.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        loadBlueskyPosts('devdottalk.uk', 'bluesky-posts');
+      });
+    </script>
 
-<body>
-  <script>
-    
-    async function fetchBlueskyPosts(handle, limit = 20) {
-try {
-  const response = await fetch(
-    `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=${limit}`
-  );
+    <div class="page-container">
+      <main class="main-content">
+        <img alt="The devdottalk logo" src=" devtalk wide.jpg" loading="lazy" class="center">      
+        <h1>Welcome to {dev.talk}</h1>
+        <p><b>{dev.talk}</b> (pronounced "dev dot talk") is a FREE monthly meetup event for software engineers and related
+          disciplines of all levels in and around the Bournemouth, Dorset, UK area run by volunteers within the community.
+        </p>
+        <p>We aim to come together regularly and share knowledge allowing us all to learn and grow in our chosen fields and
+          careers.
+        </p>
+        <p>It will be a relaxed environment where everyone is welcome from all backgrounds and technical levels.
+        </p>
+        <p>We will have a chance to network between the sessions run by community members.
+        </p>
+        <p>All sessions will be recorded and accessible on YouTube after the sessions (assuming consent from the speaker)
+        </p>
+        <p>Our goal is to bring a sense of community to the Software Engineers of Dorset, and a chance to truly “geek out”
+          in a safe place.
+        </p>    
+        <h2 id="join_us"><a href="#join_us">Come and Join Us</a></h2>
+        <p>If you would like to come to one of our friendly events, see our <a
+            href="https://devdottalk.eventbrite.com">ticket site for free tickets.</a></p>
+        <p><b>Please Note:</b> That all <b>{dev.talk}</b> events will be photographed and recorded. If you do not wish to be
+          included in a photo or video, please make the organisers aware.</p>
+        <p><b>Recruiters:</b> Note that <b>{dev.talk}</b> events are for everyone, but this is not an event for recruiting.
+          This is a friendly welcoming place and attendees should not feel pressured to use your services. Any recruiter who
+          attends and is seen to break this rule, will be asked to leave immediately.</p>
+          <h3>Attendee Feedback</h3>
+          <p>If you attended a previous event, then please tell us about your experience <a href="https://forms.gle/kKaFN1HAUX6pNAtk6">here</a>.
+          </p>
+          <h2 id="call_for_speakers"><a href="#call_for_speakers">Come and Speak</a></h2>      
+          <p>This is a community based event, so the sessions are run by us all.
+          No matter your skill level, length of time in the industry, or experience speaking, you are encouraged to
+          take part.
+          We aim for talks (& lightning talks) that are of any length (5 min to 90 min), and any software engineering based
+          skill.
+          These can include dives into technical subjects, soft skills, mental health, career progression etc.
+          We can provide help such as brainstorming of ideas for sessions, how to structure your session, an opportunity to
+          practice your session over video call.
+        </p>
+        <p>Our event topics are around Software Development.</p>
+        <p>The location will be around Bournemouth, UK.</p>
+        <p>We expect around 30 to 50 attendees for each event.</p>
+        <p>All levels of speaking/presentation skills will be accepted, and actively encouraged. We want <b>{dev.talk}</b>
+          to feel like friends who support each other.
+        </p>
+        <img alt="The devdottalk call for speakers logo" src="CallForSpeakers.png" loading="lazy" class="center"
+          style="height: 200px; width: 200px;">
+        <p>If you would like to contribute to the community by speaking at <b>{dev.talk}</b> then register your interest
+          using our <a href="https://forms.gle/B2RJJEM2iDp33KjX7">Call for Speakers form</a>, and one of the team will get
+          back to you quickly.</p>
+        <p><i>Unfortunately as <b>{dev.talk}</b> does not use sponsorship, speaker payment or their expenses will NOT be covered.</i></p>
+        <h3>Speaker Feedback</h3>
+        <p>If you were a speaker previously, then please tell us how it went, <a href="https://forms.gle/BrHud1Nrt1exWJNm9">here</a>.
+        </p>
+        <h3>Upcoming topics</h3>    
+        <h4>My Journey Building a City-Based Maze Game using ml5.js and open-source API's</h4>
+        <p>In this session, I will walk through my journey of developing a city-based maze game, highlighting the technical challenges encountered and the strategies implemented to overcome them. I will delve into how I leveraged ml5.js and various open-source APIs to create dynamic maze game that brings the urban labyrinth to life. </p>
+        <h4>Why is there a Shark in my Wire (20 mins)</h4>
+        <p>An introduction to the WireShark Network Analysis tool and how it is useful for developers.</p>
+        <h3>Previous topics</h3>    
+        <h4>Design of Microservices using the REPR pattern over MVC (20 mins)</h4>
+        <p>Exploring how to design a Microservice using the REPR pattern instead of MVC. Showcasing better alignment with
+          SOLID principles and improved performance over MVC.</p>
+        <h4>Breaking Into Industry: A Student's Perspective (20 mins)</h4>
+        <p>A Student's Perspective to beginning a career in the Tech Industry. An open discussion on what's expected from
+          fresh graduate students by employers and how student opportunities, like Insight days and Placements, offer value
+          to both companies and students.</p>
+        <h4>Skyports Technology Journey: Lessons from Vertiport Automation (30 mins)</h4>
+        <p>A delve into the journey of building the Vertiport Automation environment, and lessons learned from it.</p>
+        
 
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
 
-  const data = await response.json();
-  
-  return data.feed.map(item => {
-    const post = item.post || item;
-    
-    // Detect if this is a reply
-    const isReply = post.record?.reply !== undefined;
+        <h2>YouTube</h2>
+        <p>View past sessions on our <a href="https://www.youtube.com/@devdottalk">YouTube Channel</a></p>
+        <h2>Contact Us</h2>
+        <p>For any questions or comments, please contact us via <a href="https://bsky.app/profile/devdottalk.uk">Bluesky</a> or <a href="mailto:contactus@devdottalk.uk">email</a></p>
+        
+        <h2>Code of Conduct</h2>
+        <p>We have a <a href="https://reconnectconference.co.uk/code-of-conduct/">code of conduct</a> that will be strictly
+          adhered to. We want to be welcoming to everyone no matter who they are, what skill level they have or where they
+          come from.
+        </p>  
+        <h2 id="supporters"><a href="#supporters">Supporters</a></h2>
+        <p>
+          <b>{dev.talk}</b> could not happen without support:
+        <ul>
+          <li>
+            <div class="container">
+              <div class="image">
+                <img alt="Reconnect Logo" src="https://reconnectconference.co.uk/wp-content/uploads/2024/07/cropped-reconn-smaller.png" loading="lazy" style="height: 50px; width: 220px;">
+              </div>
+              <div class="text">
+                <p>
+                  <a href="https://reconnectconference.co.uk/">re:connect</a> - A huge supporter. They help source the event
+                  spaces for the meetup,
+                  provide the subscription to the ticketing system, and provide the most important thing of all - moral
+                  support!
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="container">
+              <div class="image">
+                <img alt="JustPickOneUK Logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXoWLUYHqTueKK_Q8glr-EKV3nUdwbiV-Fk3x-qfgGQ1gxAQB6WPfkOWb8d8sWcHamt3jeJ5iSAbbs5qmSPCnzMcwbofa2noq6JQlH5oxbrSS13rXhy7c0lExorCgGuf-yrqaZiESDfx8C0rEeBJg0RKLRz6iERKsmtTPebWKBY2uNxek/s220/JustPickOneLogo.jpg" loading="lazy" style="height: 80px; width: 80px;">
+              </div>
+              <div class="text">
+                <p><a href="https://www.youtube.com/@JustPickOneUK">JustPickOneUK</a> supports us by allowing the use of their
+                  video cameras and microphones to record the sessions.</p>
+              </div>
+            </div>
+          </li>      
+          <li>
+            <div class="container">
+              <div class="image">
+                <img alt="Institute of Directors Logo" src="https://www.iod.com/app/themes/iod/assets/images/dcf880e667d5d169da60f137b4e58e9d.svg" loading="lazy" style="height: 75px; width: 75px;">
+              </div>
+              <div class="text">
+                <p><a href="https://www.iod.com/">Institute of Directors</a> supported us by providing the first meetup venue.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <h2 id="local_events"><a href="#local_events">Other local events</a></h2>
+        <ul>
+          <li><a href="https://siliconsouth.org.uk/event/techtonic/">TechTonic</a></li>
+          <li><a href="https://www.bournemouth2600.org/">Bournemouth 2600</a></li>
+          <li><a href="https://www.meetup.com/bournemouth-devops">DevOps Exchange - Bournemouth</a></li>
+          <li><a href="https://www.meetup.com/owasp-dorset-chapter/">OWASP Dorset Chapter</a></li>
+          <li><a href="https://www.meetup.com/golang-dorset/">Golang Dorset</a></li>
+          <li><a href="https://www.meetup.com/dorset-umbraco-meetup">Dorset Umbraco Meetup</a></li>
+          <li><a href="https://womenintechdorset.co.uk/">Women In Tech Dorset</a></li>
+          <li><a href="https://reconnectconference.co.uk/">Re:connect Conference</a></li>
+          <li><a href="https://www.eventbrite.co.uk/o/things-connected-34135748213">Things Connected</a></li>
+          <li><a href="https://www.eventbrite.co.uk/e/south-coast-ecommerce-meet-up-tickets-1086879629229">South Coast
+              eCommerce Meet-Up</a></li>
+        </ul>
+        <h2 id="venues"><a href="#venues">Venues</a></h2>
+        <p>In order to run the dev.talk sessions, we need a free space to host the attendees and speakers. Our recent events
+          are bringing over 50 attendees each time, so getting a space that fits them all is tricky.
+          If you know of a venue that may be able to host us for free (dev.talk is run by volunteers and does not use
+          sponsors).</p>
+        <h3>Venue Requirements</h3>
+        <p>It needs to be able to:
+          <ul>
+          <li>Host at least 60 people</li>
+          <li>Capable of showing presentations on a large screen bigger than 80inches, with the ability to plugin a device via HDMI.</li>
+          <li>Seating for all attendees in the style of a classroom / lecture theatre (i.e. good view of the screen)</li>
+          <li>Be accessible for those with disabilities</li>
+          <li>Be accessible in the evening from 6:30pm to 9:30pm</li>
+          <li>Parking nearby</li>
+          <li>WiFi available to attendees</li>
+          <li>Allows food and drink to be served (Tea & Coffee, Soft drinks and Biscuits)</li>
+          <li>Allows filming of the event and venue</li>
+        </ul>
+        </p>
 
-          // Construct the full post URL
-          const did = post.author.did;
-    const rkey = post.uri.split('/').pop();
-    const postUrl = `https://bsky.app/profile/${post.author.handle}/post/${rkey}`;
-    
-     // If it's a reply, get parent post details
-     let parentText = null;
-    let parentHandle = null;
-    if (isReply) {
-      const parentUri = post.record.reply.parent.uri;
-      parentHandle = parentUri.split('/')[4];
-
-       // Try to get parent post text from the feed item
-       const parentPost = data.feed.find(
-        feedItem => feedItem.post.uri === post.record.reply.parent.uri
-      );
-      
-      parentText = parentPost 
-        ? (parentPost.post.record?.text || 'Original post not available')
-        : 'Original post not available';
-    }
-
-
-    return {
-      text: post.record?.text || 'No text available',
-      createdAt: post.record?.createdAt || new Date().toISOString(),
-      images: post.embed?.images?.map(img => img.fullsize) || [],
-      likes: post.likeCount || 0,
-      reposts: post.repostCount || 0,
-      isReply: isReply,
-      parentHandle: parentHandle,
-      parentText: parentText,
-      author: {
-        handle: post.author.handle,
-        displayName: post.author.displayName || post.author.handle,
-        avatar: post.author.avatar || 'https://bsky.social/placeholder-avatar.png'
-      },
-      postUrl: postUrl
-    };
-  }).filter(post => post.text);
-} catch (error) {
-  console.error('Error fetching Bluesky posts:', error);
-  return [];
-}
-}
-function renderBlueskyPosts(containerId, posts) {
-const container = document.getElementById(containerId);
-if (!container) {
-  console.error(`Container with ID ${containerId} not found`);
-  return;
-}
-
-// Clear any existing content
-container.innerHTML = '<h2 id="bluesky-posts-header">Bluesky</h2>';
-
-// Handle empty posts scenario
-if (posts.length === 0) {
-  container.classList.add('error');
-  container.innerHTML = '<p>No posts found.</p>';
-  return;
-}
-
-// Remove any previous error class
-container.classList.remove('error');
-
-// Create posts
-posts.forEach(post => {
-const postElement = document.createElement('div');
-  postElement.className = `bluesky-post ${post.isReply ? 'is-reply' : ''}`;
-  
-  postElement.innerHTML = `
-    <a href="${post.postUrl}" target="_blank" class="post-link">
-      <div class="post-header">
-        <img src="${post.author.avatar}" alt="${post.author.handle} avatar" class="post-avatar">
-        <div class="post-author">
-          <span class="post-display-name">${escapeHtml(post.author.displayName)}</span>
-          <span class="post-handle">@${post.author.handle}</span>
-        </div>
+        <h2>Volunteers</h2>
+        <p>Do you want to help out at a future event? </p>
+        <p>We always need people to:
+          <ul>
+            <li>welcome and check-in attendees</li>
+            <li>help setup and pack down afterwards</li>
+            <li>tech support for the speakers</li>
+            <li>help film the event</li>
+          </ul> 
+          If this is something you are interested in doing, then please <a href="mailto:volunteers@devdottalk.uk">Contact
+            us</a>
+        </p>
+        <h2>Who are we?</h2>
+        <p><b>{dev.talk}</b> was created by <a href="https://blog.markoliver.website/Bio">Mark Oliver</a> in 2024. He saw
+          that Bournemouth was lacking a software engineering based meetup despite being a Tech Hub on the South Coast of
+          the UK, and as Wilton Knight once said <a href="https://www.youtube.com/watch?v=otzJszJ9MnA">"one person can make
+            a difference"</a>, so Mark decided to create the meetup, and the community around it.</p>
+        <h2>Buy us a Coffee</h2>
+        <p>Buy the <b>{dev.talk}</b> team a <a href="https://ko-fi.com/devdottalk">coffee with Ko-Fi.</a>. Any monies given
+          will be used to provide refreshments at the following meetup.</p>
+      </main>
+      <div id="bluesky-posts">    
+        <!-- Posts will be loaded here -->
+        Loading posts...
       </div>
-      
-      ${post.isReply ? `
-        <div class="reply-indicator">
-          ↩ Reply to @${post.parentHandle}
-        </div>
-      ` : ''}
-      
-      <p>${escapeHtml(post.text)}</p>
-      
-      <small>Posted: ${new Date(post.createdAt).toLocaleString()}</small>
-      
-      ${post.images.length > 0 ? 
-        `<img src="${post.images[0]}" alt="Post image" class="post-image">` 
-        : ''}
-      
-      <div class="post-stats">
-        <span>Likes: ${post.likes}</span>
-        <span>Reposts: ${post.reposts}</span>
-      </div>
-    </a>
-  `;
-  
-  container.appendChild(postElement);
-});
-}
-
-// Rest of the previous implementation remains the same
-
-// Utility function to prevent XSS
-function escapeHtml(unsafe) {
-return unsafe
-  .replace(/&/g, "&amp;")
-  .replace(/</g, "&lt;")
-  .replace(/>/g, "&gt;")
-  .replace(/"/g, "&quot;")
-  .replace(/'/g, "&#039;");
-}
-
-async function loadBlueskyPosts(handle, containerId, limit = 20) {
-try {
-  const posts = await fetchBlueskyPosts(handle, limit);
-  renderBlueskyPosts(containerId, posts);
-} catch (error) {
-  const container = document.getElementById(containerId);
-  if (container) {
-    container.innerHTML = `<p>Error loading posts: ${error.message}</p>`;
-    container.classList.add('error');
-  }
-  console.error('Failed to load Bluesky posts:', error);
-}
-}
-</script>
-<script>
- document.addEventListener('DOMContentLoaded', () => {
-// Replace with your actual Bluesky handle
-loadBlueskyPosts('devdottalk.uk', 'bluesky-posts');
-});
-
-</script>
-<div class="page-container">
-  <main class="main-content">
-    <img alt="The devdottalk logo" src=" devtalk wide.jpg" loading="lazy" class="center">      
-    <h1>Welcome to {dev.talk}</h1>
-    <p><b>{dev.talk}</b> (pronounced "dev dot talk") is a FREE monthly meetup event for software engineers and related
-      disciplines of all levels in and around the Bournemouth, Dorset, UK area run by volunteers within the community.
-    </p>
-    <p>We aim to come together regularly and share knowledge allowing us all to learn and grow in our chosen fields and
-      careers.
-    </p>
-    <p>It will be a relaxed environment where everyone is welcome from all backgrounds and technical levels.
-    </p>
-    <p>We will have a chance to network between the sessions run by community members.
-    </p>
-    <p>All sessions will be recorded and accessible on YouTube after the sessions (assuming consent from the speaker)
-    </p>
-    <p>Our goal is to bring a sense of community to the Software Engineers of Dorset, and a chance to truly “geek out”
-      in a safe place.
-    </p>    
-    <h2 id="join_us"><a href="#join_us">Come and Join Us</a></h2>
-    <p>If you would like to come to one of our friendly events, see our <a
-        href="https://devdottalk.eventbrite.com">ticket site for free tickets.</a></p>
-    <p><b>Please Note:</b> That all <b>{dev.talk}</b> events will be photographed and recorded. If you do not wish to be
-      included in a photo or video, please make the organisers aware.</p>
-    <p><b>Recruiters:</b> Note that <b>{dev.talk}</b> events are for everyone, but this is not an event for recruiting.
-      This is a friendly welcoming place and attendees should not feel pressured to use your services. Any recruiter who
-      attends and is seen to break this rule, will be asked to leave immediately.</p>
-      <h3>Attendee Feedback</h3>
-      <p>If you attended a previous event, then please tell us about your experience <a href="https://forms.gle/kKaFN1HAUX6pNAtk6">here</a>.
-      </p>
-      <h2 id="call_for_speakers"><a href="#call_for_speakers">Come and Speak</a></h2>      
-      <p>This is a community based event, so the sessions are run by us all.
-      No matter your skill level, length of time in the industry, or experience speaking, you are encouraged to
-      take part.
-      We aim for talks (& lightning talks) that are of any length (5 min to 90 min), and any software engineering based
-      skill.
-      These can include dives into technical subjects, soft skills, mental health, career progression etc.
-      We can provide help such as brainstorming of ideas for sessions, how to structure your session, an opportunity to
-      practice your session over video call.
-    </p>
-    <p>Our event topics are around Software Development.</p>
-    <p>The location will be around Bournemouth, UK.</p>
-    <p>We expect around 30 to 50 attendees for each event.</p>
-    <p>All levels of speaking/presentation skills will be accepted, and actively encouraged. We want <b>{dev.talk}</b>
-      to feel like friends who support each other.
-    </p>
-    <img alt="The devdottalk call for speakers logo" src="CallForSpeakers.png" loading="lazy" class="center"
-      style="height: 200px; width: 200px;">
-    <p>If you would like to contribute to the community by speaking at <b>{dev.talk}</b> then register your interest
-      using our <a href="https://forms.gle/B2RJJEM2iDp33KjX7">Call for Speakers form</a>, and one of the team will get
-      back to you quickly.</p>
-    <p><i>Unfortunately as <b>{dev.talk}</b> does not use sponsorship, speaker payment or their expenses will NOT be covered.</i></p>
-    <h3>Speaker Feedback</h3>
-    <p>If you were a speaker previously, then please tell us how it went, <a href="https://forms.gle/BrHud1Nrt1exWJNm9">here</a>.
-    </p>
-    <h3>Upcoming topics</h3>    
-    <h4>My Journey Building a City-Based Maze Game using ml5.js and open-source API's</h4>
-    <p>In this session, I will walk through my journey of developing a city-based maze game, highlighting the technical challenges encountered and the strategies implemented to overcome them. I will delve into how I leveraged ml5.js and various open-source APIs to create dynamic maze game that brings the urban labyrinth to life. </p>
-    <h4>Why is there a Shark in my Wire (20 mins)</h4>
-    <p>An introduction to the WireShark Network Analysis tool and how it is useful for developers.</p>
-    <h3>Previous topics</h3>    
-    <h4>Design of Microservices using the REPR pattern over MVC (20 mins)</h4>
-    <p>Exploring how to design a Microservice using the REPR pattern instead of MVC. Showcasing better alignment with
-      SOLID principles and improved performance over MVC.</p>
-    <h4>Breaking Into Industry: A Student's Perspective (20 mins)</h4>
-    <p>A Student's Perspective to beginning a career in the Tech Industry. An open discussion on what's expected from
-      fresh graduate students by employers and how student opportunities, like Insight days and Placements, offer value
-      to both companies and students.</p>
-    <h4>Skyports Technology Journey: Lessons from Vertiport Automation (30 mins)</h4>
-    <p>A delve into the journey of building the Vertiport Automation environment, and lessons learned from it.</p>
-    
-
-
-    <h2>YouTube</h2>
-    <p>View past sessions on our <a href="https://www.youtube.com/@devdottalk">YouTube Channel</a></p>
-    <h2>Contact Us</h2>
-    <p>For any questions or comments, please contact us via <a href="https://bsky.app/profile/devdottalk.uk">Bluesky</a> or <a href="mailto:contactus@devdottalk.uk">email</a></p>
-    
-    <h2>Code of Conduct</h2>
-    <p>We have a <a href="https://reconnectconference.co.uk/code-of-conduct/">code of conduct</a> that will be strictly
-      adhered to. We want to be welcoming to everyone no matter who they are, what skill level they have or where they
-      come from.
-    </p>  
-    <h2 id="supporters"><a href="#supporters">Supporters</a></h2>
-    <p>
-      <b>{dev.talk}</b> could not happen without support:
-    <ul>
-      <li>
-        <div class="container">
-          <div class="image">
-            <img alt="Reconnect Logo" src="https://reconnectconference.co.uk/wp-content/uploads/2024/07/cropped-reconn-smaller.png" loading="lazy" style="height: 50px; width: 220px;">
-          </div>
-          <div class="text">
-            <p>
-              <a href="https://reconnectconference.co.uk/">re:connect</a> - A huge supporter. They help source the event
-              spaces for the meetup,
-              provide the subscription to the ticketing system, and provide the most important thing of all - moral
-              support!
-            </p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="container">
-          <div class="image">
-            <img alt="JustPickOneUK Logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXoWLUYHqTueKK_Q8glr-EKV3nUdwbiV-Fk3x-qfgGQ1gxAQB6WPfkOWb8d8sWcHamt3jeJ5iSAbbs5qmSPCnzMcwbofa2noq6JQlH5oxbrSS13rXhy7c0lExorCgGuf-yrqaZiESDfx8C0rEeBJg0RKLRz6iERKsmtTPebWKBY2uNxek/s220/JustPickOneLogo.jpg" loading="lazy" style="height: 80px; width: 80px;">
-          </div>
-          <div class="text">
-            <p><a href="https://www.youtube.com/@JustPickOneUK">JustPickOneUK</a> supports us by allowing the use of their
-              video cameras and microphones to record the sessions.</p>
-          </div>
-        </div>
-      </li>      
-      <li>
-        <div class="container">
-          <div class="image">
-            <img alt="Institute of Directors Logo" src="https://www.iod.com/app/themes/iod/assets/images/dcf880e667d5d169da60f137b4e58e9d.svg" loading="lazy" style="height: 75px; width: 75px;">
-          </div>
-          <div class="text">
-            <p><a href="https://www.iod.com/">Institute of Directors</a> supported us by providing the first meetup venue.
-            </p>
-          </div>
-        </div>
-      </li>
-    </ul>
-    <h2 id="local_events"><a href="#local_events">Other local events</a></h2>
-    <ul>
-      <li><a href="https://siliconsouth.org.uk/event/techtonic/">TechTonic</a></li>
-      <li><a href="https://www.bournemouth2600.org/">Bournemouth 2600</a></li>
-      <li><a href="https://www.meetup.com/bournemouth-devops">DevOps Exchange - Bournemouth</a></li>
-      <li><a href="https://www.meetup.com/owasp-dorset-chapter/">OWASP Dorset Chapter</a></li>
-      <li><a href="https://www.meetup.com/golang-dorset/">Golang Dorset</a></li>
-      <li><a href="https://www.meetup.com/dorset-umbraco-meetup">Dorset Umbraco Meetup</a></li>
-      <li><a href="https://womenintechdorset.co.uk/">Women In Tech Dorset</a></li>
-      <li><a href="https://reconnectconference.co.uk/">Re:connect Conference</a></li>
-      <li><a href="https://www.eventbrite.co.uk/o/things-connected-34135748213">Things Connected</a></li>
-      <li><a href="https://www.eventbrite.co.uk/e/south-coast-ecommerce-meet-up-tickets-1086879629229">South Coast
-          eCommerce Meet-Up</a></li>
-    </ul>
-    <h2 id="venues"><a href="#venues">Venues</a></h2>
-    <p>In order to run the dev.talk sessions, we need a free space to host the attendees and speakers. Our recent events
-      are bringing over 50 attendees each time, so getting a space that fits them all is tricky.
-      If you know of a venue that may be able to host us for free (dev.talk is run by volunteers and does not use
-      sponsors).</p>
-    <h3>Venue Requirements</h3>
-    <p>It needs to be able to:
-      <ul>
-      <li>Host at least 60 people</li>
-      <li>Capable of showing presentations on a large screen bigger than 80inches, with the ability to plugin a device via HDMI.</li>
-      <li>Seating for all attendees in the style of a classroom / lecture theatre (i.e. good view of the screen)</li>
-      <li>Be accessible for those with disabilities</li>
-      <li>Be accessible in the evening from 6:30pm to 9:30pm</li>
-      <li>Parking nearby</li>
-      <li>WiFi available to attendees</li>
-      <li>Allows food and drink to be served (Tea & Coffee, Soft drinks and Biscuits)</li>
-      <li>Allows filming of the event and venue</li>
-    </ul>
-    </p>
-
-    <h2>Volunteers</h2>
-    <p>Do you want to help out at a future event? </p>
-    <p>We always need people to:
-      <ul>
-        <li>welcome and check-in attendees</li>
-        <li>help setup and pack down afterwards</li>
-        <li>tech support for the speakers</li>
-        <li>help film the event</li>
-      </ul> 
-      If this is something you are interested in doing, then please <a href="mailto:volunteers@devdottalk.uk">Contact
-        us</a>
-    </p>
-    <h2>Who are we?</h2>
-    <p><b>{dev.talk}</b> was created by <a href="https://blog.markoliver.website/Bio">Mark Oliver</a> in 2024. He saw
-      that Bournemouth was lacking a software engineering based meetup despite being a Tech Hub on the South Coast of
-      the UK, and as Wilton Knight once said <a href="https://www.youtube.com/watch?v=otzJszJ9MnA">"one person can make
-        a difference"</a>, so Mark decided to create the meetup, and the community around it.</p>
-    <h2>Buy us a Coffee</h2>
-    <p>Buy the <b>{dev.talk}</b> team a <a href="https://ko-fi.com/devdottalk">coffee with Ko-Fi.</a>. Any monies given
-      will be used to provide refreshments at the following meetup.</p>
-  </main>
-  <div id="bluesky-posts">    
-    <!-- Posts will be loaded here -->
-    Loading posts...
-</div>
-</div>
-  <footer>
-    Website made with HTML and an Azure Static Web App, hosted for free on Azure.
-  </footer>
-</body>
-
+    </div>
+    <footer>
+      Website made with HTML and an Azure Static Web App, hosted for free on Azure.
+    </footer>
+  </body>
 </html>
