@@ -16,6 +16,19 @@
 
   <body>
     <script src="bluesky.js"></script>
+    <script src="TOC.js"></script>
+    <script>
+      window.onload = () => {    
+        const headingSet = document.querySelectorAll("h1, h2, h3, h4, h5, h6") // You can also select only the titles you are interested in.
+        const tocData = TOC.parse(headingSet)
+        if(tocData.length != 0)//Do nothing if there is no child elements
+        {
+          const tocHTMLContent = TOC.build(tocData[0].children)//Skip the first level of the TOC
+          const frag = document.createRange().createContextualFragment(`<fieldset class="fixed-top"><legend>Table of Contents</legend>${tocHTMLContent}</fieldset>`)
+          document.querySelector(`#table-of-contents`).insertBefore(frag, document.querySelector(`#table-of-contents`).firstChild)
+        }
+      }
+    </script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         loadBlueskyPosts('devdottalk.uk', 'bluesky-posts');
