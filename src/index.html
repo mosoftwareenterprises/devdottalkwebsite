@@ -21,7 +21,7 @@
       window.onload = () => {    
         const headingSet = document.querySelectorAll("h1, h2, h3, h4, h5, h6") // You can also select only the titles you are interested in.
         const tocData = TOC.parse(headingSet)
-        if(tocData.length != 0)//Do nothing if there is no child elements
+      if (tocData.length != 0)//Do nothing if there is no child elements
         {
           const tocHTMLContent = TOC.build(tocData[0].children)//Skip the first level of the TOC
           const frag = document.createRange().createContextualFragment(`<fieldset class="fixed-top"><legend>Table of Contents</legend>${tocHTMLContent}</fieldset>`)
@@ -286,10 +286,12 @@ Our mission is simple: build a thriving, supportive tech community in Dorset whe
         <h3 id="venue-requirements"><a href="#venue-requirements">Venue Requirements</a></h3>
         <p>It needs to be able to:
           <ul>
-          <li>Host around 50 people</li>
-          <li>Capable of showing presentations on a large screen bigger than 65 inches, with the ability to plugin a device via HDMI.</li>
+        <li>Large enough to seat around 50 attendees</li>
+        <li>Be within 15 miles of Bournemouth</li>
+        <li>Have a large screen (Projector or TV bigger than 65 inches) capable of showing Powerpoint presentations that all seated attendees can read easily.</li>
           <li>Seating for all attendees in the style of a classroom / lecture theatre (i.e. good view of the screen)</li>
-          <li>A space in order for all attendees to talk with each other and network</li>
+        <li>A space in order for all attendees to talk with each other (ideally standing) and network</li>
+        <li>We are looking for a monthly commitment, but a one-off offer of a space is helpful too</li>
           <li>Be accessible for those with disabilities</li>
           <li>Be accessible on a weekday evening from 6:30pm to 9:30pm</li>
           <li>Parking nearby</li>
