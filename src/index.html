@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="bluesky.css">    
+    <link rel="stylesheet" href="bluesky.css">
     <title>{dev.talk} a FREE monthly meetup for software engineers and related disciplines in the south of the UK run by volunteers within the community.</title>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,10 +18,10 @@
     <script src="bluesky.js"></script>
     <script src="TOC.js"></script>
     <script>
-      window.onload = () => {    
+                                        window.onload = () => {
         const headingSet = document.querySelectorAll("h1, h2, h3, h4, h5, h6") // You can also select only the titles you are interested in.
         const tocData = TOC.parse(headingSet)
-      if (tocData.length != 0)//Do nothing if there is no child elements
+                                        if (tocData.length != 0)//Do nothing if there is no child elements
         {
           const tocHTMLContent = TOC.build(tocData[0].children)//Skip the first level of the TOC
           const frag = document.createRange().createContextualFragment(`<fieldset class="fixed-top"><legend>Table of Contents</legend>${tocHTMLContent}</fieldset>`)
@@ -36,47 +36,45 @@
     </script>
     <div class="page-container">
       <main class="main-content">
-        <img alt="The devdottalk logo" src="devtalk wide.jpg" loading="lazy" class="center">      
+        <img alt="The devdottalk logo" src="devtalk wide.jpg" loading="lazy" class="center">
         <h1 id="welcome"><a href="/">Welcome to {dev.talk}</a></h1>
-          <p>
+        <p>
           <b>{dev.talk}</b> (pronounced "dev dot talk") is a community-driven monthly meetup bringing together software engineers and tech professionals in the Bournemouth and Dorset area. </p>
         <p>Free to attend and run by community volunteers, we create an inclusive space where developers of all experience levels can learn, share knowledge, and connect. </p>
         <p> Each meetup features sessions from community members (mostly of a technical nature), with time for networking and discussions between talks. Whether you're a seasoned developer or just starting out, you'll find a welcoming environment to explore new ideas and "geek out" with fellow tech enthusiasts. </p>
         <p> To extend our reach beyond the in-person events, all sessions (with speaker permission) are recorded and shared on our <a href="https://www.youtube.com/@devdottalk">YouTube Channel</a>, creating an accessible resource for the wider developer community. </p>
         <p> Our mission is simple: build a thriving, supportive tech community in Dorset where everyone can grow professionally while making meaningful connections. </p>
-<span id="table-of-contents"></span>
-<h2 id="why-attend">Why attend?</h2>
-<ul>
-  <li><b>Knowledge Sharing</b> - Our community is bursting with software engineering knowledge, and they are willing to share it with you.</li>
-  <li><b>Networking with Peers</b> - Meet others who understand the tech you do, and create a conversation.</li>
-  <li><b>Community Building</b> - Organised and created by the community, <b>{dev.talk}</b> is for the community, so come and be a part of it. Everyone is welcome.</li> 
-</ul>
-
-<h2 id="who-should-attend">Who should attend?</h2>
-<ul>
-  <li>Software Engineers</li>
-  <li>Web Developers</li>
-  <li>Systems Designers</li>
-  <li>Technical Leads</li>
-  <li>Engineering Managers</li>
-  <li>Software Architects</li>
-  <li>DevOps Engineers</li>
-  <li>QA Engineers</li>
-  <li>Cyber security experts</li>
-  <li>Data Engineers</li>
-  <li>BI Analysts</li>
-  <li>Students</li>
-  <li>Graduates</li>
-  <li>Anyone with a deep interest in the technical workings of software and systems</li>
-</ul>
+        <span id="table-of-contents"></span>
+        <h2 id="why-attend">Why attend?</h2>
+        <ul>
+          <li><b>Knowledge Sharing</b> - Our community is bursting with software engineering knowledge, and they are willing to share it with you.</li>
+          <li><b>Networking with Peers</b> - Meet others who understand the tech you do, and create a conversation.</li>
+          <li><b>Community Building</b> - Organised and created by the community, <b>{dev.talk}</b> is for the community, so come and be a part of it. Everyone is welcome.</li>
+        </ul>
+        <h2 id="who-should-attend">Who should attend?</h2>
+        <ul>
+          <li>Software Engineers</li>
+          <li>Web Developers</li>
+          <li>Systems Designers</li>
+          <li>Technical Leads</li>
+          <li>Engineering Managers</li>
+          <li>Software Architects</li>
+          <li>DevOps Engineers</li>
+          <li>QA Engineers</li>
+          <li>Cyber security experts</li>
+          <li>Data Engineers</li>
+          <li>BI Analysts</li>
+          <li>Students</li>
+          <li>Graduates</li>
+          <li>Anyone with a deep interest in the technical workings of software and systems</li>
+        </ul>
         <p><b>Recruiters:</b> Note that <b>{dev.talk}</b> events are for everyone, but this is not an event for recruiting. This is a friendly welcoming place and attendees should not feel pressured to use your services. Any recruiter who attends and is seen to break this rule, will be asked to leave immediately.</p>
         <h2 id="join_us"><a href="#join_us">Come and Join Us</a></h2>
         <p>If you would like to come to one of our friendly events, see our <a href="https://devdottalk.eventbrite.com">ticket site for free tickets.</a></p>
         <p><b>Please Note:</b> That all <b>{dev.talk}</b> events will be photographed and recorded. If you do not wish to be included in a photo or video, please make the organisers aware.</p>
-          <h3 id="attendee-feedback">Attendee Feedback</h3>
-          <p>If you attended a previous event, then please tell us about your experience <a href="https://forms.gle/kKaFN1HAUX6pNAtk6">here</a>.
-          </p>
-          <h2 id="call_for_speakers"><a href="#call_for_speakers">Come and Speak</a></h2>      
+        <h3 id="attendee-feedback">Attendee Feedback</h3>
+        <p>If you attended a previous event, then please tell us about your experience using our <a href="https://forms.gle/kKaFN1HAUX6pNAtk6">Attendee Feedback Form (Takes 1 min)</a></p>
+        <h2 id="call_for_speakers"><a href="#call_for_speakers">Come and Speak</a></h2>
         <p>This is a community based event, so the sessions are run by us all. No matter your skill level, length of time in the industry, or experience speaking, you are encouraged to take part. We aim for talks (& lightning talks) that are of any length (5 min to 90 min), and any software engineering based skill. These can include dives into technical subjects, soft skills, mental health, career progression etc. </p>
         <p> We can provide help such as brainstorming of ideas for sessions, tips on how to structure your session, and an opportunity to practice your session via video call. </p>
         <ul>
@@ -85,76 +83,71 @@
           <li>The location will be in or around Bournemouth, UK.</li>
           <li>We expect around 40 to 60 attendees for each event.</li>
         </ul>
-                <p>We want <b>{dev.talk}</b> to feel like friends who support each other. </p>
+        <p>We want <b>{dev.talk}</b> to feel like friends who support each other. </p>
         <img alt="The devdottalk call for speakers logo" src="CallForSpeakers.png" loading="lazy" class="center" style="height: 200px; width: 200px;">
-        <p>If you would like to contribute to the community by speaking at <b>{dev.talk}</b> then register your interest (this is not a commitment)           using our <a href="https://forms.gle/B2RJJEM2iDp33KjX7">Call for Speakers form</a>, and one of the team will get
-          back to you quickly.</p>
+        <p>If you would like to contribute to the community by speaking at <b>{dev.talk}</b> then register your interest (this is not a commitment) using our <a href="https://forms.gle/B2RJJEM2iDp33KjX7">Call for Speakers form (2 mins)</a>, and one of the team will get back to you quickly.</p>
         <p><i>Unfortunately as <b>{dev.talk}</b> does not use sponsorship, speaker payment or their expenses will NOT be covered.</i></p>
         <h3 id="speaker-feedback">Speaker Feedback</h3>
-        <p>If you were a speaker previously, then please tell us how it went, <a href="https://forms.gle/BrHud1Nrt1exWJNm9">here</a>.
-        </p>
+        <p>If you were a speaker previously, then please tell us how it went, using our <a href="https://forms.gle/BrHud1Nrt1exWJNm9">Speaker Feedback Form (2 mins)</a>. </p>
         <h3 id="speaker-resources">Resources on becoming a speaker</h3>
         <ul>
           <li><a href="https://speaking.io/">A simple list of how to become a speaker and set out your talk.</a></li>
           <li><a href="https://dev.to/estruyf/making-live-coding-demos-easier-with-demo-time-d8o#">Making Live Coding Demos Easier with Demo Time</a></li>
           <li><a href="https://github.com/kufii/CodeSnap">Take formatted screenshots of code simply</a></li>
         </ul>
-      <h2 id="upcoming-topics"><a href="#upcoming-topics">Upcoming topics</a></h2>
+        <h2 id="upcoming-topics"><a href="#upcoming-topics">Upcoming topics</a></h2>
         <ul>
           <li>
-          <p><b>My Journey Building a City-Based Maze Game using ml5.js and open-source API's (25 mins)</b></p>
-        <p>In this session, I will walk through my journey of developing a city-based maze game, highlighting the technical challenges encountered and the strategies implemented to overcome them. I will delve into how I leveraged ml5.js and various open-source APIs to create dynamic maze game that brings the urban labyrinth to life. </p>
-        </li>
-        <li>
-          <p><b>Lessons from a Domain-Driven Design Transformation (30 mins)</b></p>
-        <p>In this session, I will talk through the lessons we learned on scaling a company to a global level, by applying Domain-Driven Design (DDD) and Conway's law within the companies team structures, and the software system architectures. I'll tell you of the chaos we battled through to make the transformation succeed.</p>
-        </li>
-        <li>
-          <p><b>Human side of change (30mins)</b></p>
+            <p><b>My Journey Building a City-Based Maze Game using ml5.js and open-source API's (25 mins)</b> - <a href="https://www.linkedin.com/in/desmondezo/" target="_blank">Desmond Ezo-Ojile</a></p>
+            <p>In this session, I will walk through my journey of developing a city-based maze game, highlighting the technical challenges encountered and the strategies implemented to overcome them. I will delve into how I leveraged ml5.js and various open-source APIs to create dynamic maze game that brings the urban labyrinth to life. </p>
+            </li>
+            <li>
+              <p><b>Lessons from a Domain-Driven Design Transformation (30 mins)</b> - <a href="https://www.linkedin.com/in/suleri/" target="_blank">Seemin Suleri</a></p>
+              <p>In this session, I will talk through the lessons we learned on scaling a company to a global level, by applying Domain-Driven Design (DDD) and Conway's law within the companies team structures, and the software system architectures. I'll tell you of the chaos we battled through to make the transformation succeed.</p>
+              </li>
+              <li>
+              <p><b>Human side of change (30 mins)</b> - <a href="https://www.linkedin.com/in/maria-gaganova/" target="_blank">Maria Gaganova</a></p>
             <p> As developers, you are building new tools and disrupting the way others operate. having a tool is great, but then adopting users to change their behaviors requires separate focus, time and resources. Sometimes, we need to let users "destroy" the tool first, only to learn how to make them "love" it later. I'll give some examples on how I went about this challenge in the teams I worked with and how important is the work between developers, users, stakeholders, project leads, change managers and so on.</p>
-</li>
-          <li>
-            <p><b>Why is there a shark in my Wire - An introduction to Wireshark (25 mins)</b></p>
+            </li>
+            <li>
+              <p><b>Tech Hiring: 3 Years of Change - Decoding the New Maze (45 mins)</b> - <a href="https://www.linkedin.com/in/andyrossstudiovision/" target="_blank">Andy Ross</a></p>
+              <p>How tech hiring trends and employers expectations have evolved in the last 3 years + how to navigate the tech job market in 2025.</p>
+              </li>
+              <li>
+                <p><b>Why is there a shark in my Wire - An introduction to Wireshark (25 mins)</b> - <a href="https://www.linkedin.com/in/profileformarkoliver/" target="_blank">Mark Oliver</a></p>
             <p>A short introduction to the network protocol analyser tool Wireshark, and why it can be helpful for software engineers. I will show the basics of running the tool, the benefits of knowing this tool for all software developers, and then cover some real life examples of where it has been used to aid development of production systems.</p>
             </li>
             <li>
-              <p><b>Building my blog: A journey of discovery</b></p>
+              <p><b>Building my blog: A journey of discovery (45 mins)</b> - <a href="https://www.linkedin.com/in/profileformarkoliver/" target="_blank">Mark Oliver</a></p>
               <p> In this session, I will explain the journey of discovery of building my fully interactive Blog website and the engine behind it using free cloud technologies such as Azure Static Web Apps, Github Actions and Blazor WebAssembly. </p>
           </li>
         </ul>
-      <h2 id="previous-topics"><a href="#previous-topics">Previous topics</a></h2>
+        <h2 id="previous-topics"><a href="#previous-topics">Previous topics</a></h2>
         <ul>
           <li>
-          <p><b>Design of Microservices using the REPR pattern over MVC (20 mins)</b></p>
-          <p>Exploring how to design a Microservice using the REPR pattern instead of MVC. Showcasing better alignment with
-            SOLID principles and improved performance over MVC.</p>
-          
-        </li>
-        <li>
-          <p><b>Breaking Into Industry: A Student's Perspective (20 mins)</b></p>
+            <p><b><a href="https://youtu.be/lJJxj38ZPLU?si=OugK7NLZ_hLhFze6&t=1373" target="_blank">Design of Microservices using the REPR pattern over MVC (20 mins)</a></b> - <a href="https://www.linkedin.com/in/jamiesavin/" target="_blank">Jamie Savin</a></p>
+            <p>Exploring how to design a Microservice using the REPR pattern instead of MVC. Showcasing better alignment with SOLID principles and improved performance over MVC.</p>
+            </li>
+            <li>
+              <p><b><a href="https://youtu.be/lJJxj38ZPLU?si=t-e73ynOOYhnpWwB&t=514" target="_blank">Breaking Into Industry: A Student's Perspective (20 mins)</a></b> - <a href="https://www.linkedin.com/in/chlo%C3%A9-greenstreet/" target="_blank">Chloe Greenstreet</a></p>
             <p>A Student's Perspective to beginning a career in the Tech Industry. An open discussion on what's expected from fresh graduate students by employers and how student opportunities, like Insight days and Placements, offer value to both companies and students.</p>
           </li>
           <li>
-            <p><b>Skyports Technology Journey: Lessons from Vertiport Automation (30 mins)</b></p>
-        <p>A delve into the journey of building the Vertiport Automation environment, and lessons learned from it.</p>
-        </li>
-</ul>
+            <p><b><a href="https://youtu.be/lJJxj38ZPLU?si=SXlPV4Ltal2VzptH&t=2465" target="_blank">Skyports Technology Journey: Lessons from Vertiport Automation (30 mins)</a></b> - <a href="https://www.linkedin.com/in/dan-lambeth1992/" target="_blank">Dan Lambeth</a></p>
+            <p>A delve into the journey of building the Vertiport Automation environment, and lessons learned from it.</p>
+            </li>
+            </ul>
         <h2 id="upcoming-events">Upcoming events</h2>
         <ul>
-          <li>January 20th 2025: <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator">{dev.talk} - The one where we deployed our first PATCH</a></li>
+          <li>January 20th 2025: <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator" target="_blank">{dev.talk} - The one where we deployed our first PATCH</a></li>
           <li>February 26th 2025: <a href="https://devdottalk.uk/">{dev.talk} - The one where we forged friendships at the FOUNDRY</a></li>
-        </ul>        
-        
+        </ul>
         <h2 id="previous-events">Previous events</h2>
         <ul>
-          <li>November 27th 2024: <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator">{dev.talk} - the one where we got started</a> - Watch November 2024 event <a href="https://www.youtube.com/watch?si=J6UpHEy-f_aVzKD3&v=lJJxj38ZPLU&feature=youtu.be">here</a></li>
+          <li>November 27th 2024: <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator" target="_blank">{dev.talk} - the one where we got started</a> - Watch <a href="https://www.youtube.com/watch?si=J6UpHEy-f_aVzKD3&v=lJJxj38ZPLU&feature=youtu.be" target="_blank">November 2024 event</a></li>
         </ul>
-
         <h2 id="code-of-conduct">Code of Conduct</h2>
-        <p>We have a <a href="https://reconnectconference.co.uk/code-of-conduct/">code of conduct</a> that will be strictly
-          adhered to. We want to be welcoming to everyone no matter who they are, what skill level they have or where they
-          come from.
-        </p>  
+        <p>We have a <a href="https://reconnectconference.co.uk/code-of-conduct/" target="_blank">code of conduct</a> that will be strictly adhered to. We want to be welcoming to everyone no matter who they are, what skill level they have or where they come from. </p>
         <h2 id="supporters"><a href="#supporters">Supporters</a></h2>
         <p>
           <b>{dev.talk}</b> could not happen without support:
@@ -181,7 +174,7 @@
                   <a href="https://www.youtube.com/@JustPickOneUK" target="_blank">JustPickOneUK</a> supports us by allowing the use of their video cameras and microphones to record the sessions. </p>
               </div>
             </div>
-          </li>      
+          </li>
           <li>
             <div class="container">
               <div class="image">
@@ -225,7 +218,7 @@
                 <p><a href="https://sessionize.com/" target="_blank">Sessionize</a> supported us by providing Call For Speakers Community access. </p>
               </div>
             </div>
-          </li>          
+          </li>
         </ul>
         <h2 id="local_events"><a href="#local_events">Other local events</a></h2>
         <p>A list of events within 1 hour drive of Bournemouth:</p>
@@ -238,7 +231,7 @@
           <li><a href="https://www.meetup.com/dorset-umbraco-meetup/" target="_blank">Dorset Umbraco Meetup</a></li>
           <li><a href="https://womenintechdorset.co.uk/" target="_blank">Women In Tech Dorset</a></li>
           <li><a href="https://reconnectconference.co.uk/" target="_blank">Re:connect Conference</a></li>
-          <li><a href="https://www.eventbrite.co.uk/o/reconnect-bring-you-themed-half-day-conferences-103682253661" target="_blank">Re:connect Lite (half day conferences)</a></li>        
+          <li><a href="https://www.eventbrite.co.uk/o/reconnect-bring-you-themed-half-day-conferences-103682253661" target="_blank">Re:connect Lite (half day conferences)</a></li>
           <li><a href="https://www.eventbrite.co.uk/o/things-connected-34135748213" target="_blank">Things Connected</a>
           </li>
           <li><a href="https://www.eventbrite.co.uk/e/south-coast-ecommerce-meet-up-tickets-1086879629229" target="_blank">South Coast eCommerce Meet-Up</a></li>
@@ -254,13 +247,13 @@
         <p>In order to run the <b>{dev.talk}</b> sessions, we need a free space to host the attendees and speakers. Our recent events are bringing about 50 attendees each time, so getting a space that fits them all is tricky. If you know of a venue that may be able to host us for free (<b>{dev.talk}</b> is run by volunteers and does not use sponsors), then please <a href="mailto:venue@devdottalk.uk">Contact us</a></p>
         <h3 id="venue-requirements"><a href="#venue-requirements">Venue Requirements</a></h3>
         <p>It needs to be able to:
-          <ul>
-        <li>Large enough to seat around 50 attendees</li>
-        <li>Be within 15 miles of Bournemouth</li>
-        <li>Have a large screen (Projector or TV bigger than 65 inches) capable of showing Powerpoint presentations that all seated attendees can read easily.</li>
+        <ul>
+          <li>Large enough to seat around 50 attendees</li>
+          <li>Be within 15 miles of Bournemouth</li>
+          <li>Have a large screen (Projector or TV bigger than 65 inches) capable of showing Powerpoint presentations that all seated attendees can read easily.</li>
           <li>Seating for all attendees in the style of a classroom / lecture theatre (i.e. good view of the screen)</li>
-        <li>A space in order for all attendees to talk with each other (ideally standing) and network</li>
-        <li>We are looking for a monthly commitment, but a one-off offer of a space is helpful too</li>
+          <li>A space in order for all attendees to talk with each other (ideally standing) and network</li>
+          <li>We are looking for a monthly commitment, but a one-off offer of a space is helpful too</li>
           <li>Be accessible for those with disabilities</li>
           <li>Be accessible on a weekday evening from 6:30pm to 9:30pm</li>
           <li>Parking nearby</li>
@@ -280,27 +273,22 @@
           <li>A mention of the venue on our <a href="https://www.linkedin.com/company/dev-talk" target="_blank">Linkedin</a> page</li>
         </ul>
         <p><b>Plus</b>, the venue will be seen as a supporter of the local tech community, and will be helping to grow the tech community in the area.</p>
-
         <h2 id="volunteers">Volunteers</h2>
         <p>Do you want to help out at a future event? </p>
         <p>We always need people to:
-          <ul>
-            <li>Welcome and check-in attendees</li>
-            <li>Help setup and pack down afterwards</li>
-            <li>Tech support for the speakers</li>
-            <li>Take photos</li>
-            <li>Help film the event</li>
+        <ul>
+          <li>Welcome and check-in attendees</li>
+          <li>Help setup and pack down afterwards</li>
+          <li>Tech support for the speakers</li>
+          <li>Take photos</li>
+          <li>Help film the event</li>
         </ul> If this is something you are interested in doing, then please <a href="mailto:volunteers@devdottalk.uk">Contact us</a>
         </p>
         <h2 id="youtube">YouTube</h2>
         <p>View past sessions on our <a href="https://www.youtube.com/@devdottalk">YouTube Channel</a></p>
-
         <h2 id="who-are-we">Who are we?</h2>
-        <p><b>{dev.talk}</b> was created by <a href="https://blog.markoliver.website/Bio">Mark Oliver</a> in 2024. He saw
-          that Bournemouth was lacking a software engineering based meetup despite being a <a href="https://blog.markoliver.website/Bournemouth-Tech-Meetup-Rebirth">Tech Hub</a> on the South Coast of
-          the UK, and as Wilton Knight once said <a href="https://www.youtube.com/watch?v=otzJszJ9MnA">"one person can make
-            a difference"</a>, so Mark decided to create the meetup, and the community around it.</p>
-                <h2 id="contact-us"><a href="#contact-us">Contact Us</a></h2>
+        <p><b>{dev.talk}</b> was created by <a href="https://blog.markoliver.website/Bio">Mark Oliver</a> in 2024. He saw that Bournemouth was lacking a software engineering based meetup despite being a <a href="https://blog.markoliver.website/Bournemouth-Tech-Meetup-Rebirth">Tech Hub</a> on the South Coast of the UK, and as Wilton Knight once said <a href="https://www.youtube.com/watch?v=otzJszJ9MnA">"one person can make a difference"</a>, so Mark decided to create the meetup, and the community around it.</p>
+        <h2 id="contact-us"><a href="#contact-us">Contact Us</a></h2>
         <p>For any questions or comments, please contact us via:</p>
         <ul>
           <li><a href="https://devdottalk.eventbrite.com">Buy Tickets</a></li>
@@ -309,16 +297,15 @@
           <li><a href="https://discord.gg/N4JGyRthDt" target="_blank">Discord server</a></li>
           <li><a href="https://www.linkedin.com/company/dev-talk" target="_blank">Linkedin</a></li>
         </ul>
-
         <h2 id="buy-us-a-coffee">Buy us a Coffee</h2>
         <p>Buy the <b>{dev.talk}</b> team a <a href="https://ko-fi.com/devdottalk">coffee with Ko-Fi.</a>. Any monies given will be used to provide refreshments at the following meetup.</p>
       </main>
-      <div id="bluesky-posts">    
+      <div id="bluesky-posts">
         <!-- Posts will be loaded here -->
         Loading posts...
       </div>
     </div>
-    <footer>       Website made with HTML and an Azure Static Web App, hosted for free on Azure.     </footer>
+    <footer> Website made with HTML and an Azure Static Web App, hosted for free on Azure. </footer>
     <script data-goatcounter="https://devdottalk.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
   </body>
