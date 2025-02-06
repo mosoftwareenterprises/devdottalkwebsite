@@ -1,4 +1,11 @@
 {
+    "routes": [
+        {
+            "route": "/legoqr",
+            "redirect": "https://blog.markoliver.website/About-Me",
+            "statusCode": 301
+        }
+    ],
     "navigationFallback": {
         "rewrite": "/index.html",
         "exclude": [
