@@ -6,8 +6,8 @@
             "statusCode": 301
         },
         {
-            "route": "/#privacy-policy",
-            "redirect": "https://devdottalk.uk/privacy-policy",
+            "route": "/index.html#privacy-policy",
+            "rewrite": "https://devdottalk.uk/privacy-policy",
             "statusCode": 301
         }
     ],
