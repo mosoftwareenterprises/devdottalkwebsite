@@ -4,6 +4,11 @@
             "route": "/legoqr",
             "redirect": "https://blog.markoliver.website/About-Me",
             "statusCode": 301
+        },
+        {
+            "route": "#privacy-policy",
+            "redirect": "https://devdottalk.uk/privacy-policy",
+            "statusCode": 301
         }
     ],
     "navigationFallback": {
