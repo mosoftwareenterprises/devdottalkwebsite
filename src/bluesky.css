@@ -4,7 +4,7 @@
   background-color: #0a7aff;
   padding: 20px;
   overflow-y: auto;
-  max-height: 350vh;
+  max-height: 100%;
 }
 
 #bluesky-posts-header {
@@ -72,7 +72,7 @@
 
   .main-content, 
   #bluesky-posts {
-    width: 100%;
+    /* width: 100%; */
     order: initial;
   }
 }

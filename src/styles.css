@@ -80,6 +80,6 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  width: 100%;
+  /* width: 100%; */
   font-size: 0.75em;
 }
