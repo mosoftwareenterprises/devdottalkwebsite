@@ -7,8 +7,7 @@
         },
         {
             "route": "/index.html#privacy-policy",
-            "rewrite": "https://devdottalk.uk/privacy-policy",
-            "statusCode": 301
+            "rewrite": "https://devdottalk.uk/privacy-policy"
         }
     ],
     "navigationFallback": {
