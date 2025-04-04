@@ -1,5 +1,5 @@
 
-async function fetchBlueskyPosts(handle, limit = 20) {
+async function fetchBlueskyPosts(handle, limit = 10) {
     try {
         const response = await fetch(
             `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=${limit}`
@@ -56,7 +56,7 @@ async function fetchBlueskyPosts(handle, limit = 20) {
                 },
                 postUrl: postUrl
             };
-        }).filter(post => post.text);
+        }).filter(post => post.text).slice(0, limit); // limit the number of posts
     } catch (error) {
         console.error('Error fetching Bluesky posts:', error);
         return [];
@@ -134,7 +134,7 @@ function escapeHtml(unsafe) {
         .replace(/'/g, "&#039;");
 }
 
-async function loadBlueskyPosts(handle, containerId, limit = 20) {
+async function loadBlueskyPosts(handle, containerId, limit = 10) {
     try {
         const posts = await fetchBlueskyPosts(handle, limit);
         renderBlueskyPosts(containerId, posts);
