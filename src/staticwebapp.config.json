@@ -1,6 +1,11 @@
 {
     "routes": [
         {
+            "route": "/reconnect",
+            "redirect": "https://reconnectconference.co.uk/programme/",
+            "statusCode": 301
+        },
+        {
             "route": "/legoqr",
             "redirect": "https://blog.markoliver.website/About-Me",
             "statusCode": 301
