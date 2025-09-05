@@ -13,6 +13,10 @@
         {
             "route": "/index.html#privacy-policy",
             "rewrite": "https://devdottalk.uk/privacy-policy"
+        },
+        {
+            "route": "/index.html#previous-sessions",
+            "rewrite": "https://devdottalk.uk/previous-sessions"
         }
     ],
     "navigationFallback": {
