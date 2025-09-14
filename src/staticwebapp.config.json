@@ -15,7 +15,7 @@
             "rewrite": "https://devdottalk.uk/privacy-policy"
         },
         {
-            "route": "#previous-sessions",
+            "route": "/#previous-sessions",
             "rewrite": "https://devdottalk.uk/previous-sessions"
         }
     ],
