@@ -9,14 +9,6 @@
             "route": "/legoqr",
             "redirect": "https://blog.markoliver.website/About-Me",
             "statusCode": 301
-        },
-        {
-            "route": "/index.html#privacy-policy",
-            "rewrite": "https://devdottalk.uk/privacy-policy"
-        },
-        {
-            "route": "/#previous-sessions",
-            "rewrite": "https://devdottalk.uk/previous-sessions"
         }
     ],
     "navigationFallback": {
