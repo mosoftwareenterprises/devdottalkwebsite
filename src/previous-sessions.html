@@ -31,6 +31,15 @@
         <a href="https://devdottalk.uk/"><img alt="The devdottalk logo" src="devtalk wide.jpg" loading="lazy" class="center"></a>
         <h2 id="previous-sessions"><a href="#previous-sessions">Previous sessions</a></h2>
         <ul>
+                    <li>
+                      <p><b>Level Up Your DevEx: Unit Test Complex E2E Flows + Integration Testing with Aspire & OTEL</b> - <a href="https://www.linkedin.com/in/andrew-poole-2782494a/" target="_blank">Andrew Poole</a></p>
+                      <p>This session is in two parts:</p>
+                      <p>1) How to get the maximum mileage from a minimal number of tests - end-to-end component tests</p>
+                      <p>2) Using .Net Aspire for next level devex and easy integration tests asserting against OTEL trace data</p>
+                      <p>Part 1 Introduces, explains and demonstrates an approach to automated testing which covers as much of the surface area of your codebase as possible.Imagine a unit test where the 'unit' is actually multiple executables! A single test can cover the whole happy path flow of a complex piece of orchestration, from API handlers, service bus handlers, database calls etc all in-memory, fast and with a nice fluent developer experience!Because everything including the Program.cs and startup code are covered we can spot configuration and IoC issues which are hard to test with more traditional methods. I include a method of mocking and asserting against Azure Service Bus</p>
+                      <p>Part 2 discusses the usual issues with integration tests and how they expose the issues with running an app locally. It then presents .Net Aspire as the answer to lots of these issues, It covers the process of adding .Net Aspire to a solution and showcases its features, adding additional OTEL telemetry to track interesting events, including persisting and rehydrating telemetry across any 'process airgaps' and the creation of integration tests covering end-to-end flows using Open Telemetry trace data for assertions.</p>
+                      <p>The aim of both parts of this talk is to have a repo which when pulled down onto a fresh machine, builds first time, component tests pass first time, then having run the script and the app, the the integration tests pass first time, after which you can push F5 and have it all run with almost no time or effort! </p>
+                    </li>
           <li>
             <p>          
                  <p><b>The Hidden Evolution of Services (30 mins)</b> - <a href="https://www.linkedin.com/in/stuartcaborn/" target="_blank">Stuart Caborn</a></p>
