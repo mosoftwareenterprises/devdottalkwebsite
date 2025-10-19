@@ -9,6 +9,11 @@
             "route": "/legoqr",
             "redirect": "https://blog.markoliver.website/About-Me",
             "statusCode": 301
+        },
+        {
+            "route": "/tickets",
+            "redirect": "https://devdottalk.eventbrite.com",
+            "statusCode": 301
         }
     ],
     "navigationFallback": {
