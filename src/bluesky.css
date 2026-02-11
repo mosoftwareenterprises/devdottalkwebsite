@@ -70,10 +70,21 @@
     flex-direction: column;
   }
 
-  .main-content, 
+                .main-content {
+                  flex: none;
+                  width: 100%;
+                  max-height: none;
+                  overflow-y: visible;
+                  box-sizing: border-box;
+                }
   #bluesky-posts {
-    /* width: 100%; */
-    order: initial;
+    flex: none;
+      width: 100%;
+      max-height: none;
+      overflow-y: visible;
+      background-color: #0a7aff;
+      padding: 20px;
+      box-sizing: border-box;
   }
 }
 
