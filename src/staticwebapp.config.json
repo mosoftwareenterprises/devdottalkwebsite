@@ -17,7 +17,7 @@
         },
         {
             "route": "/next-event",
-            "redirect": "https://devdottalk.uk/2026-february-location-info.html",
+            "redirect": "/2026-february-location-info.html",
             "statusCode": 301
         }
     ],
