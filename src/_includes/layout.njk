@@ -14,7 +14,7 @@
     <meta name="description" property="og:description" content="{{ description | default("{dev.talk} a FREE monthly meetup for software engineers and related disciplines in the south of the UK run by volunteers within the community.") }}">
     <meta name="title" property="og:title" content="{{ title | default("{dev.talk}") }}">
     <meta property="og:type" content="website">
-    <meta name="image" property="og:image" content="https://devdottalk.uk/devtalk wide.jpg">
+    <meta name="image" property="og:image" content="/devtalk-wide.jpg">
     <meta name="author" content="{dev.talk}">
   </head>
   <body>
@@ -27,15 +27,6 @@
     </script>
     {% endif %}
     <div class="page-container">
-      <header>
-        <a href="/"><img alt="dev.dottalk" src="/devtalk wide.jpg" class="center" loading="lazy"></a>
-        <nav>
-          <!-- simple nav -->
-          <a href="/">Home</a> |
-          <a href="/faqs.html">FAQs</a> |
-          <a href="/call-for-speakers.html">Call for Speakers</a>
-        </nav>
-      </header>
       <main class="main-content">
         {{ content | safe }}
       </main>
