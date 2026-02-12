@@ -28,7 +28,12 @@
     {% endif %}
     <div class="page-container">
       <main class="main-content">
+         {% if hideMainLogo %}
+         {% else %}
       <a href="/"><img alt="The devdottalk logo" src="/devtalk-wide.jpg" loading="lazy" class="center"></a>
+      {% endif %}
+{% if hideNextEventBanner %}
+{% else %}
       <section style="
     width: 100%;
     background-color: #fff0f5;
@@ -47,6 +52,8 @@
         display: inline-block;
     ">Next Event Information</a>
 </section>
+
+    {% endif %}
         {{ content | safe }}
       </main>
       {% if includeBlueskyPosts %}
