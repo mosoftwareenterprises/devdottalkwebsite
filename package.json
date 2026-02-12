@@ -1,7 +1,13 @@
 {
-  "name": "vanilla-basic",
+  "name": "devdottalk-site",
   "version": "1.0.0",
-  "scripts": { 
-    "start": "sirv ./src public --cors --single --no-clear --port 8000"
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "preview": "sirv _site --single --cors --no-clear --port 8080"
   }
 }
