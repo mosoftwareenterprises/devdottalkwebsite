@@ -1,0 +1,8 @@
+[tools]
+node = '24'
+
+[env]
+NODE_ENV = 'production'
+
+[tasks.build]
+run = "npm ci && npm run build"

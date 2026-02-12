@@ -19,7 +19,16 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Build And Deploy
+      - name: Install mise
+        run: |
+          curl https://mise.run | sh
+      - name: Verify mise
+        run: |
+          mise --version || ~/.local/bin/mise --version
+      - name: Build (mise)
+        run: |
+          mise run build
+      - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -28,9 +37,9 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/src" # App source code path
+          app_location: "." # App source code path (repo root)
           api_location: "" # Api source code path - optional
-          output_location: "/src" # Built app content directory - optional
+          output_location: "_site" # Built app content directory - Eleventy output
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
