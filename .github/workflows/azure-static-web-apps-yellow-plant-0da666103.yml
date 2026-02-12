@@ -22,12 +22,9 @@ jobs:
       - name: Install mise
         run: |
           curl https://mise.run | sh
-      - name: Verify mise
-        run: |
-          mise --version || ~/.local/bin/mise --version
       - name: Build (mise)
         run: |
-          mise run build
+          ~/.local/bin/mise run build
       - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
