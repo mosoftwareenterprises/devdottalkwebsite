@@ -28,6 +28,25 @@
     {% endif %}
     <div class="page-container">
       <main class="main-content">
+      <a href="/"><img alt="The devdottalk logo" src="/devtalk-wide.jpg" loading="lazy" class="center"></a>
+      <section style="
+    width: 100%;
+    background-color: #fff0f5;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid palevioletred;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+">
+    <a href="/next-event" style="
+        color: palevioletred;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+    ">Next Event Information</a>
+</section>
         {{ content | safe }}
       </main>
       {% if includeBlueskyPosts %}
