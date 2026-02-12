@@ -23,11 +23,9 @@ jobs:
         run: |
           curl https://mise.run | sh
       - name: Install dependencies
-        working-directory: devdottalkwebsite
         run: |
           ~/.local/bin/mise exec -- npm ci
       - name: Build
-        working-directory: devdottalkwebsite
         run: |
           ~/.local/bin/mise exec -- npm run build
       - name: Deploy to Azure Static Web Apps
@@ -39,9 +37,9 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "devdottalkwebsite" # App source code path
+          app_location: "." # App source code path (repo root)
           api_location: "" # Api source code path - optional
-          output_location: "devdottalkwebsite/_site" # Built app content directory - Eleventy output
+          output_location: "_site" # Built app content directory - Eleventy output
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
