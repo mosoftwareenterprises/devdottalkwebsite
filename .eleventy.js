@@ -1,4 +1,8 @@
-module.exports = function(eleventyConfig) {
+// import { full as anchor } from "markdown-it-anchor";
+const anchor = require('markdown-it-anchor')
+
+
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/styles.css");
   eleventyConfig.addPassthroughCopy("src/bluesky.css");
   eleventyConfig.addPassthroughCopy("src/bluesky.js");
@@ -9,6 +13,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/*.ico");
   eleventyConfig.addPassthroughCopy("src/staticwebapp.config.json");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
+
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(anchor));
   return {
     dir: {
       input: "src",
