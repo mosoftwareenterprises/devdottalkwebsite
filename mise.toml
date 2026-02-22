@@ -6,7 +6,7 @@ gh = '2'
 NODE_ENV = 'production'
 
 [tasks.build]
-run = "npm install  && npm ci && npm run build"
+run = ["npm install", "npm ci", "npm run build"]
 
 [tasks.start]
 run = "npm start"

@@ -9,5 +9,8 @@
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
     "preview": "sirv _site --single --cors --no-clear --port 8080"
+  },
+  "dependencies": {
+    "markdown-it-anchor": "^9.2.0"
   }
 }
