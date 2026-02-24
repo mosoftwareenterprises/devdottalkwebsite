@@ -72,7 +72,7 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ## Speakers
 
-![Kevin Djabaku Ocansey Speaker headshot](/images/2026/february/First%20Speaker%20image%20-%20February%202026.png){loading=lazy width=100%}
+![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First%20Speaker%20image%20-%March%202026.jpg){loading=lazy width=100%}
 
 ### Kevin Djabaku Ocansey
 
@@ -93,7 +93,7 @@ Kevin is an AI Engineer with an MSc in Data Science and AI from Bournemouth Univ
 
 ---
 
-![Chris Sherry Speaker headshot](/images/2026/february/Second Speaker image - February 2026.png){loading=lazy width=100%}
+![Chris Sherry Speaker headshot](/images/2026/march/Second Speaker image - March 2026.jpg){loading=lazy width=100%}
 
 ### Chris Sherry
 
