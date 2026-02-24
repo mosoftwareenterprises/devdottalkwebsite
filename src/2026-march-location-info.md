@@ -122,32 +122,30 @@ Engineering Manager specialising in web and backend systems, building high-perfo
 
 ## Venue
 
-- **Location:** Room PG22, Poole House, Talbot Campus
+- **Location:** Room K101, Kimmeridge House, Talbot Campus
 - **Address:** Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
 
 ### Getting There
 
 #### Maps & Directions
 
-- [Poole House marked with its name and the number 5 on this map](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf)
+- [Kimmeridge House marked with its name and the number 16 on this map](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf)
 - [Google Maps location of BU visitors car park](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
-- Room location on [Google Maps](https://maps.app.goo.gl/rA32XHSqyJewn4ZF7) or [what3words](https://w3w.co/splash.chief.future)
+- Room K101 location on [Google Maps](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)
 
 ##### Campus Map
 
 Download: [PDF Version](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf)
 
 **Building Entrance:**
-Poole House has 2 entrances:
 
-1. Main entrance via Fern Barrow (accessed directly from the University)
-2. Accessible through the middle of campus
+Kimmeridge House has 1 entrance, and is accessible via the courtyard in the middle of campus.
 
 **Accessibility:**
-The room is on the ground floor and fully accessible with a ramp.
+The room is on the first floor and fully accessible with a flat entrance at the ground floor with a lift to the first floor.
 
 **Room Entrance:**
-Located on the ground floor, down the corridor to the left as you enter via the Fern Barrow entrance (next to reception).
+Located on the first floor, turn left at the top of the stairs, or turn right if exiting the lift.
 
 #### Travel Options
 
