@@ -72,7 +72,7 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ## Speakers
 
-![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First%20Speaker%20image%20-%March%202026.png){loading=lazy width=100%}
+![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First Speaker image - March 2026.png){loading=lazy width=100%}
 
 ### Kevin Djabaku Ocansey
 
