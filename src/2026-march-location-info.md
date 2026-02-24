@@ -115,7 +115,7 @@ Engineering Manager specialising in web and backend systems, building high-perfo
 
 ---
 
-<section style="display:nonw">
+<section style="display:none">
 
 ## Venue
 
