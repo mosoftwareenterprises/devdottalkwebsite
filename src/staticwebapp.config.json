@@ -11,6 +11,11 @@
             "statusCode": 301
         },
         {
+            "route": "/calendar",
+            "redirect": "https://luma.com/devdottalk",
+            "statusCode": 301
+        },
+        {
             "route": "/tickets",
             "redirect": "https://devdottalk.eventbrite.com",
             "statusCode": 301
@@ -18,6 +23,16 @@
         {
             "route": "/next-event",
             "redirect": "/2026-february-location-info.html",
+            "statusCode": 301
+        },
+        {
+            "route": "/tickets2",
+            "redirect": "https://luma.com/gelthyz0",
+            "statusCode": 301
+        },
+        {
+            "route": "/next-event2",
+            "redirect": "/2026-march-location-info.html",
             "statusCode": 301
         }
     ],
