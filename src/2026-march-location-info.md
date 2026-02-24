@@ -33,7 +33,7 @@ permalink: 2026-march-location-info.html
 
 Hi there,
 
-This month we are taking a delve into the world of AI talking about building an Agentic Mobile OS and also learning how being a manager can make you a better engineer with our 2 talks.
+This month we are taking a delve into the world of AI to talk about building an Agentic Mobile OS and also learning how being a manager can make you a better engineer.
 
 Thank you for being part of our amazing community of software engineers and tech enthusiasts.
 
@@ -72,54 +72,50 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ## Speakers
 
+![Kevin Djabaku Ocansey Speaker headshot](/images/2026/february/First%20Speaker%20image%20-%20February%202026.png){loading=lazy width=100%}
 
-Kevin Djabaku Ocansey 	Building Agentic Mobile OS for privacy 	"I'll be sharing my journey of building JarvisOS; a privacy-first mobile operating system that keeps AI local on your device.
+### Kevin Djabaku Ocansey
+
+[LinkedIn Profile](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/)
+
+**AI Engineer**
+
+#### Building Agentic Mobile OS for privacy
+
+I'll be sharing my journey of building JarvisOS; a privacy-first mobile operating system that keeps AI local on your device.
 The talk will walk through how I got here: starting with learning how AI systems remember and retrieve information (RAG), understanding how computers can find similar pieces of data quickly (vector databases), and diving into Android's deep internals to make it all work at the system level.
 I'll then introduce JarvisOS itself - what we're building, why it's different from existing solutions, and how we're using Cactus (a lightweight AI framework) to make powerful AI run entirely on your phone without sending anything to the cloud.
-We'll wrap up with a practical demonstration: a live notebook showing how AI models get compressed to fit on mobile devices - taking something that normally requires massive servers and making it work in your pocket."
-
-
-![Tiago Amoroso Speaker headshot](/images/2026/february/First%20Speaker%20image%20-%20February%202026.png){loading=lazy width=100%}
-
-### Tiago Amoroso
-
-[LinkedIn Profile](https://www.linkedin.com/in/tiago-amoroso-toggle-games/)
-
-**Game Developer**
-
-#### The 80/20 Rule of Game Jams
-
-A practical breakdown of the 20% of decisions that lead to 80% of results in game jams -> helping you finish more games, learn faster, and avoid common pitfalls.
+We'll wrap up with a practical demonstration: a live notebook showing how AI models get compressed to fit on mobile devices - taking something that normally requires massive servers and making it work in your pocket.
 
 #### Speaker Bio
 
-Tiago is a software engineer specializing in data science and game development. He has an upcoming Unity-based commercial mobile game release called 'Scrolly Rolly'. His first-class dissertation explored drone swarm technology for Search & Rescue applications.
+Kevin is an AI Engineer with an MSc in Data Science and AI from Bournemouth University, specializing in Computer Vision and Neuronal Analysis
 
 ---
-Chris Sherry	How becoming a manager made me a better engineer	"In the last 5 years, I have transitioned from an individual contributor, to a manager of an engineering team with increasingly more reports and more responsibility.
+
+![Chris Sherry Speaker headshot](/images/2026/february/Second Speaker image - February 2026.png){loading=lazy width=100%}
+
+### Chris Sherry
+
+[LinkedIn Profile](https://uk.linkedin.com/in/%F0%9F%90%98-chris-sherry-ab091721)
+
+**Engineering Manager at Passenger**
+
+#### How becoming a manager made me a better engineer
+
+In the last 5 years, I have transitioned from an individual contributor, to a manager of an engineering team with increasingly more reports and more responsibility.
 
 In this talk, I'll guide through what this journey has taught be about management, but also what it has taught be about being a better engineer.
 
-Topics include: management styles and traps, prioritisation, estimation and time management, recruitment (and being recruited), and staying mentally healthy."
-
-
-![Miguel Salvador Speaker headshot](/images/2026/february/Second Speaker image - February 2026.png){loading=lazy width=100%}
-
-### Miguel Salvador
-
-[LinkedIn Profile](https://www.linkedin.com/in/miguelsalvador19/)
-
-**Full stack Software Engineer**
-
-#### Shipping Faster by Debugging Marketing
-
-What to do in different stages of your game development to gain an audience, and best practices with debug menus and communicating with a publisher's marketing team.
+Topics include: management styles and traps, prioritisation, estimation and time management, recruitment (and being recruited), and staying mentally healthy.
 
 ##### Speaker Bio
 
-Software engineer with 3+ years of work experience focused on Full Stack Development and Automation.
+Engineering Manager specialising in web and backend systems, building high-performing, people-first teams with strong commercial focus. Active in the PHP community, I’ve organised initiatives, spoken at conferences, and lead digital delivery for a charity festival that has raised over £850,000.
 
 ---
+
+<section style="display:nonw">
 
 ## Venue
 
@@ -161,6 +157,7 @@ Free during the event. Check signage when parking:
 [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
 
 ---
+</section>
 
 ## What to Expect
 
