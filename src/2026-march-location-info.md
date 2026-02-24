@@ -72,11 +72,15 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ## Speakers
 
-[![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First Speaker image - March 2026.png)](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/ "Linkedin Profile")
+<a href="https://www.linkedin.com/in/kevin-ocansey-3000b91b2/" alt="Kevin Ocansey Linkedin Profile" title="Kevin Ocansey Linkedin Profile">
 
-### [Kevin Djabaku Ocansey](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/ "Linkedin Profile")
+![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First Speaker image - March 2026.png){loading=lazy width=100%}
+
+### Kevin Djabaku Ocansey
 
 **AI Engineer**
+
+</a>
 
 #### Building Agentic Mobile OS for privacy
 
@@ -91,11 +95,14 @@ Kevin is an AI Engineer with an MSc in Data Science and AI from Bournemouth Univ
 
 ---
 
+<a href="https://uk.linkedin.com/in/%F0%9F%90%98-chris-sherry-ab091721" alt="Chris Sherry Linkedin Profile" title="Chris Sherry Linkedin Profile">
+
 ![Chris Sherry Speaker headshot](/images/2026/march/Second Speaker image - March 2026.png){loading=lazy width=100%}
 
-### [Chris Sherry](https://uk.linkedin.com/in/%F0%9F%90%98-chris-sherry-ab091721)
+### Chris Sherry
 
 **Engineering Manager at Passenger**
+</a>
 
 #### How becoming a manager made me a better engineer
 
@@ -105,7 +112,7 @@ In this talk, I'll guide through what this journey has taught be about managemen
 
 Topics include: management styles and traps, prioritisation, estimation and time management, recruitment (and being recruited), and staying mentally healthy.
 
-##### Speaker Bio
+#### Speaker Bio
 
 Engineering Manager specialising in web and backend systems, building high-performing, people-first teams with strong commercial focus. Active in the PHP community, I’ve organised initiatives, spoken at conferences, and lead digital delivery for a charity festival that has raised over £850,000.
 
