@@ -78,6 +78,13 @@ Thank you for being part of our amazing community of software engineers and tech
 
 [LinkedIn Profile](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/)
 
+
+
+### [Kevin Djabaku Ocansey](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/)
+
+
+[![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First Speaker image - March 2026.png)](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/ "Linkedin Profile")
+
 **AI Engineer**
 
 #### Building Agentic Mobile OS for privacy
@@ -95,9 +102,7 @@ Kevin is an AI Engineer with an MSc in Data Science and AI from Bournemouth Univ
 
 ![Chris Sherry Speaker headshot](/images/2026/march/Second Speaker image - March 2026.png){loading=lazy width=100%}
 
-### Chris Sherry
-
-[LinkedIn Profile](https://uk.linkedin.com/in/%F0%9F%90%98-chris-sherry-ab091721)
+### [Chris Sherry](https://uk.linkedin.com/in/%F0%9F%90%98-chris-sherry-ab091721)
 
 **Engineering Manager at Passenger**
 
