@@ -72,18 +72,9 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ## Speakers
 
-![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First Speaker image - March 2026.png){loading=lazy width=100%}
-
-### Kevin Djabaku Ocansey
-
-[LinkedIn Profile](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/)
-
-
-
-### [Kevin Djabaku Ocansey](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/)
-
-
 [![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First Speaker image - March 2026.png)](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/ "Linkedin Profile")
+
+### [Kevin Djabaku Ocansey](https://www.linkedin.com/in/kevin-ocansey-3000b91b2/ "Linkedin Profile")
 
 **AI Engineer**
 
