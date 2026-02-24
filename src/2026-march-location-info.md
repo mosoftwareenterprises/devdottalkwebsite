@@ -33,7 +33,7 @@ permalink: 2026-march-location-info.html
 
 Hi there,
 
-This month we are collaborating with the [Bournemouth University Games Development Society](https://www.subu.org.uk/organisation/gds/) for a Games Development focussed event.
+This month we are taking a delve into the world of AI talking about building an Agentic Mobile OS and also learning how being a manager can make you a better engineer with our 2 talks.
 
 Thank you for being part of our amazing community of software engineers and tech enthusiasts.
 
@@ -72,6 +72,13 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ## Speakers
 
+
+Kevin Djabaku Ocansey 	Building Agentic Mobile OS for privacy 	"I'll be sharing my journey of building JarvisOS; a privacy-first mobile operating system that keeps AI local on your device.
+The talk will walk through how I got here: starting with learning how AI systems remember and retrieve information (RAG), understanding how computers can find similar pieces of data quickly (vector databases), and diving into Android's deep internals to make it all work at the system level.
+I'll then introduce JarvisOS itself - what we're building, why it's different from existing solutions, and how we're using Cactus (a lightweight AI framework) to make powerful AI run entirely on your phone without sending anything to the cloud.
+We'll wrap up with a practical demonstration: a live notebook showing how AI models get compressed to fit on mobile devices - taking something that normally requires massive servers and making it work in your pocket."
+
+
 ![Tiago Amoroso Speaker headshot](/images/2026/february/First%20Speaker%20image%20-%20February%202026.png){loading=lazy width=100%}
 
 ### Tiago Amoroso
@@ -89,6 +96,12 @@ A practical breakdown of the 20% of decisions that lead to 80% of results in gam
 Tiago is a software engineer specializing in data science and game development. He has an upcoming Unity-based commercial mobile game release called 'Scrolly Rolly'. His first-class dissertation explored drone swarm technology for Search & Rescue applications.
 
 ---
+Chris Sherry	How becoming a manager made me a better engineer	"In the last 5 years, I have transitioned from an individual contributor, to a manager of an engineering team with increasingly more reports and more responsibility.
+
+In this talk, I'll guide through what this journey has taught be about management, but also what it has taught be about being a better engineer.
+
+Topics include: management styles and traps, prioritisation, estimation and time management, recruitment (and being recruited), and staying mentally healthy."
+
 
 ![Miguel Salvador Speaker headshot](/images/2026/february/Second Speaker image - February 2026.png){loading=lazy width=100%}
 
