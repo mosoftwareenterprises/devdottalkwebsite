@@ -45,11 +45,16 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ## Table of Contents
 
+<section style="display:none">
+
+- [Getting There](#getting-there)
+- [What to Expect](#what-to-expect)
+
+</section>
+
 - [Event Details](#event-details)
 - [Speakers](#speakers)
 - [Venue](#venue)
-- [Getting There](#getting-there)
-- [What to Expect](#what-to-expect)
 - [Important Notes](#important-notes)
 
 </section>
@@ -164,7 +169,9 @@ Free during the event. Check signage when parking:
 
 We'll have soft drinks and some snacks available to keep you refreshed throughout the evening. If you have any dietary restrictions or allergen concerns, please let our organisers know.
 
-Upon arrival, we'll check your ticket and provide you with a name badge. This is a great opportunity to network with fellow attendees, so don't be shy, introduce yourself
+Upon arrival, we'll check your ticket and provide you with a name badge. This is a great opportunity to network with fellow attendees, so don't be shy, introduce yourself.
+
+The night will consist of some software focussed talks (normally 2) interspersed with networking opportunities.
 
 ---
 
