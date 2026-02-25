@@ -47,8 +47,8 @@ Thank you for being part of our amazing community of software engineers and tech
 
 <section style="display:none">
 
-- [Getting There](#getting-there)
 - [Venue](#venue)
+- [Getting There](#getting-there)
 
 </section>
 
