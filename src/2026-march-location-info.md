@@ -48,14 +48,14 @@ Thank you for being part of our amazing community of software engineers and tech
 <section style="display:none">
 
 - [Getting There](#getting-there)
-- [What to Expect](#what-to-expect)
+- [Venue](#venue)
 
 </section>
 
 - [Event Details](#event-details)
 - [Speakers](#speakers)
-- [Venue](#venue)
 - [Important Notes](#important-notes)
+- [What to Expect](#what-to-expect)
 
 </section>
 

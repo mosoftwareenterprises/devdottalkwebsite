@@ -13,7 +13,7 @@
         {
             "route": "/calendar",
             "redirect": "https://luma.com/devdottalk",
-            "statusCode": 301
+            "statusCode": 302
         },
         {
             "route": "/tickets",
