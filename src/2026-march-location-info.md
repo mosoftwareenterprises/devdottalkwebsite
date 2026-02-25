@@ -73,6 +73,44 @@ Thank you for being part of our amazing community of software engineers and tech
 
 **Location:** Bournemouth University, Talbot Campus
 
+<section style="display:none">
+
+## Venue
+
+- **Location:** Room K101, Kimmeridge House, Talbot Campus
+- **Address:** Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
+
+### Getting There
+
+#### Maps & Directions
+
+- [Kimmeridge House](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf) -marked with its name and the number 16 on this map
+- [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8) - location of BU visitors car park
+- Room K101 location on [Google Maps](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)
+
+##### Campus Map
+
+Download: [PDF Version](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf)
+
+**Building Entrance:**
+
+Kimmeridge House has 1 entrance, and is accessible via the courtyard in the middle of campus.
+
+**Accessibility:**
+The room is on the first floor and fully accessible with a flat entrance at the ground floor with a lift to the first floor.
+
+**Room Entrance:**
+Located on the first floor, turn left at the top of the stairs, or turn right if exiting the lift.
+
+#### Travel Options
+
+- **Bus:** Drops off at main entrance on Fern Barrow.
+- **Train:** Nearest station is Bournemouth Station (~45 min walk). Taxi or bus from station takes 15 mins.
+- **Bike:** Bike racks available on campus.
+- **Parking:** Free during the event. Check signage when parking: [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
+
+</section>
+
 ---
 
 ## Speakers
@@ -122,48 +160,6 @@ Topics include: management styles and traps, prioritisation, estimation and time
 Engineering Manager specialising in web and backend systems, building high-performing, people-first teams with strong commercial focus. Active in the PHP community, I’ve organised initiatives, spoken at conferences, and lead digital delivery for a charity festival that has raised over £850,000.
 
 ---
-
-<section style="display:none">
-
-## Venue
-
-- **Location:** Room K101, Kimmeridge House, Talbot Campus
-- **Address:** Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
-
-### Getting There
-
-#### Maps & Directions
-
-- [Kimmeridge House marked with its name and the number 16 on this map](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf)
-- [Google Maps location of BU visitors car park](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
-- Room K101 location on [Google Maps](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)
-
-##### Campus Map
-
-Download: [PDF Version](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf)
-
-**Building Entrance:**
-
-Kimmeridge House has 1 entrance, and is accessible via the courtyard in the middle of campus.
-
-**Accessibility:**
-The room is on the first floor and fully accessible with a flat entrance at the ground floor with a lift to the first floor.
-
-**Room Entrance:**
-Located on the first floor, turn left at the top of the stairs, or turn right if exiting the lift.
-
-#### Travel Options
-
-- **Bus:** Drops off at main entrance on Fern Barrow.
-- **Train:** Nearest station is Bournemouth Station (~45 min walk). Taxi or bus from station takes 15 mins.
-- **Bike:** Bike racks available on campus.
-
-**Parking:**
-Free during the event. Check signage when parking:
-[Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
-
----
-</section>
 
 ## What to Expect
 
