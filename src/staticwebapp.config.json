@@ -18,12 +18,12 @@
         {
             "route": "/tickets",
             "redirect": "https://luma.com/gelthyz0",
-            "statusCode": 301
+            "statusCode": 302
         },
         {
             "route": "/next-event",
             "redirect": "/2026-march-location-info.html",
-            "statusCode": 301
+            "statusCode": 302
         }
     ],
     "navigationFallback": {
