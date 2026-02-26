@@ -7,16 +7,28 @@ hideNextEventBanner: true
 hideMainLogo: false
 permalink: 2026-march-location-info.html
 ---
+
 <iframe
   src="https://luma.com/embed/event/evt-JzsilWMHPpTsKHt/simple"
-  width="600"
-  height="450"
+  width="100%"
+  height="600"
   frameborder="0"
   style="border: 1px solid #bfcbda88; border-radius: 4px;"
   allow="fullscreen;"
   aria-hidden="false"
   tabindex="0"
 ></iframe>
+
+<a
+  href="https://luma.com/event/evt-JzsilWMHPpTsKHt"
+  class="luma-checkout--button"
+  data-luma-action="checkout"
+  data-luma-event-id="evt-JzsilWMHPpTsKHt"
+>
+  Register for Event
+</a>
+
+<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 
 <section style="display:none;
     width: 100%;
