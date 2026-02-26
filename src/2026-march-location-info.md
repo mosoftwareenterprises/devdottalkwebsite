@@ -37,7 +37,7 @@ This month we are taking a delve into the world of AI to talk about building an 
 
 Thank you for being part of our amazing community of software engineers and tech enthusiasts.
 
-**Quick Reminder:** Organising these events takes a lot of time and effort from our dedicated volunteers. If your plans change and you can't make it, please cancel your ticket via the app or drop us an email at [contactus@devdottalk.uk](mailto:contactus@devdottalk.uk).This helps us manage the event better and allows others to attend.
+**Quick Reminder:** Organising these events takes a lot of time and effort from our dedicated volunteers. If your plans change and you can't make it, please cancel your ticket via the ticketing app or drop us an email at [contactus@devdottalk.uk](mailto:contactus@devdottalk.uk).This helps us manage the event better and allows others to attend.
 
 ---
 
