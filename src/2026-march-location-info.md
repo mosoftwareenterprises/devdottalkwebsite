@@ -8,6 +8,7 @@ hideMainLogo: false
 permalink: 2026-march-location-info.html
 ---
 
+
 <iframe
   src="https://luma.com/embed/event/evt-JzsilWMHPpTsKHt/simple"
   width="100%"
@@ -19,14 +20,14 @@ permalink: 2026-march-location-info.html
   tabindex="0"
 ></iframe>
 
-<a
-  href="https://luma.com/event/evt-JzsilWMHPpTsKHt"
+
+<a href="https://luma.com/event/evt-JzsilWMHPpTsKHt"
   class="luma-checkout--button"
   data-luma-action="checkout"
-  data-luma-event-id="evt-JzsilWMHPpTsKHt"
->
+  data-luma-event-id="evt-JzsilWMHPpTsKHt">
   Register for Event
 </a>
+
 
 <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 
