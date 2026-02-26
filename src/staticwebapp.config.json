@@ -11,6 +11,11 @@
             "statusCode": 301
         },
         {
+            "route": "/support-us",
+            "redirect": "https://ko-fi.com/devdottalk",
+            "statusCode": 302
+        },
+        {
             "route": "/calendar",
             "redirect": "https://luma.com/devdottalk",
             "statusCode": 302
