@@ -1,26 +1,7 @@
 <!-- Floating Register Button -->
 <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
-<div style="
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 998;
-        ">
-    <a href="/tickets" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="{{ eventId }}" 
-    style="
-                display: inline-block;
-                padding: 12px 24px;                     
-                background-color: #1a99a2;        
-                color: rgb(255,255,255);
-                text-decoration: none;                
-                border: 2px solid #445e7f;
-                border-radius: 6px;
-                font-weight: bold;
-                box-shadow: 0 4px 12px rgba(26, 153, 162, 0.4);
-                transition: transform 0.2s, box-shadow 0.2s;
-              " 
-              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(26, 153, 162, 0.6)';"
-              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(26, 153, 162, 0.4)';">
-        Get your ticket
+<div id="floating-register">
+    <a href="/tickets" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="{{ eventId }}">
+        Get your free ticket
     </a>
 </div>

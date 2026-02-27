@@ -61,6 +61,25 @@ main>h1 {
   }
 }
 
+/* Floating register button appearance (moved from inline in template) */
+#floating-register .luma-checkout--button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1a99a2;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 3px solid #445e7f;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(26, 153, 162, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#floating-register .luma-checkout--button:hover,
+#floating-register .luma-checkout--button:focus {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(26, 153, 162, 0.6);
+}
 .text {
   padding-left: 20px;
   float: left;
@@ -99,4 +118,30 @@ footer {
   width: 100%;
   box-sizing: border-box;
   font-size: 0.75em;
+}
+/* floating register button positioning */
+#floating-register {
+  position: fixed;
+  bottom: 20px;
+  right: calc(28%);
+  z-index: 998;
+}
+
+
+@media screen and (max-width: 768px) {
+  #floating-register {
+    right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1268px) {
+  #floating-register {
+    right: calc(28%);
+  }
+}
+
+@media screen and (min-width: 1268px) {
+  #floating-register {
+    left: calc(50% + 7em);
+  }
 }
