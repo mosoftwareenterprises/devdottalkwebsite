@@ -8,13 +8,23 @@ hideMainLogo: false
 permalink: 2026-march-location-info.html
 ---
 
+<iframe
+  src="https://luma.com/embed/calendar/cal-2SLOGcFpbNCs6OH/events?lt=dark"
+  width="600"
+  height="450"
+  frameborder="0"
+  style="border: 1px solid #bfcbda88; border-radius: 4px;min-height:450px;"
+  allowfullscreen=""
+  aria-hidden="false"
+  tabindex="0"
+></iframe>
 
 <iframe
   src="https://luma.com/embed/event/evt-JzsilWMHPpTsKHt/simple"
   width="100%"
-  height="600"
+  height="450"
   frameborder="0"
-  style="border: 1px solid #bfcbda88; border-radius: 4px;"
+  style="border: 1px solid #bfcbda88; border-radius: 4px; min-height:450px;"
   allow="fullscreen;"
   aria-hidden="false"
   tabindex="0"
