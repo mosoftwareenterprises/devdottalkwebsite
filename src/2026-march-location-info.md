@@ -8,28 +8,6 @@ hideMainLogo: false
 permalink: 2026-march-location-info.html
 ---
 
-<section style="
-    width: 100%;
-    background-color: #fff0f5;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 3px solid rgb(112, 136, 216);
-    margin: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-">
-    <a href="/tickets"
-      class="luma-checkout--button"
-      data-luma-action="checkout"
-      data-luma-event-id="evt-JzsilWMHPpTsKHt">
-      Get your ticket
-    </a>
-</section>
-
-{% include "floating-register-button.njk", eventId: "evt-JzsilWMHPpTsKHt" %}
-
 # Welcome to the March 2026 {dev.talk} Meetup
 
 ## The One Where JARVIS Fits in Your Pocket and the IC Grows Up
