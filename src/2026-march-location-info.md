@@ -167,7 +167,8 @@ We'll wrap up with a practical demonstration: a live notebook showing how AI mod
 
 #### Speaker Bio
 
-Kevin is an AI Engineer with an MSc in Data Science and AI from Bournemouth University, specializing in Computer Vision and Neuronal Analysis
+Kevin is a recent Data Science and AI Graduate with a passion for building intelligent systems, primarily with Python. A multiple hackathon winner, he considers himself an AI Engineer at heart, with a strong foundation in both software engineering and data Science. Still exploring where to specialise, Kevin is driven by curiosity and a love for community, most recently volunteering at the Reconnect conference through the Sam and Ray podcast.
+
 
 ---
 
