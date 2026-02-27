@@ -8,40 +8,9 @@ hideMainLogo: false
 permalink: 2026-march-location-info.html
 ---
 
-<iframe
-  src="https://luma.com/embed/calendar/cal-2SLOGcFpbNCs6OH/events?lt=dark"
-  width="600"
-  height="450"
-  frameborder="0"
-  style="border: 1px solid #bfcbda88; border-radius: 4px;min-height:450px;"
-  allowfullscreen=""
-  aria-hidden="false"
-  tabindex="0"
-></iframe>
-
-<iframe
-  src="https://luma.com/embed/event/evt-JzsilWMHPpTsKHt/simple"
-  width="100%"
-  height="450"
-  frameborder="0"
-  style="border: 1px solid #bfcbda88; border-radius: 4px; min-height:450px;"
-  allow="fullscreen;"
-  aria-hidden="false"
-  tabindex="0"
-></iframe>
-
-
-<a href="https://luma.com/event/evt-JzsilWMHPpTsKHt"
-  class="luma-checkout--button"
-  data-luma-action="checkout"
-  data-luma-event-id="evt-JzsilWMHPpTsKHt">
-  Register for Event
-</a>
-
-
 <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 
-<section style="display:none;
+<section style="
     width: 100%;
     background-color: #fff0f5;
     padding: 20px 0;
@@ -50,14 +19,12 @@ permalink: 2026-march-location-info.html
     margin: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 ">
-    <a href="/tickets" style="
-        color: rgb(112, 136, 216);
-        font-size: 18px;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 10px 20px;
-        display: inline-block;
-    ">Get your Free ticket here.</a>
+    <a href="/tickets"
+      class="luma-checkout--button"
+      data-luma-action="checkout"
+      data-luma-event-id="evt-JzsilWMHPpTsKHt">
+      Register for Free
+    </a>
 </section>
 
 # Welcome to the March 2026 {dev.talk} Meetup
