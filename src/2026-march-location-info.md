@@ -18,6 +18,9 @@ permalink: 2026-march-location-info.html
     border-bottom: 3px solid rgb(112, 136, 216);
     margin: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 ">
     <a href="/tickets"
       class="luma-checkout--button"
@@ -26,6 +29,34 @@ permalink: 2026-march-location-info.html
       Register for Free
     </a>
 </section>
+
+<!-- Floating Register Button -->
+<div style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 998;
+">
+    <a href="/tickets"
+      class="luma-checkout--button"
+      data-luma-action="checkout"
+      data-luma-event-id="evt-JzsilWMHPpTsKHt"
+      style="
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: rgb(112, 136, 216);
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(112, 136, 216, 0.4);
+        transition: transform 0.2s, box-shadow 0.2s;
+      "
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(112, 136, 216, 0.6)';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(112, 136, 216, 0.4)';">
+      Register for Free
+    </a>
+</div>
 
 # Welcome to the March 2026 {dev.talk} Meetup
 
