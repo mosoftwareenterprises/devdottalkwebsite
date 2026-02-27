@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/bluesky.css">
     <title>{{ title | default("{dev.talk}") }}</title>
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
     <meta name="description" property="og:description" content="{{ description | default("{dev.talk} a FREE monthly meetup for software engineers and related disciplines in the south of the UK run by volunteers within the community.") }}">
     <meta name="title" property="og:title" content="{{ title | default("{dev.talk}") }}">
     <meta property="og:type" content="website">
@@ -20,46 +20,47 @@
   <body>
     <script src="/bluesky.js"></script>
     {% if includeBlueskyPosts %}
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        loadBlueskyPosts('devdottalk.uk', 'bluesky-posts', 3);
-      });
-    </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          loadBlueskyPosts('devdottalk.uk', 'bluesky-posts', 3);
+        });
+      </script>
     {% endif %}
     <div class="page-container">
       <main class="main-content">
-         {% if hideMainLogo %}
-         {% else %}
-      <a href="/"><img alt="The devdottalk logo" src="/devtalk-wide.jpg" loading="lazy" class="center"></a>
-      {% endif %}
-{% if hideNextEventBanner %}
-{% else %}
-      <section style="
-    width: 100%;
-    background-color: #fff0f5;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 3px solid palevioletred;
-    margin: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-">
-    <a href="/next-event" style="
-        color: palevioletred;
-        font-size: 18px;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 10px 20px;
-        display: inline-block;
-    ">Next Event Information</a>
-</section>
-
-    {% endif %}
+        {% if hideMainLogo %}
+          {% else %}
+            <a href="/"><img alt="The devdottalk logo" src="/devtalk-wide.jpg" loading="lazy" class="center"></a>
+        {% endif %}
+        {% if hideNextEventBanner %}
+          {% else %}
+            <section style="
+                    width: 100%;
+                    background-color: #fff0f5;
+                    padding: 20px 0;
+                    text-align: center;
+                    border-bottom: 3px solid palevioletred;
+                    margin: 0;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                ">
+              <a href="/next-event" style="
+                        color: palevioletred;
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        padding: 10px 20px;
+                        display: inline-block;
+                    ">Next Event Information</a>
+            </section>
+        {% endif %}
         {{ content | safe }}
       </main>
       {% if includeBlueskyPosts %}
-      <div id="bluesky-posts">
-        <!-- Posts will be loaded here --> Loading posts...
-      </div>
+        <div
+          id="bluesky-posts">
+          <!-- Posts will be loaded here -->
+          Loading posts...
+        </div>
       {% endif %}
     </div>
     <footer>
