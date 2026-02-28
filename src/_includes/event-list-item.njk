@@ -1,21 +1,23 @@
 {% macro eventItem(date, eventUrl, eventTitle, photoUrl, video1Title, video1Url, video2Title, video2Url, video3Title, video3Url) %}
-    <li>{{ date }}:
-        <a href="{{ eventUrl }}" target="_blank">{{ eventTitle }}</a>
+  <li>
+    <div class="event-item">
+      <a href="{{ eventUrl }}" target="_blank" class="event-title">{{ date }}: {{ eventTitle }}</a>
+      {%- if (photoUrl and photoUrl != "TODO") or (video1Url and video1Url != "TODO") or (video2Url and video2Url != "TODO") or (video3Url and video3Url != "TODO") %}
+      <ul class="event-links">
         {%- if photoUrl and photoUrl != "TODO" %}
-            -
-            <a href="{{ photoUrl }}" target="_blank">Photos</a>
+        <li><a href="{{ photoUrl }}" target="_blank" class="event-link event-link--photos">📸 Photos</a></li>
         {%- endif %}
         {%- if video1Url and video1Url != "TODO" %}
-            -
-            <a href="{{ video1Url }}" target="_blank">{{ video1Title }}</a>
+        <li><a href="{{ video1Url }}" target="_blank" class="event-link event-link--video">▶️ {{ video1Title }}</a></li>
         {%- endif %}
         {%- if video2Url and video2Url != "TODO" %}
-            -
-            <a href="{{ video2Url }}" target="_blank">{{ video2Title }}</a>
+        <li><a href="{{ video2Url }}" target="_blank" class="event-link event-link--video">▶️ {{ video2Title }}</a></li>
         {%- endif %}
         {%- if video3Url and video3Url != "TODO" %}
-            -
-            <a href="{{ video3Url }}" target="_blank">{{ video3Title }}</a>
+        <li><a href="{{ video3Url }}" target="_blank" class="event-link event-link--video">▶️ {{ video3Title }}</a></li>
         {%- endif %}
-    </li>
+      </ul>
+      {%- endif %}
+    </div>
+  </li>
 {% endmacro %}
