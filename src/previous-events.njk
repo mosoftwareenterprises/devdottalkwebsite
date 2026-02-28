@@ -5,93 +5,27 @@ description: "A history of past {dev.talk} meetups, with links to recordings and
 permalink: previous-events.html
 ---
 
+{% import "event-list-item.njk" as event %}
+
 <section class="previous-events">
   <h1>Previous events</h1>
   <p>The following is a list of our past {dev.talk} meetups. Click the links for details, recordings or photos where available.</p>
   <ul>
     <h3>2026</h3>
-    <li>February 25th 2026:
-      <a href="/2026-february-location-info.html" target="_blank">{dev.talk} - The One With The Gaming Collab</a>
-    </li>
-    <li>January 28th 2026:
-      <a href="/2026-january-location-info.html" target="_blank">{dev.talk} - The one in the new year</a>
-    </li>
+    {{ event.eventItem("February 25th 2026", "/2026-february-location-info.html", "{dev.talk} - The One With The Gaming Collab", "TODO", "TODO") }}
+    {{ event.eventItem("January 28th 2026", "/2026-january-location-info.html", "{dev.talk} - The one in the new year", "TODO", "TODO") }}
     <h3>2025</h3>
-    <li>December 17th 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-with-something-different-tickets-1730678890149?aff=oddtdtcreator" target="_blank">{dev.talk} - The one with something different</a>
-    </li>
-    <li>November 26th 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-with-our-birthday-tickets-1730677285349?aff=oddtdtcreator" target="_blank">{dev.talk} - The one with our Birthday</a>
-    </li>
-    <li>October 22nd 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-pms-ask-designers-imagine-and-devs-improvise-tickets-1730652110049?aff=oddtdtcreator" target="_blank">{dev.talk} - The One Where PMs Ask, Designers Imagine, and Devs Improvise</a>
-      -
-      <a href="https://youtu.be/yv2jTL2zrXc" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/2pGzP9X5vUcYsSBg9" target="_blank">Photos</a>
-    </li>
-    <li>September 24th 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-learn-to-level-up-our-devex-tickets-1666958901949?aff=oddtdtcreator" target="_blank">{dev.talk} - The one where we learn to Level Up Our DevEx</a>
-      -
-      <a href="https://youtu.be/V-hObfFaebw" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/3jbDBpeiCG1fSQme8" target="_blank">Photos</a>
-    </li>
-    <li>July 23rd 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-with-the-conference-come-down-tickets-1383069260389" target="_blank">{dev.talk} - The one with the conference come down</a>
-      -
-      <a href="https://youtu.be/GaliZWc-cTo" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/nBgagTf8GmauaGyz8" target="_blank">Photos</a>
-    </li>
-    <li>June 25th 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-connect-before-reconnect-tickets-1335283451749?aff=oddtdtcreator" target="_blank">{dev.talk} - The one where we connect before re:connect</a>
-      -
-      <a href="https://www.youtube.com/@devdottalk" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/fiZCvRTvUaFsgU6r9" target="_blank">Photos</a>
-    </li>
-    <li>May 21st 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-open-source-ai-tries-to-break-into-tech-tickets-1312789481679?aff=oddtdtcreator" target="_blank">{dev.talk} - The one where Open Source AI tries to break into Tech</a>
-      -
-      <a href="https://youtu.be/pOkN0fQrWSQ" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/vJcDBSHSBBs9cHNe6" target="_blank">Photos</a>
-    </li>
-    <li>April 23rd 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-will-see-you-at-bu-tickets-1292820513959?aff=oddtdtcreator" target="_blank">{dev.talk} - The one where we will see you at BU</a>
-      -
-      <a href="https://youtu.be/KYxJebvBo-A" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/1C7HXnTU2NarS4X88" target="_blank">Photos</a>
-    </li>
-    <li>March 26th 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-with-creatives-coders-at-cottonwood-tickets-1261177177889?aff=oddtdtcreator" target="_blank">{dev.talk} - The one with Creatives & Coders at Cottonwood</a>
-      -
-      <a href="https://youtu.be/7pvuFaCC5Q8" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/mVEhNfpd1fYcEMcs5" target="_blank">Photos</a>
-    </li>
-    <li>February 26th 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-forged-friendships-at-the-foundry-tickets-1132558205079?aff=oddtdtcreator" target="_blank">{dev.talk} - The one where we forged friendships at the FOUNDRY</a>
-      -
-      <a href="https://www.youtube.com/watch?v=XVukg9Rt_ww" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/q9C4RTZuFEgwcZqU6" target="_blank">Photos</a>
-    </li>
-    <li>January 30th 2025:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator" target="_blank">{dev.talk} - The one where we deployed our first PATCH</a>
-      -
-      <a href="https://youtu.be/myIPUjc4P6s?si=-S70-Za6nGA0OWTQ&t=2216" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/65mdTC2EFAhdmWYb6" target="_blank">Photos</a>
-    </li>
-    <li>November 27th 2024:
-      <a href="https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator" target="_blank">{dev.talk} - the one where we got started</a>
-      -
-      <a href="https://www.youtube.com/watch?si=J6UpHEy-f_aVzKD3&v=lJJxj38ZPLU&feature=youtu.be" target="_blank">Watch</a>
-      -
-      <a href="https://photos.app.goo.gl/V8GmT5GTm1BS9VUc6" target="_blank">Photos</a>
-    </li>
+    {{ event.eventItem("December 17th 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-with-something-different-tickets-1730678890149?aff=oddtdtcreator", "{dev.talk} - The one with something different", "TODO", "TODO") }}
+    {{ event.eventItem("November 26th 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-with-our-birthday-tickets-1730677285349?aff=oddtdtcreator", "{dev.talk} - The one with our Birthday", "TODO", "TODO") }}
+    {{ event.eventItem("October 22nd 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-where-pms-ask-designers-imagine-and-devs-improvise-tickets-1730652110049?aff=oddtdtcreator", "{dev.talk} - The One Where PMs Ask, Designers Imagine, and Devs Improvise", "https://youtu.be/yv2jTL2zrXc", "https://photos.app.goo.gl/2pGzP9X5vUcYsSBg9") }}
+    {{ event.eventItem("September 24th 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-learn-to-level-up-our-devex-tickets-1666958901949?aff=oddtdtcreator", "{dev.talk} - The one where we learn to Level Up Our DevEx", "https://youtu.be/V-hObfFaebw", "https://photos.app.goo.gl/3jbDBpeiCG1fSQme8") }}
+    {{ event.eventItem("July 23rd 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-with-the-conference-come-down-tickets-1383069260389", "{dev.talk} - The one with the conference come down", "https://youtu.be/GaliZWc-cTo", "https://photos.app.goo.gl/nBgagTf8GmauaGyz8") }}
+    {{ event.eventItem("June 25th 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-connect-before-reconnect-tickets-1335283451749?aff=oddtdtcreator", "{dev.talk} - The one where we connect before re:connect", "https://www.youtube.com/@devdottalk", "https://photos.app.goo.gl/fiZCvRTvUaFsgU6r9") }}
+    {{ event.eventItem("May 21st 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-where-open-source-ai-tries-to-break-into-tech-tickets-1312789481679?aff=oddtdtcreator", "{dev.talk} - The one where Open Source AI tries to break into Tech", "https://youtu.be/pOkN0fQrWSQ", "https://photos.app.goo.gl/vJcDBSHSBBs9cHNe6") }}
+    {{ event.eventItem("April 23rd 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-will-see-you-at-bu-tickets-1292820513959?aff=oddtdtcreator", "{dev.talk} - The one where we will see you at BU", "https://youtu.be/KYxJebvBo-A", "https://photos.app.goo.gl/1C7HXnTU2NarS4X88") }}
+    {{ event.eventItem("March 26th 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-with-creatives-coders-at-cottonwood-tickets-1261177177889?aff=oddtdtcreator", "{dev.talk} - The one with Creatives & Coders at Cottonwood", "https://youtu.be/7pvuFaCC5Q8", "https://photos.app.goo.gl/mVEhNfpd1fYcEMcs5") }}
+    {{ event.eventItem("February 26th 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-forged-friendships-at-the-foundry-tickets-1132558205079?aff=oddtdtcreator", "{dev.talk} - The one where we forged friendships at the FOUNDRY", "https://www.youtube.com/watch?v=XVukg9Rt_ww", "https://photos.app.goo.gl/q9C4RTZuFEgwcZqU6") }}
+    {{ event.eventItem("January 30th 2025", "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator", "{dev.talk} - The one where we deployed our first PATCH", "https://youtu.be/myIPUjc4P6s?si=-S70-Za6nGA0OWTQ&t=2216", "https://photos.app.goo.gl/65mdTC2EFAhdmWYb6") }}
+    {{ event.eventItem("November 27th 2024", "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator", "{dev.talk} - the one where we got started", "https://www.youtube.com/watch?si=J6UpHEy-f_aVzKD3&v=lJJxj38ZPLU&feature=youtu.be", "https://photos.app.goo.gl/V8GmT5GTm1BS9VUc6") }}
   </ul>
 </section>

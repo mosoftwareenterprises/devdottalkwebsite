@@ -1,0 +1,13 @@
+{% macro eventItem(date, eventUrl, eventTitle, watchUrl, photoUrl) %}
+    <li>{{ date }}:
+        <a href="{{ eventUrl }}" target="_blank">{{ eventTitle }}</a>
+        {%- if watchUrl %}
+            -
+            <a href="{{ watchUrl }}" target="_blank">Watch</a>
+        {%- endif %}
+        {%- if photoUrl %}
+            -
+            <a href="{{ photoUrl }}" target="_blank">Photos</a>
+        {%- endif %}
+    </li>
+{% endmacro %}
