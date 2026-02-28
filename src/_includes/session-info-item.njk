@@ -1,0 +1,23 @@
+{% macro sessionInfoItem(title, duration, speakerName, speakerLink, description, videoLink, slidesLink) %}
+  <li>
+    <p>
+      <b>
+        {% if videoLink %}
+          <a href="{{ videoLink }}" target="_blank">{{ title }}
+            ({{ duration }})</a>
+        {% else %}
+          {{ title }}
+          ({{ duration }})
+        {% endif %}
+      </b>
+      -
+      <a href="{{ speakerLink }}" target="_blank">{{ speakerName }}</a>
+    </p>
+    <p>{{ description }}</p>
+    {% if slidesLink %}
+      <p>
+        <a href="{{ slidesLink }}" target="_blank">Slides</a>
+      </p>
+    {% endif %}
+  </li>
+{% endmacro %}
