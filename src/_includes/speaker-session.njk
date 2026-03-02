@@ -1,40 +1,27 @@
-{% assign sessionRecord = nil %}
-{% if sessionId != nil %}
-    {% assign sessionsSource = sessions %}
-    {% if sessionsSource != nil and sessionsSource.all != nil %}
-        {% assign sessionsSource = sessionsSource.all %}
+{% macro speakerSession(sessionId, headshotFilename, sessionsList) %}
+    {% set source = [] %}
+    {% if sessionsList %}
+        {% set source = sessionsList %}
+    {% elif sessions is defined and sessions.all is defined %}
+        {% set source = sessions.all %}
     {% endif %}
-    {% if sessionsSource == nil %}
-        {% assign sessionsSource = sessions.all %}
-    {% endif %}
-    {% if sessionsSource != nil %}
-        {% assign targetIdNum = sessionId | plus: 0 %}
-        {% for candidate in sessionsSource %}
-            {% assign candidateIdNum = candidate.id | plus: 0 %}
-            {% if candidate.id == sessionId or candidateIdNum == targetIdNum %}
-                {% assign sessionRecord = candidate %}
-                {% break %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-{% else %}
-    {% assign sessionRecord = session %}
-{% endif %}
+    {% set sessionRecord = source | selectattr("id", "equalto", sessionId) | first %}
 
-{% if sessionRecord == nil %}
-    <p>Session not found.</p>
-{% else %}
-    <a href="{{ sessionRecord.firstSpeakerUrl }}" alt="{{ sessionRecord.firstSpeakerName }} Linkedin Profile" title="{{ sessionRecord.firstSpeakerName }} Linkedin Profile">
-        <img src="{{ headshotFilename }}" loading="lazy" style="width:100%" alt="{{ sessionRecord.firstSpeakerName }} Speaker headshot">
-        <h3>{{ sessionRecord.firstSpeakerName }}</h3>
-        {% if sessionRecord.firstSpeakerJobTitle %}
-            <strong>{{ sessionRecord.firstSpeakerJobTitle }}</strong>
+    {% if not sessionRecord %}
+        <p>Session not found.</p>
+    {% else %}
+        <a href="{{ sessionRecord.firstSpeakerUrl }}" alt="{{ sessionRecord.firstSpeakerName }} Linkedin Profile" title="{{ sessionRecord.firstSpeakerName }} Linkedin Profile">
+            <img src="{{ headshotFilename }}" loading="lazy" style="width:100%" alt="{{ sessionRecord.firstSpeakerName }} Speaker headshot">
+            <h3>{{ sessionRecord.firstSpeakerName }}</h3>
+            {% if sessionRecord.firstSpeakerJobTitle %}
+                <strong>{{ sessionRecord.firstSpeakerJobTitle }}</strong>
+            {% endif %}
+        </a>
+        <h4>{{ sessionRecord.title }}</h4>
+        <p>{{ sessionRecord.description }}</p>
+        {% if sessionRecord.firstSpeakerBio %}
+            <h5>Speaker Bio</h5>
+            <p>{{ sessionRecord.firstSpeakerBio }}</p>
         {% endif %}
-    </a>
-    <h4>{{ sessionRecord.title }}</h4>
-    <p>{{ sessionRecord.description }}</p>
-    {% if sessionRecord.firstSpeakerBio %}
-        <h5>Speaker Bio</h5>
-        <p>{{ sessionRecord.firstSpeakerBio }}</p>
     {% endif %}
-{% endif %}
+{% endmacro %}

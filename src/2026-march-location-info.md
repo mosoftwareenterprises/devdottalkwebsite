@@ -5,6 +5,7 @@ description: "Event details for {dev.talk} March 2026 - The One Where JARVIS Fit
 includeBlueskyPosts: true
 hideNextEventBanner: true
 hideMainLogo: false
+templateEngineOverride: njk,md
 permalink: 2026-march-location-info.html
 ---
 
@@ -96,11 +97,12 @@ Located on the first floor, turn left at the top of the stairs, or turn right if
 
 ## Speakers
 
-{% include "speaker-session.njk", sessionId: 31, sessions: sessions.all, headshotFilename: "/images/2026/march/First Speaker image - March 2026.png" %}
+{% from "speaker-session.njk" import speakerSession %}
+{{ speakerSession(31, "/images/2026/march/First Speaker image - March 2026.png", sessions.all) }}
 
 ---
 
-{% include "speaker-session.njk", sessionId: 32, sessions: sessions.all, headshotFilename: "/images/2026/march/Second Speaker image - March 2026.png" %}
+{{ speakerSession(32, "/images/2026/march/Second Speaker image - March 2026.png", sessions.all) }}
 
 ---
 
