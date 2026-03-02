@@ -53,19 +53,6 @@
     },
     {
         "eventID": 13,
-        "title": "Shipping Faster by Debugging Marketing",
-        "duration": 20,
-        "firstSpeakerName": "Miguel Salvador",
-        "firstSpeakerUrl": "https://www.linkedin.com/in/miguelsalvador19/",
-        "firstSpeakerBio": "",
-        "firstSpeakerJobTitle": "",
-        "description": "What to do in different stages of your game development to gain an audience, and best practices with debug menus and communicating with a publisher's marketing team.",
-        "videoUrl": "",
-        "slidesUrl": "",
-        "status": "past"
-    },  
-    {
-        "eventID": 13,
         "title": "The 80/20 Rule of Game Jams",
         "duration": 20,
         "firstSpeakerName": "Tiago Amoroso",
@@ -73,6 +60,19 @@
         "firstSpeakerBio": "",
         "firstSpeakerJobTitle": "",
         "description": "A practical breakdown of the 20% of decisions that lead to 80% of results in game jams -> helping you finish more games, learn faster, and avoid common pitfalls",
+        "videoUrl": "",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 13,
+        "title": "Shipping Faster by Debugging Marketing",
+        "duration": 20,
+        "firstSpeakerName": "Miguel Salvador",
+        "firstSpeakerUrl": "https://www.linkedin.com/in/miguelsalvador19/",
+        "firstSpeakerBio": "",
+        "firstSpeakerJobTitle": "",
+        "description": "What to do in different stages of your game development to gain an audience, and best practices with debug menus and communicating with a publisher's marketing team.",
         "videoUrl": "",
         "slidesUrl": "",
         "status": "past"
@@ -118,19 +118,6 @@
     },
     {
         "eventID": 10,
-        "title": "The Post Office Horizon System's bugs",
-        "duration": 30,
-        "firstSpeakerName": "Frank Milsom",
-        "firstSpeakerUrl": "https://www.linkedin.com/in/frank-milsom-29237aa/",
-        "firstSpeakerBio": "",
-        "firstSpeakerJobTitle": "",
-        "description": "Defects in the Post Office Horizon System caused accounting errors that led to many Subpostmasters being unjustly prosecuted. Most of these faults were complex. Adjustments to the software development process might have increased the chances of catching these bugs before release.",
-        "videoUrl": "https://youtu.be/WVWnJ9X3Sts",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "eventID": 10,
         "title": "Sitcom lovers guide to Software Engineering",
         "duration": 30,
         "firstSpeakerName": "Adam Scholey",
@@ -143,15 +130,28 @@
         "status": "past"
     },
     {
-        "eventID": 9,
-        "title": "Building Products Developers Love to Build",
-        "duration": 15,
-        "firstSpeakerName": "Rachel Adedoyin",
-        "firstSpeakerUrl": "https://www.linkedin.com/in/racheladedoyin/",
+        "eventID": 10,
+        "title": "The Post Office Horizon System's bugs",
+        "duration": 30,
+        "firstSpeakerName": "Frank Milsom",
+        "firstSpeakerUrl": "https://www.linkedin.com/in/frank-milsom-29237aa/",
         "firstSpeakerBio": "",
         "firstSpeakerJobTitle": "",
-        "description": "This session explores how Product Managers and Developers can work better together, with fewer frustrations and more impact. Drawing on real stories, Rachel Adedoyin will share practical lessons on clarity, collaboration, and respecting the craft of development. Expect honesty, humour, and insights into how PMs can make developers' lives easier while keeping the focus on building products that matter.",
-        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=eiSobOQUPIH9-iR-&t=86",
+        "description": "Defects in the Post Office Horizon System caused accounting errors that led to many Subpostmasters being unjustly prosecuted. Most of these faults were complex. Adjustments to the software development process might have increased the chances of catching these bugs before release.",
+        "videoUrl": "https://youtu.be/WVWnJ9X3Sts",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 9,
+        "title": "Nix for Reproducible Developer Environments",
+        "duration": 15,
+        "firstSpeakerName": "Oliver Pauffley",
+        "firstSpeakerUrl": "https://oliverpauffley.github.io/blog/",
+        "firstSpeakerBio": "",
+        "firstSpeakerJobTitle": "",
+        "description": "The quickest and most painful way of getting developers on the same dependencies",
+        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=YfRkcJtTFOmnMOsJ&t=3102",
         "slidesUrl": "",
         "status": "past"
     },
@@ -170,14 +170,14 @@
     },
     {
         "eventID": 9,
-        "title": "Nix for Reproducible Developer Environments",
+        "title": "Building Products Developers Love to Build",
         "duration": 15,
-        "firstSpeakerName": "Oliver Pauffley",
-        "firstSpeakerUrl": "https://oliverpauffley.github.io/blog/",
+        "firstSpeakerName": "Rachel Adedoyin",
+        "firstSpeakerUrl": "https://www.linkedin.com/in/racheladedoyin/",
         "firstSpeakerBio": "",
         "firstSpeakerJobTitle": "",
-        "description": "The quickest and most painful way of getting developers on the same dependencies",
-        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=YfRkcJtTFOmnMOsJ&t=3102",
+        "description": "This session explores how Product Managers and Developers can work better together, with fewer frustrations and more impact. Drawing on real stories, Rachel Adedoyin will share practical lessons on clarity, collaboration, and respecting the craft of development. Expect honesty, humour, and insights into how PMs can make developers' lives easier while keeping the focus on building products that matter.",
+        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=eiSobOQUPIH9-iR-&t=86",
         "slidesUrl": "",
         "status": "past"
     },
@@ -196,19 +196,6 @@
     },
     {
         "eventID": 7,
-        "title": "The Hidden Evolution of Services",
-        "duration": 30,
-        "firstSpeakerName": "Stuart Caborn",
-        "firstSpeakerUrl": "https://www.linkedin.com/in/stuartcaborn/",
-        "firstSpeakerBio": "",
-        "firstSpeakerJobTitle": "",
-        "description": "How do you know when a service needs to evolve? While we often focus on REST APIs and runtime behavior, the true scope of a service could extend beyond these interfaces. Through the journey of a critical booking service at loveholidays, Stuart will explore how 12 years of rapid organisational growth created unexpected challenges in both our runtime and data architectures. Gain practical insights about recognising when your service boundaries no longer serve your teams, how 'hidden' APIs like data dependencies can impact your ability to evolve, and how loveholidays approached restructuring for future scalability while keeping their systems running smoothly. This real-world case study demonstrates how to systematically untangle and evolve critical services as your organisation grows.",
-        "videoUrl": "https://youtu.be/GaliZWc-cTo?si=M90wpEvzdAD7GxBI&t=2271",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "eventID": 7,
         "title": "Human side of change",
         "duration": 30,
         "firstSpeakerName": "Maria Gaganova",
@@ -221,15 +208,15 @@
         "status": "past"
     },
     {
-        "eventID": 6,
-        "title": "Breaking into Tech",
+        "eventID": 7,
+        "title": "The Hidden Evolution of Services",
         "duration": 30,
-        "firstSpeakerName": "Shalom Vic-Jumbo",
-        "firstSpeakerUrl": "https://www.linkedin.com/in/shalom-vic-/",
+        "firstSpeakerName": "Stuart Caborn",
+        "firstSpeakerUrl": "https://www.linkedin.com/in/stuartcaborn/",
         "firstSpeakerBio": "",
         "firstSpeakerJobTitle": "",
-        "description": "A discussion forum about popular pathways to 'breaking into the tech industry' from another industry. Listening to people's story and feedback to inspire new graduates and people transitioning.",
-        "videoUrl": "https://youtu.be/pOkN0fQrWSQ?si=DcGI-Wmh7PVYeE0Z&t=61",
+        "description": "How do you know when a service needs to evolve? While we often focus on REST APIs and runtime behavior, the true scope of a service could extend beyond these interfaces. Through the journey of a critical booking service at loveholidays, Stuart will explore how 12 years of rapid organisational growth created unexpected challenges in both our runtime and data architectures. Gain practical insights about recognising when your service boundaries no longer serve your teams, how 'hidden' APIs like data dependencies can impact your ability to evolve, and how loveholidays approached restructuring for future scalability while keeping their systems running smoothly. This real-world case study demonstrates how to systematically untangle and evolve critical services as your organisation grows.",
+        "videoUrl": "https://youtu.be/GaliZWc-cTo?si=M90wpEvzdAD7GxBI&t=2271",
         "slidesUrl": "",
         "status": "past"
     },
@@ -243,6 +230,19 @@
         "firstSpeakerJobTitle": "",
         "description": "The talk will cover the benefits of open source AI, a selection of major milestones in recent years and the current landscape of open source large language models, image generation and more. It will give an overview of how you can run these yourself either on your own hardware, or in the cloud.",
         "videoUrl": "https://youtu.be/pOkN0fQrWSQ?si=NBvcrK25PE1Te8F9&t=2027",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 6,
+        "title": "Breaking into Tech",
+        "duration": 30,
+        "firstSpeakerName": "Shalom Vic-Jumbo",
+        "firstSpeakerUrl": "https://www.linkedin.com/in/shalom-vic-/",
+        "firstSpeakerBio": "",
+        "firstSpeakerJobTitle": "",
+        "description": "A discussion forum about popular pathways to 'breaking into the tech industry' from another industry. Listening to people's story and feedback to inspire new graduates and people transitioning.",
+        "videoUrl": "https://youtu.be/pOkN0fQrWSQ?si=DcGI-Wmh7PVYeE0Z&t=61",
         "slidesUrl": "",
         "status": "past"
     },
@@ -289,23 +289,23 @@
     },
     {
         "eventID": 4,
-        "title": "No CS Degree != No Job",
-        "duration": 15,
-        "speakerName": "Miguel Salvador",
-        "speakerUrl": "https://www.linkedin.com/in/miguel-salvador19/",
-        "description": "Getting a job in the industry without a CS degree, and strategies to persevere through the whole process.",
-        "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=4dwtG_v1OqKFvd4z&t=173",
-        "slidesUrl": "https://docs.google.com/presentation/d/15K4SmRABSeDLTOSbQpogNI7NHA_0pLr7XdWRGkMNXuQ/edit?usp=sharing",
-        "status": "past"
-    },
-    {
-        "eventID": 4,
         "title": "My first year in YouTube",
         "duration": 10,
         "speakerName": "Kerry Oliver",
         "speakerUrl": "https://www.linkedin.com/in/kerry-oliver-justpickoneuk/",
         "description": "I will tell you the ups and downs of starting and maintaining my YouTube channel through its first year.",
         "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=gAHoCDYuHwEpnE-i&t=1315",
+        "slidesUrl": "https://docs.google.com/presentation/d/15K4SmRABSeDLTOSbQpogNI7NHA_0pLr7XdWRGkMNXuQ/edit?usp=sharing",
+        "status": "past"
+    },
+    {
+        "eventID": 4,
+        "title": "No CS Degree != No Job",
+        "duration": 15,
+        "speakerName": "Miguel Salvador",
+        "speakerUrl": "https://www.linkedin.com/in/miguel-salvador19/",
+        "description": "Getting a job in the industry without a CS degree, and strategies to persevere through the whole process.",
+        "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=4dwtG_v1OqKFvd4z&t=173",
         "slidesUrl": "https://docs.google.com/presentation/d/15K4SmRABSeDLTOSbQpogNI7NHA_0pLr7XdWRGkMNXuQ/edit?usp=sharing",
         "status": "past"
     },
@@ -355,6 +355,17 @@
     },
     {
         "eventID": 1,
+        "title": "Skyports Technology Journey: Lessons from Vertiport Automation",
+        "duration": 30,
+        "speakerName": "Dan Lambeth",
+        "speakerUrl": "https://www.linkedin.com/in/dan-lambeth1992/",
+        "description": "A delve into the journey of building the Vertiport Automation environment, and lessons learned from it.",
+        "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=SXlPV4Ltal2VzptH&t=2465",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 1,
         "title": "Design of Microservices using the REPR pattern over MVC",
         "duration": 20,
         "speakerName": "Jamie Savin",
@@ -372,17 +383,6 @@
         "speakerUrl": "https://www.linkedin.com/in/chloé-greenstreet/",
         "description": "A Student's Perspective to beginning a career in the Tech Industry. An open discussion on what's expected from fresh graduate students by employers and how student opportunities, like Insight days and Placements, offer value to both companies and students.",
         "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=t-e73ynOOYhnpWwB&t=514",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "eventID": 1,
-        "title": "Skyports Technology Journey: Lessons from Vertiport Automation",
-        "duration": 30,
-        "speakerName": "Dan Lambeth",
-        "speakerUrl": "https://www.linkedin.com/in/dan-lambeth1992/",
-        "description": "A delve into the journey of building the Vertiport Automation environment, and lessons learned from it.",
-        "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=SXlPV4Ltal2VzptH&t=2465",
         "slidesUrl": "",
         "status": "past"
     }

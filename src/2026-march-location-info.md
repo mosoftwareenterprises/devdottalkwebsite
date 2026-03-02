@@ -96,27 +96,8 @@ Located on the first floor, turn left at the top of the stairs, or turn right if
 
 ## Speakers
 
-<a href="https://www.linkedin.com/in/kevin-ocansey-3000b91b2/" alt="Kevin Ocansey Linkedin Profile" title="Kevin Ocansey Linkedin Profile">
-
-![Kevin Djabaku Ocansey Speaker headshot](/images/2026/march/First Speaker image - March 2026.png){loading=lazy width=100%}
-
-### Kevin Djabaku Ocansey
-
-**AI Engineer**
-
-</a>
-
-#### Building Agentic Mobile OS for privacy
-
-I'll be sharing my journey of building JarvisOS; a privacy-first mobile operating system that keeps AI local on your device.
-The talk will walk through how I got here: starting with learning how AI systems remember and retrieve information (RAG), understanding how computers can find similar pieces of data quickly (vector databases), and diving into Android's deep internals to make it all work at the system level.
-I'll then introduce JarvisOS itself - what we're building, why it's different from existing solutions, and how we're using Cactus (a lightweight AI framework) to make powerful AI run entirely on your phone without sending anything to the cloud.
-We'll wrap up with a practical demonstration: a live notebook showing how AI models get compressed to fit on mobile devices - taking something that normally requires massive servers and making it work in your pocket.
-
-#### Speaker Bio
-
-Kevin is a recent Data Science and AI Graduate with a passion for building intelligent systems, primarily with Python. A multiple hackathon winner, he considers himself an AI Engineer at heart, with a strong foundation in both software engineering and data Science. Still exploring where to specialise, Kevin is driven by curiosity and a love for community, most recently volunteering at the Reconnect conference through the Sam and Ray podcast.
-
+{% assign session = collections.sessions | where: "eventID", 14 | first %}
+{% include "speaker-session.njk" session=session headshotFilename="/images/2026/march/First Speaker image - March 2026.png" %}
 
 ---
 
