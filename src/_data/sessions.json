@@ -1,44 +1,20 @@
 [
     {
-        "eventID": 0,
-        "title": "Gender Identity & Me: Life as an autistic software engineer",
+        "id": 32,
+        "eventID": 14,
+        "title": "How becoming a manager made me a better engineer",
         "duration": 30,
-        "firstSpeakerName": "Rose T",
-        "firstSpeakerUrl": "http://lgbtbrickworks.co.uk/",
-        "firstSpeakerBio": "",
-        "firstSpeakerJobTitle": "",
-        "description": "I'm a 22 year old Trans woman and have had an unusual life story - I want to use my skills and platform to educate about Autism & neurodiversity, trans rights and broadly sharing love and respect for each other especially when it comes to mental health. I attended a specialist Maths School for my A-levels where I achieved A*s in Maths, Further Maths and Computer Science before starting a degree apprenticeship at a large American bank which I have just finished achieving a 1st class degree in Digital & Technology Solutions from the University of Exeter. Throughout the last 6 years, I have gone from being on a plane for the first time to having travelled to the USA for 2 weeks solo, to Japan for 2 weeks with friends. I've come out as Rose, struggled with my mental health and learnt a lot",
+        "firstSpeakerName": "Chris Sherry",
+        "firstSpeakerUrl": "https://uk.linkedin.com/in/%F0%9F%90%98-chris-sherry-ab091721",
+        "firstSpeakerBio": "Engineering Manager specialising in web and backend systems, building high-performing, people-first teams with strong commercial focus. Active in the PHP community, I’ve organised initiatives, spoken at conferences, and lead digital delivery for a charity festival that has raised over £850,000.",
+        "firstSpeakerJobTitle": "Engineering Manager at Passenger",
+        "description": "In the last 5 years, I have transitioned from an individual contributor, to a manager of an engineering team with increasingly more reports and more responsibility. In this talk, I'll guide through what this journey has taught be about management, but also what it has taught be about being a better engineer. Topics include: management styles and traps, prioritisation, estimation and time management, recruitment (and being recruited), and staying mentally healthy.",
         "videoUrl": "",
         "slidesUrl": "",
         "status": "upcoming"
     },
     {
-        "eventID": 0,
-        "title": "Building my blog: A journey of discovery",
-        "duration": 45,
-        "firstSpeakerName": "Mark Oliver",
-        "firstSpeakerUrl": "https://www.linkedin.com/in/profileformarkoliver/",
-        "firstSpeakerBio": "",
-        "firstSpeakerJobTitle": "",
-        "description": "In this session, I will explain the journey of discovery of building my fully interactive Blog website and the engine behind it, using free cloud technologies such as Azure Static Web Apps, Github Actions and Blazor WebAssembly.",
-        "videoUrl": "",
-        "slidesUrl": "",
-        "status": "upcoming"
-    },
-    {
-        "eventID": 0,
-        "title": "Why is there a shark in my Wire - An introduction to Wireshark",
-        "duration": 25,
-        "firstSpeakerName": "Mark Oliver",
-        "firstSpeakerUrl": "https://www.linkedin.com/in/profileformarkoliver/",
-        "firstSpeakerBio": "",
-        "firstSpeakerJobTitle": "",
-        "description": "A short introduction to the network protocol analyser tool Wireshark, and why it can be helpful for software engineers. I will show the basics of running the tool, the benefits of knowing this tool for all software developers, and then cover some real life examples of where it has been used to aid development of production systems.",
-        "videoUrl": "",
-        "slidesUrl": "",
-        "status": "upcoming"
-    },
-    {
+        "id": 31,
         "eventID": 14,
         "title": "Building Agentic Mobile OS for privacy",
         "duration": 30,
@@ -51,7 +27,50 @@
         "slidesUrl": "",
         "status": "upcoming"
     },
+{
+    "id": 30,
+    "eventID": 0,
+    "title": "Gender Identity & Me: Life as an autistic software engineer",
+    "duration": 30,
+    "firstSpeakerName": "Rose T",
+    "firstSpeakerUrl": "http://lgbtbrickworks.co.uk/",
+    "firstSpeakerBio": "",
+    "firstSpeakerJobTitle": "",
+    "description": "I'm a 22 year old Trans woman and have had an unusual life story - I want to use my skills and platform to educate about Autism & neurodiversity, trans rights and broadly sharing love and respect for each other especially when it comes to mental health. I attended a specialist Maths School for my A-levels where I achieved A*s in Maths, Further Maths and Computer Science before starting a degree apprenticeship at a large American bank which I have just finished achieving a 1st class degree in Digital & Technology Solutions from the University of Exeter. Throughout the last 6 years, I have gone from being on a plane for the first time to having travelled to the USA for 2 weeks solo, to Japan for 2 weeks with friends. I've come out as Rose, struggled with my mental health and learnt a lot",
+    "videoUrl": "",
+    "slidesUrl": "",
+    "status": "upcoming"
+},
+{
+    "id": 29,
+    "eventID": 0,
+    "title": "Building my blog: A journey of discovery",
+    "duration": 45,
+    "firstSpeakerName": "Mark Oliver",
+    "firstSpeakerUrl": "https://www.linkedin.com/in/profileformarkoliver/",
+    "firstSpeakerBio": "",
+    "firstSpeakerJobTitle": "",
+    "description": "In this session, I will explain the journey of discovery of building my fully interactive Blog website and the engine behind it, using free cloud technologies such as Azure Static Web Apps, Github Actions and Blazor WebAssembly.",
+    "videoUrl": "",
+    "slidesUrl": "",
+    "status": "upcoming"
+},
+{
+    "id": 28,
+    "eventID": 0,
+    "title": "Why is there a shark in my Wire - An introduction to Wireshark",
+    "duration": 25,
+    "firstSpeakerName": "Mark Oliver",
+    "firstSpeakerUrl": "https://www.linkedin.com/in/profileformarkoliver/",
+    "firstSpeakerBio": "",
+    "firstSpeakerJobTitle": "",
+    "description": "A short introduction to the network protocol analyser tool Wireshark, and why it can be helpful for software engineers. I will show the basics of running the tool, the benefits of knowing this tool for all software developers, and then cover some real life examples of where it has been used to aid development of production systems.",
+    "videoUrl": "",
+    "slidesUrl": "",
+    "status": "upcoming"
+},    
     {
+        "id": 27,
         "eventID": 13,
         "title": "The 80/20 Rule of Game Jams",
         "duration": 20,
@@ -65,6 +84,7 @@
         "status": "past"
     },
     {
+        "id": 26,
         "eventID": 13,
         "title": "Shipping Faster by Debugging Marketing",
         "duration": 20,
@@ -78,6 +98,7 @@
         "status": "past"
     },
     {
+        "id": 25,
         "eventID": 12,
         "title": "The AI Integration Framework: When to Automate, When to Wait",
         "duration": 30,
@@ -91,6 +112,7 @@
         "status": "past"
     },
     {
+        "id": 24,
         "eventID": 12,
         "title": "Why websites become hard to change - and how to stop it.",
         "duration": 30,
@@ -104,6 +126,7 @@
         "status": "past"
     },
     {
+        "id": 23,
         "eventID": 11,
         "title": "End of year Quiz",
         "duration": 120,
@@ -117,6 +140,7 @@
         "status": "past"
     },
     {
+        "id": 22,
         "eventID": 10,
         "title": "Sitcom lovers guide to Software Engineering",
         "duration": 30,
@@ -130,6 +154,7 @@
         "status": "past"
     },
     {
+        "id": 21,
         "eventID": 10,
         "title": "The Post Office Horizon System's bugs",
         "duration": 30,
@@ -143,6 +168,7 @@
         "status": "past"
     },
     {
+        "id": 20,
         "eventID": 9,
         "title": "Nix for Reproducible Developer Environments",
         "duration": 15,
@@ -156,6 +182,7 @@
         "status": "past"
     },
     {
+        "id": 19,
         "eventID": 9,
         "title": "Domain-Specific Languages in Action: Why, When, and How — Experiences from Medical and Veterinary, Data science, and Legal domains",
         "duration": 15,
@@ -169,6 +196,7 @@
         "status": "past"
     },
     {
+        "id": 18,
         "eventID": 9,
         "title": "Building Products Developers Love to Build",
         "duration": 15,
@@ -182,6 +210,7 @@
         "status": "past"
     },
     {
+        "id": 17,
         "eventID": 8,
         "title": "Level Up Your DevEx: Unit Test Complex E2E Flows + Integration Testing with Aspire & OTEL",
         "duration": 60,
@@ -195,6 +224,7 @@
         "status": "past"
     },
     {
+        "id": 16,
         "eventID": 7,
         "title": "Human side of change",
         "duration": 30,
@@ -208,6 +238,7 @@
         "status": "past"
     },
     {
+        "id": 15,
         "eventID": 7,
         "title": "The Hidden Evolution of Services",
         "duration": 30,
@@ -221,6 +252,7 @@
         "status": "past"
     },
     {
+        "id": 14,
         "eventID": 6,
         "title": "The Current Landscape of Open Source AI",
         "duration": 30,
@@ -234,6 +266,7 @@
         "status": "past"
     },
     {
+        "id": 13,
         "eventID": 6,
         "title": "Breaking into Tech",
         "duration": 30,
@@ -247,6 +280,7 @@
         "status": "past"
     },
     {
+        "id": 12,
         "eventID": 5,
         "title": "Clean Architecture complements Salesforce well-architected framework",
         "duration": 30,
@@ -264,6 +298,7 @@
         "status": "past"
     },
     {
+        "id": 11,
         "eventID": 5,
         "title": "The Power of Telemetry",
         "duration": 30,
@@ -277,6 +312,7 @@
         "status": "past"
     },
     {
+        "id": 10,
         "eventID": 4,
         "title": "PHP Today: Evolving, Growing, and Thriving",
         "duration": 30,
@@ -288,6 +324,7 @@
         "status": "past"
     },
     {
+        "id": 9,
         "eventID": 4,
         "title": "My first year in YouTube",
         "duration": 10,
@@ -299,6 +336,7 @@
         "status": "past"
     },
     {
+        "id": 8,
         "eventID": 4,
         "title": "No CS Degree != No Job",
         "duration": 15,
@@ -310,6 +348,7 @@
         "status": "past"
     },
     {
+        "id": 7,
         "eventID": 3,
         "title": "Beyond Automation: How Agentic AI is Reshaping the Future",
         "duration": 30,
@@ -321,6 +360,7 @@
         "status": "past"
     },
     {
+        "id": 6,
         "eventID": 3,
         "title": "Tech Hiring: 3 Years of Change - Decoding the New Maze",
         "duration": 45,
@@ -332,6 +372,7 @@
         "status": "past"
     },
     {
+        "id": 5,
         "eventID": 2,
         "title": "My Journey Building a City-Based Maze Game using ml5.js and open-source API's",
         "duration": 25,
@@ -343,6 +384,7 @@
         "status": "past"
     },
     {
+        "id": 4,
         "eventID": 2,
         "title": "Lessons from a Domain-Driven Design Transformation",
         "duration": 30,
@@ -354,6 +396,7 @@
         "status": "past"
     },
     {
+        "id": 3,
         "eventID": 1,
         "title": "Skyports Technology Journey: Lessons from Vertiport Automation",
         "duration": 30,
@@ -365,6 +408,7 @@
         "status": "past"
     },
     {
+        "id": 2,
         "eventID": 1,
         "title": "Design of Microservices using the REPR pattern over MVC",
         "duration": 20,
@@ -376,6 +420,7 @@
         "status": "past"
     },
     {
+        "id": 1,
         "eventID": 1,
         "title": "Breaking Into Industry: A Student's Perspective",
         "duration": 20,

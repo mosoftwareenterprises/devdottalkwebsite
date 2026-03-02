@@ -96,31 +96,11 @@ Located on the first floor, turn left at the top of the stairs, or turn right if
 
 ## Speakers
 
-{% assign session = collections.sessions | where: "eventID", 14 | first %}
-{% include "speaker-session.njk" session=session headshotFilename="/images/2026/march/First Speaker image - March 2026.png" %}
+{% include "speaker-session.njk" sessionId=31 headshotFilename="/images/2026/march/First Speaker image - March 2026.png" %}
 
 ---
 
-<a href="https://uk.linkedin.com/in/%F0%9F%90%98-chris-sherry-ab091721" alt="Chris Sherry Linkedin Profile" title="Chris Sherry Linkedin Profile">
-
-![Chris Sherry Speaker headshot](/images/2026/march/Second Speaker image - March 2026.png){loading=lazy width=100%}
-
-### Chris Sherry
-
-**Engineering Manager at Passenger**
-</a>
-
-#### How becoming a manager made me a better engineer
-
-In the last 5 years, I have transitioned from an individual contributor, to a manager of an engineering team with increasingly more reports and more responsibility.
-
-In this talk, I'll guide through what this journey has taught be about management, but also what it has taught be about being a better engineer.
-
-Topics include: management styles and traps, prioritisation, estimation and time management, recruitment (and being recruited), and staying mentally healthy.
-
-#### Speaker Bio
-
-Engineering Manager specialising in web and backend systems, building high-performing, people-first teams with strong commercial focus. Active in the PHP community, I’ve organised initiatives, spoken at conferences, and lead digital delivery for a charity festival that has raised over £850,000.
+{% include "speaker-session.njk" sessionId=32 headshotFilename="/images/2026/march/Second Speaker image - March 2026.png" %}
 
 ---
 

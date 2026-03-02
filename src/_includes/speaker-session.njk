@@ -1,17 +1,22 @@
-{% if session == nil %}
+{% assign sessionRecord = session %}
+{% if sessionRecord == nil and sessionId != nil %}
+    {% assign sessionRecord = collections.sessions | where: "id", sessionId | first %}
+{% endif %}
+
+{% if sessionRecord == nil %}
     <p>Session not found.</p>
 {% else %}
-    <a href="{{ session.firstSpeakerUrl }}" alt="{{ session.firstSpeakerName }} Linkedin Profile" title="{{ session.firstSpeakerName }} Linkedin Profile">
-        <img src="{{ headshotFilename }}" loading="lazy" style="width:100%" alt="{{ session.firstSpeakerName }} Speaker headshot">
-        <h3>{{ session.firstSpeakerName }}</h3>
-        {% if session.firstSpeakerJobTitle %}
-            <strong>{{ session.firstSpeakerJobTitle }}</strong>
+    <a href="{{ sessionRecord.firstSpeakerUrl }}" alt="{{ sessionRecord.firstSpeakerName }} Linkedin Profile" title="{{ sessionRecord.firstSpeakerName }} Linkedin Profile">
+        <img src="{{ headshotFilename }}" loading="lazy" style="width:100%" alt="{{ sessionRecord.firstSpeakerName }} Speaker headshot">
+        <h3>{{ sessionRecord.firstSpeakerName }}</h3>
+        {% if sessionRecord.firstSpeakerJobTitle %}
+            <strong>{{ sessionRecord.firstSpeakerJobTitle }}</strong>
         {% endif %}
     </a>
-    <h4>{{ session.title }}</h4>
-    <p>{{ session.description }}</p>
-    {% if session.firstSpeakerBio %}
+    <h4>{{ sessionRecord.title }}</h4>
+    <p>{{ sessionRecord.description }}</p>
+    {% if sessionRecord.firstSpeakerBio %}
         <h5>Speaker Bio</h5>
-        <p>{{ session.firstSpeakerBio }}</p>
+        <p>{{ sessionRecord.firstSpeakerBio }}</p>
     {% endif %}
 {% endif %}
