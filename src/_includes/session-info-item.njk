@@ -36,7 +36,13 @@
         {% endif %}
       </b>
       -
-      <a href="{{ s.speakerUrl }}" target="_blank">{{ s.speakerName }}</a>
+      {# Display up to 2 speakers if present #}
+      {% if s.secondSpeakerName and s.secondSpeakerUrl %}
+        <a href="{{ s.speakerUrl }}" target="_blank">{{ s.speakerName }}</a>
+        &amp; <a href="{{ s.secondSpeakerUrl }}" target="_blank">{{ s.secondSpeakerName }}</a>
+      {% else %}
+        <a href="{{ s.speakerUrl }}" target="_blank">{{ s.speakerName }}</a>
+      {% endif %}
     </p>
     <p>{{ s.description }}</p>
     {% if s.slidesUrl and s.slidesUrl != "" %}
