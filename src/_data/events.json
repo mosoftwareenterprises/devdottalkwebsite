@@ -1,5 +1,6 @@
 [
     {
+        "id": 23,
         "date": "2026-12-16",
         "displayDate": "December 16th 2026",
         "url": "/2026-december-location-info.html",
@@ -8,6 +9,7 @@
         "videos": []
     },
     {
+        "id": 22,
         "date": "2026-11-25",
         "displayDate": "November 25th 2026",
         "url": "/2026-november-location-info.html",
@@ -16,6 +18,7 @@
         "videos": []
     },
     {
+        "id": 21,
         "date": "2026-10-21",
         "displayDate": "October 21st 2026",
         "url": "/2026-october-location-info.html",
@@ -24,6 +27,7 @@
         "videos": []
     },
     {
+        "id": 20,
         "date": "2026-09-23",
         "displayDate": "September 23rd 2026",
         "url": "/2026-september-location-info.html",
@@ -32,6 +36,7 @@
         "videos": []
     },
     {
+        "id": 19,
         "date": "2026-07-22",
         "displayDate": "July 22nd 2026",
         "url": "/2026-july-location-info.html",
@@ -40,6 +45,7 @@
         "videos": []
     },
     {
+        "id": 18,
         "date": "2026-06-24",
         "displayDate": "June 24th 2026",
         "url": "/2026-june-location-info.html",
@@ -48,6 +54,7 @@
         "videos": []
     },
     {
+        "id": 17,
         "date": "2026-05-20",
         "displayDate": "May 20th 2026",
         "url": "/2026-may-location-info.html",
@@ -56,6 +63,7 @@
         "videos": []
     },
     {
+        "id": 16,
         "date": "2026-04-29",
         "displayDate": "April 29th 2026",
         "url": "/2026-april-location-info.html",
@@ -64,6 +72,7 @@
         "videos": []
     },
     {
+        "id": 15,
         "date": "2026-03-25",
         "displayDate": "March 25th 2026",
         "url": "/2026-march-location-info.html",
@@ -72,6 +81,7 @@
         "videos": []
     },
     {
+        "id": 14,
         "date": "2026-02-25",
         "displayDate": "February 25th 2026",
         "url": "/2026-february-location-info.html",
@@ -80,6 +90,7 @@
         "videos": []
     },
     {
+        "id": 13,
         "date": "2026-01-28",
         "displayDate": "January 28th 2026",
         "url": "/2026-january-location-info.html",
@@ -97,6 +108,7 @@
         ]
     },
     {
+        "id": 12,
         "date": "2025-12-17",
         "displayDate": "December 17th 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-something-different-tickets-1730678890149?aff=oddtdtcreator",
@@ -105,6 +117,7 @@
         "videos": []
     },
     {
+        "id": 11,
         "date": "2025-11-26",
         "displayDate": "November 26th 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-our-birthday-tickets-1730677285349?aff=oddtdtcreator",
@@ -122,6 +135,7 @@
         ]
     },
     {
+        "id": 10,
         "date": "2025-10-22",
         "displayDate": "October 22nd 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-pms-ask-designers-imagine-and-devs-improvise-tickets-1730652110049?aff=oddtdtcreator",
@@ -135,6 +149,7 @@
         ]
     },
     {
+        "id": 9,
         "date": "2025-09-24",
         "displayDate": "September 24th 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-learn-to-level-up-our-devex-tickets-1666958901949?aff=oddtdtcreator",
@@ -148,6 +163,7 @@
         ]
     },
     {
+        "id": 8,
         "date": "2025-07-23",
         "displayDate": "July 23rd 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-the-conference-come-down-tickets-1383069260389",
@@ -161,6 +177,7 @@
         ]
     },
     {
+        "id": 7,
         "date": "2025-06-25",
         "displayDate": "June 25th 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-connect-before-reconnect-tickets-1335283451749?aff=oddtdtcreator",
@@ -174,6 +191,7 @@
         ]
     },
     {
+        "id": 6,
         "date": "2025-05-21",
         "displayDate": "May 21st 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-open-source-ai-tries-to-break-into-tech-tickets-1312789481679?aff=oddtdtcreator",
@@ -187,6 +205,7 @@
         ]
     },
     {
+        "id": 5,
         "date": "2025-04-23",
         "displayDate": "April 23rd 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-will-see-you-at-bu-tickets-1292820513959?aff=oddtdtcreator",
@@ -200,6 +219,7 @@
         ]
     },
     {
+        "id": 4,
         "date": "2025-03-26",
         "displayDate": "March 26th 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-creatives-coders-at-cottonwood-tickets-1261177177889?aff=oddtdtcreator",
@@ -213,6 +233,7 @@
         ]
     },
     {
+        "id": 3,
         "date": "2025-02-26",
         "displayDate": "February 26th 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-forged-friendships-at-the-foundry-tickets-1132558205079?aff=oddtdtcreator",
@@ -226,6 +247,7 @@
         ]
     },
     {
+        "id": 2,
         "date": "2025-01-30",
         "displayDate": "January 30th 2025",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator",
@@ -239,6 +261,7 @@
         ]
     },
     {
+        "id": 1,
         "date": "2024-11-27",
         "displayDate": "November 27th 2024",
         "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator",

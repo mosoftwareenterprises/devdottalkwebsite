@@ -1,265 +1,6 @@
 [
     {
-        "title": "Shipping Faster by Debugging Marketing",
-        "duration": 20,
-        "speakerName": "Miguel Salvador",
-        "speakerUrl": "https://www.linkedin.com/in/miguelsalvador19/",
-        "description": "What to do in different stages of your game development to gain an audience, and best practices with debug menus and communicating with a publisher's marketing team.",
-        "videoUrl": "",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "The 80/20 Rule of Game Jams",
-        "duration": 20,
-        "speakerName": "Tiago Amoroso",
-        "speakerUrl": "https://www.linkedin.com/in/tiago-amoroso-toggle-games/",
-        "description": "A practical breakdown of the 20% of decisions that lead to 80% of results in game jams -> helping you finish more games, learn faster, and avoid common pitfalls",
-        "videoUrl": "",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "The AI Integration Framework: When to Automate, When to Wait",
-        "duration": 30,
-        "speakerName": "Dr Rushan Arshad",
-        "speakerUrl": "https://www.linkedin.com/in/rushan-arshad/",
-        "description": "Do you have broken processes that needs fixing? Have you hired expensive consultants who have told you that AI is a magical wand that will fix everything for you? You are not alone in this scam.\n    In this session, you'll gain a practical decision framework to cut through the AI hype and make strategic automation choices for your business. Rather than focusing on what AI can do, we'll explore when it should be used versus traditional automation tools.",
-        "videoUrl": "https://youtu.be/svvOwAFv2tQ",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Why websites become hard to change - and how to stop it.",
-        "duration": 30,
-        "speakerName": "Herve Tribouilly",
-        "speakerUrl": "https://www.linkedin.com/in/herve-tribouilloy-5107972b/",
-        "description": "Many teams struggle to evolve their platforms without increasing cost, complexity, or upgrade risk. Monolithic systems can become hard to change, while micro-services are often too heavy for most organisations.\n\n    This session introduces the Feature Isolation Pattern — a practical way to keep a stable core platform (such as Magento or WordPress) while building customer-facing features that can be developed, tested, and deployed independently.\n\n    Using real examples, the talk shows how this approach improves flexibility, performance, and long-term maintainability without rebuilding the platform or adopting full micro-services.",
-        "videoUrl": "https://youtu.be/_Sp6eUvbjRI",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "The Post Office Horizon System's bugs",
-        "duration": 30,
-        "speakerName": "Frank Milsom",
-        "speakerUrl": "https://www.linkedin.com/in/frank-milsom-29237aa/",
-        "description": "Defects in the Post Office Horizon System caused accounting errors that led to many Subpostmasters being unjustly prosecuted. Most of these faults were complex. Adjustments to the software development process might have increased the chances of catching these bugs before release.",
-        "videoUrl": "https://youtu.be/WVWnJ9X3Sts",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Sitcom lovers guide to Software Engineering",
-        "duration": 30,
-        "speakerName": "Adam Scholey",
-        "speakerUrl": "https://adamjs.net/",
-        "description": "Brief: Series 1, Episode 1: Laughter. It's the best form of medicine. And a valuable solace for those of us assigned yet another Jira ticket with ambiguous Acceptance Criteria... As AI continues to dominate society, our humanity is becoming ever more crucial to the products we create and the value we deliver. Behind every user story is an actual human who relies on our abilities to empathise, reflect and adapt to their needs. In this talk, we'll explore the softer, \"fuzzier\" side of software engineering - why knowing who your F.R.I.E.N.D.S are is crucial to shipping high-quality features; how to retain perspective when you're in The Thick Of It [battling a 3am production fire], and why a little business acumen can supercharge your technical skills in 2025 (Del Boy anyone?) Whether you're a fellow software engineer, or simply have to put up with us in your day-to-day, we'll Peep (Show) behind the curtain of what makes us far more Kryten than Marvin the Paranoid Android!",
-        "videoUrl": "https://youtu.be/H1kAYKQsXQg",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Building Products Developers Love to Build",
-        "duration": 15,
-        "speakerName": "Rachel Adedoyin",
-        "speakerUrl": "https://www.linkedin.com/in/racheladedoyin/",
-        "description": "This session explores how Product Managers and Developers can work better together, with fewer frustrations and more impact. Drawing on real stories, Rachel Adedoyin will share practical lessons on clarity, collaboration, and respecting the craft of development. Expect honesty, humour, and insights into how PMs can make developers' lives easier while keeping the focus on building products that matter.",
-        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=eiSobOQUPIH9-iR-&t=86",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Domain-Specific Languages in Action: Why, When, and How — Experiences from Medical and Veterinary, Data science, and Legal domains",
-        "duration": 15,
-        "speakerName": "Dr Sofia Meacham",
-        "speakerUrl": "https://www.linkedin.com/in/sofiameacham/",
-        "description": "This talk will introduce Domain-Specific Languages (DSLs) — what they are, why they represent a promising software engineering solution, and where they are best applied. We will explore the kinds of problems that benefit most from DSLs and why developers and organizations should consider them. I will also share our real-world experiences applying DSLs in several domains: • Medical and veterinary practice • Data science and analytics • Legal documents and compliance These case studies will demonstrate how DSLs can simplify complexity, improve communication with domain experts, and deliver practical, impactful solutions across industries.",
-        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=Tu8xxJBRYjTkfp86&t=1452",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Nix for Reproducible Developer Environments",
-        "duration": 15,
-        "speakerName": "Oliver Pauffley",
-        "speakerUrl": "https://oliverpauffley.github.io/blog/",
-        "description": "The quickest and most painful way of getting developers on the same dependencies",
-        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=YfRkcJtTFOmnMOsJ&t=3102",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Level Up Your DevEx: Unit Test Complex E2E Flows + Integration Testing with Aspire & OTEL",
-        "duration": 30,
-        "speakerName": "Andrew Poole",
-        "speakerUrl": "https://www.linkedin.com/in/andrew-poole-2782494a/",
-        "description": "This session is in two parts:\n\n1) How to get the maximum mileage from a minimal number of tests - end-to-end component tests\n\n2) Using .Net Aspire for next level devex and easy integration tests asserting against OTEL trace data\n\nPart 1 Introduces, explains and demonstrates an approach to automated testing which covers as much of the surface area of your codebase as possible.Imagine a unit test where the 'unit' is actually multiple executables! A single test can cover the whole happy path flow of a complex piece of orchestration, from API handlers, service bus handlers, database calls etc all in-memory, fast and with a nice fluent developer experience!Because everything including the Program.cs and startup code are covered we can spot configuration and IoC issues which are hard to test with more traditional methods. I include a method of mocking and asserting against Azure Service Bus\n\nPart 2 discusses the usual issues with integration tests and how they expose the issues with running an app locally. It then presents .Net Aspire as the answer to lots of these issues, It covers the process of adding .Net Aspire to a solution and showcases its features, adding additional OTEL telemetry to track interesting events, including persisting and rehydrating telemetry across any 'process airgaps' and the creation of integration tests covering end-to-end flows using Open Telemetry trace data for assertions.\n\nThe aim of both parts of this talk is to have a repo which when pulled down onto a fresh machine, builds first time, component tests pass first time, then having run the script and the app, the the integration tests pass first time, after which you can push F5 and have it all run with almost no time or effort!",
-        "videoUrl": "https://youtu.be/V-hObfFaebw",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "The Hidden Evolution of Services",
-        "duration": 30,
-        "speakerName": "Stuart Caborn",
-        "speakerUrl": "https://www.linkedin.com/in/stuartcaborn/",
-        "description": "How do you know when a service needs to evolve? While we often focus on REST APIs and runtime behavior, the true scope of a service could extend beyond these interfaces. Through the journey of a critical booking service at loveholidays, Stuart will explore how 12 years of rapid organisational growth created unexpected challenges in both our runtime and data architectures. Gain practical insights about recognising when your service boundaries no longer serve your teams, how 'hidden' APIs like data dependencies can impact your ability to evolve, and how loveholidays approached restructuring for future scalability while keeping their systems running smoothly. This real-world case study demonstrates how to systematically untangle and evolve critical services as your organisation grows.",
-        "videoUrl": "https://youtu.be/GaliZWc-cTo?si=M90wpEvzdAD7GxBI&t=2271",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Human side of change",
-        "duration": 30,
-        "speakerName": "Maria Gaganova",
-        "speakerUrl": "https://www.linkedin.com/in/maria-gaganova/",
-        "description": "As developers, you are building new tools and disrupting the way others operate. having a tool is great, but then adopting users to change their behaviors requires separate focus, time and resources. Sometimes, we need to let users \"destroy\" the tool first, only to learn how to make them \"love\" it later. I'll give some examples on how I went about this challenge in the teams I worked with and how important is the work between developers, users, stakeholders, project leads, change managers and so on.",
-        "videoUrl": "https://youtu.be/GaliZWc-cTo?si=URkVSorZJk_rsWW4&t=92",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Breaking into Tech",
-        "duration": 30,
-        "speakerName": "Shalom Vic-Jumbo",
-        "speakerUrl": "https://www.linkedin.com/in/shalom-vic-/",
-        "description": "A discussion forum about popular pathways to 'breaking into the tech industry' from another industry. Listening to people's story and feedback to inspire new graduates and people transitioning.",
-        "videoUrl": "https://youtu.be/pOkN0fQrWSQ?si=DcGI-Wmh7PVYeE0Z&t=61",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "The Current Landscape of Open Source AI",
-        "duration": 30,
-        "speakerName": "Richard Brough",
-        "speakerUrl": "https://www.linkedin.com/in/richard-n-brough/",
-        "description": "The talk will cover the benefits of open source AI, a selection of major milestones in recent years and the current landscape of open source large language models, image generation and more. It will give an overview of how you can run these yourself either on your own hardware, or in the cloud.",
-        "videoUrl": "https://youtu.be/pOkN0fQrWSQ?si=NBvcrK25PE1Te8F9&t=2027",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Clean Architecture complements Salesforce well-architected framework",
-        "duration": 30,
-        "speakerName": "Ganesh Tambat & Dayton Meyer",
-        "speakerUrl": "https://www.linkedin.com/in/gtambat/",
-        "description": "The session will dive into practical strategies to revolutionize your Salesforce development using proven Clean Architecture approach by extending it's Well-Architected Framework. Discover how to decouple dependencies, improve low-code/pro-code quality, and deliver robust solutions that adapts to evolving business needs.",
-        "videoUrl": "https://youtu.be/KYxJebvBo-A?si=FUIW7f5qasmchS67&t=2198",
-        "slidesUrl": "https://drive.google.com/file/d/18c6b9znMVPLRsqz8VQjvUIqW5ZVabyqR/view?usp=drive_link",
-        "status": "past"
-    },
-    {
-        "title": "The Power of Telemetry",
-        "duration": 30,
-        "speakerName": "Paul Reardon",
-        "speakerUrl": "https://www.linkedin.com/in/pauljreardon/",
-        "description": "An overview of Open Telemetry and how to use it in your application to make observability easy.",
-        "videoUrl": "https://youtu.be/KYxJebvBo-A?si=E7lHsT2ONsfMJlkr&t=24",
-        "slidesUrl": "https://docs.google.com/presentation/d/1OgbTKeNoYgGRMO7HDOrX5O-DbDeLcgGHmBV61DpG17s/edit?usp=drive_link",
-        "status": "past"
-    },
-    {
-        "title": "PHP Today: Evolving, Growing, and Thriving",
-        "duration": 30,
-        "speakerName": "George Buckingham",
-        "speakerUrl": "https://www.linkedin.com/in/georgebuckingham/",
-        "description": "Let's take a look at the state of the modern PHP ecosystem and why you should seriously be considering it for your next development project.",
-        "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=aW6HmUS839_pxEw5&t=2427",
-        "slidesUrl": "https://www.georgebuckingham.com/assets/files/talks/php-today.pdf",
-        "status": "past"
-    },
-    {
-        "title": "No CS Degree != No Job",
-        "duration": 15,
-        "speakerName": "Miguel Salvador",
-        "speakerUrl": "https://www.linkedin.com/in/miguel-salvador19/",
-        "description": "Getting a job in the industry without a CS degree, and strategies to persevere through the whole process.",
-        "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=4dwtG_v1OqKFvd4z&t=173",
-        "slidesUrl": "https://docs.google.com/presentation/d/15K4SmRABSeDLTOSbQpogNI7NHA_0pLr7XdWRGkMNXuQ/edit?usp=sharing",
-        "status": "past"
-    },
-    {
-        "title": "My first year in YouTube",
-        "duration": 10,
-        "speakerName": "Kerry Oliver",
-        "speakerUrl": "https://www.linkedin.com/in/kerry-oliver-justpickoneuk/",
-        "description": "I will tell you the ups and downs of starting and maintaining my YouTube channel through its first year.",
-        "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=gAHoCDYuHwEpnE-i&t=1315",
-        "slidesUrl": "https://docs.google.com/presentation/d/15K4SmRABSeDLTOSbQpogNI7NHA_0pLr7XdWRGkMNXuQ/edit?usp=sharing",
-        "status": "past"
-    },
-    {
-        "title": "Beyond Automation: How Agentic AI is Reshaping the Future",
-        "duration": 30,
-        "speakerName": "Claudia De Jeu Boronat",
-        "speakerUrl": "https://www.linkedin.com/in/claudiadejeuboronat/",
-        "description": "Agentic AI is at the forefront of the 2025 AI revolution, driving automation, decision-making, and intelligent collaboration. In this session, we'll break down what makes AI agents 'agentic,' how they're designed, and the learning path to mastering them. We'll explore real-world applications across industries, and tackle the challenges and risks that come with deploying autonomous AI. If you're looking to stay ahead in AI, this talk is for you!",
-        "videoUrl": "https://youtu.be/XVukg9Rt_ww?si=7FJOaV4cmXmyHvFZ&t=2267",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Tech Hiring: 3 Years of Change - Decoding the New Maze",
-        "duration": 45,
-        "speakerName": "Andy Ross",
-        "speakerUrl": "https://www.linkedin.com/in/andyrossstudiovision/",
-        "description": "How tech hiring trends and employers expectations have evolved in the last 3 years + how to navigate the tech job market in 2025.",
-        "videoUrl": "https://youtu.be/XVukg9Rt_ww?si=ZUyZoIfm_jKKwqXK&t=154",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "My Journey Building a City-Based Maze Game using ml5.js and open-source API's",
-        "duration": 25,
-        "speakerName": "Desmond Ezo-Ojile",
-        "speakerUrl": "https://www.linkedin.com/in/desmondezo/",
-        "description": "In this session, I will walk through my journey of developing a city-based maze game, highlighting the technical challenges encountered and the strategies implemented to overcome them. I will delve into how I leveraged ml5.js and various open-source APIs to create dynamic maze game that brings the urban labyrinth to life.",
-        "videoUrl": "https://youtu.be/myIPUjc4P6s?si=tjLuwBq0xhJE-lSj&t=206",
-        "slidesUrl": "https://docs.google.com/presentation/d/1MotO2xX3ESfFua7oB0VAoCjy9zno_-7mRxwvQsGSyBo/edit?usp=drive_link",
-        "status": "past"
-    },
-    {
-        "title": "Lessons from a Domain-Driven Design Transformation",
-        "duration": 30,
-        "speakerName": "Seemin Suleri",
-        "speakerUrl": "https://www.linkedin.com/in/suleri/",
-        "description": "In this session, I will talk through the lessons we learned on scaling a company to a global level, by applying Domain-Driven Design (DDD) and Conway's law within the companies team structures, and the software system architectures. I'll tell you of the chaos we battled through to make the transformation succeed.",
-        "videoUrl": "https://youtu.be/myIPUjc4P6s?si=-S70-Za6nGA0OWTQ&t=2216",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Design of Microservices using the REPR pattern over MVC",
-        "duration": 20,
-        "speakerName": "Jamie Savin",
-        "speakerUrl": "https://www.linkedin.com/in/jamiesavin/",
-        "description": "Exploring how to design a Microservice using the REPR pattern instead of MVC. Showcasing better alignment with SOLID principles and improved performance over MVC.",
-        "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=OugK7NLZ_hLhFze6&t=1373",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Breaking Into Industry: A Student's Perspective",
-        "duration": 20,
-        "speakerName": "Chloe Greenstreet",
-        "speakerUrl": "https://www.linkedin.com/in/chloé-greenstreet/",
-        "description": "A Student's Perspective to beginning a career in the Tech Industry. An open discussion on what's expected from fresh graduate students by employers and how student opportunities, like Insight days and Placements, offer value to both companies and students.",
-        "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=t-e73ynOOYhnpWwB&t=514",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
-        "title": "Skyports Technology Journey: Lessons from Vertiport Automation",
-        "duration": 30,
-        "speakerName": "Dan Lambeth",
-        "speakerUrl": "https://www.linkedin.com/in/dan-lambeth1992/",
-        "description": "A delve into the journey of building the Vertiport Automation environment, and lessons learned from it.",
-        "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=SXlPV4Ltal2VzptH&t=2465",
-        "slidesUrl": "",
-        "status": "past"
-    },
-    {
+        "eventID": 0,
         "title": "Gender Identity & Me: Life as an autistic software engineer",
         "duration": 30,
         "speakerName": "Rose T",
@@ -270,6 +11,7 @@
         "status": "upcoming"
     },
     {
+        "eventID": 0,
         "title": "Building my blog: A journey of discovery",
         "duration": 45,
         "speakerName": "Mark Oliver",
@@ -280,6 +22,7 @@
         "status": "upcoming"
     },
     {
+        "eventID": 0,
         "title": "Why is there a shark in my Wire - An introduction to Wireshark",
         "duration": 25,
         "speakerName": "Mark Oliver",
@@ -288,5 +31,302 @@
         "videoUrl": "",
         "slidesUrl": "",
         "status": "upcoming"
+    },
+    {
+        "eventID": 13,
+        "title": "Shipping Faster by Debugging Marketing",
+        "duration": 20,
+        "speakerName": "Miguel Salvador",
+        "speakerUrl": "https://www.linkedin.com/in/miguelsalvador19/",
+        "description": "What to do in different stages of your game development to gain an audience, and best practices with debug menus and communicating with a publisher's marketing team.",
+        "videoUrl": "",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 13,
+        "title": "The 80/20 Rule of Game Jams",
+        "duration": 20,
+        "speakerName": "Tiago Amoroso",
+        "speakerUrl": "https://www.linkedin.com/in/tiago-amoroso-toggle-games/",
+        "description": "A practical breakdown of the 20% of decisions that lead to 80% of results in game jams -> helping you finish more games, learn faster, and avoid common pitfalls",
+        "videoUrl": "",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 12,
+        "title": "The AI Integration Framework: When to Automate, When to Wait",
+        "duration": 30,
+        "speakerName": "Dr Rushan Arshad",
+        "speakerUrl": "https://www.linkedin.com/in/rushan-arshad/",
+        "description": "Do you have broken processes that needs fixing? Have you hired expensive consultants who have told you that AI is a magical wand that will fix everything for you? You are not alone in this scam.\n    In this session, you'll gain a practical decision framework to cut through the AI hype and make strategic automation choices for your business. Rather than focusing on what AI can do, we'll explore when it should be used versus traditional automation tools.",
+        "videoUrl": "https://youtu.be/svvOwAFv2tQ",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 12,
+        "title": "Why websites become hard to change - and how to stop it.",
+        "duration": 30,
+        "speakerName": "Herve Tribouilly",
+        "speakerUrl": "https://www.linkedin.com/in/herve-tribouilloy-5107972b/",
+        "description": "Many teams struggle to evolve their platforms without increasing cost, complexity, or upgrade risk. Monolithic systems can become hard to change, while micro-services are often too heavy for most organisations.\n\n    This session introduces the Feature Isolation Pattern — a practical way to keep a stable core platform (such as Magento or WordPress) while building customer-facing features that can be developed, tested, and deployed independently.\n\n    Using real examples, the talk shows how this approach improves flexibility, performance, and long-term maintainability without rebuilding the platform or adopting full micro-services.",
+        "videoUrl": "https://youtu.be/_Sp6eUvbjRI",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 11,
+        "title": "End of year Quiz",
+        "duration": 120,
+        "speakerName": "JustPickOneUK",
+        "speakerUrl": "https://www.linkedin.com/company/justpickoneuk",
+        "description": "We had a fun general knowledge quiz",
+        "videoUrl": "",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 10,
+        "title": "The Post Office Horizon System's bugs",
+        "duration": 30,
+        "speakerName": "Frank Milsom",
+        "speakerUrl": "https://www.linkedin.com/in/frank-milsom-29237aa/",
+        "description": "Defects in the Post Office Horizon System caused accounting errors that led to many Subpostmasters being unjustly prosecuted. Most of these faults were complex. Adjustments to the software development process might have increased the chances of catching these bugs before release.",
+        "videoUrl": "https://youtu.be/WVWnJ9X3Sts",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 10,
+        "title": "Sitcom lovers guide to Software Engineering",
+        "duration": 30,
+        "speakerName": "Adam Scholey",
+        "speakerUrl": "https://adamjs.net/",
+        "description": "Brief: Series 1, Episode 1: Laughter. It's the best form of medicine. And a valuable solace for those of us assigned yet another Jira ticket with ambiguous Acceptance Criteria... As AI continues to dominate society, our humanity is becoming ever more crucial to the products we create and the value we deliver. Behind every user story is an actual human who relies on our abilities to empathise, reflect and adapt to their needs. In this talk, we'll explore the softer, \"fuzzier\" side of software engineering - why knowing who your F.R.I.E.N.D.S are is crucial to shipping high-quality features; how to retain perspective when you're in The Thick Of It [battling a 3am production fire], and why a little business acumen can supercharge your technical skills in 2025 (Del Boy anyone?) Whether you're a fellow software engineer, or simply have to put up with us in your day-to-day, we'll Peep (Show) behind the curtain of what makes us far more Kryten than Marvin the Paranoid Android!",
+        "videoUrl": "https://youtu.be/H1kAYKQsXQg",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 9,
+        "title": "Building Products Developers Love to Build",
+        "duration": 15,
+        "speakerName": "Rachel Adedoyin",
+        "speakerUrl": "https://www.linkedin.com/in/racheladedoyin/",
+        "description": "This session explores how Product Managers and Developers can work better together, with fewer frustrations and more impact. Drawing on real stories, Rachel Adedoyin will share practical lessons on clarity, collaboration, and respecting the craft of development. Expect honesty, humour, and insights into how PMs can make developers' lives easier while keeping the focus on building products that matter.",
+        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=eiSobOQUPIH9-iR-&t=86",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 9,
+        "title": "Domain-Specific Languages in Action: Why, When, and How — Experiences from Medical and Veterinary, Data science, and Legal domains",
+        "duration": 15,
+        "speakerName": "Dr Sofia Meacham",
+        "speakerUrl": "https://www.linkedin.com/in/sofiameacham/",
+        "description": "This talk will introduce Domain-Specific Languages (DSLs) — what they are, why they represent a promising software engineering solution, and where they are best applied. We will explore the kinds of problems that benefit most from DSLs and why developers and organizations should consider them. I will also share our real-world experiences applying DSLs in several domains: • Medical and veterinary practice • Data science and analytics • Legal documents and compliance These case studies will demonstrate how DSLs can simplify complexity, improve communication with domain experts, and deliver practical, impactful solutions across industries.",
+        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=Tu8xxJBRYjTkfp86&t=1452",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 9,
+        "title": "Nix for Reproducible Developer Environments",
+        "duration": 15,
+        "speakerName": "Oliver Pauffley",
+        "speakerUrl": "https://oliverpauffley.github.io/blog/",
+        "description": "The quickest and most painful way of getting developers on the same dependencies",
+        "videoUrl": "https://youtu.be/yv2jTL2zrXc?si=YfRkcJtTFOmnMOsJ&t=3102",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 8,
+        "title": "Level Up Your DevEx: Unit Test Complex E2E Flows + Integration Testing with Aspire & OTEL",
+        "duration": 60,
+        "speakerName": "Andrew Poole",
+        "speakerUrl": "https://www.linkedin.com/in/andrew-poole-2782494a/",
+        "description": "This session is in two parts:\n\n1) How to get the maximum mileage from a minimal number of tests - end-to-end component tests\n\n2) Using .Net Aspire for next level devex and easy integration tests asserting against OTEL trace data\n\nPart 1 Introduces, explains and demonstrates an approach to automated testing which covers as much of the surface area of your codebase as possible.Imagine a unit test where the 'unit' is actually multiple executables! A single test can cover the whole happy path flow of a complex piece of orchestration, from API handlers, service bus handlers, database calls etc all in-memory, fast and with a nice fluent developer experience!Because everything including the Program.cs and startup code are covered we can spot configuration and IoC issues which are hard to test with more traditional methods. I include a method of mocking and asserting against Azure Service Bus\n\nPart 2 discusses the usual issues with integration tests and how they expose the issues with running an app locally. It then presents .Net Aspire as the answer to lots of these issues, It covers the process of adding .Net Aspire to a solution and showcases its features, adding additional OTEL telemetry to track interesting events, including persisting and rehydrating telemetry across any 'process airgaps' and the creation of integration tests covering end-to-end flows using Open Telemetry trace data for assertions.\n\nThe aim of both parts of this talk is to have a repo which when pulled down onto a fresh machine, builds first time, component tests pass first time, then having run the script and the app, the the integration tests pass first time, after which you can push F5 and have it all run with almost no time or effort!",
+        "videoUrl": "https://youtu.be/V-hObfFaebw",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 7,
+        "title": "The Hidden Evolution of Services",
+        "duration": 30,
+        "speakerName": "Stuart Caborn",
+        "speakerUrl": "https://www.linkedin.com/in/stuartcaborn/",
+        "description": "How do you know when a service needs to evolve? While we often focus on REST APIs and runtime behavior, the true scope of a service could extend beyond these interfaces. Through the journey of a critical booking service at loveholidays, Stuart will explore how 12 years of rapid organisational growth created unexpected challenges in both our runtime and data architectures. Gain practical insights about recognising when your service boundaries no longer serve your teams, how 'hidden' APIs like data dependencies can impact your ability to evolve, and how loveholidays approached restructuring for future scalability while keeping their systems running smoothly. This real-world case study demonstrates how to systematically untangle and evolve critical services as your organisation grows.",
+        "videoUrl": "https://youtu.be/GaliZWc-cTo?si=M90wpEvzdAD7GxBI&t=2271",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 7,
+        "title": "Human side of change",
+        "duration": 30,
+        "speakerName": "Maria Gaganova",
+        "speakerUrl": "https://www.linkedin.com/in/maria-gaganova/",
+        "description": "As developers, you are building new tools and disrupting the way others operate. having a tool is great, but then adopting users to change their behaviors requires separate focus, time and resources. Sometimes, we need to let users \"destroy\" the tool first, only to learn how to make them \"love\" it later. I'll give some examples on how I went about this challenge in the teams I worked with and how important is the work between developers, users, stakeholders, project leads, change managers and so on.",
+        "videoUrl": "https://youtu.be/GaliZWc-cTo?si=URkVSorZJk_rsWW4&t=92",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 6,
+        "title": "Breaking into Tech",
+        "duration": 30,
+        "speakerName": "Shalom Vic-Jumbo",
+        "speakerUrl": "https://www.linkedin.com/in/shalom-vic-/",
+        "description": "A discussion forum about popular pathways to 'breaking into the tech industry' from another industry. Listening to people's story and feedback to inspire new graduates and people transitioning.",
+        "videoUrl": "https://youtu.be/pOkN0fQrWSQ?si=DcGI-Wmh7PVYeE0Z&t=61",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 6,
+        "title": "The Current Landscape of Open Source AI",
+        "duration": 30,
+        "speakerName": "Richard Brough",
+        "speakerUrl": "https://www.linkedin.com/in/richard-n-brough/",
+        "description": "The talk will cover the benefits of open source AI, a selection of major milestones in recent years and the current landscape of open source large language models, image generation and more. It will give an overview of how you can run these yourself either on your own hardware, or in the cloud.",
+        "videoUrl": "https://youtu.be/pOkN0fQrWSQ?si=NBvcrK25PE1Te8F9&t=2027",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 5,
+        "title": "Clean Architecture complements Salesforce well-architected framework",
+        "duration": 30,
+        "speakerName": "Ganesh Tambat & Dayton Meyer",
+        "speakerUrl": "https://www.linkedin.com/in/gtambat/",
+        "description": "The session will dive into practical strategies to revolutionize your Salesforce development using proven Clean Architecture approach by extending it's Well-Architected Framework. Discover how to decouple dependencies, improve low-code/pro-code quality, and deliver robust solutions that adapts to evolving business needs.",
+        "videoUrl": "https://youtu.be/KYxJebvBo-A?si=FUIW7f5qasmchS67&t=2198",
+        "slidesUrl": "https://drive.google.com/file/d/18c6b9znMVPLRsqz8VQjvUIqW5ZVabyqR/view?usp=drive_link",
+        "status": "past"
+    },
+    {
+        "eventID": 5,
+        "title": "The Power of Telemetry",
+        "duration": 30,
+        "speakerName": "Paul Reardon",
+        "speakerUrl": "https://www.linkedin.com/in/pauljreardon/",
+        "description": "An overview of Open Telemetry and how to use it in your application to make observability easy.",
+        "videoUrl": "https://youtu.be/KYxJebvBo-A?si=E7lHsT2ONsfMJlkr&t=24",
+        "slidesUrl": "https://docs.google.com/presentation/d/1OgbTKeNoYgGRMO7HDOrX5O-DbDeLcgGHmBV61DpG17s/edit?usp=drive_link",
+        "status": "past"
+    },
+    {
+        "eventID": 4,
+        "title": "PHP Today: Evolving, Growing, and Thriving",
+        "duration": 30,
+        "speakerName": "George Buckingham",
+        "speakerUrl": "https://www.linkedin.com/in/georgebuckingham/",
+        "description": "Let's take a look at the state of the modern PHP ecosystem and why you should seriously be considering it for your next development project.",
+        "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=aW6HmUS839_pxEw5&t=2427",
+        "slidesUrl": "https://www.georgebuckingham.com/assets/files/talks/php-today.pdf",
+        "status": "past"
+    },
+    {
+        "eventID": 4,
+        "title": "No CS Degree != No Job",
+        "duration": 15,
+        "speakerName": "Miguel Salvador",
+        "speakerUrl": "https://www.linkedin.com/in/miguel-salvador19/",
+        "description": "Getting a job in the industry without a CS degree, and strategies to persevere through the whole process.",
+        "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=4dwtG_v1OqKFvd4z&t=173",
+        "slidesUrl": "https://docs.google.com/presentation/d/15K4SmRABSeDLTOSbQpogNI7NHA_0pLr7XdWRGkMNXuQ/edit?usp=sharing",
+        "status": "past"
+    },
+    {
+        "eventID": 4,
+        "title": "My first year in YouTube",
+        "duration": 10,
+        "speakerName": "Kerry Oliver",
+        "speakerUrl": "https://www.linkedin.com/in/kerry-oliver-justpickoneuk/",
+        "description": "I will tell you the ups and downs of starting and maintaining my YouTube channel through its first year.",
+        "videoUrl": "https://youtu.be/7pvuFaCC5Q8?si=gAHoCDYuHwEpnE-i&t=1315",
+        "slidesUrl": "https://docs.google.com/presentation/d/15K4SmRABSeDLTOSbQpogNI7NHA_0pLr7XdWRGkMNXuQ/edit?usp=sharing",
+        "status": "past"
+    },
+    {
+        "eventID": 3,
+        "title": "Beyond Automation: How Agentic AI is Reshaping the Future",
+        "duration": 30,
+        "speakerName": "Claudia De Jeu Boronat",
+        "speakerUrl": "https://www.linkedin.com/in/claudiadejeuboronat/",
+        "description": "Agentic AI is at the forefront of the 2025 AI revolution, driving automation, decision-making, and intelligent collaboration. In this session, we'll break down what makes AI agents 'agentic,' how they're designed, and the learning path to mastering them. We'll explore real-world applications across industries, and tackle the challenges and risks that come with deploying autonomous AI. If you're looking to stay ahead in AI, this talk is for you!",
+        "videoUrl": "https://youtu.be/XVukg9Rt_ww?si=7FJOaV4cmXmyHvFZ&t=2267",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 3,
+        "title": "Tech Hiring: 3 Years of Change - Decoding the New Maze",
+        "duration": 45,
+        "speakerName": "Andy Ross",
+        "speakerUrl": "https://www.linkedin.com/in/andyrossstudiovision/",
+        "description": "How tech hiring trends and employers expectations have evolved in the last 3 years + how to navigate the tech job market in 2025.",
+        "videoUrl": "https://youtu.be/XVukg9Rt_ww?si=ZUyZoIfm_jKKwqXK&t=154",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 2,
+        "title": "My Journey Building a City-Based Maze Game using ml5.js and open-source API's",
+        "duration": 25,
+        "speakerName": "Desmond Ezo-Ojile",
+        "speakerUrl": "https://www.linkedin.com/in/desmondezo/",
+        "description": "In this session, I will walk through my journey of developing a city-based maze game, highlighting the technical challenges encountered and the strategies implemented to overcome them. I will delve into how I leveraged ml5.js and various open-source APIs to create dynamic maze game that brings the urban labyrinth to life.",
+        "videoUrl": "https://youtu.be/myIPUjc4P6s?si=tjLuwBq0xhJE-lSj&t=206",
+        "slidesUrl": "https://docs.google.com/presentation/d/1MotO2xX3ESfFua7oB0VAoCjy9zno_-7mRxwvQsGSyBo/edit?usp=drive_link",
+        "status": "past"
+    },
+    {
+        "eventID": 2,
+        "title": "Lessons from a Domain-Driven Design Transformation",
+        "duration": 30,
+        "speakerName": "Seemin Suleri",
+        "speakerUrl": "https://www.linkedin.com/in/suleri/",
+        "description": "In this session, I will talk through the lessons we learned on scaling a company to a global level, by applying Domain-Driven Design (DDD) and Conway's law within the companies team structures, and the software system architectures. I'll tell you of the chaos we battled through to make the transformation succeed.",
+        "videoUrl": "https://youtu.be/myIPUjc4P6s?si=-S70-Za6nGA0OWTQ&t=2216",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 1,
+        "title": "Design of Microservices using the REPR pattern over MVC",
+        "duration": 20,
+        "speakerName": "Jamie Savin",
+        "speakerUrl": "https://www.linkedin.com/in/jamiesavin/",
+        "description": "Exploring how to design a Microservice using the REPR pattern instead of MVC. Showcasing better alignment with SOLID principles and improved performance over MVC.",
+        "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=OugK7NLZ_hLhFze6&t=1373",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 1,
+        "title": "Breaking Into Industry: A Student's Perspective",
+        "duration": 20,
+        "speakerName": "Chloe Greenstreet",
+        "speakerUrl": "https://www.linkedin.com/in/chloé-greenstreet/",
+        "description": "A Student's Perspective to beginning a career in the Tech Industry. An open discussion on what's expected from fresh graduate students by employers and how student opportunities, like Insight days and Placements, offer value to both companies and students.",
+        "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=t-e73ynOOYhnpWwB&t=514",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "eventID": 1,
+        "title": "Skyports Technology Journey: Lessons from Vertiport Automation",
+        "duration": 30,
+        "speakerName": "Dan Lambeth",
+        "speakerUrl": "https://www.linkedin.com/in/dan-lambeth1992/",
+        "description": "A delve into the journey of building the Vertiport Automation environment, and lessons learned from it.",
+        "videoUrl": "https://youtu.be/lJJxj38ZPLU?si=SXlPV4Ltal2VzptH&t=2465",
+        "slidesUrl": "",
+        "status": "past"
     }
 ]
