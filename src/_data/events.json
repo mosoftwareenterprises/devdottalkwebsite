@@ -1,157 +1,82 @@
 [
     {
-        "date": "2024-11-27",
-        "displayDate": "November 27th 2024",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator",
-        "title": "{dev.talk} - the one where we got started",
-        "photoUrl": "https://photos.app.goo.gl/V8GmT5GTm1BS9VUc6",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://www.youtube.com/watch?si=J6UpHEy-f_aVzKD3&v=lJJxj38ZPLU&feature=youtu.be"
-            }
-        ]
+        "date": "2026-12-16",
+        "displayDate": "December 16th 2026",
+        "url": "/2026-december-location-info.html",
+        "title": "{dev.talk} - The one where we celebrate together",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-01-30",
-        "displayDate": "January 30th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we deployed our first PATCH",
-        "photoUrl": "https://photos.app.goo.gl/65mdTC2EFAhdmWYb6",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/myIPUjc4P6s?si=-S70-Za6nGA0OWTQ&t=2216"
-            }
-        ]
+        "date": "2026-11-25",
+        "displayDate": "November 25th 2026",
+        "url": "/2026-november-location-info.html",
+        "title": "{dev.talk} - The one where we all want to stay in doors",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-02-26",
-        "displayDate": "February 26th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-forged-friendships-at-the-foundry-tickets-1132558205079?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we forged friendships at the FOUNDRY",
-        "photoUrl": "https://photos.app.goo.gl/q9C4RTZuFEgwcZqU6",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://www.youtube.com/watch?v=XVukg9Rt_ww"
-            }
-        ]
+        "date": "2026-10-21",
+        "displayDate": "October 21st 2026",
+        "url": "/2026-october-location-info.html",
+        "title": "{dev.talk} - The one with the spoooky season",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-03-26",
-        "displayDate": "March 26th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-creatives-coders-at-cottonwood-tickets-1261177177889?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one with Creatives & Coders at Cottonwood",
-        "photoUrl": "https://photos.app.goo.gl/mVEhNfpd1fYcEMcs5",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/7pvuFaCC5Q8"
-            }
-        ]
+        "date": "2026-09-23",
+        "displayDate": "September 23rd 2026",
+        "url": "/2026-september-location-info.html",
+        "title": "{dev.talk} - The one after the holidays",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-04-23",
-        "displayDate": "April 23rd 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-will-see-you-at-bu-tickets-1292820513959?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we will see you at BU",
-        "photoUrl": "https://photos.app.goo.gl/1C7HXnTU2NarS4X88",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/KYxJebvBo-A"
-            }
-        ]
+        "date": "2026-07-22",
+        "displayDate": "July 22nd 2026",
+        "url": "/2026-july-location-info.html",
+        "title": "{dev.talk} - The one in July",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-05-21",
-        "displayDate": "May 21st 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-open-source-ai-tries-to-break-into-tech-tickets-1312789481679?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where Open Source AI tries to break into Tech",
-        "photoUrl": "https://photos.app.goo.gl/vJcDBSHSBBs9cHNe6",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/pOkN0fQrWSQ"
-            }
-        ]
+        "date": "2026-06-24",
+        "displayDate": "June 24th 2026",
+        "url": "/2026-june-location-info.html",
+        "title": "{dev.talk} - The one in June",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-06-25",
-        "displayDate": "June 25th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-connect-before-reconnect-tickets-1335283451749?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we connect before re:connect",
-        "photoUrl": "https://photos.app.goo.gl/fiZCvRTvUaFsgU6r9",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://www.youtube.com/@devdottalk"
-            }
-        ]
+        "date": "2026-05-20",
+        "displayDate": "May 20th 2026",
+        "url": "/2026-may-location-info.html",
+        "title": "{dev.talk} - The one in May",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-07-23",
-        "displayDate": "July 23rd 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-the-conference-come-down-tickets-1383069260389",
-        "title": "{dev.talk} - The one with the conference come down",
-        "photoUrl": "https://photos.app.goo.gl/nBgagTf8GmauaGyz8",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/GaliZWc-cTo"
-            }
-        ]
+        "date": "2026-04-29",
+        "displayDate": "April 29th 2026",
+        "url": "/2026-april-location-info.html",
+        "title": "{dev.talk} - The one in April",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-09-24",
-        "displayDate": "September 24th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-learn-to-level-up-our-devex-tickets-1666958901949?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we learn to Level Up Our DevEx",
-        "photoUrl": "https://photos.app.goo.gl/3jbDBpeiCG1fSQme8",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/V-hObfFaebw"
-            }
-        ]
+        "date": "2026-03-25",
+        "displayDate": "March 25th 2026",
+        "url": "/2026-march-location-info.html",
+        "title": "The One Where JARVIS Fits in Your Pocket and the IC Grows Up",
+        "photoUrl": "TODO",
+        "videos": []
     },
     {
-        "date": "2025-10-22",
-        "displayDate": "October 22nd 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-pms-ask-designers-imagine-and-devs-improvise-tickets-1730652110049?aff=oddtdtcreator",
-        "title": "{dev.talk} - The One Where PMs Ask, Designers Imagine, and Devs Improvise",
-        "photoUrl": "https://photos.app.goo.gl/2pGzP9X5vUcYsSBg9",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/yv2jTL2zrXc"
-            }
-        ]
-    },
-    {
-        "date": "2025-11-26",
-        "displayDate": "November 26th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-our-birthday-tickets-1730677285349?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one with our Birthday",
-        "photoUrl": "https://photos.app.goo.gl/WDLzshsGGfxUYB8w9",
-        "videos": [
-            {
-                "title": "Frank Milsom - The Post Office Horizon Systems Bugs",
-                "url": "https://youtu.be/WVWnJ9X3Sts"
-            },
-            {
-                "title": "Adam Scholey - The Sitcom Lovers Guide to Software Engineering",
-                "url": "https://youtu.be/H1kAYKQsXQg"
-            }
-        ]
-    },
-    {
-        "date": "2025-12-17",
-        "displayDate": "December 17th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-something-different-tickets-1730678890149?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one with something different",
-        "photoUrl": "https://photos.app.goo.gl/aNzK9Rjqgg29pwx68",
+        "date": "2026-02-25",
+        "displayDate": "February 25th 2026",
+        "url": "/2026-february-location-info.html",
+        "title": "{dev.talk} - The One With The Gaming Collab",
+        "photoUrl": "https://photos.app.goo.gl/p4WKcC8xL2bBZKEG6",
         "videos": []
     },
     {
@@ -172,83 +97,158 @@
         ]
     },
     {
-        "date": "2026-02-25",
-        "displayDate": "February 25th 2026",
-        "url": "/2026-february-location-info.html",
-        "title": "{dev.talk} - The One With The Gaming Collab",
-        "photoUrl": "https://photos.app.goo.gl/p4WKcC8xL2bBZKEG6",
+        "date": "2025-12-17",
+        "displayDate": "December 17th 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-something-different-tickets-1730678890149?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one with something different",
+        "photoUrl": "https://photos.app.goo.gl/aNzK9Rjqgg29pwx68",
         "videos": []
     },
     {
-        "date": "2026-03-25",
-        "displayDate": "March 25th 2026",
-        "url": "/2026-march-location-info.html",
-        "title": "The One Where JARVIS Fits in Your Pocket and the IC Grows Up",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-11-26",
+        "displayDate": "November 26th 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-our-birthday-tickets-1730677285349?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one with our Birthday",
+        "photoUrl": "https://photos.app.goo.gl/WDLzshsGGfxUYB8w9",
+        "videos": [
+            {
+                "title": "Frank Milsom - The Post Office Horizon Systems Bugs",
+                "url": "https://youtu.be/WVWnJ9X3Sts"
+            },
+            {
+                "title": "Adam Scholey - The Sitcom Lovers Guide to Software Engineering",
+                "url": "https://youtu.be/H1kAYKQsXQg"
+            }
+        ]
     },
     {
-        "date": "2026-04-29",
-        "displayDate": "April 29th 2026",
-        "url": "/2026-april-location-info.html",
-        "title": "{dev.talk} - The one in April",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-10-22",
+        "displayDate": "October 22nd 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-pms-ask-designers-imagine-and-devs-improvise-tickets-1730652110049?aff=oddtdtcreator",
+        "title": "{dev.talk} - The One Where PMs Ask, Designers Imagine, and Devs Improvise",
+        "photoUrl": "https://photos.app.goo.gl/2pGzP9X5vUcYsSBg9",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://youtu.be/yv2jTL2zrXc"
+            }
+        ]
     },
     {
-        "date": "2026-05-20",
-        "displayDate": "May 20th 2026",
-        "url": "/2026-may-location-info.html",
-        "title": "{dev.talk} - The one in May",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-09-24",
+        "displayDate": "September 24th 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-learn-to-level-up-our-devex-tickets-1666958901949?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one where we learn to Level Up Our DevEx",
+        "photoUrl": "https://photos.app.goo.gl/3jbDBpeiCG1fSQme8",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://youtu.be/V-hObfFaebw"
+            }
+        ]
     },
     {
-        "date": "2026-06-24",
-        "displayDate": "June 24th 2026",
-        "url": "/2026-june-location-info.html",
-        "title": "{dev.talk} - The one in June",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-07-23",
+        "displayDate": "July 23rd 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-the-conference-come-down-tickets-1383069260389",
+        "title": "{dev.talk} - The one with the conference come down",
+        "photoUrl": "https://photos.app.goo.gl/nBgagTf8GmauaGyz8",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://youtu.be/GaliZWc-cTo"
+            }
+        ]
     },
     {
-        "date": "2026-07-22",
-        "displayDate": "July 22nd 2026",
-        "url": "/2026-july-location-info.html",
-        "title": "{dev.talk} - The one in July",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-06-25",
+        "displayDate": "June 25th 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-connect-before-reconnect-tickets-1335283451749?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one where we connect before re:connect",
+        "photoUrl": "https://photos.app.goo.gl/fiZCvRTvUaFsgU6r9",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://www.youtube.com/@devdottalk"
+            }
+        ]
     },
     {
-        "date": "2026-09-23",
-        "displayDate": "September 23rd 2026",
-        "url": "/2026-september-location-info.html",
-        "title": "{dev.talk} - The one after the holidays",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-05-21",
+        "displayDate": "May 21st 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-open-source-ai-tries-to-break-into-tech-tickets-1312789481679?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one where Open Source AI tries to break into Tech",
+        "photoUrl": "https://photos.app.goo.gl/vJcDBSHSBBs9cHNe6",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://youtu.be/pOkN0fQrWSQ"
+            }
+        ]
     },
     {
-        "date": "2026-10-21",
-        "displayDate": "October 21st 2026",
-        "url": "/2026-october-location-info.html",
-        "title": "{dev.talk} - The one with the spoooky season",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-04-23",
+        "displayDate": "April 23rd 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-will-see-you-at-bu-tickets-1292820513959?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one where we will see you at BU",
+        "photoUrl": "https://photos.app.goo.gl/1C7HXnTU2NarS4X88",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://youtu.be/KYxJebvBo-A"
+            }
+        ]
     },
     {
-        "date": "2026-11-25",
-        "displayDate": "November 25th 2026",
-        "url": "/2026-november-location-info.html",
-        "title": "{dev.talk} - The one where we all want to stay in doors",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-03-26",
+        "displayDate": "March 26th 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-creatives-coders-at-cottonwood-tickets-1261177177889?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one with Creatives & Coders at Cottonwood",
+        "photoUrl": "https://photos.app.goo.gl/mVEhNfpd1fYcEMcs5",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://youtu.be/7pvuFaCC5Q8"
+            }
+        ]
     },
     {
-        "date": "2026-12-16",
-        "displayDate": "December 16th 2026",
-        "url": "/2026-december-location-info.html",
-        "title": "{dev.talk} - The one where we celebrate together",
-        "photoUrl": "TODO",
-        "videos": []
+        "date": "2025-02-26",
+        "displayDate": "February 26th 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-forged-friendships-at-the-foundry-tickets-1132558205079?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one where we forged friendships at the FOUNDRY",
+        "photoUrl": "https://photos.app.goo.gl/q9C4RTZuFEgwcZqU6",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://www.youtube.com/watch?v=XVukg9Rt_ww"
+            }
+        ]
+    },
+    {
+        "date": "2025-01-30",
+        "displayDate": "January 30th 2025",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator",
+        "title": "{dev.talk} - The one where we deployed our first PATCH",
+        "photoUrl": "https://photos.app.goo.gl/65mdTC2EFAhdmWYb6",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://youtu.be/myIPUjc4P6s?si=-S70-Za6nGA0OWTQ&t=2216"
+            }
+        ]
+    },
+    {
+        "date": "2024-11-27",
+        "displayDate": "November 27th 2024",
+        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator",
+        "title": "{dev.talk} - the one where we got started",
+        "photoUrl": "https://photos.app.goo.gl/V8GmT5GTm1BS9VUc6",
+        "videos": [
+            {
+                "title": "Watch",
+                "url": "https://www.youtube.com/watch?si=J6UpHEy-f_aVzKD3&v=lJJxj38ZPLU&feature=youtu.be"
+            }
+        ]
     }
 ]
