@@ -14,7 +14,7 @@ export default () => {
     const enriched = list.map((session, idx) => {
         return {
             ...session,
-            id: `session-${idx}`,
+            id: session.id ?? `session-${idx}`,
             durationText: `${session.duration} mins`
         };
     });

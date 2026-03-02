@@ -96,11 +96,11 @@ Located on the first floor, turn left at the top of the stairs, or turn right if
 
 ## Speakers
 
-{% include "speaker-session.njk" sessionId=31 headshotFilename="/images/2026/march/First Speaker image - March 2026.png" %}
+{% include "speaker-session.njk", sessionId: 31, sessions: sessions.all, headshotFilename: "/images/2026/march/First Speaker image - March 2026.png" %}
 
 ---
 
-{% include "speaker-session.njk" sessionId=32 headshotFilename="/images/2026/march/Second Speaker image - March 2026.png" %}
+{% include "speaker-session.njk", sessionId: 32, sessions: sessions.all, headshotFilename: "/images/2026/march/Second Speaker image - March 2026.png" %}
 
 ---
 
