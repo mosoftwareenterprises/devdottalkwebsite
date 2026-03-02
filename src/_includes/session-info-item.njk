@@ -13,8 +13,8 @@
     {% set s = {
       title: a,
       durationText: b,
-      speakerName: c,
-      speakerUrl: d,
+      firstSpeakerName: c,
+      firstSpeakerUrl: d,
       description: e,
       videoUrl: f,
       slidesUrl: g
@@ -38,10 +38,10 @@
       -
       {# Display up to 2 speakers if present #}
       {% if s.secondSpeakerName and s.secondSpeakerUrl %}
-        <a href="{{ s.speakerUrl }}" target="_blank">{{ s.speakerName }}</a>
+        <a href="{{ s.firstSpeakerUrl }}" target="_blank">{{ s.firstSpeakerName }}</a>
         &amp; <a href="{{ s.secondSpeakerUrl }}" target="_blank">{{ s.secondSpeakerName }}</a>
       {% else %}
-        <a href="{{ s.speakerUrl }}" target="_blank">{{ s.speakerName }}</a>
+        <a href="{{ s.firstSpeakerUrl }}" target="_blank">{{ s.firstSpeakerName }}</a>
       {% endif %}
     </p>
     <p>{{ s.description }}</p>
