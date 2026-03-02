@@ -1,21 +1,47 @@
-{% macro eventItem(date, eventUrl, eventTitle, photoUrl, video1Title, video1Url, video2Title, video2Url, video3Title, video3Url) %}
+{% macro eventItem(a, b, c, d, e, f, g, h, i, j) %}
+  {#
+    The old signature took ten separate positional arguments:
+      date, eventUrl, eventTitle, photoUrl,
+      video1Title, video1Url, video2Title, video2Url, video3Title, video3Url
+
+    To make maintenance easier we now prefer to pass a single
+    "event" object (see src/_data/events.json).  However some
+    legacy calls still use the old form, so we detect which was
+    supplied and normalise to an object named `ev`.
+  #}
+
+  {% if b is defined %}
+    {# old style invocation #}
+    {% set ev = {
+      displayDate: a,
+      url: b,
+      title: c,
+      photoUrl: d,
+      videos: []
+    } %}
+    {%- if f and f != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: e, url: f }]) }) %} {% endif %}
+    {%- if h and h != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: g, url: h }]) }) %} {% endif %}
+    {%- if j and j != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: i, url: j }]) }) %} {% endif %}
+  {% else %}
+    {# assume first argument is the event object #}
+    {% set ev = a %}
+  {% endif %}
+
   <li>
     <div class="event-item">
-      <a href="{{ eventUrl }}" target="_blank" class="event-title">{{ date }}: {{ eventTitle }}</a>
-      {%- if (photoUrl and photoUrl != "TODO") or (video1Url and video1Url != "TODO") or (video2Url and video2Url != "TODO") or (video3Url and video3Url != "TODO") %}
+      <a href="{{ ev.url }}" target="_blank" class="event-title">
+        {{ ev.displayDate }}: {{ ev.title }}
+      </a>
+      {%- if (ev.photoUrl and ev.photoUrl != "TODO") or (ev.videos and ev.videos | length) %}
       <ul class="event-links">
-        {%- if photoUrl and photoUrl != "TODO" %}
-        <li><a href="{{ photoUrl }}" target="_blank" class="event-link event-link--photos">📸 Photos</a></li>
+        {%- if ev.photoUrl and ev.photoUrl != "TODO" %}
+          <li><a href="{{ ev.photoUrl }}" target="_blank" class="event-link event-link--photos">📸 Photos</a></li>
         {%- endif %}
-        {%- if video1Url and video1Url != "TODO" %}
-        <li><a href="{{ video1Url }}" target="_blank" class="event-link event-link--video">▶️ {{ video1Title }}</a></li>
-        {%- endif %}
-        {%- if video2Url and video2Url != "TODO" %}
-        <li><a href="{{ video2Url }}" target="_blank" class="event-link event-link--video">▶️ {{ video2Title }}</a></li>
-        {%- endif %}
-        {%- if video3Url and video3Url != "TODO" %}
-        <li><a href="{{ video3Url }}" target="_blank" class="event-link event-link--video">▶️ {{ video3Title }}</a></li>
-        {%- endif %}
+        {%- for video in ev.videos %}
+          {%- if video.url and video.url != "TODO" %}
+            <li><a href="{{ video.url }}" target="_blank" class="event-link event-link--video">▶️ {{ video.title }}</a></li>
+          {%- endif %}
+        {%- endfor %}
       </ul>
       {%- endif %}
     </div>
