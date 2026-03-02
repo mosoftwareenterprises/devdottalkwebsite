@@ -39,6 +39,19 @@
         "status": "upcoming"
     },
     {
+        "eventID": 14,
+        "title": "Building Agentic Mobile OS for privacy",
+        "duration": 30,
+        "firstSpeakerName": "Kevin Djabaku Ocansey",
+        "firstSpeakerUrl": "https://www.linkedin.com/in/kevin-ocansey-3000b91b2/",
+        "firstSpeakerBio": "Kevin is a recent Data Science and AI Graduate with a passion for building intelligent systems, primarily with Python. A multiple hackathon winner, he considers himself an AI Engineer at heart, with a strong foundation in both software engineering and data Science. Still exploring where to specialise, Kevin is driven by curiosity and a love for community, most recently volunteering at the Reconnect conference through the Sam and Ray podcast.",
+        "firstSpeakerJobTitle": "AI Engineer",
+        "description": "I'll be sharing my journey of building JarvisOS; a privacy-first mobile operating system that keeps AI local on your device. The talk will walk through how I got here: starting with learning how AI systems remember and retrieve information (RAG), understanding how computers can find similar pieces of data quickly (vector databases), and diving into Android's deep internals to make it all work at the system level. I'll then introduce JarvisOS itself - what we're building, why it's different from existing solutions, and how we're using Cactus (a lightweight AI framework) to make powerful AI run entirely on your phone without sending anything to the cloud. We'll wrap up with a practical demonstration: a live notebook showing how AI models get compressed to fit on mobile devices - taking something that normally requires massive servers and making it work in your pocket.",
+        "videoUrl": "",
+        "slidesUrl": "",
+        "status": "upcoming"
+    },
+    {
         "eventID": 13,
         "title": "Shipping Faster by Debugging Marketing",
         "duration": 20,
@@ -50,7 +63,7 @@
         "videoUrl": "",
         "slidesUrl": "",
         "status": "past"
-    },
+    },  
     {
         "eventID": 13,
         "title": "The 80/20 Rule of Game Jams",
