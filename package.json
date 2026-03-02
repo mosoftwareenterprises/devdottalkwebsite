@@ -4,12 +4,17 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "@vitest/ui": "^1.6.1",
+    "nunjucks": "^3.2.4",
+    "vitest": "^1.6.1"
   },
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
-    "preview": "sirv _site --single --cors --no-clear --port 8080"
+    "preview": "sirv _site --single --cors --no-clear --port 8080",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^6.0.4",

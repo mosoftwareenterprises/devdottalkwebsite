@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: |
           ~/.local/bin/mise exec -- npm ci
+      - name: Run tests
+        run: |
+          ~/.local/bin/mise exec -- npm run test
       - name: Build
         run: |
           ~/.local/bin/mise exec -- npm run build

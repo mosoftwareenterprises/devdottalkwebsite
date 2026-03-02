@@ -8,6 +8,12 @@ NODE_ENV = 'production'
 [tasks.build]
 run = ["npm install", "npm ci", "npm run build"]
 
+[tasks.test]
+run = "npm run test"
+
+[tasks.test-watch]
+run = "npm run test:watch"
+
 [tasks.start]
-run = "npm start"
+run = ["npm run test", "npm start"]
 depends = "build"
