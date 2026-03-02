@@ -17,8 +17,10 @@ Static community website built with **Eleventy (11ty)** and **Nunjucks templates
 ### Component Patterns
 
 **Reusable macros** (`src/_includes/*.njk`) define repeating content blocks:
-- `eventItem(date, eventUrl, eventTitle, photoUrl, video1Title, video1Url, ...)` – renders event cards
+- `eventItem(...)` – renders event cards.  It now accepts **either** a legacy parameter list or an `event` object from the shared data file.
 - `sessionInfoItem(title, duration, speakerName, speakerLink, description, videoLink, slidesLink)` – renders session entries
+
+Events data is stored centrally in `src/_data/events.json` with convenient helper logic in `src/_data/events.js` that exposes `events.all`, `events.past`, and `events.upcoming`.  Templates can control which set to render via a frontmatter field `eventScope` (values `past`, `upcoming` or `all`).
 
 Page templates invoke macros: `{% import "session-info-item.njk" as session %}`  
 then call: `{{ session.sessionInfoItem(...) }}`  
@@ -44,15 +46,16 @@ Eleventy copies static assets explicitly:
 
 ### Setup
 - **Runtime requirement**: Node 24 (enforced via `mise.toml`)
-- **Tool**: [mise](https://mise.jdx.dev/) manages node/tooling
-- **Install**: `mise install` then `mise start` (runs build + start tasks)
+- **Tool**: [mise](https://mise.jdx.dev/) manages node/tooling and wraps npm commands
+- **Install dependencies**: `mise install`
+- **Build & serve**: use the provided mise tasks instead of calling npm directly:
+  ```bash
+  mise run build    # equivalent to `npm run build`, produces _site/
+  mise start        # installs, builds, then serves with live reload
+  mise run preview  # static server on :8080 after build
+  ```
 
-### Build & Serve
-```bash
-npm run build    # eleventy build → _site/
-npm start        # eleventy --serve (watches src/, live reload on :8080)
-npm run preview  # static server on :8080 after build
-```
+(The tasks are defined in `mise.toml` and mirror the npm scripts found in package.json.)
 
 ### Git Workflow
 - Main branch auto-deploys via GitHub Actions → Azure Static Web Apps
@@ -77,7 +80,9 @@ npm run preview  # static server on :8080 after build
 **Add a new page**: Create `src/new-page.njk` with frontmatter + content  
 **Add index section**: Create `src/_includes/index/section-name.njk`, include in [src/index.njk](src/index.njk)  
 **Add session/event**: Call macro in template (see [previous-sessions.njk](src/previous-sessions.njk) line 14+)  
-**Update redirect**: Edit [staticwebapp.config.json](src/staticwebapp.config.json) routes
+**Update redirect**: Edit [staticwebapp.config.json](src/staticwebapp.config.json) routes  
+
+> ⚠️ When running any of the above locally, use `mise` commands (`mise run build`, `mise start`, etc.) rather than invoking `npm` directly.  This ensures the correct Node version and environment flags are applied.
 
 ## Deployment
 
