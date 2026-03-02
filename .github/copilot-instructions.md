@@ -18,12 +18,14 @@ Static community website built with **Eleventy (11ty)** and **Nunjucks templates
 
 **Reusable macros** (`src/_includes/*.njk`) define repeating content blocks:
 - `eventItem(...)` – renders event cards.  It now accepts **either** a legacy parameter list or an `event` object from the shared data file.
-- `sessionInfoItem(title, duration, speakerName, speakerLink, description, videoLink, slidesLink)` – renders session entries
+- `sessionInfoItem(...)` – renders session entries.  It now accepts **either** a legacy parameter list or a `session` object from the shared data file.
 
-Events data is stored centrally in `src/_data/events.json` with convenient helper logic in `src/_data/events.js` that exposes `events.all`, `events.past`, and `events.upcoming`.  Templates can control which set to render via a frontmatter field `eventScope` (values `past`, `upcoming` or `all`).
+**Data sources:**
+- Events data is stored centrally in `src/_data/events.json` with helper logic in `src/_data/events.js` that exposes `events.all`, `events.past`, and `events.upcoming`.  Templates control which set to render via frontmatter field `eventScope` (`past`, `upcoming` or `all`).
+- Sessions data is stored centrally in `src/_data/sessions.json` with helper logic in `src/_data/sessions.js` that exposes `sessions.all`, `sessions.past`, and `sessions.upcoming`.  Templates control which set to render via frontmatter field `sessionScope` (`past`, `upcoming` or `all`).
 
 Page templates invoke macros: `{% import "session-info-item.njk" as session %}`  
-then call: `{{ session.sessionInfoItem(...) }}`  
+then call: `{{ session.sessionInfoItem(sess) }}`  with a session object from the data file.  
 See [src/previous-sessions.njk](src/previous-sessions.njk) for examples.
 
 ### Image Handling

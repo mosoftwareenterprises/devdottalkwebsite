@@ -1,22 +1,47 @@
-{% macro sessionInfoItem(title, duration, speakerName, speakerLink, description, videoLink, slidesLink) %}
+{% macro sessionInfoItem(a, b, c, d, e, f, g) %}
+  {#
+    The old signature took seven separate parameters:
+      title, duration, speakerName, speakerLink, description, videoLink, slidesLink
+
+    To simplify maintenance we now prefer a single "session" object from src/_data/sessions.json.
+    However legacy calls still use the old form, so we detect which was supplied
+    and normalise to an object named `s`.
+  #}
+
+  {% if b is defined %}
+    {# old style invocation #}
+    {% set s = {
+      title: a,
+      durationText: b,
+      speakerName: c,
+      speakerUrl: d,
+      description: e,
+      videoUrl: f,
+      slidesUrl: g
+    } %}
+  {% else %}
+    {# assume first argument is the session object #}
+    {% set s = a %}
+  {% endif %}
+
   <li>
     <p>
       <b>
-        {% if videoLink %}
-          <a href="{{ videoLink }}" target="_blank">{{ title }}
-            ({{ duration }})</a>
+        {% if s.videoUrl and s.videoUrl != "" %}
+          <a href="{{ s.videoUrl }}" target="_blank">{{ s.title }}
+            ({{ s.durationText }})</a>
         {% else %}
-          {{ title }}
-          ({{ duration }})
+          {{ s.title }}
+          ({{ s.durationText }})
         {% endif %}
       </b>
       -
-      <a href="{{ speakerLink }}" target="_blank">{{ speakerName }}</a>
+      <a href="{{ s.speakerUrl }}" target="_blank">{{ s.speakerName }}</a>
     </p>
-    <p>{{ description }}</p>
-    {% if slidesLink %}
+    <p>{{ s.description }}</p>
+    {% if s.slidesUrl and s.slidesUrl != "" %}
       <p>
-        <a href="{{ slidesLink }}" target="_blank">Slides</a>
+        <a href="{{ s.slidesUrl }}" target="_blank">Slides</a>
       </p>
     {% endif %}
   </li>
