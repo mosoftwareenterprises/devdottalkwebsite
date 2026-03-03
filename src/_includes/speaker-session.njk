@@ -1,11 +1,17 @@
 {% macro speakerSession(sessionId, headshotFilename, sessionsList) %}
-    {% set source = [] %}
-    {% if sessionsList %}
-        {% set source = sessionsList %}
-    {% elif sessions is defined and sessions.all is defined %}
-        {% set source = sessions.all %}
+    {% set sessionRecord = null %}
+    
+    {# Try to use the helper function if available #}
+    {% if sessions is defined and sessions.findById %}
+        {% set sessionRecord = sessions.findById(sessionId) %}
+    {% elif sessionsList %}
+        {# Fallback to manual search in provided list #}
+        {% for session in sessionsList %}
+            {% if session.id == sessionId %}
+                {% set sessionRecord = session %}
+            {% endif %}
+        {% endfor %}
     {% endif %}
-    {% set sessionRecord = source | selectattr("id", "equalto", sessionId) | first %}
 
     {% if not sessionRecord %}
         <p>Session not found.</p>

@@ -21,11 +21,17 @@ export default () => {
 
     const past = enriched.filter(s => s.status === 'past');
     const upcoming = enriched.filter(s => s.status === 'upcoming');
+    
+    // helper function to find a session by ID
+    const findById = (id) => {
+        return enriched.find(s => s.id === id);
+    };
 
     // export multiple collections so templates can pick what they need
     return {
         all: enriched,
         past,
-        upcoming
+        upcoming,
+        findById
     };
 };
