@@ -10,9 +10,7 @@ run = ["npm install", "npm ci", "npm run build"]
 
 [tasks.test]
 run = "npm run test"
-
-[tasks.test-watch]
-run = "npm run test:watch"
+depends = "build"
 
 [tasks.start]
 run = ["npm run test", "npm start"]
