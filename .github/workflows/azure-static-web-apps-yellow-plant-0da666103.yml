@@ -14,9 +14,6 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
-    defaults:
-      run:
-        working-directory: devdottalkwebsite
     steps:
       - uses: actions/checkout@v3
         with:
@@ -26,15 +23,19 @@ jobs:
         run: |
           curl https://mise.run | sh
       - name: Setup mise tools
+        working-directory: devdottalkwebsite
         run: |
           ~/.local/bin/mise install
       - name: Install dependencies
+        working-directory: devdottalkwebsite
         run: |
           ~/.local/bin/mise exec -- npm ci
       - name: Run tests
+        working-directory: devdottalkwebsite
         run: |
           ~/.local/bin/mise exec -- npm run test
       - name: Build
+        working-directory: devdottalkwebsite
         run: |
           ~/.local/bin/mise exec -- npm run build
       - name: Deploy to Azure Static Web Apps
