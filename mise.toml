@@ -2,9 +2,6 @@
 node = '24'
 gh = '2'
 
-[env]
-NODE_ENV = 'production'
-
 [tasks.build]
 run = ["npm install", "npm ci", "npm run build"]
 
