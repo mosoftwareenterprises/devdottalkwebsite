@@ -103,6 +103,7 @@ Eleventy copies static assets explicitly:
 - **No data formats**: Avoid creating new patterns relying on data files
 - **Markdown content**: Use `.md` or `.njk`; markdown-it-anchor auto-generates heading anchors
 - **Bluesky feed**: Include `includeBlueskyPosts: true` in frontmatter to load 3 posts
+- **Styling**: All CSS must be in [src/styles.css](src/styles.css). Do NOT use inline `style` attributes in templates or markdown. Create new CSS classes instead and apply them via `class` attributes.
 
 ## Testing & Validation
 
