@@ -7,7 +7,7 @@ hideNextEventBanner: true
 hideMainLogo: false
 templateEngineOverride: njk,md
 permalink: 2026-march-location-info.html
-showVenueSection: true
+showVenueSection: false
 ---
 
 # Welcome to the March 2026 {dev.talk} Meetup
@@ -24,21 +24,30 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ---
 
+{% if not showVenueSection %}
+<section style="background-color: #fff3cd; padding: 20px; margin: 20px 0; border-left: 4px solid #ff9800; border-radius: 4px;">
+
+**📍 Venue Details Coming Soon!**
+
+We'll reveal the exact location on campus a few days before the event. If you get a ticket, you will be notified of the location on the day, as well as links to maps too.
+
+</section>
+{% endif %}
+
 <section style="background-color: #f9f9f9; padding: 20px; margin: 20px 0; border-left: 4px solid rgb(112, 136, 216); border-radius: 4px;">
 
 ## Table of Contents
 
+- [Event Details](#event-details)
 {% if showVenueSection %}
-
 - [Venue](#venue)
 - [Getting There](#getting-there)
-
+{% else %}
+- [🔒 Venue Details Coming Soon](#venue-details-coming-soon)
 {% endif %}
-
-- [Event Details](#event-details)
 - [Speakers](#speakers)
-- [Important Notes](#important-notes)
 - [What to Expect](#what-to-expect)
+- [Important Notes](#important-notes)
 
 </section>
 
@@ -91,6 +100,12 @@ Located on the first floor, turn left at the top of the stairs, or turn right if
 - **Train:** Nearest station is Bournemouth Station (~45 min walk). Taxi or bus from station takes 15 mins.
 - **Bike:** Bike racks available on campus.
 - **Parking:** Free during the event. Check signage when parking: [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
+
+{% else %}
+
+## Venue Details Coming Soon
+
+Ticket holders will be sent exact room on campus **shortly before the event** to manage capacity more effectively.
 
 {% endif %}
 
