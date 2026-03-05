@@ -7,6 +7,7 @@ hideNextEventBanner: true
 hideMainLogo: false
 templateEngineOverride: njk,md
 permalink: 2026-march-location-info.html
+showVenueSection: true
 ---
 
 # Welcome to the March 2026 {dev.talk} Meetup
@@ -27,12 +28,12 @@ Thank you for being part of our amazing community of software engineers and tech
 
 ## Table of Contents
 
-<section style="display:none">
+{% if showVenueSection %}
 
 - [Venue](#venue)
 - [Getting There](#getting-there)
 
-</section>
+{% endif %}
 
 - [Event Details](#event-details)
 - [Speakers](#speakers)
@@ -55,7 +56,7 @@ Thank you for being part of our amazing community of software engineers and tech
 
 **Location:** Bournemouth University, Talbot Campus
 
-<section style="display:none">
+{% if showVenueSection %}
 
 ## Venue
 
@@ -91,7 +92,7 @@ Located on the first floor, turn left at the top of the stairs, or turn right if
 - **Bike:** Bike racks available on campus.
 - **Parking:** Free during the event. Check signage when parking: [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
 
-</section>
+{% endif %}
 
 ---
 
