@@ -145,3 +145,47 @@ footer {
     left: calc(50% + 7em);
   }
 }
+/* Remove extra spacing from paragraphs inside list items */
+li p {
+  margin: 0;
+  padding: 0;
+}
+
+#floating-venue {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgb(112, 136, 216);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Location info page sections */
+.venue-details-coming-soon {
+  background-color: #fff3cd;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #ff9800;
+  border-radius: 4px;
+}
+
+.toc-section {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 2px 0;
+  border-left: 4px solid rgb(112, 136, 216);
+  border-radius: 4px;
+}
+
+.venue-section {
+  background-color: #e7f3ff;
+  padding: 15px;
+  border-left: 4px solid rgb(112, 136, 216);
+  border-radius: 4px;
+  margin: 15px 0;
+}

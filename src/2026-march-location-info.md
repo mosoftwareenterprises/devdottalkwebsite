@@ -11,7 +11,7 @@ showVenueSection: false
 ---
 
 {% if showVenueSection %}
-<a href="#venue" style="position: sticky; top: 0; z-index: 100; background-color: rgb(112, 136, 216); color: white; padding: 12px; text-align: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: block; text-decoration: none; cursor: pointer;">
+<a id="floating-venue" href="#venue">
   📍 Room K101, Kimmeridge House | Wed 25th March @ 7:00 PM
 </a>
 {% endif %}
@@ -29,7 +29,7 @@ Thank you for being part of our amazing community of software engineers and tech
 ---
 
 {% if not showVenueSection %}
-<section style="background-color: #fff3cd; padding: 20px; margin: 20px 0; border-left: 4px solid #ff9800; border-radius: 4px;">
+<section class="venue-details-coming-soon">
 
 **📍 Venue Details Coming Soon!**
 
@@ -38,7 +38,7 @@ We'll reveal the exact location on campus a few days before the event. If you ge
 </section>
 {% endif %}
 
-<section style="background-color: #f9f9f9; padding: 20px; margin: 20px 0; border-left: 4px solid rgb(112, 136, 216); border-radius: 4px;">
+<section id="TOC" class="toc-section">
 
 ## Table of Contents
 
@@ -73,7 +73,7 @@ We'll reveal the exact location on campus a few days before the event. If you ge
 
 ## Venue
 
-<section style="background-color: #e7f3ff; padding: 15px; border-left: 4px solid rgb(112, 136, 216); border-radius: 4px; margin: 15px 0;">
+<section class="venue-section">
 
 **🏢 Room K101, Kimmeridge House**
 
