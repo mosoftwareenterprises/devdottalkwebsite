@@ -10,9 +10,13 @@ permalink: 2026-march-location-info.html
 showVenueSection: false
 ---
 
-# Welcome to the March 2026 {dev.talk} Meetup
+{% if showVenueSection %}
+<a href="#venue" style="position: sticky; top: 0; z-index: 100; background-color: rgb(112, 136, 216); color: white; padding: 12px; text-align: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: block; text-decoration: none; cursor: pointer;">
+  📍 Room K101, Kimmeridge House | Wed 25th March @ 7:00 PM
+</a>
+{% endif %}
 
-## The One Where JARVIS Fits in Your Pocket and the IC Grows Up
+## {dev.talk} - The One Where JARVIS Fits in Your Pocket and the IC Grows Up
 
 Hi there,
 
@@ -69,8 +73,13 @@ We'll reveal the exact location on campus a few days before the event. If you ge
 
 ## Venue
 
-- **Location:** Room K101, Kimmeridge House, Talbot Campus
-- **Address:** Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
+<section style="background-color: #e7f3ff; padding: 15px; border-left: 4px solid rgb(112, 136, 216); border-radius: 4px; margin: 15px 0;">
+
+**🏢 Room K101, Kimmeridge House**
+
+Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
+
+</section>
 
 ### Getting There
 
