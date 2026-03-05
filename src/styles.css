@@ -100,6 +100,11 @@ main>h1 {
   box-sizing: border-box;
 }
 
+@media screen and (min-width: 754px) {
+  .main-content {
+    overflow-y: visible;
+  }
+}
 h1 a,
 h2 a,
 h3 a,
