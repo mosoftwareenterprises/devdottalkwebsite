@@ -34,7 +34,7 @@ describe('session-info-item component', () => {
     it('should render in list item', () => {
       const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
       
-      expect(html).toContain('<li>');
+      expect(html).toContain('<li class="session-info-item">');
       expect(html).toContain('</li>');
     });
   });
