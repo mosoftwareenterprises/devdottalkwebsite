@@ -156,6 +156,20 @@ li p {
   padding: 0;
 }
 
+/* Remove extra spacing from unordered lists */
+.TOC ul {
+  margin: 0;
+  padding: 0;
+}
+
+.event-item {
+  padding-bottom: 12px;
+}
+
+.session-info-item {
+  padding-bottom: 12px;
+}
+
 #floating-venue {
   position: sticky;
   top: 0;

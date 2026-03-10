@@ -87,7 +87,16 @@
         "url": "/2026-february-location-info.html",
         "title": "{dev.talk} - The One With The Gaming Collab",
         "photoUrl": "https://photos.app.goo.gl/p4WKcC8xL2bBZKEG6",
-        "videos": []
+        "videos": [
+                    {
+                        "title": "Miguel Salvador - Shipping Faster by Debugging Marketing - February 2026",
+                        "url": "https://youtu.be/p0rOLOIw1wg"
+                    },
+                    {
+                        "title": "Tiago Amoroso - The 80/20 Rule of Game Jams - February 2026",
+                        "url": "https://youtu.be/WuEJlAmqR48"
+                    }
+        ]
     },
     {
         "id": 13,
@@ -102,7 +111,7 @@
                 "url": "https://youtu.be/_Sp6eUvbjRI"
             },
             {
-                "title": "Rushan Ashad - When to Automate, When to Wait",
+                "title": "Dr. Rushan Ashad - When to Automate, When to Wait",
                 "url": "https://youtu.be/svvOwAFv2tQ"
             }
         ]
