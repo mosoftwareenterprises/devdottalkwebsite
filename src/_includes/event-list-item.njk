@@ -27,8 +27,12 @@
     {% set ev = a %}
   {% endif %}
 
+  {% if ev.id is defined and ev.id %}
+    {% set eventAnchorId = ev.id %}
+  {% endif %}
+
   <li>
-    <div class="event-item">
+    <div class="event-item"{% if eventAnchorId %} id="{{ eventAnchorId }}"{% endif %}>
       <a href="{{ ev.url }}" target="_blank" class="event-title">
         {{ ev.displayDate }}: {{ ev.title }}
       </a>

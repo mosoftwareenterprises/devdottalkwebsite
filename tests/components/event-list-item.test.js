@@ -174,6 +174,23 @@ describe('event-list-item component', () => {
       expect(html).toContain('class="event-item"');
     });
 
+    it('should add anchor id based on event id', () => {
+      const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
+
+      expect(html).toContain('id="test-event-march-2026"');
+    });
+
+    it('should not add anchor id when event id is missing', () => {
+      const eventWithoutId = {
+        ...mockEvents[0]
+      };
+      delete eventWithoutId.id;
+
+      const html = renderMacro(templatePath, macroName, [eventWithoutId]);
+
+      expect(html).not.toContain('id="test-event-march-2026"');
+    });
+
     it('should have event-title class on title link', () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
       
