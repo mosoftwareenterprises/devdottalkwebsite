@@ -3,12 +3,12 @@
         {
             "route": "/reconnect",
             "redirect": "https://reconnectconference.co.uk/programme/",
-            "statusCode": 301
+            "statusCode": 302
         },
         {
             "route": "/legoqr",
             "redirect": "https://blog.markoliver.website/About-Me",
-            "statusCode": 301
+            "statusCode": 302
         },
         {
             "route": "/support-us",
@@ -23,6 +23,16 @@
         {
             "route": "/tickets",
             "redirect": "https://luma.com/gelthyz0",
+            "statusCode": 302
+        },
+        {
+            "route": "/2026-february-location-info.html",
+            "redirect": "/2026-march-location-info.html",
+            "statusCode": 302
+        },
+        {
+            "route": "/2026-january-location-info.html",
+            "redirect": "/2026-march-location-info.html",
             "statusCode": 302
         },
         {
