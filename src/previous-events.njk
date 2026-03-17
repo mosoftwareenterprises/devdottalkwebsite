@@ -11,16 +11,21 @@ eventScope: "past"   # frontmatter controls which collection to render (past|upc
 <section class="previous-events">
   <h1>Previous events</h1>
   <p>The following is a list of our past {dev.talk} meetups. Click the links for details, recordings or photos where available.</p>
-  <ul>
-    {# loop over whichever set the frontmatter requested. we can refer to events.past/upcoming/all #}
-    {% set list = events[page.eventScope] or events.past %}
-    {% set lastYear = null %}
-    {% for ev in list %}
-      {%- if ev.year != lastYear %}
-        <h3>{{ ev.year }}</h3>
-        {% set lastYear = ev.year %}
-      {%- endif %}
-      {{ event.eventItem(ev) }}
-    {% endfor %}
-  </ul>
+  {# Group by year so year headings are semantic and do not jump levels. #}
+  {% set list = events[page.eventScope] or events.past %}
+  {% set lastYear = null %}
+  {% for ev in list %}
+    {%- if ev.year != lastYear %}
+      {% if not loop.first %}
+        </ul>
+      {% endif %}
+      <h2>{{ ev.year }}</h2>
+      <ul>
+      {% set lastYear = ev.year %}
+    {%- endif %}
+    {{ event.eventItem(ev) }}
+    {% if loop.last %}
+      </ul>
+    {% endif %}
+  {% endfor %}
 </section>
