@@ -65,20 +65,26 @@ main>h1 {
 #floating-register .luma-checkout--button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #1a99a2;
-  color: rgb(255, 255, 255);
+  background-color: #0d5f66;
+    color: #ffffff;
   text-decoration: none;
-  border: 3px solid #445e7f;
+  border: 3px solid #08363a;
   border-radius: 6px;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(26, 153, 162, 0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(8, 54, 58, 0.35);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
 #floating-register .luma-checkout--button:hover,
 #floating-register .luma-checkout--button:focus {
+  background-color: #094a50;
   transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(26, 153, 162, 0.6);
+  box-shadow: 0 6px 16px rgba(8, 54, 58, 0.5);
+  }
+  
+  #floating-register .luma-checkout--button:focus-visible {
+    outline: 3px solid #ffcc33;
+    outline-offset: 2px;
 }
 .text {
   padding-left: 20px;
