@@ -7,7 +7,7 @@ hideNextEventBanner: true
 hideMainLogo: false
 templateEngineOverride: njk,md
 permalink: 2026-march-location-info.html
-showVenueSection: true
+showVenueSection: false
 ---
 
 {% if showVenueSection %}

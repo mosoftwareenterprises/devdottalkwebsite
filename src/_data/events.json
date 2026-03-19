@@ -76,8 +76,8 @@
         "date": "2026-03-25",
         "displayDate": "March 25th 2026",
         "url": "/2026-march-location-info.html",
-        "title": "The One Where JARVIS Fits in Your Pocket and the IC Grows Up",
-        "photoUrl": "TODO",
+        "title": "{dev.talk} - The One Where JARVIS Fits in Your Pocket and the IC Grows Up",
+        "photoUrl": "https://photos.app.goo.gl/vXHKGzFiWxys9Ndi9",
         "videos": []
     },
     {
@@ -88,14 +88,14 @@
         "title": "{dev.talk} - The One With The Gaming Collab",
         "photoUrl": "https://photos.app.goo.gl/p4WKcC8xL2bBZKEG6",
         "videos": [
-                    {
-                        "title": "Miguel Salvador - Shipping Faster by Debugging Marketing - February 2026",
-                        "url": "https://youtu.be/p0rOLOIw1wg"
-                    },
-                    {
-                        "title": "Tiago Amoroso - The 80/20 Rule of Game Jams - February 2026",
-                        "url": "https://youtu.be/WuEJlAmqR48"
-                    }
+            {
+                "title": "Miguel Salvador - Shipping Faster by Debugging Marketing - February 2026",
+                "url": "https://youtu.be/p0rOLOIw1wg"
+            },
+            {
+                "title": "Tiago Amoroso - The 80/20 Rule of Game Jams - February 2026",
+                "url": "https://youtu.be/WuEJlAmqR48"
+            }
         ]
     },
     {
