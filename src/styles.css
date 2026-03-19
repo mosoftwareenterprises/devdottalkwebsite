@@ -216,6 +216,34 @@ main>h1 {
   z-index: 250;
 }
 
+.next-event-banner {
+  width: 100%;
+  background-color: #eaf5ff;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.next-event-banner-link {
+  color: #0f3f68;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  padding: 6px 16px;
+  display: inline-block;
+}
+
+.next-event-banner-link:hover,
+.next-event-banner-link:focus {
+  color: #08263f;
+}
+
+.next-event-banner-link:focus-visible {
+  outline: 3px solid #0f3f68;
+  outline-offset: 3px;
+}
 @media screen and (max-width: 540px) {
   .site-header-row {
     padding-right: 68px;
