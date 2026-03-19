@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles.css?v=1.0.0">
+    <link rel="stylesheet" href="/styles.css?v=1.0.7">
     <link rel="stylesheet" href="/bluesky.css?v=1.0.0">
     <title>{{ title | default("{dev.talk}") }}</title>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
@@ -28,10 +28,34 @@
     {% endif %}
     <div class="page-container">
       <main class="main-content">
-        {% if hideMainLogo %}
-          {% else %}
-            <a href="/"><img alt="The devdottalk logo" src="/devtalk-wide.jpg" loading="lazy" class="center"></a>
-        {% endif %}
+
+        <div class="site-header-row">
+          {% if hideMainLogo %}
+            {% else %}
+              <a href="/" class="site-logo-link"><img alt="The devdottalk logo" src="/devtalk-wide.jpg" loading="lazy" class="site-logo"></a>
+          {% endif %}
+          <div class="site-nav-bar" id="site-nav-bar">
+            <button
+              type="button"
+              class="site-nav-toggle"
+              aria-expanded="false"
+              aria-controls="primary-nav"
+              aria-label="Toggle navigation">
+              <span class="site-nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <nav aria-label="Primary" class="site-nav" id="primary-nav">
+              <a href="/">Home</a>
+              <a href="/call-for-speakers.html">Call for Speakers</a>
+              <a href="/previous-events.html">Previous Events</a>
+              <a href="/previous-sessions.html">Previous Sessions</a>
+              <a href="/local-events.html">Local Events</a>
+              <a href="/supporters.html">Supporters</a>
+              <a href="/venues.html">Venues</a>
+              <a href="/faqs.html">FAQs</a>
+              <a href="/privacy-policy.html">Privacy Policy</a>
+            </nav>
+          </div>
+        </div>
 
         {% set eventId = 'evt-JzsilWMHPpTsKHt' %}
         {% include "floating-register-button.njk" %}
@@ -70,6 +94,33 @@
     <footer>
       Website made with HTML and an Azure Static Web App, hosted for free on Azure.
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navBar = document.getElementById('site-nav-bar');
+        const navToggle = document.querySelector('.site-nav-toggle');
+        const navLinks = document.querySelectorAll('#primary-nav a');
+        if (!navBar || !navToggle) {
+          return;
+        }
+
+        const closeMenu = () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navBar.classList.remove('is-open');
+        };
+
+        navToggle.addEventListener('click', () => {
+          const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', String(!isExpanded));
+          navBar.classList.toggle('is-open', !isExpanded);
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            closeMenu();
+          });
+        });
+      });
+    </script>
     <script data-goatcounter="https://devdottalk.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>

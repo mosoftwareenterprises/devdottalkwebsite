@@ -100,6 +100,143 @@ main>h1 {
   box-sizing: border-box;
 }
 
+.site-nav {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+
+.site-header-row {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 0 72px;
+  position: relative;
+}
+
+.site-logo-link {
+  display: inline-block;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+.site-logo {
+  display: block;
+  height: auto;
+  max-width: min(65vw, 340px);
+  width: 100%;
+}
+
+.site-nav-bar {
+  background: linear-gradient(90deg, #445e7f 0%, #3f7594 100%);
+  border: 1px solid #355267;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  margin-bottom: 0;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.site-nav-toggle {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.95rem;
+  font-weight: 700;
+  gap: 8px;
+  padding: 8px 10px;
+}
+
+.site-nav-toggle-icon {
+  background: currentcolor;
+  border-radius: 2px;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  width: 16px;
+}
+
+.site-nav-toggle-icon::before,
+.site-nav-toggle-icon::after {
+  background: currentcolor;
+  border-radius: 2px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 16px;
+}
+
+.site-nav-toggle-icon::before {
+  top: -5px;
+}
+
+.site-nav-toggle-icon::after {
+  top: 5px;
+}
+
+.site-nav a {
+  background-color: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background-color: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.site-nav-bar.is-open .site-nav {
+  background: linear-gradient(90deg, #445e7f 0%, #3f7594 100%);
+  border: 1px solid #355267;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+  display: flex;
+  left: 0;
+  min-width: 250px;
+  padding: 10px;
+  position: absolute;
+  right: auto;
+  top: calc(100% + 8px);
+  z-index: 250;
+}
+
+@media screen and (max-width: 540px) {
+  .site-header-row {
+    padding-right: 68px;
+    padding-left: 68px;
+  }
+
+  .site-logo {
+    max-width: 56vw;
+  }
+
+  .site-nav-bar.is-open .site-nav {
+    min-width: 220px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .site-nav-bar.is-open .site-nav {
+    left: 0;
+    right: auto;
+  }
+}
 @media screen and (min-width: 754px) {
   .main-content {
     overflow-y: visible;
