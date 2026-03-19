@@ -12,7 +12,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Alice Fictional Developer');
@@ -23,7 +23,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Test Framework Architect');
@@ -34,7 +34,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Testing Quantum Debugging Techniques');
@@ -45,7 +45,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Discover advanced techniques for debugging quantum-inspired testing frameworks');
@@ -56,7 +56,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Speaker Bio');
@@ -70,7 +70,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/2026/march/kevin.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('img src="/images/2026/march/kevin.png"');
@@ -82,7 +82,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('href="https://www.linkedin.com/in/alice-fictional-test/"');
@@ -93,7 +93,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('<h3>Alice Fictional Developer</h3>');
@@ -104,7 +104,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('<h4>Testing Quantum Debugging Techniques</h4>');
@@ -115,7 +115,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('<h5>Speaker Bio</h5>');
@@ -126,7 +126,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('<p class="formatted-description">');
@@ -139,7 +139,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [555, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Session not found');
@@ -150,7 +150,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [555, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).not.toContain('LinkedIn Profile');
@@ -164,7 +164,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [998, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Bob Test Sample');
@@ -177,7 +177,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [997, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Charlie Testington');
@@ -189,7 +189,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [996, '/images/test.png', mockSessions],
-        { sessions: { all: mockSessions } }
+        { sessions: { allEvents: mockSessions } }
       );
 
       expect(html).toContain('Diana Mock Expert');
@@ -207,7 +207,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [999, '/images/test.png', sessionsWithoutTitle],
-        { sessions: { all: sessionsWithoutTitle } }
+        { sessions: { allEvents: sessionsWithoutTitle } }
       );
 
       // Speaker name should still be there
@@ -225,7 +225,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [31, '/images/test.png', sessionsWithoutBio],
-        { sessions: { all: sessionsWithoutBio } }
+        { sessions: { allEvents: sessionsWithoutBio } }
       );
 
       expect(html).not.toContain('Speaker Bio');
@@ -250,7 +250,7 @@ describe('speaker-session component', () => {
         templatePath,
         macroName,
         [31, '/images/test.png', customSessions],
-        { sessions: { all: mockSessions } } // Different global data
+        { sessions: { allEvents: mockSessions } } // Different global data
       );
 
       expect(html).toContain('Custom Title');

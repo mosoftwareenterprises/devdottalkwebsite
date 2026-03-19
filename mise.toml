@@ -10,4 +10,4 @@ run = "npm run test"
 depends = "build"
 
 [tasks.start]
-run = ["npm start"]
+run = ["npx kill-port 8080 || true", "npm start"]

@@ -7,7 +7,7 @@ hideNextEventBanner: true
 hideMainLogo: false
 templateEngineOverride: njk,md
 permalink: 2026-march-location-info.html
-showVenueSection: false
+showVenueSection: true
 ---
 
 {% if showVenueSection %}
@@ -87,7 +87,7 @@ Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
 
 If this is your first time visiting, use this order:
 
-1. 🎥 **Watch the arrival walkthrough:** Add your YouTube venue walkthrough link here.
+1. 🎥 **Watch the arrival walkthrough:** [Venue walkthrough](https://youtu.be/fYq5pReMZWs)
 2. 📍 **Navigate to Kimmeridge House entrance:** [Google Maps pin for Room K101](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)
 3. 🅿️ **If driving, head to the visitors car park first:** [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
 4. 🗺️ **Use the official campus map as backup:** [Talbot Campus map PDF](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf) (Kimmeridge House is building **16**)
@@ -152,11 +152,11 @@ Ticket holders will be sent exact room on campus **shortly before the event** to
 ## Speakers
 
 {% from "speaker-session.njk" import speakerSession %}
-{{ speakerSession(31, "/images/2026/march/First Speaker image - March 2026.png", sessions.all) }}
+{{ speakerSession(31, "/images/2026/march/First Speaker image - March 2026.png", sessions.allEvents) }}
 
 ---
 
-{{ speakerSession(32, "/images/2026/march/Second Speaker image - March 2026.png", sessions.all) }}
+{{ speakerSession(32, "/images/2026/march/Second Speaker image - March 2026.png", sessions.allEvents) }}
 
 ---
 

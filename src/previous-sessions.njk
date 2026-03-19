@@ -4,7 +4,7 @@ title: "{dev.talk} - Previous Sessions"
 description: "Watch previous sessions from {dev.talk} meetups"
 includeBlueskyPosts: true
 permalink: previous-sessions.html
-sessionScope: "past"   # frontmatter controls which collection to render (past|upcoming|all)
+sessionScope: "pastEvents"   # frontmatter controls which collection to render (pastEvents|upcomingEvents|allEvents)
 ---
 
 {% import "session-info-item.njk" as session %}
@@ -13,7 +13,7 @@ sessionScope: "past"   # frontmatter controls which collection to render (past|u
 </h2>
 <ul>
   {# render sessions from the shared data file based on frontmatter scope #}
-  {% set list = sessions[page.sessionScope] or sessions.past %}
+  {% set list = sessions[page.sessionScope] or sessions.pastEvents %}
   {% for sess in list %}
     {{ session.sessionInfoItem(sess) }}
   {% endfor %}

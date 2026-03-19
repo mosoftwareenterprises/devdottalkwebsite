@@ -19,8 +19,15 @@ export default () => {
         };
     });
 
-    const past = enriched.filter(s => s.status === 'past');
-    const upcoming = enriched.filter(s => s.status === 'upcoming');
+    const pastEvents = enriched.filter(s => s.status === 'past');
+    const upcomingEvents = [...enriched.filter(s => s.status === 'upcoming')].sort((a, b) => {
+        const aIsZero = a.eventID === 0;
+        const bIsZero = b.eventID === 0;
+
+        if (aIsZero && !bIsZero) return 1;
+        if (!aIsZero && bIsZero) return -1;
+        return a.eventID - b.eventID;
+    });
     
     // helper function to find a session by ID
     const findById = (id) => {
@@ -29,9 +36,9 @@ export default () => {
 
     // export multiple collections so templates can pick what they need
     return {
-        all: enriched,
-        past,
-        upcoming,
+        allEvents: enriched,
+        pastEvents,
+        upcomingEvents,
         findById
     };
 };
