@@ -188,8 +188,14 @@ describe('session-info-item component', () => {
     it('should render paragraphs', () => {
       const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
       
-      const pTags = (html.match(/<p>/g) || []).length;
+      const pTags = (html.match(/<p[\s>]/g) || []).length;
       expect(pTags).toBeGreaterThanOrEqual(2);
+    });
+
+    it('should add formatted-description class to description paragraph', () => {
+      const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
+
+      expect(html).toContain('<p class="formatted-description">');
     });
 
     it('should render multiple list items for different sessions', () => {

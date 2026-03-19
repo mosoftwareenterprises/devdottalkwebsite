@@ -53,7 +53,7 @@ Eleventy copies static assets explicitly:
 - **Build & serve**: use the provided mise tasks instead of calling npm directly:
   ```bash
   mise run build    # equivalent to `npm run build`, produces _site/
-  mise start        # installs, builds, then serves with live reload
+  mise start        #  serves with live reload
   mise run preview  # static server on :8080 after build
   ```
 

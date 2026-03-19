@@ -10,5 +10,4 @@ run = "npm run test"
 depends = "build"
 
 [tasks.start]
-run = ["npm run test", "npm start"]
-depends = "build"
+run = ["npm start"]

@@ -44,7 +44,7 @@
         <a href="{{ s.firstSpeakerUrl }}" target="_blank">{{ s.firstSpeakerName }}</a>
       {% endif %}
     </p>
-    <p>{{ s.description }}</p>
+    <p class="formatted-description">{{ s.description }}</p>
     {% if s.slidesUrl and s.slidesUrl != "" %}
       <p>
         <a href="{{ s.slidesUrl }}" target="_blank">Slides</a>

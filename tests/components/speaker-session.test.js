@@ -120,6 +120,17 @@ describe('speaker-session component', () => {
 
       expect(html).toContain('<h5>Speaker Bio</h5>');
     });
+
+    it('should add formatted-description class to the session description', () => {
+      const html = renderMacro(
+        templatePath,
+        macroName,
+        [999, '/images/test.png', mockSessions],
+        { sessions: { all: mockSessions } }
+      );
+
+      expect(html).toContain('<p class="formatted-description">');
+    });
   });
 
   describe('handles missing sessions gracefully', () => {

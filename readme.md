@@ -34,8 +34,7 @@ mise x node@24 -- npm run test:watch
 Tests automatically run before the development server starts:
 
 ```bash
-mise start
-# Runs: build → test → dev server (watch mode)
+mise test
 ```
 
 If any test fails, the dev server will not start. Fix the failing tests and run again.

@@ -24,10 +24,10 @@
             {% endif %}
         </a>
         <h4>{{ sessionRecord.title }}</h4>
-        <p>{{ sessionRecord.description }}</p>
+        <p class="formatted-description">{{ sessionRecord.description }}</p>
         {% if sessionRecord.firstSpeakerBio %}
             <h5>Speaker Bio</h5>
-            <p>{{ sessionRecord.firstSpeakerBio }}</p>
+            <p class="formatted-description">{{ sessionRecord.firstSpeakerBio }}</p>
         {% endif %}
     {% endif %}
 {% endmacro %}

@@ -170,6 +170,12 @@ li p {
   padding-bottom: 12px;
 }
 
+.formatted-description {
+  white-space: pre-line;
+  line-height: 1.5;
+  margin-top: 0.35rem;
+}
+
 #floating-venue {
   position: sticky;
   top: 0;
