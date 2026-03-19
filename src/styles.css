@@ -130,8 +130,8 @@ main>h1 {
 }
 
 .site-nav-bar {
-  background: linear-gradient(90deg, #445e7f 0%, #3f7594 100%);
-  border: 1px solid #355267;
+  background: linear-gradient(90deg, #f6f9fd 0%, #e6eff8 100%);
+  border: 1px solid #9ab3cc;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   margin-bottom: 0;
@@ -147,7 +147,7 @@ main>h1 {
   background: transparent;
   border: 0;
   border-radius: 4px;
-  color: #fff;
+  color: #1e3550;
   cursor: pointer;
   display: inline-flex;
   font-size: 0.95rem;
@@ -185,8 +185,8 @@ main>h1 {
 }
 
 .site-nav a {
-  background-color: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  background-color: #3f7594;
+  border: 1px solid #355267;
   border-radius: 4px;
   color: #fff;
   display: block;
@@ -197,13 +197,13 @@ main>h1 {
 
 .site-nav a:hover,
 .site-nav a:focus {
-  background-color: rgba(255, 255, 255, 0.28);
-  border-color: rgba(255, 255, 255, 0.45);
+  background-color: #335f7a;
+  border-color: #274b60;
 }
 
 .site-nav-bar.is-open .site-nav {
-  background: linear-gradient(90deg, #445e7f 0%, #3f7594 100%);
-  border: 1px solid #355267;
+  background: linear-gradient(90deg, #f6f9fd 0%, #e6eff8 100%);
+  border: 1px solid #9ab3cc;
   border-radius: 8px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
   display: flex;
