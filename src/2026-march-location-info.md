@@ -85,27 +85,56 @@ Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
 
 #### Maps & Directions
 
-- [Kimmeridge House](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf) -marked with its name and the number 16 on this map
-- [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8) - location of BU visitors car park
-- Room K101 location on [Google Maps](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)
+If this is your first time visiting, use this order:
+
+1. 🎥 **Watch the arrival walkthrough:** Add your YouTube venue walkthrough link here.
+2. 📍 **Navigate to Kimmeridge House entrance:** [Google Maps pin for Room K101](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)
+3. 🅿️ **If driving, head to the visitors car park first:** [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
+4. 🗺️ **Use the official campus map as backup:** [Talbot Campus map PDF](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf) (Kimmeridge House is building **16**)
+
+{% from "locationMapAndOverlay.njk" import locationMapAndOverlay %}
+{% set mapPins = [
+  {
+    left: "35.5%",
+    top: "14.5%",
+    text: "KH",
+    textX: 13,
+    textY: 16.5,
+    fontSize: 11.9,
+    ariaLabel: "Kimmeridge House – Room K101"
+  },
+  {
+    left: "64%",
+    top: "53%",
+    text: "P",
+    textX: 13.5,
+    textY: 19,
+    fontSize: 16.3,
+    ariaLabel: "Visitors Car Park"
+  }
+] %}
+{{ locationMapAndOverlay("/images/talbotcampus.svg", mapPins) }}
+
+Directions and Maps (on BU site):
+https://www.bournemouth.ac.uk/about/contact-us/directions-maps/directions-our-talbot-campus
 
 ##### Campus Map
 
-Download: [PDF Version](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map_0.pdf)
+Download: [PDF Version](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf)
 
 **Building Entrance:**
 
-Kimmeridge House has 1 entrance, and is accessible via the courtyard in the middle of campus.
+Kimmeridge House has one entrance and is accessed via the courtyard in the middle of campus. What 3 words here
 
 **Accessibility:**
-The room is on the first floor and fully accessible with a flat entrance at the ground floor with a lift to the first floor.
+The room is on the first floor and fully accessible, with a flat entrance at ground level and lift access to the first floor.
 
 **Room Entrance:**
-Located on the first floor, turn left at the top of the stairs, or turn right if exiting the lift.
+Located on the first floor: turn left at the top of the stairs, or turn right if exiting the lift.
 
 #### Travel Options
 
-- **Bus:** Drops off at main entrance on Fern Barrow.
+- **Bus:** Drops off at main entrance on Fern Barrow. w3w
 - **Train:** Nearest station is Bournemouth Station (~45 min walk). Taxi or bus from station takes 15 mins.
 - **Bike:** Bike racks available on campus.
 - **Parking:** Free during the event. Check signage when parking: [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)

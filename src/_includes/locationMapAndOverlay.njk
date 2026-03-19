@@ -1,0 +1,13 @@
+{%- macro locationMapAndOverlay(mapSrc, pins) -%}
+  <div style="position:relative;display:block;line-height:0;">
+    <img src="{{ mapSrc }}" alt="Campus map" style="width:100%;display:block;">
+      {%- for pin in pins %}
+        <div style="position:absolute;left:{{ pin.left }};top:{{ pin.top }};transform:translate(-50%,-100%);" role="img" aria-label="{{ pin.ariaLabel }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="36" viewBox="0 0 26 36" aria-hidden="true">
+            <path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 23 13 23S26 22.75 26 13C26 5.82 20.18 0 13 0z" fill="#c0392b" stroke="white" stroke-width="1.5"/>
+            <text x="{{ pin.textX or 13 }}" y="{{ pin.textY or 16 }}" text-anchor="middle" fill="white" font-size="{{ pin.fontSize or 13 }}" font-weight="bold" font-family="Arial,sans-serif">{{ pin.text }}</text>
+          </svg>
+        </div>
+      {%- endfor %}
+    </div>
+  {%- endmacro -%}
