@@ -12,7 +12,8 @@ showVenueSection: false
 
 {% if showVenueSection %}
 <a id="floating-venue" href="#venue">
-  📍 Room K101, Kimmeridge House | Wed 25th March @ 7:00 PM
+  📍 Room K101, Kimmeridge House | Wed 25th March @ 7:00 PM.</br>
+   <b>Click for details.</b>
 </a>
 {% endif %}
 
@@ -94,15 +95,7 @@ If this is your first time visiting, use this order:
 
 {% from "locationMapAndOverlay.njk" import locationMapAndOverlay %}
 {% set mapPins = [
-  {
-    left: "35.5%",
-    top: "14.5%",
-    text: "KH",
-    textX: 13,
-    textY: 16.5,
-    fontSize: 11.9,
-    ariaLabel: "Kimmeridge House – Room K101"
-  },
+  
   {
     left: "64%",
     top: "53%",
@@ -110,31 +103,41 @@ If this is your first time visiting, use this order:
     textX: 13.5,
     textY: 19,
     fontSize: 16.3,
+    color: "#6315ca",
     ariaLabel: "Visitors Car Park"
+  },
+  {
+    left: "39.2%",
+    top: "21.5%",
+    text: "CY",
+    textX: 13,
+    textY: 16.5,
+    fontSize: 11.9,
+    color: "#2980b9",
+    ariaLabel: "Courtyard"
+  },
+  {
+    left: "35.5%",
+    top: "14.5%",
+    text: "KH",
+    textX: 13,
+    textY: 16.5,
+    fontSize: 11.9,
+    color: "#c0392b",
+    ariaLabel: "Kimmeridge House – Room K101"
   }
 ] %}
 {{ locationMapAndOverlay("/images/talbotcampus.svg", mapPins) }}
 
-Directions and Maps (on BU site):
-https://www.bournemouth.ac.uk/about/contact-us/directions-maps/directions-our-talbot-campus
+More directions on the [BU website](https://www.bournemouth.ac.uk/about/contact-us/directions-maps/directions-our-talbot-campus).
 
-##### Campus Map
+**Building Entrance:** Kimmeridge House has one entrance, accessed via the courtyard in the middle of campus (CY pin on Campus map). The room is on the first floor — take the stairs or lift, then turn left from the stairs or right from the lift.
 
-Download: [PDF Version](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf)
-
-**Building Entrance:**
-
-Kimmeridge House has one entrance and is accessed via the courtyard in the middle of campus. What 3 words here
-
-**Accessibility:**
-The room is on the first floor and fully accessible, with a flat entrance at ground level and lift access to the first floor.
-
-**Room Entrance:**
-Located on the first floor: turn left at the top of the stairs, or turn right if exiting the lift.
+**Accessibility:** Flat entrance at ground level with lift access to the first floor.
 
 #### Travel Options
 
-- **Bus:** Drops off at main entrance on Fern Barrow. w3w
+- **Bus:** Drops off at the main entrance on Fern Barrow.
 - **Train:** Nearest station is Bournemouth Station (~45 min walk). Taxi or bus from station takes 15 mins.
 - **Bike:** Bike racks available on campus.
 - **Parking:** Free during the event. Check signage when parking: [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)

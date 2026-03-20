@@ -4,10 +4,18 @@
       {%- for pin in pins %}
         <div style="position:absolute;left:{{ pin.left }};top:{{ pin.top }};transform:translate(-50%,-100%);" role="img" aria-label="{{ pin.ariaLabel }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="36" viewBox="0 0 26 36" aria-hidden="true">
-            <path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 23 13 23S26 22.75 26 13C26 5.82 20.18 0 13 0z" fill="#c0392b" stroke="white" stroke-width="1.5"/>
+            <path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 23 13 23S26 22.75 26 13C26 5.82 20.18 0 13 0z" fill="{{ pin.color or '#c0392b' }}" stroke="white" stroke-width="1.5"/>
             <text x="{{ pin.textX or 13 }}" y="{{ pin.textY or 16 }}" text-anchor="middle" fill="white" font-size="{{ pin.fontSize or 13 }}" font-weight="bold" font-family="Arial,sans-serif">{{ pin.text }}</text>
           </svg>
         </div>
       {%- endfor %}
+      <div role="note" aria-label="Map legend" style="position:absolute;bottom:8px;right:8px;background:rgba(255,255,255,0.9);border:1px solid #ccc;border-radius:4px;padding:6px 8px;line-height:1.6;font-size:0.75rem;font-family:Arial,sans-serif;">
+        {%- for pin in pins %}
+          <div style="display:flex;align-items:center;gap:6px;">
+            <span style="display:inline-block;width:12px;height:12px;background:{{ pin.color or '#c0392b' }};border-radius:2px;flex-shrink:0;"></span>
+            <span>{{ pin.ariaLabel }}</span>
+          </div>
+        {%- endfor %}
+      </div>
     </div>
   {%- endmacro -%}
