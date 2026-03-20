@@ -76,7 +76,7 @@ We'll reveal the exact location on campus a few days before the event. If you ge
 
 **🏢 Room K101, Kimmeridge House**
 
-Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
+Bournemouth University, Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB
 
 </section>
 
@@ -156,11 +156,11 @@ Ticket holders will be sent exact room on campus **shortly before the event** to
 ## Speakers
 
 {% from "speaker-session.njk" import speakerSession %}
-{{ speakerSession(31, "/images/2026/march/First Speaker image - March 2026.png", sessions.allEvents) }}
+{{ speakerSession(32, "/images/2026/march/First Speaker image - March 2026.png", sessions.allEvents) }}
 
 ---
 
-{{ speakerSession(32, "/images/2026/march/Second Speaker image - March 2026.png", sessions.allEvents) }}
+{{ speakerSession(33, "/images/2026/march/Second Speaker image - March 2026.png", sessions.allEvents) }}
 
 ---
 

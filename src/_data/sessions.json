@@ -1,7 +1,7 @@
 [
     {
-        "id": 34,
-        "eventID": 15,
+        "id": 35,
+        "eventID": 16,
         "title": "Anatomy of an Incident (featuring CrowdStrike",
         "duration": 60,
         "firstSpeakerName": "Liam Westley",
@@ -18,8 +18,8 @@
         "status": "upcoming"
     },
     {
-        "id": 33,
-        "eventID": 15,
+        "id": 34,
+        "eventID": 16,
         "title": "Spatial Data Basics: Concepts, Tools, and Use Cases",
         "duration": 20,
         "firstSpeakerName": "George Buckingham",
@@ -36,8 +36,8 @@
         "status": "upcoming"
     },
     {
-        "id": 32,
-        "eventID": 14,
+        "id": 33,
+        "eventID": 15,
         "title": "How becoming a manager made me a better engineer",
         "duration": 30,
         "firstSpeakerName": "Chris Sherry",
@@ -54,8 +54,8 @@
         "status": "upcoming"
     },
     {
-        "id": 31,
-        "eventID": 14,
+        "id": 32,
+        "eventID": 15,
         "title": "Building Agentic Mobile OS for privacy",
         "duration": 30,
         "firstSpeakerName": "Kevin Djabaku Ocansey",
@@ -72,7 +72,7 @@
         "status": "upcoming"
     },
     {
-        "id": 30,
+        "id": 31,
         "eventID": 0,
         "title": "Gender Identity & Me: Life as an autistic software engineer",
         "duration": 30,
@@ -90,7 +90,7 @@
         "status": "upcoming"
     },
     {
-        "id": 29,
+        "id": 30,
         "eventID": 0,
         "title": "Building my blog: A journey of discovery",
         "duration": 45,
@@ -108,7 +108,7 @@
         "status": "upcoming"
     },
     {
-        "id": 28,
+        "id": 29,
         "eventID": 0,
         "title": "Why is there a shark in my Wire - An introduction to Wireshark",
         "duration": 25,
@@ -126,8 +126,8 @@
         "status": "upcoming"
     },
     {
-        "id": 27,
-        "eventID": 13,
+        "id": 28,
+        "eventID": 14,
         "title": "The 80/20 Rule of Game Jams",
         "duration": 20,
         "firstSpeakerName": "Tiago Amoroso",
@@ -144,8 +144,8 @@
         "status": "past"
     },
     {
-        "id": 26,
-        "eventID": 13,
+        "id": 27,
+        "eventID": 14,
         "title": "Shipping Faster by Debugging Marketing",
         "duration": 20,
         "firstSpeakerName": "Miguel Salvador",
@@ -162,8 +162,8 @@
         "status": "past"
     },
     {
-        "id": 25,
-        "eventID": 12,
+        "id": 26,
+        "eventID": 13,
         "title": "The AI Integration Framework: When to Automate, When to Wait",
         "duration": 30,
         "firstSpeakerName": "Dr Rushan Arshad",
@@ -180,8 +180,8 @@
         "status": "past"
     },
     {
-        "id": 24,
-        "eventID": 12,
+        "id": 25,
+        "eventID": 13,
         "title": "Why websites become hard to change - and how to stop it.",
         "duration": 30,
         "firstSpeakerName": "Herve Tribouilly",
@@ -198,8 +198,8 @@
         "status": "past"
     },
     {
-        "id": 23,
-        "eventID": 11,
+        "id": 24,
+        "eventID": 12,
         "title": "End of year Quiz",
         "duration": 120,
         "firstSpeakerName": "JustPickOneUK",
@@ -216,8 +216,8 @@
         "status": "past"
     },
     {
-        "id": 22,
-        "eventID": 10,
+        "id": 23,
+        "eventID": 11,
         "title": "Sitcom lovers guide to Software Engineering",
         "duration": 30,
         "firstSpeakerName": "Adam Scholey",
@@ -234,8 +234,8 @@
         "status": "past"
     },
     {
-        "id": 21,
-        "eventID": 10,
+        "id": 22,
+        "eventID": 11,
         "title": "The Post Office Horizon System's bugs",
         "duration": 30,
         "firstSpeakerName": "Frank Milsom",
@@ -252,8 +252,8 @@
         "status": "past"
     },
     {
-        "id": 20,
-        "eventID": 9,
+        "id": 21,
+        "eventID": 10,
         "title": "Nix for Reproducible Developer Environments",
         "duration": 15,
         "firstSpeakerName": "Oliver Pauffley",
@@ -270,8 +270,8 @@
         "status": "past"
     },
     {
-        "id": 19,
-        "eventID": 9,
+        "id": 20,
+        "eventID": 10,
         "title": "Domain-Specific Languages in Action: Why, When, and How — Experiences from Medical and Veterinary, Data science, and Legal domains",
         "duration": 15,
         "firstSpeakerName": "Dr Sofia Meacham",
@@ -288,8 +288,8 @@
         "status": "past"
     },
     {
-        "id": 18,
-        "eventID": 9,
+        "id": 19,
+        "eventID": 10,
         "title": "Building Products Developers Love to Build",
         "duration": 15,
         "firstSpeakerName": "Rachel Adedoyin",
@@ -306,8 +306,8 @@
         "status": "past"
     },
     {
-        "id": 17,
-        "eventID": 8,
+        "id": 18,
+        "eventID": 9,
         "title": "Level Up Your DevEx: Unit Test Complex E2E Flows + Integration Testing with Aspire & OTEL",
         "duration": 60,
         "firstSpeakerName": "Andrew Poole",
@@ -324,8 +324,8 @@
         "status": "past"
     },
     {
-        "id": 16,
-        "eventID": 7,
+        "id": 17,
+        "eventID": 8,
         "title": "Human side of change",
         "duration": 30,
         "firstSpeakerName": "Maria Gaganova",
@@ -342,8 +342,8 @@
         "status": "past"
     },
     {
-        "id": 15,
-        "eventID": 7,
+        "id": 16,
+        "eventID": 8,
         "title": "The Hidden Evolution of Services",
         "duration": 30,
         "firstSpeakerName": "Stuart Caborn",
@@ -356,6 +356,24 @@
         "secondSpeakerJobTitle": "",
         "description": "How do you know when a service needs to evolve?\nWhile we often focus on REST APIs and runtime behavior, the true scope of a service could extend beyond these interfaces.\nThrough the journey of a critical booking service at loveholidays, Stuart will explore how 12 years of rapid organisational growth created unexpected challenges in both our runtime and data architectures.\nGain practical insights about recognising when your service boundaries no longer serve your teams, how 'hidden' APIs like data dependencies can impact your ability to evolve, and how loveholidays approached restructuring for future scalability while keeping their systems running smoothly.\nThis real-world case study demonstrates how to systematically untangle and evolve critical services as your organisation grows.",
         "videoUrl": "https://youtu.be/GaliZWc-cTo?si=M90wpEvzdAD7GxBI&t=2271",
+        "slidesUrl": "",
+        "status": "past"
+    },
+    {
+        "id": 15,
+        "eventID": 7,
+        "title": "Re:connect collab &Quiz",
+        "duration": 120,
+        "firstSpeakerName": "JustPickOneUK",
+        "firstSpeakerUrl": "https://www.linkedin.com/company/justpickoneuk",
+        "firstSpeakerBio": "",
+        "firstSpeakerJobTitle": "",
+        "secondSpeakerName": "",
+        "secondSpeakerUrl": "",
+        "secondSpeakerBio": "",
+        "secondSpeakerJobTitle": "",
+        "description": "We had a fun general knowledge quiz which was a collaboration with the Re:connect conference, and hosted by JustPickOneUK.",
+        "videoUrl": "",
         "slidesUrl": "",
         "status": "past"
     },
