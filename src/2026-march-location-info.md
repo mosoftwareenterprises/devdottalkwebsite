@@ -39,17 +39,14 @@ We'll reveal the exact location on campus a few days before the event. If you ge
 </section>
 {% endif %}
 
+{% if showVenueSection %}
+{% else %}
 <section id="TOC" class="toc-section">
 
 ## Table of Contents
 
 - [Event Details](#event-details)
-{% if showVenueSection %}
-- [Venue](#venue)
-- [Getting There](#getting-there)
-{% else %}
 - [🔒 Venue Details Coming Soon](#venue-details-coming-soon)
-{% endif %}
 - [Speakers](#speakers)
 - [What to Expect](#what-to-expect)
 - [Important Notes](#important-notes)
@@ -57,6 +54,7 @@ We'll reveal the exact location on campus a few days before the event. If you ge
 </section>
 
 ---
+{% endif %}
 
 ## Event Details
 
@@ -82,20 +80,15 @@ Bournemouth University, Fern Barrow, Poole, Dorset, BH12 5BB
 
 </section>
 
-### Getting There
+### Maps & Directions
 
-#### Maps & Directions
-
-If this is your first time visiting, use this order:
-
-1. 🎥 **Watch the arrival walkthrough:** [Venue walkthrough](https://youtu.be/fYq5pReMZWs)
-2. 📍 **Navigate to Kimmeridge House entrance:** [Google Maps pin for Room K101](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)
-3. 🅿️ **If driving, head to the visitors car park first:** [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
-4. 🗺️ **Use the official campus map as backup:** [Talbot Campus map PDF](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf) (Kimmeridge House is building **16**)
+- 🅿️ **If driving, head to the visitors car park:** [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)  (Parking marked with a **P** pin on the campus map below)
+- 🎥 **Watch the video showing how to get from the car park to Kimmeridge house:** [Car park to Kimmeridge house Video](https://youtu.be/fYq5pReMZWs)
+- 📍 **Navigate to Kimmeridge House entrance:** [Google Maps pin for Room K101](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)  (Kimmeridge House marked with a **KH** pin on campus map below)
+- More directions on the [BU website](https://www.bournemouth.ac.uk/about/contact-us/directions-maps/directions-our-talbot-campus) & official [Talbot Campus map](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf)
 
 {% from "locationMapAndOverlay.njk" import locationMapAndOverlay %}
 {% set mapPins = [
-  
   {
     left: "64%",
     top: "53%",
@@ -125,19 +118,27 @@ If this is your first time visiting, use this order:
     fontSize: 11.9,
     color: "#c0392b",
     ariaLabel: "Kimmeridge House – Room K101"
+  },
+  {
+    left: "4%",
+    top: "20%",
+    text: "BS",
+    textX: 13.5,
+    textY: 19,
+    fontSize: 11.3,
+    color: "#2753b4",
+    ariaLabel: "Bus Stop"
   }
 ] %}
 {{ locationMapAndOverlay("/images/talbotcampus.svg", mapPins) }}
 
-More directions on the [BU website](https://www.bournemouth.ac.uk/about/contact-us/directions-maps/directions-our-talbot-campus).
-
-**Building Entrance:** Kimmeridge House has one entrance, accessed via the courtyard in the middle of campus (CY pin on Campus map). The room is on the first floor — take the stairs or lift, then turn left from the stairs or right from the lift.
+**Building Entrance:** Kimmeridge House has one entrance, accessed via the courtyard in the middle of campus **(CY pin on Campus map)**. The room is on the first floor — take the stairs or lift, then turn left from the stairs or right from the lift.
 
 **Accessibility:** Flat entrance at ground level with lift access to the first floor.
 
 #### Travel Options
 
-- **Bus:** Drops off at the main entrance on Fern Barrow.
+- **Bus:** Drops off at the main entrance on Fern Barrow **(BS pin on the campus map above)**
 - **Train:** Nearest station is Bournemouth Station (~45 min walk). Taxi or bus from station takes 15 mins.
 - **Bike:** Bike racks available on campus.
 - **Parking:** Free during the event. Check signage when parking: [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
