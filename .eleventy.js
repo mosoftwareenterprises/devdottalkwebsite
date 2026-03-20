@@ -101,6 +101,25 @@ export default function (eleventyConfig) {
     }
   );
 
+  eleventyConfig.addTransform(
+    'external-links',
+    (content, outputPath) => {
+      if (outputPath.endsWith('.html')) {
+        const dom = new JSDOM(content);
+        const document = dom.window.document;
+
+        document.querySelectorAll('a[href^="http"]').forEach((link) => {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        });
+
+        return document.documentElement.outerHTML;
+      } else {
+        return content;
+      }
+    }
+  );
+
   return {
     dir: {
       input: "src",
