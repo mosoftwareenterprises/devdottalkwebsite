@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { renderMacro, htmlContains, extractElements } from '../helpers/nunjucks.js';
+import { renderMacro } from '../helpers/nunjucks.js';
 import { mockSessions } from '../fixtures/data.js';
 
 describe('speaker-session component', () => {
@@ -11,7 +11,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -22,7 +22,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -33,7 +33,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -44,7 +44,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -55,7 +55,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -69,11 +69,11 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/2026/march/kevin.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('img src="/images/2026/march/kevin.png"');
+      expect(html).toContain('img src="/images/test/alice-tile.png"');
       expect(html).toContain('loading="lazy"');
     });
 
@@ -81,7 +81,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -92,7 +92,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -103,7 +103,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -114,7 +114,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -125,7 +125,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', mockSessions],
+        [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -138,7 +138,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [555, '/images/test.png', mockSessions],
+        [555, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -149,7 +149,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [555, '/images/test.png', mockSessions],
+        [555, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -163,7 +163,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [998, '/images/test.png', mockSessions],
+        [998, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -176,7 +176,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [997, '/images/test.png', mockSessions],
+        [997, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -188,7 +188,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [996, '/images/test.png', mockSessions],
+        [996, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
 
@@ -206,7 +206,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [999, '/images/test.png', sessionsWithoutTitle],
+        [999, sessionsWithoutTitle],
         { sessions: { allEvents: sessionsWithoutTitle } }
       );
 
@@ -224,7 +224,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [31, '/images/test.png', sessionsWithoutBio],
+        [31, sessionsWithoutBio],
         { sessions: { allEvents: sessionsWithoutBio } }
       );
 
@@ -240,6 +240,7 @@ describe('speaker-session component', () => {
           title: 'Custom Title',
           firstSpeakerName: 'Custom Name',
           firstSpeakerUrl: 'https://custom.url',
+          firstSpeakerTileImageLocation: '/images/test/custom-tile.png',
           firstSpeakerJobTitle: 'Custom Job',
           description: 'Custom description',
           firstSpeakerBio: 'Custom bio'
@@ -249,7 +250,7 @@ describe('speaker-session component', () => {
       const html = renderMacro(
         templatePath,
         macroName,
-        [31, '/images/test.png', customSessions],
+        [31, customSessions],
         { sessions: { allEvents: mockSessions } } // Different global data
       );
 

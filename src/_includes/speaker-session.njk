@@ -1,6 +1,5 @@
-{% macro speakerSession(sessionId, headshotFilename, sessionsList) %}
+{% macro speakerSession(sessionId, sessionsList) %}
     {% set sessionRecord = null %}
-    
     {# Try to use the helper function if available #}
     {% if sessions is defined and sessions.findById %}
         {% set sessionRecord = sessions.findById(sessionId) %}
@@ -12,22 +11,24 @@
             {% endif %}
         {% endfor %}
     {% endif %}
-
     {% if not sessionRecord %}
         <p>Session not found.</p>
     {% else %}
-        <a href="{{ sessionRecord.firstSpeakerUrl }}" alt="{{ sessionRecord.firstSpeakerName }} Linkedin Profile" title="{{ sessionRecord.firstSpeakerName }} Linkedin Profile">
-            <img src="{{ headshotFilename }}" loading="lazy" style="width:100%" alt="{{ sessionRecord.firstSpeakerName }} Speaker headshot">
-            <h3>{{ sessionRecord.firstSpeakerName }}</h3>
-            {% if sessionRecord.firstSpeakerJobTitle %}
-                <strong>{{ sessionRecord.firstSpeakerJobTitle }}</strong>
+        {% set tileImage = sessionRecord.firstSpeakerTileImageLocation %}
+        <a href="{{ sessionRecord.firstSpeakerUrl }}" title="{{ sessionRecord.firstSpeakerName }} Linkedin Profile">
+            {% if tileImage %}
+                <img src="{{ tileImage }}" loading="lazy" style="width:100%" alt="{{ sessionRecord.firstSpeakerName }} Speaker headshot">
             {% endif %}
-        </a>
-        <h4>{{ sessionRecord.title }}</h4>
-        <p class="formatted-description">{{ sessionRecord.description }}</p>
-        {% if sessionRecord.firstSpeakerBio %}
-            <h5>Speaker Bio</h5>
-            <p class="formatted-description">{{ sessionRecord.firstSpeakerBio }}</p>
+                <h3>{{ sessionRecord.firstSpeakerName }}</h3>
+                {% if sessionRecord.firstSpeakerJobTitle %}
+                    <strong>{{ sessionRecord.firstSpeakerJobTitle }}</strong>
+                {% endif %}
+            </a>
+            <h4>{{ sessionRecord.title }}</h4>
+            <p class="formatted-description">{{ sessionRecord.description }}</p>
+            {% if sessionRecord.firstSpeakerBio %}
+                <h5>Speaker Bio</h5>
+                <p class="formatted-description">{{ sessionRecord.firstSpeakerBio }}</p>
+            {% endif %}
         {% endif %}
-    {% endif %}
-{% endmacro %}
+    {% endmacro %}
