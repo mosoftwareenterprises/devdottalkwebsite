@@ -66,13 +66,13 @@ main>h1 {
   display: inline-block;
   padding: 12px 24px;
   background-color: #0d5f66;
-    color: #ffffff;
+  color: #ffffff;
   text-decoration: none;
   border: 3px solid #08363a;
   border-radius: 6px;
   font-weight: bold;
   box-shadow: 0 4px 12px rgba(8, 54, 58, 0.35);
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
 #floating-register .luma-checkout--button:hover,
@@ -80,12 +80,13 @@ main>h1 {
   background-color: #094a50;
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(8, 54, 58, 0.5);
-  }
-  
-  #floating-register .luma-checkout--button:focus-visible {
-    outline: 3px solid #ffcc33;
-    outline-offset: 2px;
 }
+
+#floating-register .luma-checkout--button:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 2px;
+}
+
 .text {
   padding-left: 20px;
   float: left;
@@ -250,6 +251,7 @@ main>h1 {
   outline: 3px solid #0f3f68;
   outline-offset: 3px;
 }
+
 @media screen and (max-width: 540px) {
   .site-header-row {
     padding-right: 68px;
@@ -271,11 +273,13 @@ main>h1 {
     right: auto;
   }
 }
+
 @media screen and (min-width: 754px) {
   .main-content {
     overflow-y: visible;
   }
 }
+
 h1 a,
 h2 a,
 h3 a,
@@ -295,6 +299,7 @@ footer {
   box-sizing: border-box;
   font-size: 0.75em;
 }
+
 /* floating register button positioning */
 #floating-register {
   position: fixed;
@@ -321,6 +326,7 @@ footer {
     left: calc(50% + 7em);
   }
 }
+
 /* Remove extra spacing from paragraphs inside list items */
 li p {
   margin: 0;
@@ -361,6 +367,7 @@ li p {
   text-decoration: none;
   cursor: pointer;
 }
+
 /* Location info page sections */
 .venue-details-coming-soon {
   background-color: #fff3cd;
@@ -384,4 +391,79 @@ li p {
   border-left: 4px solid rgb(112, 136, 216);
   border-radius: 4px;
   margin: 15px 0;
+}
+.contact-page-intro {
+  line-height: 1.6;
+  margin: 0 auto 18px;
+  max-width: 68ch;
+  text-align: center;
+}
+
+.contact-card-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 0 0 24px;
+}
+
+.contact-card {
+  background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+  border: 1px solid #b7cce0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(23, 62, 98, 0.12);
+  padding: 14px;
+}
+
+.contact-card h2 {
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+
+.contact-card p {
+  line-height: 1.45;
+  margin: 0 0 10px;
+}
+
+.contact-card-link {
+  background-color: #0f3f68;
+  border: 1px solid #0a2a45;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+.contact-card-link:hover,
+.contact-card-link:focus {
+  background-color: #0c3457;
+}
+
+.contact-card-link:focus-visible,
+.contact-help-link:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 2px;
+}
+
+.contact-page-support {
+  background-color: #f7faf5;
+  border-left: 4px solid #608447;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.contact-page-support h2 {
+  margin-top: 0;
+}
+
+.contact-help-link {
+  color: #0f3f68;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 540px) {
+  .contact-card-grid {
+    grid-template-columns: 1fr;
+  }
 }
