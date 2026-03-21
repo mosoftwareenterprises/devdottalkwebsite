@@ -392,6 +392,14 @@ footer {
   }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .floatingchat-container-wrap,
+  .floatingchat-container-wrap-mobi {
+    right: 20px !important;
+  }
+}
+
 @media screen and (min-width: 1201px) {
 
   .floatingchat-container-wrap,
@@ -402,6 +410,12 @@ footer {
 @media screen and (min-width: 769px) {
   #floating-register {
     right: 310px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #floating-register {
+    right: 20px;
   }
 }
 
