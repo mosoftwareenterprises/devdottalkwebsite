@@ -427,61 +427,6 @@ h6 a {
   z-index: 998;
 }
 
-/* Position Ko-fi floating chat — mirrors #floating-register right offsets at each breakpoint */
-.floatingchat-container-wrap,
-.floatingchat-container-wrap-mobi {
-  position: fixed !important;
-  top: 20px !important;
-  right: 0 !important;
-  left: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  z-index: 997 !important;
-}
-
-@media screen and (max-width: 768px) {
-  .floatingchat-container-wrap-mobi {
-    right: -80px !important;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .floatingchat-container-wrap-mobi {
-    right: 90px !important;
-  }
-}
-
-@media screen and (max-width: 749px) {
-
-  .floatingchat-container-wrap,
-  .floatingchat-container-wrap-mobi {
-    top: 40px !important;
-  }
-}
-@media screen and (min-width: 769px) {
-
-  .floatingchat-container-wrap,
-  .floatingchat-container-wrap-mobi {
-    top: 25px !important;
-    right: 210px !important;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
-  .floatingchat-container-wrap,
-  .floatingchat-container-wrap-mobi {
-    right: 20px !important;
-  }
-}
-
-@media screen and (min-width: 1201px) {
-
-  .floatingchat-container-wrap,
-  .floatingchat-container-wrap-mobi {
-    right: calc((100vw - 1200px) / 2 + 210px) !important;
-  }
-}
 @media screen and (min-width: 769px) {
   #floating-register {
     right: 310px;
