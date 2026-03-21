@@ -2,7 +2,7 @@
     {
         "id": 35,
         "eventID": 16,
-        "title": "Anatomy of an Incident (featuring CrowdStrike",
+        "title": "Anatomy of an Incident (featuring CrowdStrike)",
         "duration": 60,
         "description": "Back in 2022 I gave a talk about how to handle incidents (google: \"youtube incident liam westley\") providing a strategy for how to prepare for incidents, how they should be managed and how you talk to your customers.\nIn July 2024, along came CrowdStrike, and our incident plan went into action, honed over the previous three years.\nIn this session we will have a quick review of what an incident plan should look like. Then will move onto a timeline, taken from our Post Incident Review (PIR), of how that incident plan was put into action when CrowdStrike arrived, what worked (most of it) and how we have tweaked our incident plan for the future.",
         "firstSpeakerName": "Liam Westley",
