@@ -253,6 +253,41 @@ main>h1 {
   outline-offset: 3px;
 }
 
+.support-callout {
+  background: linear-gradient(180deg, #f7fbf6 0%, #eef6ed 100%);
+  border: 1px solid #b7cfb4;
+  border-left: 5px solid #5f8f5b;
+  border-radius: 8px;
+  margin-top: 28px;
+  padding: 14px 16px;
+}
+
+.support-callout h2 {
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+}
+
+.support-callout p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.support-callout a {
+  color: #1c5a24;
+  font-weight: 700;
+  text-underline-offset: 2px;
+}
+
+.support-callout a:hover,
+.support-callout a:focus {
+  color: #13441a;
+}
+
+.support-callout a:focus-visible {
+  outline: 3px solid #1c5a24;
+  outline-offset: 2px;
+}
+
 @media screen and (max-width: 540px) {
   .site-header-row {
     padding-right: 68px;
@@ -265,6 +300,14 @@ main>h1 {
 
   .site-nav-bar.is-open .site-nav {
     min-width: 220px;
+  }
+
+  .support-callout {
+    padding: 12px;
+  }
+
+  .support-callout h2 {
+    font-size: 1rem;
   }
 }
 
