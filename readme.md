@@ -74,3 +74,27 @@ Mock data uses completely fake URLs and names to avoid conflicts with real websi
 
 
 PRs welcome.
+
+## Community Projects
+
+The [`src/community-projects.md`](src/community-projects.md) page showcases blogs, articles, videos, GitHub repos, and websites created by {dev.talk} community members.
+
+### How to Contribute
+
+Adding your project takes a few minutes:
+
+1. Open [`src/community-projects.md`](src/community-projects.md).
+2. Find the section that best fits your project:
+   - **Blogs & Personal Sites** — personal blogs or portfolio sites
+   - **Articles** — published articles on Dev.to, Medium, personal blogs, etc.
+   - **Videos** — YouTube videos, conference recordings, screencasts
+   - **GitHub Repos & Open Source** — open source tools, libraries or experiments
+   - **Websites & Apps** — live sites or apps you've built
+3. Add a bullet point in this format:
+   ```
+   - [Project Name](https://your-project-url) — A short description. *by [Your Name](https://your-profile-link)*
+   ```
+4. If your project doesn't fit an existing section, add a new `##` heading.
+5. Submit a Pull Request — all community project contributions are welcome!
+
+> Not sure how to raise a PR? Drop a message via [contactus@devdottalk.uk](mailto:contactus@devdottalk.uk).
