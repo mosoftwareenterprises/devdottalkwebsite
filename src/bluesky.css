@@ -1,10 +1,11 @@
 #bluesky-posts-header,
 #bluesky-posts {
-  flex: 1;
+  width: 300px;
   background-color: #0a7aff;
   padding: 20px;
   overflow-y: auto;
   max-height: 100%;
+  flex-shrink: 0;
 }
 
 #bluesky-posts-header {
@@ -85,16 +86,14 @@
     width: 100%;
     max-height: none;
     overflow-y: visible;
-
+  
 
     #bluesky-posts {
-      flex: none;
-      width: 100%;
+    width: 100%;
       max-height: none;
       overflow-y: visible;
       background-color: #0a7aff;
       padding: 20px;
-    }
   }
 
   /* Post Stats */
