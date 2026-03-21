@@ -1,0 +1,65 @@
+---
+layout: layout
+title: "{dev.talk} - Speakers"
+description: "Meet the incredible speakers who have shared their knowledge and experience at {dev.talk} meetups in the south of the UK."
+permalink: speakers.html
+includeBlueskyPosts: true
+---
+
+<section>
+  <h1 id="speakers">
+    <a href="#speakers">Our Speakers</a>
+  </h1>
+  <p>
+    A huge thank you to every speaker who has shared their knowledge, stories, and expertise with the {dev.talk} community. You make these events possible.
+  </p>
+  <p>
+    Interested in speaking? See our <a href="/call-for-speakers.html">Call for Speakers</a> page.
+  </p>
+  <div class="speakers-grid">
+    {% for speaker in speakers.all %}
+      <div class="speaker-card">
+        {% if speaker.tileImageLocation %}
+          <div class="speaker-card-image">
+            {% if speaker.url %}
+              <a href="{{ speaker.url }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ speaker.tileImageLocation }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-headshot">
+              </a>
+            {% else %}
+              <img src="{{ speaker.tileImageLocation }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-headshot">
+            {% endif %}
+          </div>
+        {% endif %}
+        <div class="speaker-card-body">
+          <h2 class="speaker-card-name">
+            {% if speaker.url %}
+              <a href="{{ speaker.url }}" target="_blank" rel="noopener noreferrer">{{ speaker.name }}</a>
+            {% else %}
+              {{ speaker.name }}
+            {% endif %}
+          </h2>
+          {% if speaker.jobTitle %}
+            <p class="speaker-card-job">{{ speaker.jobTitle }}</p>
+          {% endif %}
+          {% if speaker.bio %}
+            <p class="speaker-card-bio formatted-description">{{ speaker.bio }}</p>
+          {% endif %}
+          <div class="speaker-card-sessions">
+            <h3>{{ 'Sessions' if speaker.sessions | length > 1 else 'Session' }}</h3>
+            <ul>
+              {% for sess in speaker.sessions %}
+                <li>
+                  {% if sess.videoUrl %}
+                    <a href="{{ sess.videoUrl }}" target="_blank" rel="noopener noreferrer">{{ sess.title }}</a>
+                  {% else %}
+                    {{ sess.title }}
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
