@@ -1,0 +1,8 @@
+<footer>
+  <p>Built with Eleventy (11ty) into a static website.</p>
+  <p>Hosted as an Azure Static Web App in Azure. Source code is available on <a href="https://github.com/mosoftwareenterprises/devdottalkwebsite" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+  {% if build and build.commitUrl and build.shortSha %}
+    <p>This deployment was built from commit <a href="{{ build.commitUrl }}" target="_blank" rel="noopener noreferrer">{{ build.shortSha }}</a>{% if build.branch %} on branch {{ build.branch }}{% endif %}{% if build.builtAtUtc %} at {{ build.builtAtUtc }}{% endif %}.</p>
+  {% endif %}
+  <p>&copy; {{ build.currentYear }} <a href="https://blog.markoliver.website/Bio" target="_blank" rel="noopener noreferrer">Mark Oliver</a>. All rights reserved.</p>
+</footer>
