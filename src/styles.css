@@ -71,6 +71,7 @@ main>h1 {
   border: 3px solid #08363a;
   border-radius: 6px;
   font-weight: bold;
+  white-space: nowrap;
   box-shadow: 0 4px 12px rgba(8, 54, 58, 0.35);
   transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
@@ -304,26 +305,31 @@ footer {
 #floating-register {
   position: fixed;
   bottom: 20px;
-  right: calc(28%);
+  right: 20px;
   z-index: 998;
 }
 
+/* Position Ko-fi to the right of the site logo, clamped inside the content column */
+.floatingchat-container-wrap,
+.floatingchat-container-wrap-mobi {
+  position: fixed !important;
+  top: 20px !important;
+  right: max(28px, calc((100vw - 700px) / 2 + 20px)) !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  z-index: 997 !important;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   #floating-register {
-    right: 20px;
+    right: 310px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1268px) {
+@media screen and (min-width: 1201px) {
   #floating-register {
-    right: calc(28%);
-  }
-}
-
-@media screen and (min-width: 1268px) {
-  #floating-register {
-    left: calc(50% + 7em);
+    right: calc((100vw - 1200px) / 2 + 310px);
   }
 }
 
