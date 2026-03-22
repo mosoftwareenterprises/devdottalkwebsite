@@ -39,6 +39,7 @@ Thank you for being part of our amazing community of software engineers and tech
 **📍 Venue Details Coming Soon!**
 
 We'll reveal the exact location on campus a few days before the event. If you get a ticket, you will be notified of the location on the day, as well as links to maps too.
+This helps us to manage capacity more effectively.
 
 </section>
 {% endif %}
@@ -128,17 +129,12 @@ Bournemouth University, Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB
 - **Bike:** Bike racks available on campus.
 - **Parking:** Free during the event. Check signage when parking: [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
 
-{% else %}
-
-## Venue Details Coming Soon
-
-Ticket holders will be sent exact room on campus **shortly before the event** to manage capacity more effectively.
-
 {% endif %}
 
 ---
 
 ## Speakers
+
 {{ speakerSession(32, sessions.allEvents) }}
 
 ---
