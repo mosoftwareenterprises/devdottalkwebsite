@@ -17,7 +17,7 @@
         {% set tileImage = sessionRecord.firstSpeakerTileImageLocation %}
         <a href="{{ sessionRecord.firstSpeakerUrl }}" title="{{ sessionRecord.firstSpeakerName }} Linkedin Profile">
             {% if tileImage %}
-                <img src="{{ tileImage }}" loading="lazy" style="width:100%" alt="{{ sessionRecord.firstSpeakerName }} Speaker headshot">
+                <img src="{{ tileImage }}" loading="lazy" class="speaker-headshot" alt="{{ sessionRecord.firstSpeakerName }} Speaker headshot">
             {% endif %}
                 <h3>{{ sessionRecord.firstSpeakerName }}</h3>
                 {% if sessionRecord.firstSpeakerJobTitle %}

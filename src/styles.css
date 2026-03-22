@@ -61,6 +61,8 @@ main>h1 {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  max-width: 100%;
+    height: auto;
 }
 
 .video-embed {
@@ -1065,6 +1067,29 @@ li p {
   padding: 14px;
 }
 
+/* Image aspect ratio rules to prevent cumulative layout shift */
+.session-info-item img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+img[style*="width:100%"] {
+  height: auto;
+}
+
+/* Ensure speaker headshots maintain aspect ratio */
+.speaker-headshot {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Location map container aspect ratio */
+div[style*="position:relative;display:block;line-height:0"] {
+  aspect-ratio: auto;
+  overflow: hidden;
+}
 .volunteer-role-card h2 {
   font-size: 1.1rem;
   margin: 0 0 8px;
