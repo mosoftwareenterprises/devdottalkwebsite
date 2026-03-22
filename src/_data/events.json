@@ -104,7 +104,7 @@
             35,
             34
         ],
-        "overview": "This event is all about learning how to use geospatial data to solve problems and also how to learn from incidents to improve our systems and processes."
+        "overview": "Attendees will explore practical geospatial concepts and tools, then see a real incident case study showing how teams can prepare, respond, and improve after major production issues."
     },
     {
         "id": 15,
@@ -120,7 +120,7 @@
             33,
             32
         ],
-        "overview": "This events delves into the world of AI to talk about building an Agentic Mobile OS and we are also going to learn how being a manager can make you a better engineer."
+        "overview": "This event covers building a privacy-first agentic mobile OS and shares practical lessons on how management experience can help you grow as an engineer."
     },
     {
         "id": 14,
@@ -136,7 +136,7 @@
             28,
             27
         ],
-        "overview": ""
+        "overview": "This event is packed with practical game development advice, from the key decisions that help you finish game jams faster to smart ways to build an audience and work with marketing while you ship."
     },
     {
         "id": 13,
@@ -152,7 +152,7 @@
             26,
             25
         ],
-        "overview": ""
+        "overview": "In this event, attendees will hear how to cut through AI hype with a practical automation framework, plus how to make websites easier to evolve using feature isolation without a full rebuild."
     },
     {
         "id": 12,
@@ -167,7 +167,7 @@
         "sessionIDs": [
             24
         ],
-        "overview": ""
+        "overview": "A fun and social end-of-year session where everyone can take part in a general knowledge quiz and celebrate together."
     },
     {
         "id": 11,
@@ -183,7 +183,7 @@
             23,
             22
         ],
-        "overview": ""
+        "overview": "This event blends humour and hard lessons, exploring the human side of software engineering through a sitcom lens and reflecting on bugs from the Post Office Horizon system and what teams can learn from them."
     },
     {
         "id": 10,
@@ -200,7 +200,7 @@
             20,
             19
         ],
-        "overview": ""
+        "overview": "Attendees will hear short, practical talks on improving developer environments with Nix, using domain-specific languages to simplify complex problems, and building better collaboration between product managers and developers."
     },
     {
         "id": 9,
@@ -215,7 +215,7 @@
         "sessionIDs": [
             18
         ],
-        "overview": ""
+        "overview": "A deep dive into developer experience, covering how to test complex end-to-end flows effectively and how .NET Aspire and OpenTelemetry can make integration testing and local development smoother."
     },
     {
         "id": 8,
@@ -231,7 +231,7 @@
             17,
             16
         ],
-        "overview": ""
+        "overview": "This event focuses on managing change and growth, with insights on helping people adopt new tools and a real-world case study on evolving service boundaries and architecture over time."
     },
     {
         "id": 7,
@@ -246,7 +246,7 @@
         "sessionIDs": [
             15
         ],
-        "overview": ""
+        "overview": "A collaborative and relaxed community night featuring a fun general knowledge quiz with the Re:connect conference."
     },
     {
         "id": 6,
@@ -262,7 +262,7 @@
             14,
             13
         ],
-        "overview": ""
+        "overview": "Attendees will explore the current open-source AI landscape and hear real stories and advice on pathways into the tech industry."
     },
     {
         "id": 5,
@@ -278,7 +278,7 @@
             12,
             11
         ],
-        "overview": ""
+        "overview": "This event highlights practical engineering approaches, from applying Clean Architecture in Salesforce to using OpenTelemetry to make application observability easier."
     },
     {
         "id": 4,
@@ -295,7 +295,7 @@
             9,
             8
         ],
-        "overview": ""
+        "overview": "A varied event covering modern PHP, the real ups and downs of building a YouTube channel, and practical strategies for landing a tech role without a computer science degree."
     },
     {
         "id": 3,
@@ -311,7 +311,7 @@
             7,
             6
         ],
-        "overview": ""
+        "overview": "In this event, attendees will hear how agentic AI is shaping the future of automation and get practical guidance on navigating today’s changing tech hiring market."
     },
     {
         "id": 2,
@@ -327,7 +327,7 @@
             5,
             4
         ],
-        "overview": ""
+        "overview": "This event shares lessons from building a city-based maze game with open tools, alongside a candid look at scaling teams and systems through a domain-driven design transformation."
     },
     {
         "id": 1,
@@ -344,6 +344,6 @@
             2,
             1
         ],
-        "overview": ""
+        "overview": "A strong kickoff event featuring a student perspective on breaking into tech, practical microservice design with REPR, and lessons learned from building a vertiport automation platform."
     }
 ]
