@@ -47,7 +47,7 @@ describe('event-list-item component', () => {
     it('should show photos link when photoUrl exists', () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
       
-      expect(html).toContain('📸 Photos');
+      expect(html).toContain('<span class="event-link-label">Photos</span>');
       expect(html).toContain('href="https://test-photos.local/march-mock"');
     });
 
@@ -55,14 +55,14 @@ describe('event-list-item component', () => {
       const eventWithoutPhotos = { ...mockEvents[0], photoUrl: 'TODO' };
       const html = renderMacro(templatePath, macroName, [eventWithoutPhotos]);
       
-      expect(html).not.toContain('📸 Photos');
+      expect(html).not.toContain('<span class="event-link-label">Photos</span>');
     });
 
     it('should not show photos link when photoUrl is empty', () => {
       const eventWithoutPhotos = { ...mockEvents[0], photoUrl: '' };
       const html = renderMacro(templatePath, macroName, [eventWithoutPhotos]);
       
-      expect(html).not.toContain('📸 Photos');
+      expect(html).not.toContain('<span class="event-link-label">Photos</span>');
     });
   });
 
@@ -76,11 +76,11 @@ describe('event-list-item component', () => {
       expect(html).toContain('href="https://test-youtube.local/mock-qa-1"');
     });
 
-    it('should show video emoji', () => {
+    it('should render session video links for each valid video URL', () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0], mockSessions]);
       
-      const videoLinks = html.match(/▶️/g);
-      expect(videoLinks).toHaveLength(2); // Two videos
+      const videoLinks = html.match(/class="session-video-link"/g) || [];
+      expect(videoLinks).toHaveLength(2);
     });
 
     it('should not render video links when sessions have no video URLs', () => {
@@ -90,7 +90,7 @@ describe('event-list-item component', () => {
       }));
       const html = renderMacro(templatePath, macroName, [mockEvents[0], sessionsWithoutVideos]);
       
-      expect(html).not.toContain('▶️');
+      expect(html).not.toContain('class="session-video-link"');
     });
 
     it('should skip session videos with TODO URLs', () => {
@@ -108,8 +108,9 @@ describe('event-list-item component', () => {
       ];
       const html = renderMacro(templatePath, macroName, [mockEvents[0], sessionsWithTodoVideo]);
       
-      expect(html).not.toContain('▶️ Main Session'); // TODO should be skipped in event links
-      expect(html).toContain('▶️ Valid Video'); // Valid one should show in event links
+      expect(html).not.toContain('href="TODO"');
+      expect(html).toContain('href="https://youtube.com/valid"');
+      expect(html).toContain('Valid Video (45 mins)');
     });
   });
 
@@ -171,8 +172,7 @@ describe('event-list-item component', () => {
       expect(html).toContain('Test Data Deep Dive');
       expect(html).toContain('Test Framework Overview');
       
-      // Should only have one video link
-      const videoCount = (html.match(/▶️/g) || []).length;
+      const videoCount = (html.match(/class="session-video-link"/g) || []).length;
       expect(videoCount).toBe(1);
     });
   });

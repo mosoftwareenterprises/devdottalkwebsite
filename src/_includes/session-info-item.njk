@@ -29,10 +29,12 @@
     } %}
   {% endif %}
 
+  {% set hasVideoUrl = s.videoUrl and s.videoUrl != "" and s.videoUrl != "TODO" %}
+
   <li class="session-info-item">
     <p>
       <b>
-        {% if s.videoUrl and s.videoUrl != "" %}
+        {% if hasVideoUrl %}
           <a href="{{ s.videoUrl }}" target="_blank" rel="noopener noreferrer" class="session-video-link">
             <span class="session-video-link-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false">
