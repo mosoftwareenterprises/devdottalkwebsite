@@ -4,6 +4,10 @@ import { JSDOM } from 'jsdom';
 // Map to store image attributes from markdown extended syntax
 const imageAttributesMap = new Map();
 
+function serializeDom(dom) {
+  return dom.serialize();
+}
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/styles.css");
   eleventyConfig.addPassthroughCopy("src/bluesky.css");
@@ -95,7 +99,7 @@ export default function (eleventyConfig) {
           }
         });
 
-        return document.documentElement.outerHTML;
+        return serializeDom(dom);
       } else {
         return content;
       }
@@ -114,7 +118,7 @@ export default function (eleventyConfig) {
           link.setAttribute('rel', 'noopener noreferrer');
         });
 
-        return document.documentElement.outerHTML;
+        return serializeDom(dom);
       } else {
         return content;
       }

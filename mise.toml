@@ -13,3 +13,9 @@ run = ["npx kill-port 8080"]
 
 [tasks.start]
 run = ["npx kill-port 8080 || true", "npm start"]
+
+[tasks.audit]
+run = ["npx --yes unlighthouse --site devdottalk.uk --disable-dynamic-sampling"]
+
+[tasks.auditprod]
+run = ["npx --yes unlighthouse --site devdottalk.uk --disable-dynamic-sampling"]
