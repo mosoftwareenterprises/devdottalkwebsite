@@ -1,0 +1,7 @@
+{% macro eventOverview(eventId, eventList) %}
+  {% for ev in eventList %}
+    {% if ev.id == eventId and ev.overview %}
+      {{ ev.overview }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}

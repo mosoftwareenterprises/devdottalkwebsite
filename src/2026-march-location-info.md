@@ -10,6 +10,10 @@ permalink: 2026-march-location-info.html
 showVenueSection: false
 ---
 
+{% from "event-overview.njk" import eventOverview %}
+{% from "locationMapAndOverlay.njk" import locationMapAndOverlay %}
+{% from "speaker-session.njk" import speakerSession %}
+
 {% if showVenueSection %}
 <a id="floating-venue" href="#venue">
   📍 Room K101, Kimmeridge House | Wed 25th March @ 7:00 PM.</br>
@@ -21,7 +25,7 @@ showVenueSection: false
 
 Hi there,
 
-This month we are taking a delve into the world of AI to talk about building an Agentic Mobile OS and also learning how being a manager can make you a better engineer.
+{{ eventOverview(15, events.all) }}
 
 Thank you for being part of our amazing community of software engineers and tech enthusiasts.
 
@@ -69,8 +73,6 @@ Bournemouth University, Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB
 - 🎥 **Watch the video showing how to get from the car park to Kimmeridge house:** [Car park to Kimmeridge house Video](https://youtu.be/fYq5pReMZWs)
 - 📍 **Navigate to Kimmeridge House entrance:** [Google Maps pin for Room K101](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)  (Kimmeridge House marked with a **KH** pin on campus map below)
 - More directions on the [BU website](https://www.bournemouth.ac.uk/about/contact-us/directions-maps/directions-our-talbot-campus) & official [Talbot Campus map](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf)
-
-{% from "locationMapAndOverlay.njk" import locationMapAndOverlay %}
 {% set mapPins = [
   {
     left: "64%",
@@ -137,8 +139,6 @@ Ticket holders will be sent exact room on campus **shortly before the event** to
 ---
 
 ## Speakers
-
-{% from "speaker-session.njk" import speakerSession %}
 {{ speakerSession(32, sessions.allEvents) }}
 
 ---
