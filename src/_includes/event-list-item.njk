@@ -1,39 +1,8 @@
 {% import "session-info-item.njk" as session %}
 
-{% macro eventItem(a, b, c, d, e, f, g, h, i, j) %}
-  {#
-    The old signature took ten separate positional arguments:
-      date, eventUrl, eventTitle, photoUrl,
-      video1Title, video1Url, video2Title, video2Url, video3Title, video3Url
-
-    To make maintenance easier we now prefer to pass a single
-    "event" object (see src/_data/events.json).  However some
-    legacy calls still use the old form, so we detect which was
-    supplied and normalise to an object named `ev`.
-  #}
-
-  {% set allSessions = [] %}
+{% macro eventItem(ev, sessions) %}
+  {% set allSessions = sessions if sessions else [] %}
   {% set eventAnchorId = null %}
-
-  {% if a and a.displayDate is defined and a.title is defined %}
-    {# new style invocation: event object, optional sessions collection as second argument #}
-    {% set ev = a %}
-    {% if b is defined and b %}
-      {% set allSessions = b %}
-    {% endif %}
-  {% elif b is defined %}
-    {# old style invocation #}
-    {% set ev = {
-      displayDate: a,
-      url: b,
-      title: c,
-      photoUrl: d,
-      videos: []
-    } %}
-    {%- if f and f != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: e, url: f }]) }) %} {% endif %}
-    {%- if h and h != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: g, url: h }]) }) %} {% endif %}
-    {%- if j and j != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: i, url: j }]) }) %} {% endif %}
-  {% endif %}
 
   {% if ev.id is defined and ev.id %}
     {% set eventAnchorId = ev.id %}

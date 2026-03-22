@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { renderMacro, extractElements } from '../helpers/nunjucks.js';
+import { renderMacro } from '../helpers/nunjucks.js';
 import { mockEvents, mockSessions } from '../fixtures/data.js';
 
 describe('event-list-item component', () => {
@@ -102,77 +102,6 @@ describe('event-list-item component', () => {
       
       expect(html).not.toContain('Main Session'); // TODO should be skipped
       expect(html).toContain('Valid Video'); // Valid one should show
-    });
-  });
-
-  describe('backward compatibility (legacy parameter style)', () => {
-    it('should work with legacy 10-parameter format', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [
-          '25 April 2026',
-          'https://test.meetup.local/event',
-          'Test Legacy Event',
-          'https://test-photos.local/april',
-          'Test Full Talk',
-          'https://test-youtube.local/full',
-          'Test Q&A',
-          'https://test-youtube.local/qa',
-          'Test Highlights',
-          'https://test-youtube.local/highlights'
-        ]
-      );
-
-      expect(html).toContain('25 April 2026');
-      expect(html).toContain('Test Legacy Event');
-      expect(html).toContain('📸 Photos');
-      expect(html).toContain('Test Full Talk');
-      expect(html).toContain('Test Q&A');
-      expect(html).toContain('Test Highlights');
-    });
-
-    it('should handle TODO values in legacy format', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [
-          '30 April 2026',
-          'https://test.meetup.local/event',
-          'Test Event Title',
-          'TODO', // No photos
-          'Test Video 1',
-          'https://test-youtube.local/v1',
-          'Test Video 2',
-          'TODO', // No video 2 link
-          'Test Video 3',
-          'https://test-youtube.local/v3'
-        ]
-      );
-
-      expect(html).not.toContain('📸 Photos');
-      expect(html).toContain('Test Video 1');
-      expect(html).not.toContain('Test Video 2');
-      expect(html).toContain('Test Video 3');
-    });
-
-    it('should handle partial videos in legacy format', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [
-          '28 April 2026',
-          'https://test.meetup.local/event',
-          'Test Partial Event',
-          'https://test-photos.local/april',
-          'Test Video 1',
-          'https://test-youtube.local/v1'
-          // No more parameters - should handle gracefully
-        ]
-      );
-
-      expect(html).toContain('Test Video 1');
-      expect(html).not.toContain('undefined');
     });
   });
 
