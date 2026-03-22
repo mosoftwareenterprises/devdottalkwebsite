@@ -18,7 +18,7 @@ export const mockSessions = [
     firstSpeakerTileImageLocation: '/images/test/alice-tile.png',
     secondSpeakerTileImageLocation: '',
     description: 'Discover advanced techniques for debugging quantum-inspired testing frameworks and CI/CD pipelines.',
-    videoUrl: '',
+    videoUrl: 'https://test-youtube.local/mock-video-1',
     slidesUrl: '',
     status: 'upcoming'
   },
@@ -37,7 +37,7 @@ export const mockSessions = [
     firstSpeakerTileImageLocation: '/images/test/bob-tile.png',
     secondSpeakerTileImageLocation: '',
     description: 'Learn how to design test data that integrates seamlessly without polluting your search indexes.',
-    videoUrl: 'https://www.youtube.com/watch?v=test-video-999',
+    videoUrl: 'https://test-youtube.local/mock-qa-1',
     slidesUrl: 'https://slides.test.local/bob-slides',
     status: 'past'
   },
@@ -78,6 +78,25 @@ export const mockSessions = [
     videoUrl: 'https://www.youtube.com/watch?v=test-video-997',
     slidesUrl: 'https://slides.test.local/diana-slides',
     status: 'past'
+  },
+  {
+    id: 995,
+    eventID: 'test-event-february-2026',
+    title: 'Test Framework Overview',
+    duration: '30',
+    durationText: '30 mins',
+    firstSpeakerName: 'Elliot Example',
+    firstSpeakerUrl: 'https://www.linkedin.com/in/elliot-example/',
+    firstSpeakerJobTitle: 'Testing Advocate',
+    firstSpeakerBio: 'Elliot speaks about turning event sessions into reliable content artifacts.',
+    firstSpeakerBioPicUrl: '',
+    secondSpeakerBioPicUrl: '',
+    firstSpeakerTileImageLocation: '/images/test/elliot-tile.png',
+    secondSpeakerTileImageLocation: '',
+    description: 'A concise overview of practical test framework decisions and trade-offs.',
+    videoUrl: 'https://test-youtube.local/mock-feb',
+    slidesUrl: '',
+    status: 'past'
   }
 ];
 
@@ -91,28 +110,20 @@ export const mockEvents = [
     displayDate: '15 March 2026',
     url: 'https://test.meetup.local/test-events/example-mock',
     title: 'Mock Testing Mock Workshop',
-    photoUrl: 'https://test-photos.local/march-mock',
-    videos: [
-      { title: 'Test Video One', url: 'https://test-youtube.local/mock-video-1' },
-      { title: 'Test Q&A Session', url: 'https://test-youtube.local/mock-qa-1' }
-    ]
+    photoUrl: 'https://test-photos.local/march-mock'
   },
   {
     id: 'test-event-january-2026',
     displayDate: '20 January 2026',
     url: 'https://test.meetup.local/test-events/example-mock-2',
     title: 'Fictional Meetup Experience',
-    photoUrl: 'https://test-photos.local/january-mock',
-    videos: []
+    photoUrl: 'https://test-photos.local/january-mock'
   },
   {
     id: 'test-event-february-2026',
     displayDate: '17 February 2026',
     url: 'https://test.meetup.local/test-events/example-mock-3',
     title: 'Test Data Deep Dive',
-    photoUrl: 'https://test-photos.local/february-mock',
-    videos: [
-      { title: 'Test Framework Overview', url: 'https://test-youtube.local/mock-feb' }
-    ]
+    photoUrl: 'https://test-photos.local/february-mock'
   }
 ];

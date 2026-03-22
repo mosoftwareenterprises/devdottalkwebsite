@@ -3,24 +3,31 @@
 {% macro eventItem(ev, sessions) %}
   {% set allSessions = sessions if sessions else [] %}
   {% set eventAnchorId = null %}
+  {% set renderedVideoCount = 0 %}
 
   {% if ev.id is defined and ev.id %}
     {% set eventAnchorId = ev.id %}
   {% endif %}
+
+  {% for sess in allSessions %}
+    {% if sess.eventID == ev.id and sess.videoUrl and sess.videoUrl != "TODO" %}
+      {% set renderedVideoCount = renderedVideoCount + 1 %}
+    {% endif %}
+  {% endfor %}
 
   <li>
     <div class="event-item"{% if eventAnchorId %} id="{{ eventAnchorId }}"{% endif %}>
       <a href="{{ ev.url }}" target="_blank" class="event-title">
         {{ ev.displayDate }}: {{ ev.title }}
       </a>
-      {%- if (ev.photoUrl and ev.photoUrl != "TODO") or (ev.videos and ev.videos | length) %}
+      {%- if (ev.photoUrl and ev.photoUrl != "TODO") or (renderedVideoCount > 0) %}
       <ul class="event-links">
         {%- if ev.photoUrl and ev.photoUrl != "TODO" %}
           <li><a href="{{ ev.photoUrl }}" target="_blank" class="event-link event-link--photos">📸 Photos</a></li>
         {%- endif %}
-        {%- for video in ev.videos %}
-          {%- if video.url and video.url != "TODO" %}
-            <li><a href="{{ video.url }}" target="_blank" class="event-link event-link--video">▶️ {{ video.title }}</a></li>
+        {%- for sess in allSessions %}
+          {%- if sess.eventID == ev.id and sess.videoUrl and sess.videoUrl != "TODO" %}
+            <li><a href="{{ sess.videoUrl }}" target="_blank" class="event-link event-link--video">▶️ {{ sess.title }}</a></li>
           {%- endif %}
         {%- endfor %}
       </ul>

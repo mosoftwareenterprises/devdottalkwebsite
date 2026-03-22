@@ -4,12 +4,13 @@
   <h2 id="upcoming-events">
     <a href="#upcoming-events">Upcoming events</a>
   </h2>
+  {% set upcomingSessions = sessions.upcomingEvents or [] %}
   <ul>
     {# render the future list from the shared data file; the helper routines in src/_data/events.js
        already keep this sorted.
     #}
     {% for ev in events.upcoming %}
-      {{ event.eventItem(ev) }}
+      {{ event.eventItem(ev, upcomingSessions) }}
     {% endfor %}
   </ul>
 </section>

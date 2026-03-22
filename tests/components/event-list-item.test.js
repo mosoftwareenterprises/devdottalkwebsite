@@ -68,40 +68,48 @@ describe('event-list-item component', () => {
 
   describe('renders video links', () => {
     it('should render multiple video links', () => {
-      const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
+      const html = renderMacro(templatePath, macroName, [mockEvents[0], mockSessions]);
       
-      expect(html).toContain('Test Video One');
-      expect(html).toContain('Test Q&A Session');
+      expect(html).toContain('Testing Quantum Debugging Techniques');
+      expect(html).toContain('Fictional Frameworks: Not Your Regular Stack');
       expect(html).toContain('href="https://test-youtube.local/mock-video-1"');
       expect(html).toContain('href="https://test-youtube.local/mock-qa-1"');
     });
 
     it('should show video emoji', () => {
-      const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
+      const html = renderMacro(templatePath, macroName, [mockEvents[0], mockSessions]);
       
       const videoLinks = html.match(/▶️/g);
       expect(videoLinks).toHaveLength(2); // Two videos
     });
 
-    it('should not render video links when empty array', () => {
-      const eventWithoutVideos = { ...mockEvents[0], videos: [] };
-      const html = renderMacro(templatePath, macroName, [eventWithoutVideos]);
+    it('should not render video links when sessions have no video URLs', () => {
+      const sessionsWithoutVideos = mockSessions.map((session) => ({
+        ...session,
+        videoUrl: session.eventID === mockEvents[0].id ? '' : session.videoUrl
+      }));
+      const html = renderMacro(templatePath, macroName, [mockEvents[0], sessionsWithoutVideos]);
       
       expect(html).not.toContain('▶️');
     });
 
-    it('should skip videos with TODO URLs', () => {
-      const eventWithTodoVideo = {
-        ...mockEvents[0],
-        videos: [
-          { title: 'Main Session', url: 'TODO' },
-          { title: 'Valid Video', url: 'https://youtube.com/valid' }
-        ]
-      };
-      const html = renderMacro(templatePath, macroName, [eventWithTodoVideo]);
+    it('should skip session videos with TODO URLs', () => {
+      const sessionsWithTodoVideo = [
+        {
+          ...mockSessions[0],
+          title: 'Main Session',
+          videoUrl: 'TODO'
+        },
+        {
+          ...mockSessions[1],
+          title: 'Valid Video',
+          videoUrl: 'https://youtube.com/valid'
+        }
+      ];
+      const html = renderMacro(templatePath, macroName, [mockEvents[0], sessionsWithTodoVideo]);
       
-      expect(html).not.toContain('Main Session'); // TODO should be skipped
-      expect(html).toContain('Valid Video'); // Valid one should show
+      expect(html).not.toContain('▶️ Main Session'); // TODO should be skipped in event links
+      expect(html).toContain('▶️ Valid Video'); // Valid one should show in event links
     });
   });
 
@@ -157,7 +165,7 @@ describe('event-list-item component', () => {
     });
 
     it('should render February event with single video', () => {
-      const html = renderMacro(templatePath, macroName, [mockEvents[2]]);
+      const html = renderMacro(templatePath, macroName, [mockEvents[2], mockSessions]);
       
       expect(html).toContain('17 February 2026');
       expect(html).toContain('Test Data Deep Dive');
@@ -175,8 +183,7 @@ describe('event-list-item component', () => {
         displayDate: '25 April 2026',
         url: 'https://test.meetup.local/event',
         title: 'Test Minimal Event',
-        photoUrl: '',
-        videos: []
+        photoUrl: ''
       };
 
       const html = renderMacro(templatePath, macroName, [minimalEvent]);

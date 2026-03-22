@@ -9,7 +9,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": []
     },
     {
         "id": 22,
@@ -21,7 +21,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": []
     },
     {
         "id": 21,
@@ -33,7 +33,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": []
     },
     {
         "id": 20,
@@ -45,7 +45,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": []
     },
     {
         "id": 19,
@@ -57,7 +57,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": []
     },
     {
         "id": 18,
@@ -69,7 +69,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": []
     },
     {
         "id": 17,
@@ -81,7 +81,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": []
     },
     {
         "id": 16,
@@ -93,7 +93,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": [
+            35,
+            34
+        ]
     },
     {
         "id": 15,
@@ -105,7 +108,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": [
+            33,
+            32
+        ]
     },
     {
         "id": 14,
@@ -117,15 +123,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Miguel Salvador - Shipping Faster by Debugging Marketing",
-                "url": "https://youtu.be/p0rOLOIw1wg"
-            },
-            {
-                "title": "Tiago Amoroso - The 80/20 Rule of Game Jams",
-                "url": "https://youtu.be/WuEJlAmqR48"
-            }
+        "sessionIDs": [
+            28,
+            27
         ]
     },
     {
@@ -138,15 +138,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Herve Tribouilly - Why websites become hard to change, and how to stop it",
-                "url": "https://youtu.be/_Sp6eUvbjRI"
-            },
-            {
-                "title": "Dr. Rushan Ashad - When to Automate, When to Wait",
-                "url": "https://youtu.be/svvOwAFv2tQ"
-            }
+        "sessionIDs": [
+            26,
+            25
         ]
     },
     {
@@ -159,7 +153,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": []
+        "sessionIDs": [
+            24
+        ]
     },
     {
         "id": 11,
@@ -171,15 +167,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Frank Milsom - The Post Office Horizon Systems Bugs",
-                "url": "https://youtu.be/WVWnJ9X3Sts"
-            },
-            {
-                "title": "Adam Scholey - The Sitcom Lovers Guide to Software Engineering",
-                "url": "https://youtu.be/H1kAYKQsXQg"
-            }
+        "sessionIDs": [
+            23,
+            22
         ]
     },
     {
@@ -192,11 +182,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/yv2jTL2zrXc"
-            }
+        "sessionIDs": [
+            21,
+            20,
+            19
         ]
     },
     {
@@ -209,11 +198,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/V-hObfFaebw"
-            }
+        "sessionIDs": [
+            18
         ]
     },
     {
@@ -226,11 +212,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/GaliZWc-cTo"
-            }
+        "sessionIDs": [
+            17,
+            16
         ]
     },
     {
@@ -243,11 +227,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://www.youtube.com/@devdottalk"
-            }
+        "sessionIDs": [
+            15
         ]
     },
     {
@@ -260,11 +241,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/pOkN0fQrWSQ"
-            }
+        "sessionIDs": [
+            14,
+            13
         ]
     },
     {
@@ -277,11 +256,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/KYxJebvBo-A"
-            }
+        "sessionIDs": [
+            12,
+            11
         ]
     },
     {
@@ -294,11 +271,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/7pvuFaCC5Q8"
-            }
+        "sessionIDs": [
+            10,
+            9,
+            8
         ]
     },
     {
@@ -311,11 +287,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://www.youtube.com/watch?v=XVukg9Rt_ww"
-            }
+        "sessionIDs": [
+            7,
+            6
         ]
     },
     {
@@ -328,11 +302,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://youtu.be/myIPUjc4P6s?si=-S70-Za6nGA0OWTQ&t=2216"
-            }
+        "sessionIDs": [
+            5,
+            4
         ]
     },
     {
@@ -345,11 +317,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "videos": [
-            {
-                "title": "Watch",
-                "url": "https://www.youtube.com/watch?si=J6UpHEy-f_aVzKD3&v=lJJxj38ZPLU&feature=youtu.be"
-            }
+        "sessionIDs": [
+            3,
+            2,
+            1
         ]
     }
 ]

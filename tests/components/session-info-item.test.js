@@ -60,7 +60,7 @@ describe('session-info-item component', () => {
       const html = renderMacro(templatePath, macroName, [mockSessions[1]]);
       
       // Should have video link for Bob Test Sample (id 998)
-      expect(html).toContain('href="https://www.youtube.com/watch?v=test-video-999"');
+      expect(html).toContain('href="https://test-youtube.local/mock-qa-1"');
       expect(html).toContain('target="_blank"');
     });
 
@@ -246,7 +246,7 @@ describe('session-info-item component', () => {
       const html = renderMacro(templatePath, macroName, [mockSessions[1]]);
       
       expect(html).toContain('Bob Test Sample');
-      expect(html).toContain('youtube.com');
+      expect(html).toContain('test-youtube.local/mock-qa-1');
       expect(html).toContain('slides.test.local/bob-slides');
     });
   });
