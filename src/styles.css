@@ -341,7 +341,7 @@ h6 a {
     linear-gradient(180deg, #112236 0%, #0a1623 100%);
   border-top: 3px solid #5a89b0;
   color: #eef5fc;
-  padding: 24px 18px;
+  padding: 10px 10px 70px;
   width: 100%;
 }
 
@@ -402,7 +402,7 @@ h6 a {
 
 @media screen and (max-width: 540px) {
   .site-footer {
-    padding: 20px 14px;
+    padding: 20px 14px 80px;
   }
 
   .site-footer-lead {
