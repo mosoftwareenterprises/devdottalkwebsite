@@ -8,7 +8,15 @@
     and normalise to an object named `s`.
   #}
 
-  {% if b is defined %}
+  {% set collapseDescription = false %}
+
+  {% if a and a.title is defined and a.durationText is defined %}
+    {# new style invocation: session object, optional collapseDescription boolean #}
+    {% set s = a %}
+    {% if b == true %}
+      {% set collapseDescription = true %}
+    {% endif %}
+  {% else %}
     {# old style invocation #}
     {% set s = {
       title: a,
@@ -19,9 +27,6 @@
       videoUrl: f,
       slidesUrl: g
     } %}
-  {% else %}
-    {# assume first argument is the session object #}
-    {% set s = a %}
   {% endif %}
 
   <li class="session-info-item">
@@ -44,7 +49,14 @@
         <a href="{{ s.firstSpeakerUrl }}" target="_blank">{{ s.firstSpeakerName }}</a>
       {% endif %}
     </p>
-    <p class="formatted-description">{{ s.description }}</p>
+    {% if collapseDescription and s.description and s.description != "" %}
+      <details>
+        <summary>Session description</summary>
+        <p class="formatted-description">{{ s.description }}</p>
+      </details>
+    {% else %}
+      <p class="formatted-description">{{ s.description }}</p>
+    {% endif %}
     {% if s.slidesUrl and s.slidesUrl != "" %}
       <p>
         <a href="{{ s.slidesUrl }}" target="_blank">Slides</a>

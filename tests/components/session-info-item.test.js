@@ -31,6 +31,22 @@ describe('session-info-item component', () => {
       expect(html).toContain('Discover advanced techniques for debugging quantum-inspired testing frameworks');
     });
 
+    it('should render plain description by default', () => {
+      const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
+
+      expect(html).toContain('<p class="formatted-description">');
+      expect(html).not.toContain('<details>');
+    });
+
+    it('should render collapsible description when enabled', () => {
+      const html = renderMacro(templatePath, macroName, [mockSessions[0], true]);
+
+      expect(html).toContain('<details>');
+      expect(html).toContain('<summary>Session description</summary>');
+      expect(html).toContain('<p class="formatted-description">');
+      expect(html).toContain('</details>');
+    });
+
     it('should render in list item', () => {
       const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
       
