@@ -110,20 +110,23 @@ export const mockEvents = [
     displayDate: '15 March 2026',
     url: 'https://test.meetup.local/test-events/example-mock',
     title: 'Mock Testing Mock Workshop',
-    photoUrl: 'https://test-photos.local/march-mock'
+    photoUrl: 'https://test-photos.local/march-mock',
+    overview: 'A practical meetup focused on testing patterns and debugging workflows.'
   },
   {
     id: 'test-event-january-2026',
     displayDate: '20 January 2026',
     url: 'https://test.meetup.local/test-events/example-mock-2',
     title: 'Fictional Meetup Experience',
-    photoUrl: 'https://test-photos.local/january-mock'
+    photoUrl: 'https://test-photos.local/january-mock',
+    overview: 'A January session with engineering talks and community discussion.'
   },
   {
     id: 'test-event-february-2026',
     displayDate: '17 February 2026',
     url: 'https://test.meetup.local/test-events/example-mock-3',
     title: 'Test Data Deep Dive',
-    photoUrl: 'https://test-photos.local/february-mock'
+    photoUrl: 'https://test-photos.local/february-mock',
+    overview: 'A deep dive into practical test data strategies for teams.'
   }
 ];

@@ -9,7 +9,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": []
+        "sessionIDs": [],
+        "overview": ""
     },
     {
         "id": 22,
@@ -21,7 +22,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": []
+        "sessionIDs": [],
+        "overview": ""
     },
     {
         "id": 21,
@@ -33,7 +35,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": []
+        "sessionIDs": [],
+        "overview": ""
     },
     {
         "id": 20,
@@ -45,7 +48,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": []
+        "sessionIDs": [],
+        "overview": ""
     },
     {
         "id": 19,
@@ -57,7 +61,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": []
+        "sessionIDs": [],
+        "overview": ""
     },
     {
         "id": 18,
@@ -69,7 +74,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": []
+        "sessionIDs": [],
+        "overview": ""
     },
     {
         "id": 17,
@@ -81,7 +87,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": []
+        "sessionIDs": [],
+        "overview": ""
     },
     {
         "id": 16,
@@ -96,7 +103,8 @@
         "sessionIDs": [
             35,
             34
-        ]
+        ],
+        "overview": "This event is all about learning how to use geospatial data to solve problems and also how to learn from incidents to improve our systems and processes."
     },
     {
         "id": 15,
@@ -111,7 +119,8 @@
         "sessionIDs": [
             33,
             32
-        ]
+        ],
+        "overview": "This events delves into the world of AI to talk about building an Agentic Mobile OS and we are also going to learn how being a manager can make you a better engineer."
     },
     {
         "id": 14,
@@ -126,7 +135,8 @@
         "sessionIDs": [
             28,
             27
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 13,
@@ -141,7 +151,8 @@
         "sessionIDs": [
             26,
             25
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 12,
@@ -155,7 +166,8 @@
         "venueName": "Room K101, Kimmeridge House",
         "sessionIDs": [
             24
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 11,
@@ -170,7 +182,8 @@
         "sessionIDs": [
             23,
             22
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 10,
@@ -186,7 +199,8 @@
             21,
             20,
             19
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 9,
@@ -200,7 +214,8 @@
         "venueName": "Room K101, Kimmeridge House",
         "sessionIDs": [
             18
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 8,
@@ -215,7 +230,8 @@
         "sessionIDs": [
             17,
             16
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 7,
@@ -229,7 +245,8 @@
         "venueName": "Room K101, Kimmeridge House",
         "sessionIDs": [
             15
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 6,
@@ -244,7 +261,8 @@
         "sessionIDs": [
             14,
             13
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 5,
@@ -259,7 +277,8 @@
         "sessionIDs": [
             12,
             11
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 4,
@@ -275,7 +294,8 @@
             10,
             9,
             8
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 3,
@@ -290,7 +310,8 @@
         "sessionIDs": [
             7,
             6
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 2,
@@ -305,7 +326,8 @@
         "sessionIDs": [
             5,
             4
-        ]
+        ],
+        "overview": ""
     },
     {
         "id": 1,
@@ -321,6 +343,7 @@
             3,
             2,
             1
-        ]
+        ],
+        "overview": ""
     }
 ]

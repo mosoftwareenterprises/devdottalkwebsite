@@ -1,16 +1,20 @@
-{% import "event-list-item.njk" as event %}
-
 <section>
   <h2 id="upcoming-events">
     <a href="#upcoming-events">Upcoming events</a>
   </h2>
-  {% set upcomingSessions = sessions.upcomingEvents or [] %}
   <ul>
     {# render the future list from the shared data file; the helper routines in src/_data/events.js
        already keep this sorted.
     #}
     {% for ev in events.upcoming %}
-      {{ event.eventItem(ev, upcomingSessions) }}
+      <li class="event-item"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
+        <a href="{{ ev.url }}" target="_blank" class="event-title">
+          {{ ev.displayDate }}: {{ ev.title }}
+        </a>
+        {% if ev.overview %}
+          <p class="event-overview">{{ ev.overview }}</p>
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 </section>
