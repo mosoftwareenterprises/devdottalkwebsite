@@ -17,10 +17,19 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  font-size: 16px;
+  line-height: 1.4;
   min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  min-height: 44px;
 }
 
 main {
@@ -80,7 +89,10 @@ main>h1 {
 
 /* Floating register button appearance (moved from inline in template) */
 #floating-register .luma-checkout--button {
-  display: inline-block;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 44px;
   padding: 12px 24px;
   background-color: #0d5f66;
   color: #ffffff;
@@ -178,6 +190,8 @@ main>h1 {
   font-size: 0.95rem;
   font-weight: 700;
   gap: 8px;
+  min-height: 44px;
+  min-width: 44px;
   padding: 8px 10px;
 }
 
@@ -210,11 +224,13 @@ main>h1 {
 }
 
 .site-nav a {
+  align-items: center;
   background-color: #3f7594;
   border: 1px solid #355267;
   border-radius: 4px;
   color: #fff;
-  display: block;
+  display: flex;
+  min-height: 44px;
   padding: 8px 10px;
   text-decoration: none;
   width: 100%;
@@ -254,8 +270,8 @@ main>h1 {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  min-height: 42px;
-  min-width: 42px;
+  min-height: 44px;
+  min-width: 44px;
   text-decoration: none;
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
@@ -377,13 +393,15 @@ main>h1 {
 }
 
 .next-event-banner-link {
+  align-items: center;
   color: #0f3f68;
+  display: inline-flex;
   font-size: 1.25rem;
   font-weight: 700;
+  min-height: 44px;
   text-decoration: underline;
   text-underline-offset: 2px;
   padding: 6px 16px;
-  display: inline-block;
 }
 
 .next-event-banner-link:hover,
@@ -660,7 +678,7 @@ li p {
   display: inline-flex;
   font-weight: 700;
   gap: 6px;
-  min-height: 36px;
+  min-height: 44px;
   padding: 6px 12px;
   text-decoration: none;
 }
@@ -713,6 +731,7 @@ li p {
   align-items: center;
   display: inline-flex;
   gap: 6px;
+  min-height: 44px;
 }
 
 .session-video-link-icon {
@@ -921,12 +940,14 @@ li p {
   outline-offset: 2px;
 }
 .supporters-help-link {
+  align-items: center;
   background-color: #1f6024;
   border: 1px solid #17471b;
   border-radius: 6px;
   color: #fff;
-  display: inline-block;
+  display: inline-flex;
   font-weight: 700;
+  min-height: 44px;
   padding: 8px 10px;
   text-decoration: none;
 }
@@ -960,12 +981,14 @@ li p {
 }
 
 .contact-card-link {
+  align-items: center;
   background-color: #0f3f68;
   border: 1px solid #0a2a45;
   border-radius: 6px;
   color: #fff;
-  display: inline-block;
+  display: inline-flex;
   font-weight: 700;
+  min-height: 44px;
   padding: 8px 10px;
   text-decoration: none;
 }
@@ -1193,4 +1216,26 @@ li p {
 
 .speaker-card-sessions a {
   color: #0f3f68;
+}
+
+.reactions-list {
+  padding-left: 20px;
+}
+
+.reactions-list li {
+  margin-bottom: 10px;
+}
+
+.reaction-link {
+  align-items: center;
+  display: inline-flex;
+  font-weight: 700;
+  margin-top: 6px;
+  min-height: 44px;
+  text-underline-offset: 2px;
+}
+
+.reaction-link:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 2px;
 }
