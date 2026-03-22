@@ -3,10 +3,13 @@ node = '24'
 gh = '2'
 
 [tasks.build]
-run = ["npm install", "npm ci", "npm run build"]
+run = ["npm install", "npm run build"]
 
 [tasks.test]
 run = "npm run test"
+
+[tasks.stop]
+run = ["npx kill-port 8080"]
 
 [tasks.start]
 run = ["npx kill-port 8080 || true", "npm start"]
