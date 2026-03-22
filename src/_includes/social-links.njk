@@ -1,0 +1,51 @@
+{% set socialLinks = [
+  {
+    "key": "youtube",
+    "href": "https://www.youtube.com/@devdottalk",
+    "label": "YouTube",
+    "ariaLabel": "Visit the devdottalk YouTube channel",
+    "external": true,
+    "path": "M23.498 6.186a2.998 2.998 0 0 0-2.11-2.121C19.53 3.564 12 3.564 12 3.564s-7.53 0-9.388.501a2.998 2.998 0 0 0-2.11 2.121C0 8.055 0 12 0 12s0 3.945.502 5.814a2.998 2.998 0 0 0 2.11 2.121c1.857.501 9.388.501 9.388.501s7.53 0 9.388-.501a2.998 2.998 0 0 0 2.11-2.121C24 15.945 24 12 24 12s0-3.945-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"
+  },
+  {
+    "key": "discord",
+    "href": "https://discord.gg/N4JGyRthDt",
+    "label": "Discord",
+    "ariaLabel": "Join the devdottalk Discord server",
+    "external": true,
+    "path": "M20.317 4.369A19.791 19.791 0 0 0 15.885 3c-.191.328-.403.771-.554 1.116a18.27 18.27 0 0 0-5.487 0A11.365 11.365 0 0 0 9.29 3a19.736 19.736 0 0 0-4.433 1.369C2.053 8.554 1.295 12.636 1.674 16.66a19.9 19.9 0 0 0 5.993 3.034 14.91 14.91 0 0 0 1.285-2.106 12.955 12.955 0 0 1-2.024-.977c.171-.122.338-.249.499-.381a13.94 13.94 0 0 0 11.146 0c.163.132.33.259.5.381-.643.38-1.32.708-2.026.978.372.728.803 1.431 1.286 2.104a19.858 19.858 0 0 0 6-3.034c.444-4.663-.759-8.708-3.016-12.291ZM8.02 14.243c-1.182 0-2.152-1.085-2.152-2.419 0-1.333.95-2.418 2.152-2.418 1.212 0 2.173 1.095 2.152 2.418 0 1.334-.95 2.419-2.152 2.419Zm7.974 0c-1.182 0-2.152-1.085-2.152-2.419 0-1.333.95-2.418 2.152-2.418 1.212 0 2.173 1.095 2.152 2.418 0 1.334-.94 2.419-2.152 2.419Z"
+  },
+  {
+    "key": "linkedin",
+    "href": "https://www.linkedin.com/company/dev-talk",
+    "label": "LinkedIn",
+    "ariaLabel": "Visit the devdottalk LinkedIn page",
+    "external": true,
+    "path": "M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8h4V23h-4V8Zm7 0h3.83v2.05h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.95c0-1.66-.03-3.79-2.31-3.79-2.31 0-2.66 1.8-2.66 3.67V23h-4V8Z"
+  },
+  {
+    "key": "bluesky",
+    "href": "https://bsky.app/profile/devdottalk.uk",
+    "label": "Bluesky",
+    "ariaLabel": "Follow devdottalk on Bluesky",
+    "external": true,
+    "path": "M5.74 3.53c2.15 1.61 4.47 4.89 6.26 8.59 1.8-3.7 4.11-6.98 6.26-8.59 1.55-1.16 4.06-2.06 4.06.81 0 .57-.33 4.8-.52 5.48-.66 2.35-3.08 2.95-5.23 2.59 3.75.64 4.7 2.77 2.64 4.9-3.91 4.04-5.62-1.01-6.06-2.31-.08-.24-.12-.35-.15-.35s-.07.11-.15.35c-.44 1.3-2.15 6.35-6.06 2.31-2.06-2.13-1.11-4.26 2.64-4.9-2.15.36-4.57-.24-5.23-2.59-.19-.68-.52-4.91-.52-5.48 0-2.87 2.51-1.97 4.06-.81Z"
+  },
+  {
+    "key": "email",
+    "href": "mailto:contactus@devdottalk.uk",
+    "label": "Email",
+    "ariaLabel": "Email the devdottalk team",
+    "external": false,
+    "path": "M1.5 4h21A1.5 1.5 0 0 1 24 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-21A1.5 1.5 0 0 1 0 18.5v-13A1.5 1.5 0 0 1 1.5 4Zm0 2v.2l10.5 6.56L22.5 6.2V6h-21Zm21 2.55-10.1 6.31a.75.75 0 0 1-.8 0L1.5 8.55V18.5h21V8.55Z"
+  }
+] %}
+<div class="site-social-links{% if socialLinksClass %} {{ socialLinksClass }}{% endif %}" aria-label="Social links">
+    {% for socialLink in socialLinks %}
+        <a class="site-social-link site-social-link-{{ socialLink.key }}" href="{{ socialLink.href }}" aria-label="{{ socialLink.ariaLabel }}" title="{{ socialLink.label }}" {% if socialLink.external %} target="_blank" rel="noopener noreferrer" {% endif %}>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="{{ socialLink.path }}"/>
+            </svg>
+        </a>
+    {% endfor %}
+</div>

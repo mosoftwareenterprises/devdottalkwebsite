@@ -2,6 +2,8 @@
   <div class="site-footer-inner">
     <p class="site-footer-lead">Built with Eleventy (11ty), Nunjucks, Markdown, CSS, and JavaScript into a static website.</p>
     <p class="site-footer-meta">Hosted as an Azure Static Web App in Azure. Source code is available on <a class="site-footer-link" href="https://github.com/mosoftwareenterprises/devdottalkwebsite" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    {% set socialLinksClass = "site-footer-social-links" %}
+    {% include "social-links.njk" %}
   {% if build and build.commitUrl and build.shortSha %}
     <p class="site-footer-meta">Deployment <a class="site-footer-link" href="{{ build.commitUrl }}" target="_blank" rel="noopener noreferrer">{{ build.shortSha }}</a>{% if build.branch %}<span class="site-footer-separator">|</span>Branch {{ build.branch }}{% endif %}{% if build.builtAtUtc %}<span class="site-footer-separator">|</span>{{ build.builtAtUtc }}{% endif %}</p>
   {% endif %}
