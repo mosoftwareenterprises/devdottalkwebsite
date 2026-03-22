@@ -12,12 +12,13 @@ describe('social links component', () => {
         const links = [...document.querySelectorAll('.site-social-link')];
 
         expect(document.querySelector('.site-social-links.test-social-links')).not.toBeNull();
-        expect(links).toHaveLength(5);
+        expect(links).toHaveLength(6);
 
         expect(document.querySelector('.site-social-link-youtube')?.getAttribute('href')).toBe('https://www.youtube.com/@devdottalk');
         expect(document.querySelector('.site-social-link-discord')?.getAttribute('href')).toBe('https://discord.gg/N4JGyRthDt');
         expect(document.querySelector('.site-social-link-linkedin')?.getAttribute('href')).toBe('https://www.linkedin.com/company/dev-talk');
         expect(document.querySelector('.site-social-link-bluesky')?.getAttribute('href')).toBe('https://bsky.app/profile/devdottalk.uk');
+        expect(document.querySelector('.site-social-link-kofi')?.getAttribute('href')).toBe('/support-us');
         expect(document.querySelector('.site-social-link-email')?.getAttribute('href')).toBe('mailto:contactus@devdottalk.uk');
 
         expect(document.querySelector('.site-social-link-email')?.getAttribute('target')).toBeNull();
@@ -25,6 +26,7 @@ describe('social links component', () => {
         expect(document.querySelector('.site-social-link-discord')?.getAttribute('aria-label')).toBe('Join the devdottalk Discord server');
         expect(document.querySelector('.site-social-link-linkedin')?.getAttribute('aria-label')).toBe('Visit the devdottalk LinkedIn page');
         expect(document.querySelector('.site-social-link-bluesky')?.getAttribute('aria-label')).toBe('Follow devdottalk on Bluesky');
+        expect(document.querySelector('.site-social-link-kofi')?.getAttribute('aria-label')).toBe('Support devdottalk on Ko-fi');
         expect(document.querySelector('.site-social-link-email')?.getAttribute('aria-label')).toBe('Email the devdottalk team');
     });
 });

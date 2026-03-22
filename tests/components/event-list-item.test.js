@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { renderMacro, extractElements } from '../helpers/nunjucks.js';
-import { mockEvents } from '../fixtures/data.js';
+import { mockEvents, mockSessions } from '../fixtures/data.js';
 
 describe('event-list-item component', () => {
   const templatePath = '_includes/event-list-item.njk';
@@ -31,6 +31,15 @@ describe('event-list-item component', () => {
       
       expect(html).toContain('href="https://test.meetup.local/test-events/example-mock"');
       expect(html).toContain('target="_blank"');
+    });
+
+    it('should render related sessions when session collection is provided', () => {
+      const html = renderMacro(templatePath, macroName, [mockEvents[0], mockSessions]);
+
+      expect(html).toContain('Sessions and speakers');
+      expect(html).toContain('Fictional Frameworks: Not Your Regular Stack');
+      expect(html).toContain('Alice Fictional Developer');
+      expect(html).toContain('class="event-sessions"');
     });
   });
 

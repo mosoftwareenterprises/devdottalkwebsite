@@ -271,6 +271,7 @@ main>h1 {
 .site-social-link.site-social-link-discord,
 .site-social-link.site-social-link-linkedin,
 .site-social-link.site-social-link-bluesky,
+.site-social-link.site-social-link-kofi,
 .site-social-link.site-social-link-email {
   border-radius: 999px;
   color: #fff;
@@ -296,6 +297,10 @@ main>h1 {
   border: 1px solid #0c60b7;
 }
 
+.site-social-link.site-social-link-kofi {
+  background-color: #ff5e5b;
+  border: 1px solid #cc4a47;
+}
 .site-social-link.site-social-link-email {
   background-color: #36647d;
   border: 1px solid #244454;
@@ -329,6 +334,12 @@ main>h1 {
   transform: translateY(-1px);
 }
 
+.site-social-link.site-social-link-kofi:hover,
+.site-social-link.site-social-link-kofi:focus {
+  background-color: #e5524f;
+  border-color: #b33e3b;
+  transform: translateY(-1px);
+}
 .site-social-link.site-social-link-email:hover,
 .site-social-link.site-social-link-email:focus {
   background-color: #2c5367;
@@ -876,7 +887,7 @@ li p {
 
 .supporter-logo-link {
   min-height: 80px;
-  }
+}
 }
 .volunteer-page-intro {
   line-height: 1.6;
