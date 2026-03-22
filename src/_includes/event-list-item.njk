@@ -10,7 +10,7 @@
 
   <li>
     <div class="event-item"{% if eventAnchorId %} id="{{ eventAnchorId }}"{% endif %}>
-      <a href="{{ ev.url }}" target="_blank" class="event-title">
+      <a href="{{ ev.url }}" target="_blank" rel="noopener noreferrer" class="event-title">
         {{ ev.displayDate }}: {{ ev.title }}
       </a>
       {% set overviewText = (ev.overview or "") | trim %}

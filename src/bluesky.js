@@ -88,7 +88,7 @@ function renderBlueskyPosts(containerId, posts) {
         postElement.className = `bluesky-post ${post.isReply ? 'is-reply' : ''}`;
 
         postElement.innerHTML = `
-        <a href="${post.postUrl}" target="_blank" class="post-link">
+        <a href="${post.postUrl}" target="_blank" rel="noopener noreferrer" class="post-link">
           <div class="post-header">
             <img src="${post.author.avatar}" alt="${post.author.handle} avatar" class="post-avatar">
             <div class="post-author">

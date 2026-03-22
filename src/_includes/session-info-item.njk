@@ -51,10 +51,10 @@
       -
       {# Display up to 2 speakers if present #}
       {% if s.secondSpeakerName and s.secondSpeakerUrl %}
-        <a href="{{ s.firstSpeakerUrl }}" target="_blank">{{ s.firstSpeakerName }}</a>
-        &amp; <a href="{{ s.secondSpeakerUrl }}" target="_blank">{{ s.secondSpeakerName }}</a>
+        <a href="{{ s.firstSpeakerUrl }}" target="_blank" rel="noopener noreferrer">{{ s.firstSpeakerName }}</a>
+        &amp; <a href="{{ s.secondSpeakerUrl }}" target="_blank" rel="noopener noreferrer">{{ s.secondSpeakerName }}</a>
       {% else %}
-        <a href="{{ s.firstSpeakerUrl }}" target="_blank">{{ s.firstSpeakerName }}</a>
+        <a href="{{ s.firstSpeakerUrl }}" target="_blank" rel="noopener noreferrer">{{ s.firstSpeakerName }}</a>
       {% endif %}
     </p>
     {% if collapseDescription and s.description and s.description != "" %}
@@ -67,7 +67,7 @@
     {% endif %}
     {% if s.slidesUrl and s.slidesUrl != "" %}
       <p>
-        <a href="{{ s.slidesUrl }}" target="_blank">Slides</a>
+        <a href="{{ s.slidesUrl }}" target="_blank" rel="noopener noreferrer">Slides</a>
       </p>
     {% endif %}
   </li>
