@@ -773,6 +773,22 @@ li p {
   margin: 0 0 10px;
 }
 
+.supporters-help p a {
+  color: #1f6024;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.supporters-help p a:hover,
+.supporters-help p a:focus {
+  color: #17471b;
+}
+
+.supporters-help p a:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 2px;
+}
 .supporters-help-link {
   background-color: #1f6024;
   border: 1px solid #17471b;
@@ -853,6 +869,13 @@ li p {
 @media screen and (max-width: 540px) {
   .contact-card-grid {
     grid-template-columns: 1fr;
+  }
+.supporter-card {
+  grid-template-columns: 1fr;
+}
+
+.supporter-logo-link {
+  min-height: 80px;
   }
 }
 .volunteer-page-intro {
