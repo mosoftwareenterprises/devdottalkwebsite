@@ -14,6 +14,7 @@ eventScope: "past"   # frontmatter controls which collection to render (past|upc
   <p>The following is a list of our past {dev.talk} meetups. Click the links for details, recordings or photos where available.</p>
   {# Group by year so year headings are semantic and do not jump levels. #}
   {% set list = events[page.eventScope] or events.past %}
+  {% set pastSessions = sessions.pastEvents or [] %}
   {% set lastYear = null %}
   {% for ev in list %}
     {%- if ev.year != lastYear %}
@@ -24,7 +25,7 @@ eventScope: "past"   # frontmatter controls which collection to render (past|upc
       <ul>
       {% set lastYear = ev.year %}
     {%- endif %}
-    {{ event.eventItem(ev) }}
+    {{ event.eventItem(ev, pastSessions) }}
     {% if loop.last %}
       </ul>
     {% endif %}

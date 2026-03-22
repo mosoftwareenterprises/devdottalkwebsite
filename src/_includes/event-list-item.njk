@@ -1,3 +1,5 @@
+{% import "session-info-item.njk" as session %}
+
 {% macro eventItem(a, b, c, d, e, f, g, h, i, j) %}
   {#
     The old signature took ten separate positional arguments:
@@ -10,7 +12,16 @@
     supplied and normalise to an object named `ev`.
   #}
 
-  {% if b is defined %}
+  {% set allSessions = [] %}
+  {% set eventAnchorId = null %}
+
+  {% if a and a.displayDate is defined and a.title is defined %}
+    {# new style invocation: event object, optional sessions collection as second argument #}
+    {% set ev = a %}
+    {% if b is defined and b %}
+      {% set allSessions = b %}
+    {% endif %}
+  {% elif b is defined %}
     {# old style invocation #}
     {% set ev = {
       displayDate: a,
@@ -22,9 +33,6 @@
     {%- if f and f != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: e, url: f }]) }) %} {% endif %}
     {%- if h and h != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: g, url: h }]) }) %} {% endif %}
     {%- if j and j != "TODO" %} {% set ev = ev | merge({ videos: ev.videos.concat([{ title: i, url: j }]) }) %} {% endif %}
-  {% else %}
-    {# assume first argument is the event object #}
-    {% set ev = a %}
   {% endif %}
 
   {% if ev.id is defined and ev.id %}
@@ -48,6 +56,21 @@
         {%- endfor %}
       </ul>
       {%- endif %}
+
+      {% set renderedSessionCount = 0 %}
+      {% for sess in allSessions %}
+        {% if sess.eventID == ev.id %}
+          {% if renderedSessionCount == 0 %}
+            <h3>Sessions and speakers</h3>
+            <ul class="event-sessions">
+          {% endif %}
+          {{ session.sessionInfoItem(sess) }}
+          {% set renderedSessionCount = renderedSessionCount + 1 %}
+        {% endif %}
+      {% endfor %}
+      {% if renderedSessionCount > 0 %}
+        </ul>
+      {% endif %}
     </div>
   </li>
 {% endmacro %}

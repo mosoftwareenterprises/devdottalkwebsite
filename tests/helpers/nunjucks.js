@@ -13,7 +13,8 @@ const projectRoot = resolve(join(__dirname, '..', '..'));
  */
 export function createNunjucksEnv(data = {}) {
   const srcPath = join(projectRoot, 'src');
-  const env = nunjucks.configure(srcPath, {
+  const includesPath = join(srcPath, '_includes');
+  const env = nunjucks.configure([srcPath, includesPath], {
     autoescape: false,
     trimBlocks: true,
     lstripBlocks: true,

@@ -1,20 +1,19 @@
 ---
-layout: layout
-title: "{dev.talk} - Previous Sessions"
-description: "Watch previous sessions from {dev.talk} meetups"
-includeBlueskyPosts: true
+layout: null
 permalink: previous-sessions.html
-sessionScope: "pastEvents"   # frontmatter controls which collection to render (pastEvents|upcomingEvents|allEvents)
+eleventyExcludeFromCollections: true
 ---
 
-{% import "session-info-item.njk" as session %}
-<h2 id="previous-sessions">
-  <a href="#previous-sessions">Previous sessions</a>
-</h2>
-<ul>
-  {# render sessions from the shared data file based on frontmatter scope #}
-  {% set list = sessions[page.sessionScope] or sessions.pastEvents %}
-  {% for sess in list %}
-    {{ session.sessionInfoItem(sess) }}
-  {% endfor %}
-</ul>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=/previous-events.html">
+    <link rel="canonical" href="/previous-events.html">
+    <title>{dev.talk} - Previous Sessions moved</title>
+  </head>
+  <body>
+    <p>Previous sessions are now part of
+      <a href="/previous-events.html">Previous Events</a>.</p>
+  </body>
+</html>
