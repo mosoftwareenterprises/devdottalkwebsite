@@ -660,6 +660,140 @@ li p {
   margin: 0 0 24px;
 }
 
+.supporters-page {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.supporters-page-intro {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 auto 18px;
+  max-width: 70ch;
+}
+
+.supporters-list {
+  display: grid;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.supporter-item {
+  margin: 0;
+}
+
+.supporter-card {
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5fc 100%);
+  border: 1px solid #b8ccdf;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(20, 55, 86, 0.1);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(120px, 150px) 1fr;
+  padding: 14px;
+}
+
+.supporter-card-no-logo {
+  grid-template-columns: 1fr;
+}
+
+.supporter-logo-link {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #d5e1ec;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  min-height: 90px;
+  padding: 10px;
+}
+
+.supporter-logo-link:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 2px;
+}
+
+.supporter-logo {
+  height: auto;
+  max-height: 80px;
+  max-width: 100%;
+  width: auto;
+}
+
+.supporter-content h2 {
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+
+.supporter-content h2 a {
+  color: #0d426c;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.supporter-content h2 a:hover,
+.supporter-content h2 a:focus {
+  color: #082b47;
+}
+
+.supporter-content p {
+  line-height: 1.55;
+}
+
+.supporter-quote {
+  background-color: #f5f8fb;
+  border-left: 4px solid #577fa4;
+  border-radius: 4px;
+  margin: 12px 0 0;
+  padding: 10px 12px;
+}
+
+.supporter-quote p {
+  font-style: italic;
+}
+
+.supporters-help {
+  background: linear-gradient(180deg, #f7fbf6 0%, #eef6ed 100%);
+  border: 1px solid #b7cfb4;
+  border-left: 5px solid #5f8f5b;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 14px 16px;
+}
+
+.supporters-help h2 {
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+
+.supporters-help p {
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.supporters-help-link {
+  background-color: #1f6024;
+  border: 1px solid #17471b;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+.supporters-help-link:hover,
+.supporters-help-link:focus {
+  background-color: #16471a;
+}
+
+.supporters-help-link:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 2px;
+}
+
 .contact-card {
   background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
   border: 1px solid #b7cce0;
