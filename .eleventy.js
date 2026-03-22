@@ -15,6 +15,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/*.ico");
   eleventyConfig.addPassthroughCopy("src/staticwebapp.config.json");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   eleventyConfig.amendLibrary("md", (mdLib) => {
     // Plugin to encode spaces and extract attributes from markdown image syntax
