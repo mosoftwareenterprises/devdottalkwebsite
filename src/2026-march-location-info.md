@@ -39,23 +39,6 @@ We'll reveal the exact location on campus a few days before the event. If you ge
 </section>
 {% endif %}
 
-{% if showVenueSection %}
-{% else %}
-<section id="TOC" class="toc-section">
-
-## Table of Contents
-
-- [Event Details](#event-details)
-- [🔒 Venue Details Coming Soon](#venue-details-coming-soon)
-- [Speakers](#speakers)
-- [What to Expect](#what-to-expect)
-- [Important Notes](#important-notes)
-
-</section>
-
----
-{% endif %}
-
 ## Event Details
 
 **Date:** Wednesday, 25th March 2026
