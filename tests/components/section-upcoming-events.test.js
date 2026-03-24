@@ -16,7 +16,7 @@ describe('index upcoming events section', () => {
         });
 
         expect(html).toContain('15 March 2026: Mock Testing Mock Workshop');
-        expect(html).toContain('href="https://test.meetup.local/test-events/example-mock"');
+        expect(html).not.toContain('href="https://test.meetup.local/test-events/example-mock"');
     });
 
     it('renders overview for upcoming events', () => {
