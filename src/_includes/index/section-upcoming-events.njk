@@ -8,9 +8,9 @@
     #}
     {% for ev in events.upcoming %}
       <li class="event-item"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
-        <a href="{{ ev.url }}" target="_blank" rel="noopener noreferrer" class="event-title">
-          {{ ev.displayDate }}: {{ ev.title }}
-        </a>
+        {# <a href="{{ ev.url }}" target="_blank" rel="noopener noreferrer" class="event-title"> #}
+          <b>{{ ev.displayDate }}: {{ ev.title }}</b>
+        {# </a> #}
         {% if ev.overview %}
           <p class="event-overview">{{ ev.overview }}</p>
         {% endif %}
