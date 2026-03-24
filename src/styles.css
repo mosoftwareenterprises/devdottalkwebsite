@@ -20,8 +20,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   background-color: #fff;
 }
 
@@ -130,6 +129,8 @@ main>h1 {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+    box-sizing: border-box;
 }
 
 .main-content {
