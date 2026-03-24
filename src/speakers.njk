@@ -19,14 +19,14 @@ includeBlueskyPosts: true
   <div class="speakers-grid">
     {% for speaker in speakers.all %}
       <div class="speaker-card">
-        {% if speaker.tileImageLocation %}
+        {% if speaker.bioPicUrl %}
           <div class="speaker-card-image">
             {% if speaker.url %}
               <a href="{{ speaker.url }}" target="_blank" rel="noopener noreferrer">
-                <img src="{{ speaker.tileImageLocation }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-headshot">
+                <img src="{{ speaker.bioPicUrl }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-headshot">
               </a>
             {% else %}
-              <img src="{{ speaker.tileImageLocation }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-headshot">
+              <img src="{{ speaker.bioPicUrl }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-headshot">
             {% endif %}
           </div>
         {% endif %}
