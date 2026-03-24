@@ -1080,7 +1080,7 @@ img[style*="width:100%"] {
 }
 
 /* Ensure speaker headshots maintain aspect ratio */
-.speaker-headshot {
+.speaker-headshot, .speaker-tile-image {
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
@@ -1166,7 +1166,12 @@ div[style*="position:relative;display:block;line-height:0"] {
   text-align: center;
 }
 
-.speaker-headshot {
+.speaker-headshot{
+  object-fit: cover;
+  width: 400px;
+}
+
+.speaker-tile-image {
   border-radius: 50%;
   height: 120px;
   object-fit: cover;
