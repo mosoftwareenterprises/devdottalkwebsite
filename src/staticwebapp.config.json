@@ -11,6 +11,26 @@
             "statusCode": 302
         },
         {
+            "route": "/discord",
+            "redirect": "https://discord.gg/N4JGyRthDt",
+            "statusCode": 302
+        },
+        {
+            "route": "/linkedin",
+            "redirect": "https://www.linkedin.com/company/dev-talk",
+            "statusCode": 302
+        },
+        {
+            "route": "/bluesky",
+            "redirect": "https://bsky.app/profile/devdottalk.uk",
+            "statusCode": 302
+        },
+        {
+            "route": "/youtube",
+            "redirect": "https://www.youtube.com/@devdottalk",
+            "statusCode": 302
+        },
+        {
             "route": "/support-us",
             "redirect": "https://ko-fi.com/devdottalk",
             "statusCode": 302

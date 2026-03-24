@@ -12,7 +12,7 @@ templateEngineOverride: njk,md
 The {dev.talk} community is full of talented people building and sharing great things!
 This page collects blogs, articles, videos, GitHub repos, and websites created by community members.
 
-Want to add your own work? See the [contributing guide in the repository readme](https://github.com/mosoftwareenterprises/devdottalkwebsite/blob/main/readme.md#community-projects) — all contributions are welcome!
+Want to add your own work? See the [contributing guide in the repository readme](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projectss) — all contributions are welcome!
 
 ---
 
@@ -26,7 +26,7 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 <!-- Add links to written articles published by community members (Dev.to, Medium, personal blogs, etc.) -->
 
-*No articles listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/blob/main/readme.md#community-projects)*
+*No articles listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projectss)*
 
 ---
 
@@ -34,7 +34,7 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 <!-- Add links to YouTube videos, conference recordings, screencasts or demos made by community members. -->
 
-*No videos listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/blob/main/readme.md#community-projects)*
+*No videos listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projectss)*
 
 ---
 
@@ -42,7 +42,7 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 <!-- Add links to open source projects, tools, libraries or repositories from community members. -->
 
-*No repos listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/blob/main/readme.md#community-projects)*
+*No repos listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projectss)*
 
 ---
 
@@ -50,12 +50,12 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 <!-- Add links to live websites, apps or tools built by community members. -->
 
-*No websites listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/blob/main/readme.md#community-projects)*
+*No websites listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projectss)*
 
 ---
 
 ## How to Contribute
 
-Please follow the contribution instructions in the [repository readme](https://github.com/mosoftwareenterprises/devdottalkwebsite/blob/main/readme.md#community-projects).
+Please follow the contribution instructions in the [repository readme](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projectss).
 
 > Not sure how to raise a PR? Drop us a message via [Contact Us](/contact-us.html) and we'll help you get it added.

@@ -14,10 +14,10 @@ describe('social links component', () => {
         expect(document.querySelector('.site-social-links.test-social-links')).not.toBeNull();
         expect(links).toHaveLength(6);
 
-        expect(document.querySelector('.site-social-link-youtube')?.getAttribute('href')).toBe('https://www.youtube.com/@devdottalk');
-        expect(document.querySelector('.site-social-link-discord')?.getAttribute('href')).toBe('https://discord.gg/N4JGyRthDt');
-        expect(document.querySelector('.site-social-link-linkedin')?.getAttribute('href')).toBe('https://www.linkedin.com/company/dev-talk');
-        expect(document.querySelector('.site-social-link-bluesky')?.getAttribute('href')).toBe('https://bsky.app/profile/devdottalk.uk');
+        expect(document.querySelector('.site-social-link-youtube')?.getAttribute('href')).toBe('/youtube');
+        expect(document.querySelector('.site-social-link-discord')?.getAttribute('href')).toBe('/discord');
+        expect(document.querySelector('.site-social-link-linkedin')?.getAttribute('href')).toBe('/linkedin');
+        expect(document.querySelector('.site-social-link-bluesky')?.getAttribute('href')).toBe('/bluesky');
         expect(document.querySelector('.site-social-link-kofi')?.getAttribute('href')).toBe('/support-us');
         expect(document.querySelector('.site-social-link-email')?.getAttribute('href')).toBe('mailto:contactus@devdottalk.uk');
 

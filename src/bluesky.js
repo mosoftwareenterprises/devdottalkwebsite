@@ -70,7 +70,7 @@ function renderBlueskyPosts(containerId, posts) {
     }
 
     // Clear any existing content
-    container.innerHTML = '<h2 id="bluesky-posts-header"><a href="https://bsky.app/profile/devdottalk.uk">{dev.talk} @ Bluesky</a></h2>';
+    container.innerHTML = '<h2 id="bluesky-posts-header"><a href="/bluesky">{dev.talk} @ Bluesky</a></h2>';
 
     // Handle empty posts scenario
     if (posts.length === 0) {
