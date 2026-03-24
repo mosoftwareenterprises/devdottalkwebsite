@@ -47,13 +47,13 @@
         },
         {
             "route": "/2026-february-location-info.html",
-            "redirect": "/2026-march-location-info.html",
-            "statusCode": 302
+            "redirect": "/2026-february-location-info.html",
+            "statusCode": 301
         },
         {
             "route": "/2026-january-location-info.html",
-            "redirect": "/2026-march-location-info.html",
-            "statusCode": 302
+            "redirect": "/2026-january-location-info.html",
+            "statusCode": 301
         },
         {
             "route": "/next-event",
