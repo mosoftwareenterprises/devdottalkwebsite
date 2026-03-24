@@ -15,13 +15,31 @@ export default () => {
     const addSpeaker = (name, jobTitle, url, bioPicUrl, tileImageLocation, bio, session) => {
         if (!name) return;
         if (!speakerMap.has(name)) {
-            speakerMap.set(name, { name, jobTitle, url, bioPicUrl, tileImageLocation, bio, sessions: [] });
+            speakerMap.set(name, {
+                name,
+                jobTitle,
+                url,
+                bioPicUrl,
+                tileImageLocation,
+                bio,
+                profileSessionId: session.id,
+                sessions: []
+            });
         }
         const speaker = speakerMap.get(name);
-        // Keep the richest data available across multiple sessions
-        if (!speaker.tileImageLocation && tileImageLocation) speaker.tileImageLocation = tileImageLocation;
-        if (!speaker.bio && bio) speaker.bio = bio;
-        if (!speaker.jobTitle && jobTitle) speaker.jobTitle = jobTitle;
+
+        // Data policy: profile fields (bio, job title, etc.) are taken from the session
+        // with the highest id for that speaker. This means if a speaker updates their
+        // details between appearances, the newest version is always shown on the site.
+        if (session.id > speaker.profileSessionId) {
+            speaker.jobTitle = jobTitle;
+            speaker.url = url;
+            speaker.bioPicUrl = bioPicUrl;
+            speaker.tileImageLocation = tileImageLocation;
+            speaker.bio = bio;
+            speaker.profileSessionId = session.id;
+        }
+
         speaker.sessions.push({ id: session.id, title: session.title, videoUrl: session.videoUrl, status: session.status });
     };
 
@@ -49,11 +67,13 @@ export default () => {
     }
 
     // Sort alphabetically by last name
-    const all = [...speakerMap.values()].sort((a, b) => {
-        const lastA = a.name.trim().split(/\s+/).pop().toLowerCase();
-        const lastB = b.name.trim().split(/\s+/).pop().toLowerCase();
-        return lastA.localeCompare(lastB);
-    });
+    const all = [...speakerMap.values()]
+        .map(({ profileSessionId, ...speaker }) => speaker)
+        .sort((a, b) => {
+            const lastA = a.name.trim().split(/\s+/).pop().toLowerCase();
+            const lastB = b.name.trim().split(/\s+/).pop().toLowerCase();
+            return lastA.localeCompare(lastB);
+        });
 
     return { all };
 };
