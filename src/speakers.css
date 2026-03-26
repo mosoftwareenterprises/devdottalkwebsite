@@ -1,0 +1,465 @@
+/* Speakers page */
+.speakers-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr;
+    margin: 24px 0;
+}
+
+@media screen and (min-width: 600px) {
+    .speakers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .speakers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.speakers-call-to-action {
+    background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+    border: 1px solid #b7cce0;
+    border-left: 5px solid #3f7594;
+    border-radius: 8px;
+    margin: 28px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.speakers-call-to-action h2 {
+    color: #0f3f68;
+    font-size: 1.3rem;
+    margin: 0 0 8px;
+}
+
+.speakers-call-to-action p {
+    line-height: 1.6;
+    margin: 0 0 14px;
+    color: #333;
+}
+
+.speakers-call-to-action p:last-child {
+    margin-bottom: 0;
+}
+
+.speakers-cta-button {
+    align-items: center;
+    background-color: #0f3f68;
+    border: 1px solid #0a2a45;
+    border-radius: 6px;
+    color: #fff;
+    display: inline-flex;
+    font-weight: 700;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.speakers-cta-button:hover,
+.speakers-cta-button:focus {
+    background-color: #0c3457;
+}
+
+.speakers-cta-button:focus-visible {
+    outline: 3px solid #ffcc33;
+    outline-offset: 2px;
+}
+
+.speaker-card {
+    background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+    border: 1px solid #b7cce0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(23, 62, 98, 0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.speaker-card-image {
+    display: flex;
+    justify-content: center;
+    padding: 16px 16px 0;
+    text-align: center;
+}
+
+.speaker-headshot {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    width: min(220px, 100%);
+}
+
+.speaker-tile-image {
+    border-radius: 50%;
+    height: 120px;
+    object-fit: cover;
+    width: 120px;
+}
+
+.speaker-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+}
+
+.speaker-card-name {
+    font-size: 1.2rem;
+    margin: 0 0 4px;
+}
+
+.speaker-card-name a {
+    color: #0f3f68;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.speaker-card-name a:hover,
+.speaker-card-name a:focus {
+    color: #08263f;
+}
+
+.speaker-card-name a:focus-visible {
+    outline: 3px solid #ffcc33;
+    outline-offset: 2px;
+}
+
+.speaker-card-job {
+    color: #555;
+    font-size: 0.875rem;
+    margin: 0 0 10px;
+}
+
+.speaker-card-bio {
+    font-size: 0.875rem;
+    flex: 1;
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.speaker-card-sessions {
+    border-top: 1px solid #d0e4f0;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.speaker-card-sessions h3 {
+    color: #3f7594;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+}
+
+.speaker-card-sessions ul {
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+.speaker-card-sessions li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.speaker-card-sessions a {
+    color: #0f3f68;
+}
+
+/* Ensure speaker headshots maintain aspect ratio */
+.speaker-headshot,
+.speaker-tile-image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Call for Speakers page */
+.cfs-hero {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    border: 1px solid #b7cce0;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 28px 0;
+}
+
+.cfs-hero-intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 0 20px;
+    color: #1a1a1a;
+}
+
+.cfs-submit-box {
+    background: #fff;
+    border: 2px solid #0f3f68;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cfs-submit-box h2 {
+    color: #0f3f68;
+    font-size: 1.3rem;
+    margin: 0 0 8px;
+}
+
+.cfs-submit-box > p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 0 16px;
+}
+
+.cfs-submit-button,
+.cfs-submit-button-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0f3f68;
+    color: #fff;
+    border: 1px solid #0a2a45;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    min-height: 44px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cfs-submit-button:hover,
+.cfs-submit-button-secondary:hover,
+.cfs-submit-button:focus,
+.cfs-submit-button-secondary:focus {
+    background-color: #0c3457;
+}
+
+.cfs-submit-button:focus-visible,
+.cfs-submit-button-secondary:focus-visible {
+    outline: 3px solid #ffcc33;
+    outline-offset: 2px;
+}
+
+.cfs-submit-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 12px 0 0;
+}
+
+.cfs-section {
+    margin: 40px 0;
+}
+
+.cfs-section h2 {
+    color: #0f3f68;
+    font-size: 1.4rem;
+    margin: 0 0 16px;
+}
+
+.cfs-section > p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.cfs-topics-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+}
+
+@media screen and (min-width: 600px) {
+    .cfs-topics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .cfs-topics-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.cfs-topic-card {
+    background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+    border: 1px solid #b7cce0;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.cfs-topic-card h3 {
+    color: #0f3f68;
+    font-size: 1rem;
+    margin: 0 0 8px;
+}
+
+.cfs-topic-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #333;
+}
+
+.cfs-topic-inspiration {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #555;
+    padding: 12px;
+    background-color: #f7f7f7;
+    border-left: 3px solid #3f7594;
+    border-radius: 4px;
+    margin: 20px 0 0;
+}
+
+.cfs-benefits-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+}
+
+@media screen and (min-width: 600px) {
+    .cfs-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.cfs-benefit-card {
+    background: linear-gradient(180deg, #f6fcf9 0%, #eaf6f0 100%);
+    border: 1px solid #b7d9c8;
+    border-left: 4px solid #1c563a;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.cfs-benefit-card h3 {
+    color: #1c563a;
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+}
+
+.cfs-benefit-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+}
+
+.cfs-resources-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+}
+
+@media screen and (min-width: 600px) {
+    .cfs-resources-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.cfs-resource {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.cfs-resource h3 {
+    color: #0f3f68;
+    font-size: 1rem;
+    margin: 0 0 12px;
+}
+
+.cfs-resource ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cfs-resource li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cfs-resource li:last-child {
+    margin-bottom: 0;
+}
+
+.cfs-resource a {
+    color: #0f3f68;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.cfs-resource a:hover,
+.cfs-resource a:focus {
+    color: #08263f;
+}
+
+.cfs-resource a:focus-visible {
+    outline: 3px solid #ffcc33;
+    outline-offset: 2px;
+}
+
+.cfs-tips {
+    background: #fff8e8;
+    border-left: 4px solid #cc9a2e;
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.cfs-tips h3 {
+    color: #8b6f1e;
+    margin: 0 0 12px;
+    font-size: 1rem;
+}
+
+.cfs-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cfs-tips li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cfs-tips li:last-child {
+    margin-bottom: 0;
+}
+
+.cfs-faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.cfs-faq-list li {
+    margin-bottom: 14px;
+    padding-left: 0;
+    line-height: 1.6;
+}
+
+.cfs-faq-list strong {
+    color: #0f3f68;
+}
+
+.cfs-final-cta {
+    text-align: center;
+    margin-top: 24px;
+    padding: 20px;
+    background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+    border: 1px solid #b7cce0;
+    border-radius: 6px;
+}
