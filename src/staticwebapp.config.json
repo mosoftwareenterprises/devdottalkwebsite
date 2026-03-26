@@ -41,11 +41,6 @@
             "statusCode": 302
         },
         {
-            "route": "/tickets",
-            "redirect": "https://luma.com/gelthyz0",
-            "statusCode": 302
-        },
-        {
             "route": "/2026-february-location-info.html",
             "redirect": "/2026-february-location-info.html",
             "statusCode": 301
@@ -56,8 +51,18 @@
             "statusCode": 301
         },
         {
-            "route": "/next-event",
+            "route": "/2026-march-location-info.html",
             "redirect": "/2026-march-location-info.html",
+            "statusCode": 301
+        },
+        {
+            "route": "/tickets",
+            "redirect": "https://luma.com/gelthyz0",
+            "statusCode": 302
+        },
+        {
+            "route": "/next-event",
+            "redirect": "/2026-april-location-info.html",
             "statusCode": 302
         }
     ],
