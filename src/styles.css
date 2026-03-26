@@ -1163,13 +1163,17 @@ div[style*="position:relative;display:block;line-height:0"] {
 }
 
 .speaker-card-image {
+display: flex;
+    justify-content: center;
   padding: 16px 16px 0;
   text-align: center;
 }
 
 .speaker-headshot{
+display: block;
+    max-width: 100%;
   object-fit: cover;
-  width: 400px;
+  width: min(220px, 100%);
 }
 
 .speaker-tile-image {
