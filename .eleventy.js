@@ -1,8 +1,25 @@
 import markdownItAnchor from "markdown-it-anchor";
 import { JSDOM } from 'jsdom';
+import sharp from 'sharp';
+import path from 'path';
+import { createHash } from 'crypto';
+import { mkdirSync, existsSync } from 'fs';
+import { readFileSync } from 'fs';
 
 // Map to store image attributes from markdown extended syntax
 const imageAttributesMap = new Map();
+
+const TILE_CACHE_DIR = '.tilecache';
+const TILE_CROP_FRACTION = 0.5;
+
+function getTileCropFilename(srcPath) {
+  const hash = createHash('md5')
+    .update(`${srcPath}|${TILE_CROP_FRACTION}`)
+    .digest('hex')
+    .slice(0, 10);
+  const ext = path.extname(srcPath).toLowerCase().replace('.', '');
+  return `tile-${hash}.${ext}`;
+}
 
 function serializeDom(dom) {
   return dom.serialize();
@@ -19,6 +36,43 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/staticwebapp.config.json");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  // Copy pre-processed tile crops from .tilecache/ into _site/images/cropped/
+  eleventyConfig.addPassthroughCopy({ [TILE_CACHE_DIR]: "images/cropped" });
+
+  // Before each build, crop all tile images from sessions data and cache them.
+  eleventyConfig.on('eleventy.before', async () => {
+    const sessions = JSON.parse(readFileSync('./src/_data/sessions.json', 'utf-8'));
+    const tilePaths = [...new Set(
+      sessions
+        .flatMap(s => [s.firstSpeakerTileImageLocation, s.secondSpeakerTileImageLocation])
+        .filter(Boolean)
+    )];
+
+    if (!existsSync(TILE_CACHE_DIR)) {
+      mkdirSync(TILE_CACHE_DIR, { recursive: true });
+    }
+
+    for (const tilePath of tilePaths) {
+      const filename = getTileCropFilename(tilePath);
+      const outputPath = path.join(TILE_CACHE_DIR, filename);
+      if (!existsSync(outputPath)) {
+        const srcFilePath = path.join('src', tilePath);
+        const metadata = await sharp(srcFilePath).metadata();
+        const cropWidth = Math.round(metadata.width * TILE_CROP_FRACTION);
+        const cropLeft = Math.round((metadata.width - cropWidth) / 2);
+        await sharp(srcFilePath)
+          .extract({ left: cropLeft, top: 0, width: cropWidth, height: metadata.height })
+          .toFile(outputPath);
+      }
+    }
+  });
+
+  // Synchronous global usable inside Nunjucks macros — returns the cropped image URL.
+  eleventyConfig.addNunjucksGlobal('tileImagePath', (srcPath) => {
+    if (!srcPath) return '';
+    return `/images/cropped/${getTileCropFilename(srcPath)}`;
+  });
 
   eleventyConfig.amendLibrary("md", (mdLib) => {
     // Plugin to encode spaces and extract attributes from markdown image syntax

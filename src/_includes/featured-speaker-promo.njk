@@ -11,9 +11,7 @@
   <article class="featured-speaker-promo">
     <div class="featured-speaker-promo-art">
       {%- if speakerTileImage -%}
-        <div class="featured-speaker-promo-tile-frame">
-          <img src="{{ speakerTileImage }}" alt="{{ speakerName }} speaker tile" loading="lazy" class="featured-speaker-promo-tile">
-        </div>
+        <img src="{{ tileImagePath(speakerTileImage) }}" alt="{{ speakerName }} speaker tile" loading="lazy" class="featured-speaker-promo-tile">
       {%- else -%}
         <div class="featured-speaker-promo-canvas">
           <div class="featured-speaker-promo-brand">

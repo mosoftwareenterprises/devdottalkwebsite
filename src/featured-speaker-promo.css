@@ -17,6 +17,13 @@
     padding: 18px 8%;
 }
 
+.featured-speaker-promo-tile {
+    border-radius: 28px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
 .featured-speaker-promo-canvas {
     aspect-ratio: 4 / 5;
     background:
