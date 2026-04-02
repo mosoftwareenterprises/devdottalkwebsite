@@ -1090,8 +1090,8 @@ img[style*="width:100%"] {
   height: auto;
 }
 
-/* Ensure speaker headshots maintain aspect ratio */
-.speaker-headshot,
+/* Ensure speaker tile images maintain aspect ratio */
+.speaker-card-headshot,
 .speaker-tile-image {
   aspect-ratio: 1 / 1;
   object-fit: cover;

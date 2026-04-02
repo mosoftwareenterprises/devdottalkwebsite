@@ -26,10 +26,10 @@ includeBlueskyPosts: true
           <div class="speaker-card-image">
             {% if speaker.url %}
               <a href="{{ speaker.url }}" target="_blank" rel="noopener noreferrer">
-                <img src="{{ speaker.bioPicUrl }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-headshot">
+                <img src="{{ speaker.bioPicUrl }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-card-headshot">
               </a>
             {% else %}
-              <img src="{{ speaker.bioPicUrl }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-headshot">
+              <img src="{{ speaker.bioPicUrl }}" alt="{{ speaker.name }} headshot" loading="lazy" class="speaker-card-headshot">
             {% endif %}
           </div>
         {% endif %}

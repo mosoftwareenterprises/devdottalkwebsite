@@ -88,11 +88,19 @@
 
 .speaker-headshot {
     display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    object-fit: cover;
+    width: min(750px, 100%);
+}
+
+.speaker-card-headshot {
+    aspect-ratio: 1 / 1;
+    display: block;
     max-width: 100%;
     object-fit: cover;
     width: min(220px, 100%);
 }
-
 .speaker-tile-image {
     border-radius: 50%;
     height: 120px;
@@ -170,8 +178,7 @@
     color: #0f3f68;
 }
 
-/* Ensure speaker headshots maintain aspect ratio */
-.speaker-headshot,
+/* Ensure speaker tile images maintain aspect ratio */
 .speaker-tile-image {
     aspect-ratio: 1 / 1;
     object-fit: cover;
