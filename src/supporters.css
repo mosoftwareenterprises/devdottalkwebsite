@@ -1,0 +1,84 @@
+/* Ko-Fi supporters section (Supporters page) */
+.people-supporters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.people-supporter-item {
+align-items: stretch;
+    background: linear-gradient(180deg, #fcfcfc 0%, #f2f2f2 100%);
+    border: 1px solid #c9c9c9;
+  border-radius: 8px;
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+gap: 8px;
+  padding: 10px 14px;
+position: relative;
+    width: min(100%, 34ch);
+}
+
+.people-supporter-name {
+align-self: flex-end;
+    color: #4a4a4a;
+    font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.people-supporter-name::before {
+    content: "- ";
+}
+.people-supporter-message {
+background: linear-gradient(180deg, #f4f8fc 0%, #eaf2fa 100%);
+    border: 1px solid #b7ccdf;
+    border-left: 4px solid #4f7ea7;
+    border-radius: 8px;
+    color: #1f364d;
+    display: block;
+    font-size: 0.92rem;
+  font-style: italic;
+line-height: 1.45;
+    margin: 2px 0 0;
+    padding: 8px 10px;
+    position: relative;
+  quotes: '\201C' '\201D';
+}
+
+.people-supporter-message::before {
+  content: open-quote;
+}
+
+.people-supporter-message::after {
+background: #eaf2fa;
+    border-bottom: 1px solid #b7ccdf;
+    border-right: 1px solid #b7ccdf;
+    bottom: -8px;
+    content: "";
+    height: 14px;
+    left: 22px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 14px;
+}
+
+.people-supporters-empty {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.people-supporters-empty a {
+  color: #0d426c;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.people-supporters-empty a:hover,
+.people-supporters-empty a:focus {
+  color: #082b47;
+}

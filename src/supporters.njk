@@ -3,6 +3,7 @@ layout: layout
 title: "{dev.talk} - Supporters"
 description: "Organisations and individuals who help keep {dev.talk} running."
 includeBlueskyPosts: true
+includeSupportersStyles: true
 permalink: supporters.html
 ---
 
@@ -11,6 +12,8 @@ permalink: supporters.html
   <p class="supporters-page-intro">
     {dev.talk} exists because generous organisations and people back this community. We are grateful for every venue, tool, and vote of confidence.
   </p>
+
+  <h2 class="supporters-section-heading" id="company-supporters">Company &amp; Organisation Supporters</h2>
   <ul class="supporters-list" role="list">
     <li class="supporter-item">
       <article class="supporter-card">
@@ -117,6 +120,31 @@ permalink: supporters.html
       </article>
     </li>
   </ul>
+
+  <h2 class="supporters-section-heading" id="people-supporters">People Supporters</h2>
+  <p class="supporters-section-intro">
+    These lovely people have supported {dev.talk} directly via
+    <a href="https://ko-fi.com/devdottalk" target="_blank" rel="noopener noreferrer">Ko-Fi</a>.
+    Every coffee counts!
+  </p>
+  {% if kofiSupporters and kofiSupporters.length > 0 %}
+    <ul class="people-supporters-list" role="list">
+      {% for person in kofiSupporters %}
+        <li class="people-supporter-item">
+          {% if person.message %}
+            <q class="people-supporter-message">{{ person.message }}</q>
+          {% endif %}
+          <span class="people-supporter-name">{{ person.name }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="people-supporters-empty">
+      No supporters yet — be the first!
+      <a href="https://ko-fi.com/devdottalk" target="_blank" rel="noopener noreferrer">Buy us a coffee on Ko-Fi</a>.
+    </p>
+  {% endif %}
+
   <aside class="supporters-help" aria-label="Support call to action">
     <h2>Want to support {dev.talk}?</h2>
     <p>We are always open to help with

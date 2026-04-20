@@ -973,6 +973,18 @@ li p {
   outline-offset: 2px;
 }
 
+.supporters-section-heading {
+  border-bottom: 2px solid #b8ccdf;
+  font-size: 1.35rem;
+  margin: 28px 0 10px;
+  padding-bottom: 6px;
+}
+
+.supporters-section-intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
 .contact-card {
   background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
   border: 1px solid #b7cce0;
