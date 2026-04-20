@@ -82,13 +82,13 @@
         "date": "2026-05-20",
         "displayDate": "May 20th 2026",
         "url": "/2026-may-location-info.html",
-        "title": "{dev.talk} - The One About Cybersecurity",
+        "title": "{dev.talk} - The One with the Cybersecurity hack",
         "photoUrl": "TODO",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [],
-        "overview": ""
+        "sessionIDs": [36],
+        "overview": "This is a collab with the B2600 Cybersecurity community.\nAttendees will participate in a no pressure, hands-on cybersecurity AI vibe coding challenge. No experience of cybersecurity or software development is required."
     },
     {
         "id": 16,
