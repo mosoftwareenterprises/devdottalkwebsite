@@ -1,0 +1,20 @@
+{% macro floatingVenueLink(eventRecord, startTime="7:00 PM", href="#venue") -%}
+  {%- if eventRecord and eventRecord.venueName and eventRecord.floatingDateLabel -%}
+<a id="floating-venue" href="{{ href }}">
+  📍 {{ eventRecord.venueName }} | {{ eventRecord.floatingDateLabel }} @ {{ startTime }}.<br>
+   <b>Click for details.</b>
+</a>
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro eventTitle(eventRecord) -%}
+  {%- if eventRecord and eventRecord.title -%}{{ eventRecord.title }}{%- endif -%}
+{%- endmacro %}
+
+{% macro eventDate(eventRecord) -%}
+  {%- if eventRecord and eventRecord.fullDateLabel -%}{{ eventRecord.fullDateLabel }}{%- endif -%}
+{%- endmacro %}
+
+{% macro eventVenueName(eventRecord) -%}
+  {%- if eventRecord and eventRecord.venueName -%}{{ eventRecord.venueName }}{%- endif -%}
+{%- endmacro %}
