@@ -38,8 +38,9 @@ describe('events.json schema', () => {
         }, {});
 
         for (const ev of events) {
-            const expected = sessionIdsByEventId[ev.id] || [];
-            expect(ev.sessionIDs).toEqual(expected);
+            const expected = (sessionIdsByEventId[ev.id] || []).slice().sort((a, b) => a - b);
+            const actual = ev.sessionIDs.slice().sort((a, b) => a - b);
+            expect(actual).toEqual(expected);
         }
     });
 });

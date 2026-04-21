@@ -1,6 +1,6 @@
 [
     {
-        "id": 23,
+        "id": 24,
         "date": "2026-12-16",
         "displayDate": "December 16th 2026",
         "url": "/2026-december-location-info.html",
@@ -9,11 +9,11 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [],
+        "sessionIDs": [49,50],
         "overview": ""
     },
     {
-        "id": 22,
+        "id": 23,
         "date": "2026-11-25",
         "displayDate": "November 25th 2026",
         "url": "/2026-november-location-info.html",
@@ -22,11 +22,11 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [],
+        "sessionIDs": [47,48],
         "overview": ""
     },
     {
-        "id": 21,
+        "id": 22,
         "date": "2026-10-21",
         "displayDate": "October 21st 2026",
         "url": "/2026-october-location-info.html",
@@ -35,11 +35,11 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [],
+        "sessionIDs": [45,46],
         "overview": ""
     },
     {
-        "id": 20,
+        "id": 21,
         "date": "2026-09-16",
         "displayDate": "September 16th 2026",
         "url": "/2026-september-location-info.html",
@@ -48,7 +48,20 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [],
+        "sessionIDs": [43,44],
+        "overview": ""
+    },
+    {
+        "id": 20,
+        "date": "2026-08-31",
+        "displayDate": "August 31st 2026",
+        "url": "/2026-august-location-info.html",
+        "title": "NO EVENT IN AUGUST - The one where we all go on holiday",
+        "photoUrl": "TODO",
+        "locationName": "Holidays",
+        "locationAddress": "Hopefully somewhere nice!",
+        "venueName": "Your favourite holiday spot",
+        "sessionIDs": [41,42],
         "overview": ""
     },
     {
@@ -61,7 +74,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [],
+        "sessionIDs": [39,40],
         "overview": ""
     },
     {
@@ -74,8 +87,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [37],
-        "overview": "This is the temporary overview. It will be replaced with the real one when the event is ready to be announced. This is the temporary overview. It will be replaced with the real one when the event is ready to be announced. This is the temporary overview. It will be replaced with the real one when the event is ready to be announced."
+        "sessionIDs": [
+            37, 38
+        ],
+        "overview": "We are looking for a speaker for this event - if you have a topic you'd like to share, please get in touch!"
     },
     {
         "id": 17,
@@ -87,7 +102,9 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [36],
+        "sessionIDs": [
+            36
+        ],
         "overview": "This is a collab with the B2600 Cybersecurity community.\nAttendees will participate in a no pressure, hands-on cybersecurity AI vibe coding challenge. No experience of cybersecurity or software development is required."
     },
     {

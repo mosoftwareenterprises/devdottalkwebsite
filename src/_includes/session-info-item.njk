@@ -1,33 +1,11 @@
-{% macro sessionInfoItem(a, b, c, d, e, f, g) %}
+{% macro sessionInfoItem(session, collapseDescription) %}
   {#
-    The old signature took seven separate parameters:
-      title, duration, speakerName, speakerLink, description, videoLink, slidesLink
-
-    To simplify maintenance we now prefer a single "session" object from src/_data/sessions.json.
-    However legacy calls still use the old form, so we detect which was supplied
-    and normalise to an object named `s`.
+    session        – a session object from src/_data/sessions.json
+    collapseDescription (optional boolean) – wrap the description in a <details> element
   #}
 
-  {% set collapseDescription = false %}
-
-  {% if a and a.title is defined and a.durationText is defined %}
-    {# new style invocation: session object, optional collapseDescription boolean #}
-    {% set s = a %}
-    {% if b == true %}
-      {% set collapseDescription = true %}
-    {% endif %}
-  {% else %}
-    {# old style invocation #}
-    {% set s = {
-      title: a,
-      durationText: b,
-      firstSpeakerName: c,
-      firstSpeakerUrl: d,
-      description: e,
-      videoUrl: f,
-      slidesUrl: g
-    } %}
-  {% endif %}
+  {% set s = session %}
+  {% set collapseDescription = collapseDescription == true %}
 
   {% set hasVideoUrl = s.videoUrl and s.videoUrl != "" and s.videoUrl != "TODO" %}
 
