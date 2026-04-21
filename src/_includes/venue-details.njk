@@ -1,0 +1,12 @@
+{% from "venues/k101-location-data.njk" import k101VenueDetails %}
+{% macro renderVenueDetails(venue, eventRecord) %}
+    {% if not venue %}
+        <p>Venue details for this event will be announced soon.</p>
+    {% elif venue.key == "k101" %}
+        {{ k101VenueDetails(eventRecord) }}
+    {% else %}
+        <p>Venue details for
+            {{ venue.name }}
+            are not available yet.</p>
+    {% endif %}
+{% endmacro %}

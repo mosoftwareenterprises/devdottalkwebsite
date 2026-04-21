@@ -74,8 +74,8 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [],
-        "overview": ""
+        "sessionIDs": [37],
+        "overview": "This is the temporary overview. It will be replaced with the real one when the event is ready to be announced. This is the temporary overview. It will be replaced with the real one when the event is ready to be announced. This is the temporary overview. It will be replaced with the real one when the event is ready to be announced."
     },
     {
         "id": 17,
