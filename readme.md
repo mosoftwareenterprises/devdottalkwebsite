@@ -70,7 +70,12 @@ Use this checklist each month to avoid missing linked updates.
    - Add session entries for the new talks with:
      - unique session `id`
      - `eventID` matching the event `id`
-     - speaker, title, description, status, assets
+       - speaker, title, description, `status`
+       - `videoUrl` and `slidesUrl` (set placeholders like `""` or `"TODO"` until published, then update with real links)
+    - Keep session statuses current as talks progress (for example: `upcoming` before the event, then `completed` once published).
+    - After the event, make sure media links are populated:
+       - session-level links in `src/_data/sessions.json`: `videoUrl`, `slidesUrl`
+       - event-level photo link in `src/_data/events.json`: `photoUrl`
    - If there are no confirmed sessions yet, keep event `sessionIDs` empty and show "coming soon" content.
 
 4. Connect event, session, and venue
