@@ -229,4 +229,71 @@ describe('session-info-item component', () => {
       });
     });
   });
+
+  describe('placeholder session filtering', () => {
+    it('should not render a session titled "First Session"', () => {
+      const placeholder = { ...mockSessions[0], title: 'First Session' };
+      const html = renderMacro(templatePath, macroName, [placeholder]);
+      expect(html).not.toContain('<li class="session-info-item">');
+    });
+
+    it('should not render a session titled "Second Session"', () => {
+      const placeholder = { ...mockSessions[0], title: 'Second Session' };
+      const html = renderMacro(templatePath, macroName, [placeholder]);
+      expect(html).not.toContain('<li class="session-info-item">');
+    });
+
+    it('should not render a session titled "first session" (all lowercase)', () => {
+      const placeholder = { ...mockSessions[0], title: 'first session' };
+      const html = renderMacro(templatePath, macroName, [placeholder]);
+      expect(html).not.toContain('<li class="session-info-item">');
+    });
+
+    it('should not render a session titled "SECOND SESSION" (all uppercase)', () => {
+      const placeholder = { ...mockSessions[0], title: 'SECOND SESSION' };
+      const html = renderMacro(templatePath, macroName, [placeholder]);
+      expect(html).not.toContain('<li class="session-info-item">');
+    });
+
+    it('should not render a session titled "First session" (mixed case)', () => {
+      const placeholder = { ...mockSessions[0], title: 'First session' };
+      const html = renderMacro(templatePath, macroName, [placeholder]);
+      expect(html).not.toContain('<li class="session-info-item">');
+    });
+
+    it('should not render a session titled "second Session" (mixed case)', () => {
+      const placeholder = { ...mockSessions[0], title: 'second Session' };
+      const html = renderMacro(templatePath, macroName, [placeholder]);
+      expect(html).not.toContain('<li class="session-info-item">');
+    });
+
+    it('should not render a session titled "  First Session  " (with surrounding whitespace)', () => {
+      const placeholder = { ...mockSessions[0], title: '  First Session  ' };
+      const html = renderMacro(templatePath, macroName, [placeholder]);
+      expect(html).not.toContain('<li class="session-info-item">');
+    });
+
+    it('should not render a session titled "  second session  " (whitespace and lowercase)', () => {
+      const placeholder = { ...mockSessions[0], title: '  second session  ' };
+      const html = renderMacro(templatePath, macroName, [placeholder]);
+      expect(html).not.toContain('<li class="session-info-item">');
+    });
+
+    it('should render a session whose title starts with "First" but does not end with "Session"', () => {
+      const session = { ...mockSessions[0], title: 'First Look at Vitest' };
+      const html = renderMacro(templatePath, macroName, [session]);
+      expect(html).toContain('<li class="session-info-item">');
+    });
+
+    it('should render a session whose title ends with "Session" but does not start with "First" or "Second"', () => {
+      const session = { ...mockSessions[0], title: 'Keynote Session' };
+      const html = renderMacro(templatePath, macroName, [session]);
+      expect(html).toContain('<li class="session-info-item">');
+    });
+
+    it('should render a normal session unaffected by placeholder filtering', () => {
+      const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
+      expect(html).toContain('<li class="session-info-item">');
+    });
+  });
 });

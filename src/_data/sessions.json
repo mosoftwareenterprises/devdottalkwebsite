@@ -2,7 +2,7 @@
     {
         "id": 50,
         "eventID": 24,
-        "title": "Second December session ",
+        "title": "Second December session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -24,7 +24,7 @@
     {
         "id": 49,
         "eventID": 24,
-        "title": "First December session ",
+        "title": "First December session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -46,7 +46,7 @@
     {
         "id": 48,
         "eventID": 23,
-        "title": "Second November session ",
+        "title": "Second November session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -68,7 +68,7 @@
     {
         "id": 47,
         "eventID": 23,
-        "title": "First November session ",
+        "title": "First November session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -90,7 +90,7 @@
     {
         "id": 46,
         "eventID": 22,
-        "title": "Second October session ",
+        "title": "Second October session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -112,7 +112,7 @@
     {
         "id": 45,
         "eventID": 22,
-        "title": "First October session ",
+        "title": "First October session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -134,7 +134,7 @@
     {
         "id": 44,
         "eventID": 21,
-        "title": "Second September session ",
+        "title": "Second September session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -156,7 +156,7 @@
     {
         "id": 43,
         "eventID": 21,
-        "title": "First September session ",
+        "title": "First September session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -178,7 +178,7 @@
     {
         "id": 42,
         "eventID": 20,
-        "title": "Second August session ",
+        "title": "Second August session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -200,7 +200,7 @@
     {
         "id": 41,
         "eventID": 20,
-        "title": "First August session ",
+        "title": "First August session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -222,7 +222,7 @@
     {
         "id": 40,
         "eventID": 19,
-        "title": "Second July session ",
+        "title": "Second July session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -244,7 +244,7 @@
     {
         "id": 39,
         "eventID": 19,
-        "title": "First July session ",
+        "title": "First July session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -266,7 +266,7 @@
     {
         "id": 38,
         "eventID": 18,
-        "title": "Second June session ",
+        "title": "Second June session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -288,7 +288,7 @@
     {
         "id": 37,
         "eventID": 18,
-        "title": "First June session ",
+        "title": "First June session",
         "duration": 45,
         "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
         "firstSpeakerName": "It could be you!",
@@ -413,7 +413,7 @@
         "secondSpeakerBioPicUrl": "",
         "secondSpeakerTileImageLocation": "",
         "secondSpeakerBio": "",
-        "videoUrl": "",
+        "videoUrl": "https://youtu.be/g7Ji-fLibvc",
         "slidesUrl": "",
         "status": "past"
     },

@@ -8,7 +8,10 @@
   {% set collapseDescription = collapseDescription == true %}
 
   {% set hasVideoUrl = s.videoUrl and s.videoUrl != "" and s.videoUrl != "TODO" %}
+  {% set titleLower = s.title | trim | lower %}
+  {% set isPlaceholderSession = s.title and (titleLower.startsWith("first") or titleLower.startsWith("second")) and titleLower.endsWith("session") %}
 
+  {% if not isPlaceholderSession %}
   <li class="session-info-item">
     <p>
       <b>
@@ -49,4 +52,5 @@
       </p>
     {% endif %}
   </li>
+  {% endif %}
 {% endmacro %}
