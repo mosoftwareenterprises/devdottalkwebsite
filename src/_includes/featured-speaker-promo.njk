@@ -1,76 +1,75 @@
-{% macro featuredSpeakerPromo(data) -%}
-  {% set sessionRecord = data -%}
-  {% set title = sessionRecord.title -%}
-  {% set speakerName = sessionRecord.firstSpeakerName -%}
-  {% set speakerJobTitle = sessionRecord.firstSpeakerJobTitle -%}
-  {% set speakerImage = sessionRecord.firstSpeakerBioPicUrl -%}
-  {% set speakerUrl = sessionRecord.firstSpeakerUrl -%}
-  {% set description = sessionRecord.description -%}
-  {% set speakerBio = sessionRecord.firstSpeakerBio -%}
-  {% set speakerTileImage = sessionRecord.firstSpeakerTileImageLocation -%}
+{% macro featuredSpeakerPromo(data) %}
+  {% set sessionRecord = data %}
+  {% set title = sessionRecord.title %}
+  {% set speakerName = sessionRecord.firstSpeakerName %}
+  {% set speakerJobTitle = sessionRecord.firstSpeakerJobTitle %}
+  {% set speakerImage = sessionRecord.firstSpeakerBioPicUrl %}
+  {% set speakerUrl = sessionRecord.firstSpeakerUrl %}
+  {% set description = sessionRecord.description %}
+  {% set speakerBio = sessionRecord.firstSpeakerBio %}
+  {% set speakerTileImage = sessionRecord.firstSpeakerTileImageLocation %}
   <article class="featured-speaker-promo">
     <div class="featured-speaker-promo-art">
-      {%- if speakerTileImage -%}
+      {% if speakerTileImage %}
         <img src="{{ tileImagePath(speakerTileImage) }}" alt="{{ speakerName }} speaker tile" loading="lazy" class="featured-speaker-promo-tile">
-      {%- else -%}
+      {% else %}
         <div class="featured-speaker-promo-canvas">
           <div class="featured-speaker-promo-brand">
             <img src="/devtalk-wide.jpg" alt="{dev.talk}" loading="lazy" class="featured-speaker-promo-brand-image"></div>
             <div class="featured-speaker-promo-frame">
-              {%- if speakerImage -%}
+              {% if speakerImage %}
                 <img src="{{ speakerImage }}" alt="{{ speakerName }} headshot" loading="lazy" class="featured-speaker-promo-image">
-              {%- else -%}
+              {% else %}
                 <div class="featured-speaker-promo-image featured-speaker-promo-image-placeholder" aria-hidden="true">
                   <span>{{ speakerName }}</span>
                 </div>
-              {%- endif -%}
+              {% endif %}
             </div>
             <div class="featured-speaker-promo-panel featured-speaker-promo-panel-title">
               <p class="featured-speaker-promo-kicker">{dev.talk} Speaker</p>
               <h3>{{ title }}</h3>
             </div>
             <div class="featured-speaker-promo-panel featured-speaker-promo-panel-meta">
-              {%- if events is defined and events.all and sessionRecord.eventID -%}
-                {%- for event in events.all -%}
-                  {%- if event.id == sessionRecord.eventID -%}
+              {% if events is defined and events.all and sessionRecord.eventID %}
+                {% for event in events.all %}
+                  {% if event.id == sessionRecord.eventID %}
                     <p class="featured-speaker-promo-date">{{ event.displayDate | replace(" 2026", "") | replace(" 2025", "") }}
                       Speaker</p>
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endif -%}
-              {%- if speakerUrl -%}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              {% if speakerUrl %}
                 <p class="featured-speaker-promo-name">
                   <a href="{{ speakerUrl }}">{{ speakerName }}</a>
                 </p>
-              {%- else -%}
+              {% else %}
                 <p class="featured-speaker-promo-name">{{ speakerName }}</p>
-              {%- endif -%}
-              {%- if speakerJobTitle -%}
+              {% endif %}
+              {% if speakerJobTitle %}
                 <p class="featured-speaker-promo-job">{{ speakerJobTitle }}</p>
-              {%- endif -%}
+              {% endif %}
             </div>
-          </div>
         </div>
-      {%- endif -%}
+      {% endif %}
     </div>
-    {%- if description or speakerBio or speakerUrl -%}
-          <div class="featured-speaker-promo-body">
-            {%- if description -%}
-             <h4>Session Description</h4>
-              <p class="featured-speaker-promo-description formatted-description">{{ description }}</p>
-            {%- endif -%}
-            {%- if speakerBio -%}
-              <div class="featured-speaker-promo-bio-block">
-                <h4>Speaker Bio</h4>
-                <p class="formatted-description">{{ speakerBio }}</p>
-              </div>
-            {%- endif -%}
-            {%- if speakerUrl -%}
-              <p class="featured-speaker-promo-actions">
-                <a href="{{ speakerUrl }}">View speaker profile</a>
-              </p>
-            {%- endif -%}
+    {% if description or speakerBio or speakerUrl %}
+      <div class="featured-speaker-promo-body">
+        {% if description %}
+          <h4>Session Description</h4>
+          <p class="featured-speaker-promo-description formatted-description">{{ description }}</p>
+        {% endif %}
+        {% if speakerBio %}
+          <div class="featured-speaker-promo-bio-block">
+            <h4>Speaker Bio</h4>
+            <p class="formatted-description">{{ speakerBio }}</p>
           </div>
-        {%- endif -%}
-      </article>
-    {%- endmacro %}
+        {% endif %}
+        {% if speakerUrl %}
+          <p class="featured-speaker-promo-actions">
+            <a href="{{ speakerUrl }}">View speaker profile</a>
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+  </article>
+{% endmacro %}
