@@ -7,7 +7,7 @@ hideNextEventBanner: true
 hideMainLogo: false
 templateEngineOverride: njk,md
 permalink: 2026-april-location-info.html
-showVenueSection: false
+showVenueSection: true
 ---
 
 {% from "event-overview.njk" import eventOverview %}
