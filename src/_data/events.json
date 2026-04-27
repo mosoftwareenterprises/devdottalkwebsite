@@ -9,7 +9,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [49,50],
+        "sessionIDs": [
+            49,
+            50
+        ],
         "overview": ""
     },
     {
@@ -22,7 +25,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [47,48],
+        "sessionIDs": [
+            47,
+            48
+        ],
         "overview": ""
     },
     {
@@ -35,7 +41,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [45,46],
+        "sessionIDs": [
+            45,
+            46
+        ],
         "overview": ""
     },
     {
@@ -48,7 +57,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [43,44],
+        "sessionIDs": [
+            43,
+            44
+        ],
         "overview": ""
     },
     {
@@ -61,7 +73,10 @@
         "locationName": "Holidays",
         "locationAddress": "Hopefully somewhere nice!",
         "venueName": "Your favourite holiday spot",
-        "sessionIDs": [41,42],
+        "sessionIDs": [
+            41,
+            42
+        ],
         "overview": "We are not having an event in August as we know many people will be on holiday - we hope you have a great break and we'll see you at the next one in September!"
     },
     {
@@ -74,7 +89,10 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [39,40],
+        "sessionIDs": [
+            39,
+            40
+        ],
         "overview": ""
     },
     {
@@ -82,30 +100,31 @@
         "date": "2026-06-24",
         "displayDate": "June 24th 2026",
         "url": "/2026-june-location-info.html",
-        "title": "{dev.talk} - The one in June",
-        "photoUrl": "TODO",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            37, 38
-        ],
-        "overview": "We are looking for a speaker for this event - if you have a topic you'd like to share, please get in touch!"
-    },
-    {
-        "id": 17,
-        "date": "2026-05-20",
-        "displayDate": "May 20th 2026",
-        "url": "/2026-may-location-info.html",
         "title": "{dev.talk} - The One with the Cybersecurity hack",
         "photoUrl": "TODO",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
         "sessionIDs": [
-            36
+            38
         ],
         "overview": "This is a collab with the B2600 Cybersecurity community.\nAttendees will participate in a no pressure, hands-on cybersecurity AI vibe coding challenge. No experience of cybersecurity or software development is required."
+    },
+    {
+        "id": 17,
+        "date": "2026-05-20",
+        "displayDate": "May 20th 2026",
+        "url": "/2026-may-location-info.html",
+        "title": "{dev.talk} - The One without a speaker",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            36,
+            37
+        ],
+        "overview": "We are looking for a speaker for this event - if you have a topic you'd like to share, please get in touch!"
     },
     {
         "id": 16,
