@@ -1,6 +1,6 @@
 {% import "session-info-item.njk" as session %}
 
-{% macro eventItem(ev, sessions) %}
+{% macro eventItem(ev, sessions, youtubeIconPath) %}
   {% set allSessions = sessions if sessions else [] %}
   {% set eventAnchorId = null %}
 
@@ -38,7 +38,7 @@
             <h3>Sessions and speakers</h3>
             <ul class="event-sessions">
           {% endif %}
-          {{ session.sessionInfoItem(sess) }}
+          {{ session.sessionInfoItem(sess, false, youtubeIconPath) }}
           {% set renderedSessionCount = renderedSessionCount + 1 %}
         {% endif %}
       {% endfor %}

@@ -25,7 +25,7 @@ eventScope: "past"   # frontmatter controls which collection to render (past|upc
       <ul class="previous-events-year-list">
       {% set lastYear = ev.year %}
     {%- endif %}
-    {{ event.eventItem(ev, pastSessions) }}
+    {{ event.eventItem(ev, pastSessions, icons.youtube) }}
     {% if loop.last %}
       </ul>
     {% endif %}

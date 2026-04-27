@@ -1,4 +1,4 @@
-{% macro sessionInfoItem(session, collapseDescription) %}
+{% macro sessionInfoItem(session, collapseDescription, youtubeIconPath) %}
   {#
     session        – a session object from src/_data/sessions.json
     collapseDescription (optional boolean) – wrap the description in a <details> element
@@ -19,7 +19,7 @@
           <a href="{{ s.videoUrl }}" target="_blank" rel="noopener noreferrer" class="session-video-link">
             <span class="session-video-link-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false">
-                <path d="{{ icons.youtube }}"/>
+                <path d="{{ youtubeIconPath }}"/>
               </svg>
             </span>
             <span>{{ s.title }} ({{ s.durationText }})</span>

@@ -7,7 +7,7 @@
   <ul>
     {# render sessions sorted by eventID, with eventID 0 at the bottom #}
     {% for sess in sessions.upcomingEvents %}
-      {{ session.sessionInfoItem(sess, true) }}
+      {{ session.sessionInfoItem(sess, true, icons.youtube) }}
     {% endfor %}
   </ul>
 </section>
