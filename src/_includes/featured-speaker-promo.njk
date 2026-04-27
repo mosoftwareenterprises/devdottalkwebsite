@@ -7,7 +7,7 @@
   {% set speakerUrl = sessionRecord.firstSpeakerUrl %}
   {% set description = sessionRecord.description %}
   {% set speakerBio = sessionRecord.firstSpeakerBio %}
-  {% set speakerTileImage = sessionRecord.firstSpeakerTileImageLocation %}
+  {% set speakerTileImage = "" %}
   <article class="featured-speaker-promo">
     <div class="featured-speaker-promo-art">
       {% if speakerTileImage %}
@@ -15,40 +15,39 @@
       {% else %}
         <div class="featured-speaker-promo-canvas">
           <div class="featured-speaker-promo-brand">
-            <img src="/devtalk-wide.jpg" alt="{dev.talk}" loading="lazy" class="featured-speaker-promo-brand-image"></div>
-            <div class="featured-speaker-promo-frame">
-              {% if speakerImage %}
-                <img src="{{ speakerImage }}" alt="{{ speakerName }} headshot" loading="lazy" class="featured-speaker-promo-image">
-              {% else %}
-                <div class="featured-speaker-promo-image featured-speaker-promo-image-placeholder" aria-hidden="true">
-                  <span>{{ speakerName }}</span>
-                </div>
+            <img src="/devtalk-wide.jpg" alt="{dev.talk}" loading="lazy" class="featured-speaker-promo-brand-image">
+          </div>
+          {% if events is defined and events.all and sessionRecord.eventID %}
+            {% for event in events.all %}
+              {% if event.id == sessionRecord.eventID %}
+                <p class="featured-speaker-promo-date">{{ event.displayDate | replace(" 2026", "") | replace(" 2025", "") }} Speaker</p>
               {% endif %}
-            </div>
-            <div class="featured-speaker-promo-panel featured-speaker-promo-panel-title">
-              <p class="featured-speaker-promo-kicker">{dev.talk} Speaker</p>
-              <h3>{{ title }}</h3>
-            </div>
-            <div class="featured-speaker-promo-panel featured-speaker-promo-panel-meta">
-              {% if events is defined and events.all and sessionRecord.eventID %}
-                {% for event in events.all %}
-                  {% if event.id == sessionRecord.eventID %}
-                    <p class="featured-speaker-promo-date">{{ event.displayDate | replace(" 2026", "") | replace(" 2025", "") }}
-                      Speaker</p>
-                  {% endif %}
-                {% endfor %}
-              {% endif %}
-              {% if speakerUrl %}
-                <p class="featured-speaker-promo-name">
-                  <a href="{{ speakerUrl }}">{{ speakerName }}</a>
-                </p>
-              {% else %}
-                <p class="featured-speaker-promo-name">{{ speakerName }}</p>
-              {% endif %}
-              {% if speakerJobTitle %}
-                <p class="featured-speaker-promo-job">{{ speakerJobTitle }}</p>
-              {% endif %}
-            </div>
+            {% endfor %}
+          {% endif %}
+          <div class="featured-speaker-promo-panel featured-speaker-promo-panel-title">
+            <h3>{{ title }}</h3>
+          </div>
+          <div class="featured-speaker-promo-frame">
+            {% if speakerImage %}
+              <img src="{{ speakerImage }}" alt="{{ speakerName }} headshot" loading="lazy" class="featured-speaker-promo-image">
+            {% else %}
+              <div class="featured-speaker-promo-image featured-speaker-promo-image-placeholder" aria-hidden="true">
+                <span>{{ speakerName }}</span>
+              </div>
+            {% endif %}
+          </div>
+          <div class="featured-speaker-promo-panel featured-speaker-promo-panel-meta">
+            {% if speakerUrl %}
+              <p class="featured-speaker-promo-name">
+                <a href="{{ speakerUrl }}">{{ speakerName }}</a>
+              </p>
+            {% else %}
+              <p class="featured-speaker-promo-name">{{ speakerName }}</p>
+            {% endif %}
+            {% if speakerJobTitle %}
+              <p class="featured-speaker-promo-job">{{ speakerJobTitle }}</p>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
     </div>

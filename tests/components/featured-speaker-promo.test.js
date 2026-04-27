@@ -81,4 +81,36 @@ describe('featured-speaker-promo component', () => {
         expect(html).not.toContain('Speaker Bio');
         expect(html).not.toContain('View speaker profile');
     });
+
+    it('renders canvas elements in the correct vertical order: brand, date, title, image, meta', () => {
+        const session = mockSessions[0];
+        const html = renderMacro(
+            templatePath,
+            macroName,
+            [session],
+            { events: { all: mockEvents } }
+        );
+
+        const dom = new JSDOM(html);
+        const canvas = dom.window.document.querySelector('.featured-speaker-promo-canvas');
+        const children = Array.from(canvas.children);
+
+        const brandIdx = children.findIndex(el => el.classList.contains('featured-speaker-promo-brand'));
+        const dateIdx = children.findIndex(el => el.classList.contains('featured-speaker-promo-date'));
+        const titleIdx = children.findIndex(el => el.classList.contains('featured-speaker-promo-panel-title'));
+        const frameIdx = children.findIndex(el => el.classList.contains('featured-speaker-promo-frame'));
+        const metaIdx = children.findIndex(el => el.classList.contains('featured-speaker-promo-panel-meta'));
+
+        expect(brandIdx).toBeGreaterThanOrEqual(0);
+        expect(dateIdx).toBeGreaterThan(brandIdx);
+        expect(titleIdx).toBeGreaterThan(dateIdx);
+        expect(frameIdx).toBeGreaterThan(titleIdx);
+        expect(metaIdx).toBeGreaterThan(frameIdx);
+    });
+
+    it('does not render the kicker element', () => {
+        const session = mockSessions[0];
+        const html = renderMacro(templatePath, macroName, [session], { events: { all: mockEvents } });
+        expect(html).not.toContain('featured-speaker-promo-kicker');
+    });
 });
