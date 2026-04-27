@@ -29,8 +29,7 @@ describe('event-list-item component', () => {
     it('should link to event URL', () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
       
-      expect(html).toContain('href="https://test.meetup.local/test-events/example-mock"');
-      expect(html).toContain('target="_blank"');
+      expect(html).toContain('<a href="#test-event-march-2026"  class="event-title">');
     });
 
     it('should render related sessions when session collection is provided', () => {
