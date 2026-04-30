@@ -1,10 +1,10 @@
 ---
 layout: layout
 title: "{dev.talk} - May 2026"
-description: "Event details for {dev.talk} May 2026 - The One with the Cybersecurity hack"
+description: "Event details for {dev.talk} May 2026 - The One with The Cliffhanger"
 includeBlueskyPosts: true
 hideNextEventBanner: true
-hideMainLogo: true
+hideMainLogo: false
 templateEngineOverride: njk,md
 permalink: 2026-may-location-info.html
 showVenueSection: false
@@ -20,8 +20,6 @@ showVenueSection: false
 {% if showVenueSection %}
 {{ floatingVenueLink(mayEvent) }}
 {% endif %}
-
-<a href="/"><img alt="The devdottalk logo" src="/images/2026/may/Hero image - May 2026.png" loading="lazy" class="center" style="width:100%"></a>
 
 ## {{ eventTitle(mayEvent) }}
 
