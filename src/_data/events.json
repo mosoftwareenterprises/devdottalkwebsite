@@ -221,7 +221,7 @@
             47,
             48
         ],
-        "overview": ""
+        "overview": "The second installment of delving into JarvisOS."
     },
     {
         "id": 22,
@@ -237,7 +237,7 @@
             45,
             46
         ],
-        "overview": ""
+        "overview": "This event combines socio-technical thinking with practical development discussion, exploring how engineering choices, team dynamics, and architecture decisions shape better software outcomes."
     },
     {
         "id": 21,
@@ -253,7 +253,7 @@
             43,
             44
         ],
-        "overview": ""
+        "overview": "This event explores building a commercial-grade embedded Rust system on constrained ESP32 hardware, including async networking, memory and performance trade-offs, frontend delivery on-device, and real-world architectural lessons."
     },
     {
         "id": 20,
@@ -285,7 +285,7 @@
             39,
             40
         ],
-        "overview": ""
+        "overview": "This event dives into practical 3D game asset production, covering modelling and UV workflow, texturing pipelines, integration into modern game engines, optimisation techniques, and packaging assets for publishing."
     },
     {
         "id": 18,
