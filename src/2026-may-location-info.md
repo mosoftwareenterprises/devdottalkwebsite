@@ -137,6 +137,8 @@ Bournemouth University, Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB
 
 {{ speakerSession(36, sessions.allEvents) }}
 
+{{ speakerSession(37, sessions.allEvents) }}
+
 ---
 
 ## What to Expect
