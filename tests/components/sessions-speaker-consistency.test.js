@@ -21,11 +21,12 @@ function normalize(value) {
 describe('sessions speaker data quality', () => {
     it('uses profile fields from the newest session id per speaker', () => {
         const sessions = readJson(sessionsPath);
+        const pastSessions = sessions.filter((session) => session.status === 'past');
         const { all: speakerList } = loadSpeakers();
         const speakerByName = new Map(speakerList.map((speaker) => [speaker.name, speaker]));
         const speakerOccurrences = new Map();
 
-        for (const session of sessions) {
+        for (const session of pastSessions) {
             for (const role of speakerRoles) {
                 const name = normalize(session[`${role}SpeakerName`]);
                 if (!name) continue;
@@ -47,6 +48,40 @@ describe('sessions speaker data quality', () => {
                 const outputField = field.charAt(0).toLowerCase() + field.slice(1);
                 expect(normalize(output[outputField])).toBe(normalize(source));
             }
+        }
+    });
+
+    it('omits speakers who only appear in upcoming sessions', () => {
+        const sessions = readJson(sessionsPath);
+        const pastSpeakerNames = new Set();
+        const upcomingOnlySpeakerNames = new Set();
+        const { all: speakerList } = loadSpeakers();
+        const speakerNames = new Set(speakerList.map((speaker) => speaker.name));
+
+        for (const session of sessions) {
+            if (session.status !== 'past') continue;
+
+            for (const role of speakerRoles) {
+                const name = normalize(session[`${role}SpeakerName`]);
+                if (!name) continue;
+
+                pastSpeakerNames.add(name);
+            }
+        }
+
+        for (const session of sessions) {
+            if (session.status !== 'upcoming') continue;
+
+            for (const role of speakerRoles) {
+                const name = normalize(session[`${role}SpeakerName`]);
+                if (!name || pastSpeakerNames.has(name)) continue;
+
+                upcomingOnlySpeakerNames.add(name);
+            }
+        }
+
+        for (const name of upcomingOnlySpeakerNames) {
+            expect(speakerNames.has(name)).toBe(false);
         }
     });
 });

@@ -11,6 +11,7 @@ const list = JSON.parse(raw);
 
 export default () => {
     const speakerMap = new Map();
+    const pastSessions = list.filter((session) => session.status === 'past');
 
     const addSpeaker = (name, jobTitle, url, bioPicUrl, tileImageLocation, bio, session) => {
         if (!name) return;
@@ -43,7 +44,7 @@ export default () => {
         speaker.sessions.push({ id: session.id, title: session.title, videoUrl: session.videoUrl, status: session.status });
     };
 
-    for (const session of list) {
+    for (const session of pastSessions) {
         addSpeaker(
             session.firstSpeakerName,
             session.firstSpeakerJobTitle,
