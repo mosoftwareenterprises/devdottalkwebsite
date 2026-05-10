@@ -1,5 +1,197 @@
 [
     {
+        "id": 36,
+        "date": "2027-12-29",
+        "displayDate": "December 29th 2027",
+        "url": "/2027-december-location-info.html",
+        "title": "{dev.talk} - The one where we celebrate together",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            73,
+            74
+        ],
+        "overview": ""
+    },
+    {
+        "id": 35,
+        "date": "2027-11-24",
+        "displayDate": "November 24th 2027",
+        "url": "/2027-november-location-info.html",
+        "title": "{dev.talk} - The one in November",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            71,
+            72
+        ],
+        "overview": ""
+    },
+    {
+        "id": 34,
+        "date": "2027-10-27",
+        "displayDate": "October 27th 2027",
+        "url": "/2027-october-location-info.html",
+        "title": "{dev.talk} - The one with the spoooky season",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            69,
+            70
+        ],
+        "overview": ""
+    },
+    {
+        "id": 33,
+        "date": "2027-09-29",
+        "displayDate": "September 29th 2027",
+        "url": "/2027-september-location-info.html",
+        "title": "{dev.talk} - The one after the holidays",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            67,
+            68
+        ],
+        "overview": ""
+    },
+    {
+        "id": 32,
+        "date": "2027-08-25",
+        "displayDate": "August 25th 2027",
+        "url": "/2027-august-location-info.html",
+        "title": "NO EVENT IN AUGUST - The one where we all go on holiday",
+        "photoUrl": "TODO",
+        "locationName": "Holidays",
+        "locationAddress": "Hopefully somewhere nice!",
+        "venueName": "Your favourite holiday spot",
+        "sessionIDs": [
+            65,
+            66
+        ],
+        "overview": "We are not having an event in August as we know many people will be on holiday - we hope you have a great break and we'll see you at the next one in September!"
+    },
+    {
+        "id": 31,
+        "date": "2027-07-21",
+        "displayDate": "July 21st 2027",
+        "url": "/2027-july-location-info.html",
+        "title": "{dev.talk} - The one in July",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            63,
+            64
+        ],
+        "overview": ""
+    },
+    {
+        "id": 30,
+        "date": "2027-06-30",
+        "displayDate": "June 30th 2027",
+        "url": "/2027-june-location-info.html",
+        "title": "{dev.talk} - The one in June",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            61,
+            62
+        ],
+        "overview": ""
+    },
+    {
+        "id": 29,
+        "date": "2027-05-26",
+        "displayDate": "May 26th 2027",
+        "url": "/2027-may-location-info.html",
+        "title": "{dev.talk} - The one in May",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            59,
+            60
+        ],
+        "overview": ""
+    },
+    {
+        "id": 28,
+        "date": "2027-04-28",
+        "displayDate": "April 28th 2027",
+        "url": "/2027-april-location-info.html",
+        "title": "{dev.talk} - The one in April",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            57,
+            58
+        ],
+        "overview": ""
+    },
+    {
+        "id": 27,
+        "date": "2027-03-24",
+        "displayDate": "March 24th 2027",
+        "url": "/2027-march-location-info.html",
+        "title": "{dev.talk} - The one in March",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            55,
+            56
+        ],
+        "overview": ""
+    },
+    {
+        "id": 26,
+        "date": "2027-02-24",
+        "displayDate": "February 24th 2027",
+        "url": "/2027-february-location-info.html",
+        "title": "{dev.talk} - The one in February",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            53,
+            54
+        ],
+        "overview": ""
+    },
+    {
+        "id": 25,
+        "date": "2027-01-27",
+        "displayDate": "January 27th 2027",
+        "url": "/2027-january-location-info.html",
+        "title": "{dev.talk} - The one in January",
+        "photoUrl": "TODO",
+        "locationName": "Bournemouth University",
+        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+        "venueName": "Room K101, Kimmeridge House",
+        "sessionIDs": [
+            51,
+            52
+        ],
+        "overview": ""
+    },
+    {
         "id": 24,
         "date": "2026-12-16",
         "displayDate": "December 16th 2026",
