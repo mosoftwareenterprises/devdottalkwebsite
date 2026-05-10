@@ -639,6 +639,22 @@ li p {
   padding-bottom: 12px;
 }
 
+.event-item--speaker-wanted {
+  background: linear-gradient(180deg, #fff3e0 0%, #ffe0b2 100%);
+  border: 1px solid #ffe0b2;
+  padding: 8px 12px;
+}
+
+.event-item--speaker-wanted b {
+  display: inline;
+  margin-right: 6px;
+}
+
+.event-item--speaker-wanted .event-speaker-wanted-inline {
+  display: inline;
+  font-size: 0.9rem;
+}
+
 .previous-events-year-list {
   list-style: none;
   margin: 0;
@@ -663,6 +679,45 @@ li p {
 .event-overview {
   line-height: 1.6;
   margin: 10px 0 0;
+}
+
+.event-speaker-wanted {
+  line-height: 1.6;
+  margin: 10px 0 0;
+  padding: 12px;
+  background-color: #fff8e1;
+  border-left: 4px solid #ffa500;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #8b6914;
+}
+
+.event-speaker-wanted a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.event-speaker-wanted a:hover,
+.event-speaker-wanted a:focus {
+  color: #004499;
+}
+
+.event-speaker-wanted-inline {
+  display: inline;
+  margin-left: 4px;
+  font-weight: 500;
+  color: #8b6914;
+  white-space: nowrap;
+}
+
+.event-speaker-wanted-inline a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.event-speaker-wanted-inline a:hover,
+.event-speaker-wanted-inline a:focus {
+  color: #004499;
 }
 
 .event-media-heading {

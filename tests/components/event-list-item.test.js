@@ -176,6 +176,64 @@ describe('event-list-item component', () => {
     });
   });
 
+  describe('renders event overview or speaker wanted message', () => {
+    it('should render overview when event has overview text', () => {
+      const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
+
+      expect(html).toContain('class="event-overview-heading"');
+      expect(html).toContain('A practical meetup focused on testing patterns and debugging workflows.');
+    });
+
+    it('should render speaker-wanted message when event has no overview', () => {
+      const eventWithoutOverview = {
+        id: 'test-event-no-overview',
+        displayDate: '10 June 2026',
+        url: 'https://test.meetup.local/event-no-overview',
+        title: 'Event Without Overview',
+        photoUrl: 'https://test-photos.local/june-mock',
+        overview: ''
+      };
+
+      const html = renderMacro(templatePath, macroName, [eventWithoutOverview]);
+
+      expect(html).toContain('class="event-speaker-wanted"');
+      expect(html).toContain('Speaker wanted');
+      expect(html).toContain('/call-for-speakers.html');
+      expect(html).toContain('/contact-us.html');
+    });
+
+    it('should not render overview heading when event has no overview', () => {
+      const eventWithoutOverview = {
+        id: 'test-event-no-overview',
+        displayDate: '10 June 2026',
+        url: 'https://test.meetup.local/event-no-overview',
+        title: 'Event Without Overview',
+        photoUrl: 'https://test-photos.local/june-mock',
+        overview: ''
+      };
+
+      const html = renderMacro(templatePath, macroName, [eventWithoutOverview]);
+
+      expect(html).not.toContain('class="event-overview-heading"');
+    });
+
+    it('should handle whitespace-only overview as empty', () => {
+      const eventWithWhitespaceOverview = {
+        id: 'test-event-whitespace',
+        displayDate: '15 July 2026',
+        url: 'https://test.meetup.local/event-whitespace',
+        title: 'Event With Whitespace Overview',
+        photoUrl: 'https://test-photos.local/july-mock',
+        overview: '   \n\t   '
+      };
+
+      const html = renderMacro(templatePath, macroName, [eventWithWhitespaceOverview]);
+
+      expect(html).toContain('class="event-speaker-wanted"');
+      expect(html).not.toContain('class="event-overview-heading"');
+    });
+  });
+
   describe('edge cases', () => {
     it('should handle event with no videos or photos', () => {
       const minimalEvent = {
@@ -186,7 +244,7 @@ describe('event-list-item component', () => {
       };
 
       const html = renderMacro(templatePath, macroName, [minimalEvent]);
-      
+
       expect(html).toContain('25 April 2026');
       expect(html).toContain('Test Minimal Event');
       expect(html).not.toContain('event-links'); // No links section
@@ -199,7 +257,7 @@ describe('event-list-item component', () => {
       };
 
       const html = renderMacro(templatePath, macroName, [longTitleEvent]);
-      
+
       expect(html).toContain('This is a very long test event title');
     });
   });

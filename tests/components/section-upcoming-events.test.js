@@ -46,7 +46,7 @@ describe('index upcoming events section', () => {
         expect(html).not.toContain('class="event-sessions"');
     });
 
-    it('omits overview markup when overview is empty', () => {
+    it('renders compact speaker-wanted line when overview is empty', () => {
         const html = renderTemplate(templatePath, {
             events: {
                 upcoming: [{ ...mockEvents[0], overview: '' }]
@@ -54,5 +54,11 @@ describe('index upcoming events section', () => {
         });
 
         expect(html).not.toContain('class="event-overview"');
+        expect(html).toContain('event-item--speaker-wanted');
+        expect(html).toContain('15 March 2026');
+        expect(html).not.toContain('Mock Testing Mock Workshop');
+        expect(html).toContain('class="event-speaker-wanted-inline"');
+        expect(html).toContain('/call-for-speakers.html');
+        expect(html).toContain('/contact-us.html');
     });
 });

@@ -7,12 +7,19 @@
        already keep this sorted.
     #}
     {% for ev in events.upcoming %}
-      <li class="event-item"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
+      {% set overviewText = (ev.overview or "") | trim %}
+      <li class="event-item{% if not overviewText %} event-item--speaker-wanted{% endif %}"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
         {# <a href="{{ ev.url }}" target="_blank" rel="noopener noreferrer" class="event-title"> #}
-          <b>{{ ev.displayDate }}: {{ ev.title }}</b>
+          {% if overviewText %}
+            <b>{{ ev.displayDate }}: {{ ev.title }}</b>
+          {% else %}
+            <b>{{ ev.displayDate }}</b>
+          {% endif %}
         {# </a> #}
-        {% if ev.overview %}
-          <p class="event-overview">{{ ev.overview }}</p>
+        {% if overviewText %}
+          <p class="event-overview">{{ overviewText }}</p>
+        {% else %}
+          <span class="event-speaker-wanted-inline">🎤 Speaker wanted: <a href="/call-for-speakers.html">submit a talk idea</a> or <a href="/contact-us.html">get in touch</a>.</span>
         {% endif %}
       </li>
     {% endfor %}

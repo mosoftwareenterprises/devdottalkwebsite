@@ -17,6 +17,8 @@
       {% if overviewText %}
         <h3 class="event-overview-heading">Overview</h3>
         <p class="event-overview">{{ overviewText }}</p>
+      {% else %}
+        <p class="event-speaker-wanted">🎤 Speaker wanted - <a href="/call-for-speakers.html">submit a talk idea</a> or <a href="/contact-us.html">get in touch</a>.</p>
       {% endif %}
       {%- if ev.photoUrl and ev.photoUrl != "TODO" %}
       <h3 class="event-media-heading">Highlights</h3>
