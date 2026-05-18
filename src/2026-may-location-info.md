@@ -7,7 +7,7 @@ hideNextEventBanner: true
 hideMainLogo: false
 templateEngineOverride: njk,md
 permalink: 2026-may-location-info.html
-showVenueSection: false
+showVenueSection: true
 ---
 
 {% from "event-overview.njk" import eventOverview %}
@@ -136,6 +136,8 @@ Bournemouth University, Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB
 ## Speakers
 
 {{ speakerSession(36, sessions.allEvents) }}
+
+---
 
 {{ speakerSession(37, sessions.allEvents) }}
 
