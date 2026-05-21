@@ -37,6 +37,15 @@ function createLayoutDom() {
 }
 
 describe('layout navigation menu', () => {
+  it('includes the events calendar link in the primary navigation', () => {
+    const dom = createLayoutDom();
+    const { document } = dom.window;
+    const calendarLink = document.querySelector('#primary-nav a[href="/calendar"]');
+
+    expect(calendarLink).not.toBeNull();
+    expect(calendarLink?.textContent?.trim()).toBe('Events Calendar');
+  });
+
   it('closes the menu when clicking outside the nav bar', () => {
     const dom = createLayoutDom();
     const { document } = dom.window;
