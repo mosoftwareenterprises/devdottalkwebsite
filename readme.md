@@ -87,7 +87,7 @@ Use this checklist each month to avoid missing linked updates.
    - If using a new venue, add a dedicated include in `src/_includes/venues/` and wire it in `src/_includes/venue-details.njk`.
 
 5. Update ticket IDs and links
-   - Update Luma checkout event id in `src/_includes/layout.njk` (`ticketSystemEventId`).
+   - Update Luma checkout event id in `src/_includes/layout.njk` (`ticketSystemEventId`) with the Manage event->More->Embed section in Luma
    - Update `/tickets` redirect in `src/staticwebapp.config.json`.
    - Update `/next-event` redirect in `src/staticwebapp.config.json`.
 

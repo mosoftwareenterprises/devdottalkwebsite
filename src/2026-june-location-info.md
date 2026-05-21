@@ -7,7 +7,7 @@ hideNextEventBanner: true
 hideMainLogo: true
 templateEngineOverride: njk,md
 permalink: 2026-june-location-info.html
-showVenueSection: true
+showVenueSection: false
 eventId: 18
 ---
 
