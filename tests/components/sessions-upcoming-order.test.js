@@ -5,6 +5,15 @@ function hasMarkOliverFirstSpeaker(session) {
     return session.firstSpeakerName === 'Mark Oliver';
 }
 
+describe('past sessions ordering', () => {
+    it('sorts past sessions by id ascending', () => {
+        const { pastEvents } = loadSessions();
+        for (let i = 1; i < pastEvents.length; i++) {
+            expect(pastEvents[i].id).toBeGreaterThanOrEqual(pastEvents[i - 1].id);
+        }
+    });
+});
+
 describe('upcoming sessions ordering', () => {
     it('pushes Mark Oliver first-speaker sessions to the bottom of the upcoming list', () => {
         const { upcomingEvents } = loadSessions();

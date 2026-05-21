@@ -19,7 +19,7 @@ export default () => {
         };
     });
 
-    const pastEvents = enriched.filter(s => s.status === 'past');
+    const pastEvents = enriched.filter(s => s.status === 'past').sort((a, b) => a.id - b.id);
     const hasMarkOliverFirstSpeaker = (session) => {
         return session.firstSpeakerName === 'Mark Oliver';
     };
