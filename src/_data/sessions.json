@@ -861,7 +861,7 @@
         "id": 37,
         "eventID": 17,
         "title": "One Tool to Run Them All: Simplifying Your Dev Environment",
-        "duration": 45,
+        "duration": 20,
         "description": "Do you wander across many repositories and technology stacks?\nHave you ever stood before your terminal, wondering which incantation must be spoken in which environment?\n\nIn the lands of modern development, every project brings its own tools, versions, and commands. What begins as a simple journey soon becomes a tangle of scripts, forgotten setup steps, and environments that refuse to behave.\n\nBut... there is another way.\n\nIn this talk, I will introduce mise-en-place* — a small yet powerful tool that brings order where there is chaos, consistency where there is uncertainty, and a sense of calm to the ever-shifting world of developer environments.\n\nWith mise, your tools, tasks, and runtimes can be gathered and managed in one place, a single, reliable front-end to your development environment, no matter how many repositories you travel between.\n\nJoin me to discover how one simple tool can restore harmony to your workflow and lighten the burden of managing modern development setups.\n\n*Pronounced “MEEZ ahn plahs.”",
         "firstSpeakerName": "Mark Oliver",
         "firstSpeakerJobTitle": "Principal Software Engineer",
