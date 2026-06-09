@@ -3,11 +3,17 @@ const venueDefinitions = {
         key: 'k101',
         name: 'Room K101, Kimmeridge House',
         template: 'venues/k101-location-data.njk'
+    },
+    pg22: {
+        key: 'pg22',
+        name: 'Room PG22, Poole House',
+        template: 'venues/pg22-location-data.njk'
     }
 };
 
 const venueNameToKey = {
-    'room k101, kimmeridge house': 'k101'
+    'room k101, kimmeridge house': 'k101',
+    'room pg22, poole house': 'pg22'
 };
 
 function normalize(value) {

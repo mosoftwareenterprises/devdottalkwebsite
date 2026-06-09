@@ -296,11 +296,11 @@
         "photoUrl": "TODO",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room PG22, Kimmeridge House",
+        "venueName": "Room PG22, Poole House",
         "sessionIDs": [
             38
         ],
-        "overview": "This is a collab with the B2600 Cybersecurity community.\nAttendees will participate in a no pressure, hands-on cybersecurity AI vibe coding challenge. No experience of cybersecurity or software development is required."
+        "overview": "This is a collab with the [B2600 Cybersecurity community](https://www.bournemouth2600.org/).\n\nAttendees will participate in a no pressure, hands-on cybersecurity AI vibe coding challenge. No experience of cybersecurity or software development is required.\n\nHowever if you do have experience in either, we would love to have you there to help mentor and support others as they learn and explore the challenge. The event will be a fun and relaxed way to learn about cybersecurity concepts and how AI can be used in this space.\n\n**If you have access to a laptop, please bring it along to participate in the coding challenge. If not, don't worry - you can still join in and learn!**"
     },
     {
         "id": 17,

@@ -1,0 +1,75 @@
+{% from "locationMapAndOverlay.njk" import locationMapAndOverlay %}
+{% from "event-details.njk" import eventVenueName %}
+
+{% macro pg22VenueDetails(eventRecord) %}
+<section class="venue-section">
+
+<p><strong>🏢 {{ eventVenueName(eventRecord) }}</strong></p>
+
+Bournemouth University, Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB
+
+</section>
+
+### Maps & Directions
+
+- 🅿️ **If driving, head to the visitors car park:** [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)  (Parking marked with a **P** pin on the campus map below)
+- 🎥 **Watch the video showing how to get from the car park to Room PG22:** [Car park to Room PG22 video](https://youtu.be/AYP6WBNKdKI)
+- 🎥 **Watch the video showing how to get from the main entrance to Room PG22:** [Main entrance to Room PG22 video](https://youtu.be/AYP6WBNKdKI?si=58Sjpp1fMXNAcoWw&t=46)
+- 📍 **Navigate to Poole House main entrance:** [Google Maps pin for Poole House Main Entrance](https://maps.app.goo.gl/gNDtBHgXqMtk6SKv7) or [what3words](tps://w3w.co/chefs.minute.vines)  (Poole House marked with a **PH** pin on campus map below)
+- 📍 **Navigate to Poole House courtyard entrance:** [Google Maps pin for Poole House Courtyard Entrance](https://maps.app.goo.gl/mJ4USnzTPzcECDsS7) or [what3words](https://w3w.co/golf.crab.happy)  (Poole House marked with a **PH** pin on campus map below)
+- More directions on the [BU website](https://www.bournemouth.ac.uk/about/contact-us/directions-maps/directions-our-talbot-campus) & official [Talbot Campus map](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf)
+{% set mapPins = [
+    {
+        left: "64%",
+        top: "53%",
+        text: "P",
+        textX: 13.5,
+        textY: 19,
+        fontSize: 16.3,
+        color: "#6315ca",
+        ariaLabel: "Visitors Car Park"
+    },
+    {
+        left: "39.2%",
+        top: "21.5%",
+        text: "CY",
+        textX: 13,
+        textY: 16.5,
+        fontSize: 11.9,
+        color: "#2980b9",
+        ariaLabel: "Courtyard"
+    },
+    {
+        left: "23.5%",
+        top: "16.5%",
+        text: "PH",
+        textX: 13,
+        textY: 16.5,
+        fontSize: 11.9,
+        color: "#c0392b",
+        ariaLabel: "Poole House - Room PG22"
+    },
+    {
+        left: "4%",
+        top: "20%",
+        text: "BS",
+        textX: 13.5,
+        textY: 19,
+        fontSize: 11.3,
+        color: "#2753b4",
+        ariaLabel: "Bus Stop"
+    }
+] %}
+{{ locationMapAndOverlay("/images/talbotcampus.svg", mapPins) }}
+
+**Building Entrance:** Poole House has two entrances, one accessed via the courtyard in the middle of campus **(CY pin on Campus map)**, the other marked "Main Entrance" on Campus Map. The room is on the ground floor near the information area/cybersecurity suite.
+
+**Accessibility:** Flat entrance at ground level.
+
+#### Travel Options
+
+- **Bus:** Drops off at the main entrance on Fern Barrow **(BS pin on the campus map above)**
+- **Train:** Nearest station is Bournemouth Station (~45 min walk). Taxi or bus from station takes 15 mins.
+- **Bike:** Bike racks available on campus.
+- **Parking:** Free during the event. Check signage when parking: [Google Maps location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)
+{% endmacro %}
