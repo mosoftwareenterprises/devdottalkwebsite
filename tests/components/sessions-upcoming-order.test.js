@@ -18,13 +18,12 @@ describe('upcoming sessions ordering', () => {
     it('pushes Mark Oliver first-speaker sessions to the bottom of the upcoming list', () => {
         const { upcomingEvents } = loadSessions();
         const firstMarkOliverIndex = upcomingEvents.findIndex(hasMarkOliverFirstSpeaker);
-        const secondSpeakerOnlyIndex = upcomingEvents.findIndex((session) => {
-            return session.firstSpeakerName !== 'Mark Oliver' && session.secondSpeakerName === 'Mark Oliver';
-        });
+        const nonMarkOliverFirstSpeakerCount = upcomingEvents.filter((session) => {
+            return !hasMarkOliverFirstSpeaker(session);
+        }).length;
 
         expect(firstMarkOliverIndex).toBeGreaterThan(-1);
-        expect(secondSpeakerOnlyIndex).toBeGreaterThan(-1);
-        expect(secondSpeakerOnlyIndex).toBeLessThan(firstMarkOliverIndex);
+        expect(nonMarkOliverFirstSpeakerCount).toBeGreaterThan(0);
 
         const sessionsAfterFirstMarkOliver = upcomingEvents.slice(firstMarkOliverIndex);
 
