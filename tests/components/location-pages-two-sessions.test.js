@@ -8,6 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const locationPagesFromMay2026 = [
     '2026-may-location-info.md',
     '2026-june-location-info.md',
+    '2026-july-location-info.md',
     '2027-january-location-info.md',
     '2027-february-location-info.md',
     '2027-march-location-info.md',

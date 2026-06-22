@@ -41,80 +41,29 @@ If any test fails, the dev server will not start. Fix the failing tests and run 
 
 ## Add A New Event (Runbook)
 
-Use this checklist each month to avoid missing linked updates.
+Use this monthly checklist to keep event updates complete.
 
-1. Create the event page
-   - Create a new file in `src/` (for example: `src/2026-july-location-info.md`).
-   - Start from `src/2026-june-location-info.md` as the template.
-   - In frontmatter set:
-     - `permalink`
-     - `title`
-     - `description`
-     - `eventId` (this is now the source of truth for page data)
-     - `showVenueSection` (`false` while venue is hidden, then `true` when announcing location)
-
-2. Add/update the event in data
-   - Edit `src/_data/events.json`.
-   - Add the new event object (or update placeholder event) with:
-     - unique `id`
-     - `date`, `displayDate`, `url`, `title`
-     - `locationName`, `locationAddress`, `venueName`
-     - `overview`
-     - `sessionIDs` array
-   - Keep `events.json` and `sessions.json` in sync:
-     - every `sessionIDs` value must exist as a session `id`
-     - every session with `eventID = X` must appear in event `id = X` `sessionIDs`
-
-3. Add/update sessions
-   - Edit `src/_data/sessions.json`.
-   - Add session entries for the new talks with:
-     - unique session `id`
-     - `eventID` matching the event `id`
-       - speaker, title, description, `status`
-       - `videoUrl` and `slidesUrl` (set placeholders like `""` or `"TODO"` until published, then update with real links)
-    - Keep session statuses current as talks progress (for example: `upcoming` before the event, then `completed` once published).
-    - After the event, make sure media links are populated:
-       - session-level links in `src/_data/sessions.json`: `videoUrl`, `slidesUrl`
-       - event-level photo link in `src/_data/events.json`: `photoUrl`
-   - If there are no confirmed sessions yet, keep event `sessionIDs` empty and show "coming soon" content.
-
-4. Connect event, session, and venue
-   - On the page file, set the new `eventId` in frontmatter.
-   - The page uses:
-     - `events.findById(eventId)` for event details
-     - `currentEvent.sessionIDs` to render speaker blocks
-     - `eventVenues.findByEvent(currentEvent)` to resolve venue block
-   - If using a new venue, add a dedicated include in `src/_includes/venues/` and wire it in `src/_includes/venue-details.njk`.
-
-5. Update ticket IDs and links
-   - Update Luma checkout event id in `src/_includes/layout.njk` (`ticketSystemEventId`) with the Manage event->More->Embed section in Luma
-   - Update `/tickets` redirect in `src/staticwebapp.config.json`.
-   - Update `/next-event` redirect in `src/staticwebapp.config.json`.
-
-6. Deprecate last month's short links/redirects
-   - In `src/staticwebapp.config.json`, review event-related routes and update/remove old redirects that should no longer be promoted.
-   - Keep permanent links stable for already published event pages.
-
-7. Update supporters
-   - If new Ko-fi supporters were received, update `src/_data/kofiSupporters.json`.
-
-8. Optional event polish
-   - Add/update hero and speaker images under `src/images/`.
-   - Check `hideMainLogo` / `hideNextEventBanner` values in frontmatter for the new page.
-   - Confirm event copy references the right month, title, and ticket wording.
-
-9. Validate before committing
-   - Run:
-     - `mise test`
-     - `mise run build`
-   - Spot-check locally with `mise start`:
-     - new event page
-     - `/next-event`
-     - `/tickets`
-     - floating ticket button behavior
-
-10. Final sanity checks
-   Confirm event appears correctly in upcoming lists, speaker cards render (or intentionally show "coming soon"), the venue section toggles correctly when `showVenueSection` changes, and there are no broken links in page content.
+- [ ] Create the event page in `src/` (copy the previous month), then set frontmatter: `permalink`, `title`, `description`, `eventId`, `showVenueSection`.
+- [ ] Add or update the event in `src/_data/events.json` with `id`, date/display fields, URL/title, location fields, `overview`, and `sessionIDs`.
+- [ ] Add or update talks in `src/_data/sessions.json` with unique session `id`, matching `eventID`, speaker/title/description, `status`, `videoUrl`, and `slidesUrl`.
+- [ ] Keep event/session links in sync:
+  - every `sessionIDs` entry must exist in sessions
+  - every session with `eventID = X` must be listed in event `id = X` `sessionIDs`
+- [ ] If no talks are confirmed yet, keep `sessionIDs` empty and show "coming soon" content.
+- [ ] Confirm the page wiring still works: `events.findById(eventId)`, `currentEvent.sessionIDs`, and `eventVenues.findByEvent(currentEvent)`.
+- [ ] If using a new venue, add an include under `src/_includes/venues/` and map it in `src/_includes/venue-details.njk`.
+- [ ] Update ticketing links:
+  - `ticketSystemEventId` in `src/_includes/layout.njk`
+  - `/tickets` redirect in `src/staticwebapp.config.json`
+  - `/next-event` redirect in `src/staticwebapp.config.json`
+- [ ] Retire old short links/redirects in `src/staticwebapp.config.json` (keep historical event links stable).
+- [ ] Update `src/_data/kofiSupporters.json` if new supporters were received.
+- [ ] Optional polish: refresh images in `src/images/`, verify `hideMainLogo`/`hideNextEventBanner`, and check month/title/ticket wording.
+- [ ] Validate before commit:
+  - run `mise test`
+  - run `mise run build`
+  - spot-check with `mise start`: new event page, `/next-event`, `/tickets`, floating ticket button
+- [ ] Final sanity check: upcoming lists look right, speaker cards render correctly (or "coming soon" intentionally), venue visibility toggles with `showVenueSection`, and no broken links remain.
 
 ### Test Structure
 
