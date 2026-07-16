@@ -1,4 +1,5 @@
 import nunjucks from 'nunjucks';
+import MarkdownIt from 'markdown-it';
 import { fileURLToPath } from 'url';
 import { dirname, join, resolve } from 'path';
 import { readFileSync } from 'fs';
@@ -67,6 +68,18 @@ export function createNunjucksEnv(data = {}) {
 
   env.addFilter('merge', (obj, updates) => {
     return { ...obj, ...updates };
+  });
+
+  const markdownInline = new MarkdownIt({
+    html: false,
+    linkify: true
+  });
+
+  env.addFilter('markdownInline', (value) => {
+    if (value === null || value === undefined) {
+      return '';
+    }
+    return markdownInline.renderInline(String(value));
   });
 
   // Add global data

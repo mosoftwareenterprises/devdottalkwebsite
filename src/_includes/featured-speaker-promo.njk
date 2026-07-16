@@ -55,7 +55,7 @@
       <div class="featured-speaker-promo-body">
         {% if description %}
           <h4>Session Description</h4>
-          <p class="featured-speaker-promo-description formatted-description">{{ description }}</p>
+          <p class="featured-speaker-promo-description formatted-description">{{ description | markdownInline | safe }}</p>
         {% endif %}
         {% if speakerBio %}
           <div class="featured-speaker-promo-bio-block">

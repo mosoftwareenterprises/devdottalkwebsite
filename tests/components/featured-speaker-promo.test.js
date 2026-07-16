@@ -25,6 +25,22 @@ describe('featured-speaker-promo component', () => {
         expect(html).toContain('15 March');
     });
 
+    it('renders markdown links in session description', () => {
+        const session = {
+            ...mockSessions[0],
+            description: 'Learn more in the [Lean Coffee guide](https://agilecoffee.com/leancoffee/).'
+        };
+
+        const html = renderMacro(
+            templatePath,
+            macroName,
+            [session],
+            { events: { all: mockEvents } }
+        );
+
+        expect(html).toContain('<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>');
+    });
+
     it('keeps promo body inside the article container', () => {
         const session = mockSessions[0];
         const html = renderMacro(

@@ -41,10 +41,10 @@
     {% if collapseDescription and s.description and s.description != "" %}
       <details>
         <summary>Session description</summary>
-        <p class="formatted-description">{{ s.description }}</p>
+        <p class="formatted-description">{{ s.description | markdownInline | safe }}</p>
       </details>
     {% else %}
-      <p class="formatted-description">{{ s.description }}</p>
+      <p class="formatted-description">{{ s.description | markdownInline | safe }}</p>
     {% endif %}
     {% if s.slidesUrl and s.slidesUrl != "" %}
       <p>

@@ -25,7 +25,7 @@
                 {% endif %}
             </a>
             <h4>{{ sessionRecord.title }}</h4>
-            <p class="formatted-description">{{ sessionRecord.description }}</p>
+            <p class="formatted-description">{{ sessionRecord.description | markdownInline | safe }}</p>
             {% if sessionRecord.firstSpeakerBio %}
                 <h5>Speaker Bio</h5>
                 <p class="formatted-description">{{ sessionRecord.firstSpeakerBio }}</p>

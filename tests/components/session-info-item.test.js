@@ -31,6 +31,17 @@ describe('session-info-item component', () => {
       expect(html).toContain('Discover advanced techniques for debugging quantum-inspired testing frameworks');
     });
 
+    it('should render markdown links in session description', () => {
+      const markdownSession = {
+        ...mockSessions[0],
+        description: 'Learn more in the [Lean Coffee guide](https://agilecoffee.com/leancoffee/).'
+      };
+
+      const html = renderMacro(templatePath, macroName, [markdownSession]);
+
+      expect(html).toContain('<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>');
+    });
+
     it('should render plain description by default', () => {
       const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
 

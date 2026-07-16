@@ -1,4 +1,5 @@
 import markdownItAnchor from "markdown-it-anchor";
+import MarkdownIt from 'markdown-it';
 import { JSDOM } from 'jsdom';
 import sharp from 'sharp';
 import path from 'path';
@@ -26,6 +27,18 @@ function serializeDom(dom) {
 }
 
 export default function (eleventyConfig) {
+  const markdownInline = new MarkdownIt({
+    html: false,
+    linkify: true
+  });
+
+  eleventyConfig.addNunjucksFilter('markdownInline', (value) => {
+    if (value === null || value === undefined) {
+      return '';
+    }
+    return markdownInline.renderInline(String(value));
+  });
+
   eleventyConfig.addPassthroughCopy("src/bluesky.js");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/*.jpg");

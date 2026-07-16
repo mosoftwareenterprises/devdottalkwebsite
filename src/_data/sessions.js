@@ -20,10 +20,13 @@ export default () => {
     });
 
     const pastEvents = enriched.filter(s => s.status === 'past').sort((a, b) => a.id - b.id);
+
+
     const hasMarkOliverFirstSpeaker = (session) => {
         return session.firstSpeakerName === 'Mark Oliver';
     };
-    const upcomingEvents = [...enriched.filter(s => s.status === 'upcoming')].sort((a, b) => {
+
+    const upcomingEvents = [...enriched.filter(s => s.status === 'upcoming' && s.title !== 'Lean Coffee Session')].sort((a, b) => {
         const aHasMarkOliver = hasMarkOliverFirstSpeaker(a);
         const bHasMarkOliver = hasMarkOliverFirstSpeaker(b);
 

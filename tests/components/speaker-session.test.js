@@ -51,6 +51,25 @@ describe('speaker-session component', () => {
       expect(html).toContain('Discover advanced techniques for debugging quantum-inspired testing frameworks');
     });
 
+    it('should render markdown links in session description', () => {
+      const markdownSessions = [
+        {
+          ...mockSessions[0],
+          id: 777,
+          description: 'Learn more in the [Lean Coffee guide](https://agilecoffee.com/leancoffee/).'
+        }
+      ];
+
+      const html = renderMacro(
+        templatePath,
+        macroName,
+        [777, markdownSessions],
+        { sessions: { allEvents: markdownSessions } }
+      );
+
+      expect(html).toContain('<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>');
+    });
+
     it('should render speaker bio', () => {
       const html = renderMacro(
         templatePath,
