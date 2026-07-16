@@ -82,8 +82,9 @@ describe('index upcoming events section', () => {
             }
         });
 
-        expect(html).toContain('We would like another speaker for this event');
+        expect(html).toContain('Another speaker wanted for this event');
         expect(html).toContain('come and join us');
+        expect(html).toContain('event-speaker-wanted-inline--highlight');
         expect(html).toContain('/call-for-speakers.html');
     });
 
@@ -100,7 +101,7 @@ describe('index upcoming events section', () => {
             }
         });
 
-        expect(html).not.toContain('We would like another speaker for this event');
+        expect(html).not.toContain('Another speaker wanted for this event');
     });
 
     it('renders another-speaker prompt when the second matched session is Lean Coffee', () => {
@@ -125,6 +126,6 @@ describe('index upcoming events section', () => {
             }
         });
 
-        expect(html).toContain('We would like another speaker for this event');
+        expect(html).toContain('Another speaker wanted for this event');
     });
 });

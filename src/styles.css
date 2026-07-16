@@ -719,6 +719,28 @@ li p {
   color: #004499;
 }
 
+.event-speaker-wanted-inline--highlight {
+  display: block;
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 10px 12px;
+  background: #fff8e1;
+  border: 1px solid #f0cd68;
+  border-left: 5px solid #c77600;
+  border-radius: 6px;
+  color: #6e4700;
+  font-weight: 500;
+}
+
+.event-speaker-wanted-inline--highlight a {
+  color: #0050a8;
+}
+
+.event-speaker-wanted-inline--highlight a:hover,
+.event-speaker-wanted-inline--highlight a:focus {
+  color: #003c7d;
+}
+
 .event-media-heading {
   font-size: 1rem;
   margin: 12px 0 8px;
