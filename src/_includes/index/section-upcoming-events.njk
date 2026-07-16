@@ -8,6 +8,43 @@
        already keep this sorted.
     #}
     {% for ev in events.upcoming %}
+      {# Prefer all sessions when available; fall back to upcoming-only data in tests/partial contexts. #}
+      {% set allSessions = [] %}
+      {% if sessions is defined and sessions and sessions.allEvents is defined and sessions.allEvents %}
+        {% set allSessions = sessions.allEvents %}
+      {% elif sessions is defined and sessions and sessions.upcomingEvents is defined and sessions.upcomingEvents %}
+        {% set allSessions = sessions.upcomingEvents %}
+      {% endif %}
+
+      {# Count confirmed speaker slots for this event so we can request an additional speaker when only one is assigned. #}
+      {% set assignedSpeakerCount = 0 %}
+      {% for sess in allSessions %}
+        {% set sessionTitle = (sess.title or "") | trim | lower %}
+        {# Lean Coffee is community-led and should not affect speaker-needed messaging. #}
+        {% if sessionTitle != "lean coffee session" %}
+          {% set sessionMatchesEvent = false %}
+          {# Match by explicit sessionIDs when present, otherwise by eventID for older/test data shapes. #}
+          {% if ev.sessionIDs is defined and ev.sessionIDs and (sess.id in ev.sessionIDs) %}
+            {% set sessionMatchesEvent = true %}
+          {% elif sess.eventID is defined and sess.eventID == ev.id %}
+            {% set sessionMatchesEvent = true %}
+          {% endif %}
+
+          {% if sessionMatchesEvent %}
+            {% set firstSpeakerName = (sess.firstSpeakerName or "") | trim | lower %}
+            {# Ignore placeholder names used to represent open speaker slots. #}
+            {% if firstSpeakerName and firstSpeakerName != "it could be you!" %}
+              {% set assignedSpeakerCount = assignedSpeakerCount + 1 %}
+            {% endif %}
+
+            {% set secondSpeakerName = (sess.secondSpeakerName or "") | trim | lower %}
+            {% if secondSpeakerName and secondSpeakerName != "it could be you!" %}
+              {% set assignedSpeakerCount = assignedSpeakerCount + 1 %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
       {% set overviewText = (ev.overview or "") | trim %}
       <li class="event-item{% if not overviewText %} event-item--speaker-wanted{% endif %}"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
         {# <a href="{{ ev.url }}" target="_blank" rel="noopener noreferrer" class="event-title"> #}
@@ -21,6 +58,10 @@
           <p class="event-overview">{{ overviewText }}</p>
         {% else %}
           <span class="event-speaker-wanted-inline">🎤 Speaker wanted: <a href="/call-for-speakers.html">submit a talk idea</a> or <a href="/contact-us.html">get in touch</a>.</span>
+        {% endif %}
+
+        {% if assignedSpeakerCount == 1 %}
+          <p class="event-speaker-wanted-inline">We would like another speaker for this event, <a href="/call-for-speakers.html">come and join us</a>.</p>
         {% endif %}
       </li>
     {% endfor %}

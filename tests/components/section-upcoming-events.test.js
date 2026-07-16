@@ -24,6 +24,9 @@ describe('index upcoming events section', () => {
         const html = renderTemplate(templatePath, {
             events: {
                 upcoming: [mockEvents[0]]
+            },
+            sessions: {
+                allEvents: [mockSessions[0], mockSessions[1]]
             }
         });
 
@@ -51,6 +54,9 @@ describe('index upcoming events section', () => {
         const html = renderTemplate(templatePath, {
             events: {
                 upcoming: [{ ...mockEvents[0], overview: '' }]
+            },
+            sessions: {
+                allEvents: [mockSessions[0], mockSessions[1]]
             }
         });
 
@@ -61,5 +67,64 @@ describe('index upcoming events section', () => {
         expect(html).toContain('class="event-speaker-wanted-inline"');
         expect(html).toContain('/call-for-speakers.html');
         expect(html).toContain('/contact-us.html');
+    });
+
+    it('renders another-speaker prompt when exactly one speaker is assigned', () => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [{
+                    ...mockEvents[0],
+                    sessionIDs: [999, 123456]
+                }]
+            },
+            sessions: {
+                allEvents: [mockSessions[0]]
+            }
+        });
+
+        expect(html).toContain('We would like another speaker for this event');
+        expect(html).toContain('come and join us');
+        expect(html).toContain('/call-for-speakers.html');
+    });
+
+    it('does not render another-speaker prompt when two speakers are assigned', () => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [{
+                    ...mockEvents[0],
+                    sessionIDs: [999, 998]
+                }]
+            },
+            sessions: {
+                allEvents: [mockSessions[0], mockSessions[1]]
+            }
+        });
+
+        expect(html).not.toContain('We would like another speaker for this event');
+    });
+
+    it('renders another-speaker prompt when the second matched session is Lean Coffee', () => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [{
+                    ...mockEvents[0],
+                    sessionIDs: [999, 997]
+                }]
+            },
+            sessions: {
+                allEvents: [
+                    mockSessions[0],
+                    {
+                        ...mockSessions[2],
+                        id: 997,
+                        title: 'Lean Coffee Session',
+                        eventID: 'test-event-march-2026',
+                        firstSpeakerName: 'Someone Placeholder'
+                    }
+                ]
+            }
+        });
+
+        expect(html).toContain('We would like another speaker for this event');
     });
 });
