@@ -7,7 +7,7 @@
     {# render the future list from the shared data file; the helper routines in src/_data/events.js
        already keep this sorted.
     #}
-    {% for ev in events.upcoming %}
+    {% for ev in events.upcoming | rejectattr('isCancelled') %}
       {# Prefer all sessions when available; fall back to upcoming-only data in tests/partial contexts. #}
       {% set allSessions = [] %}
       {% if sessions is defined and sessions and sessions.allEvents is defined and sessions.allEvents %}

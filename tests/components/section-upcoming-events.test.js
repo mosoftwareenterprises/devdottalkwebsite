@@ -128,4 +128,21 @@ describe('index upcoming events section', () => {
 
         expect(html).toContain('Another speaker wanted for this event');
     });
+
+    it('does not render cancelled events', () => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [
+                    { ...mockEvents[0], isCancelled: true },
+                    mockEvents[1]
+                ]
+            },
+            sessions: {
+                allEvents: [mockSessions[0], mockSessions[1]]
+            }
+        });
+
+        expect(html).not.toContain('Mock Testing Mock Workshop');
+        expect(html).toContain('Fictional Meetup Experience');
+    });
 });
