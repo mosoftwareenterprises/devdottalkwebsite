@@ -668,6 +668,11 @@ li p {
   padding: 8px 12px;
 }
 
+.event-item--no-event {
+  background: linear-gradient(180deg, #eef8f1 0%, #e1f1e7 100%);
+  border: 1px solid #b6d9c2;
+}
+
 .event-item--speaker-wanted b {
   display: inline;
   margin-right: 6px;
@@ -716,6 +721,13 @@ li p {
   border: 1px solid #e9a8b2;
   border-left: 5px solid #b00020;
   color: #7a0016;
+}
+
+.event-status--no-event {
+  background: #edf8f1;
+  border: 1px solid #b9ddc6;
+  border-left: 5px solid #2f7a4a;
+  color: #184b2d;
 }
 
 .event-pill {

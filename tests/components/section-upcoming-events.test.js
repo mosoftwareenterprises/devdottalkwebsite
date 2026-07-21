@@ -145,4 +145,52 @@ describe('index upcoming events section', () => {
         expect(html).not.toContain('Mock Testing Mock Workshop');
         expect(html).toContain('Fictional Meetup Experience');
     });
+
+    it('renders no-event months with summer break messaging', () => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [
+                    {
+                        ...mockEvents[0],
+                        date: '2027-07-21',
+                        month: 'July',
+                        year: 2027,
+                        title: 'NO EVENT IN JULY',
+                        isNoEventMonth: true,
+                        overview: ''
+                    }
+                ]
+            },
+            sessions: {
+                allEvents: [mockSessions[0]]
+            }
+        });
+
+        expect(html).toContain('July 2027');
+        expect(html).not.toContain('NO EVENT IN JULY');
+        expect(html).not.toContain('15 March 2026');
+        expect(html).toContain('event-item--no-event');
+        expect(html).toContain('event-status--no-event');
+        expect(html).toContain('pause events in summer to give everyone a chance to touch grass');
+    });
+
+    it('does not show speaker-wanted prompts for no-event months', () => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [
+                    {
+                        ...mockEvents[0],
+                        isNoEventMonth: true,
+                        overview: ''
+                    }
+                ]
+            },
+            sessions: {
+                allEvents: [mockSessions[0]]
+            }
+        });
+
+        expect(html).not.toContain('Speaker wanted');
+        expect(html).not.toContain('Another speaker wanted for this event');
+    });
 });

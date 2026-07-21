@@ -46,21 +46,25 @@
       {% endfor %}
 
       {% set overviewText = (ev.overview or "") | trim %}
-      <li class="event-item{% if not overviewText %} event-item--speaker-wanted{% endif %}"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
+      <li class="event-item{% if ev.isNoEventMonth %} event-item--no-event{% elif not overviewText %} event-item--speaker-wanted{% endif %}"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
         {# <a href="{{ ev.url }}" target="_blank" rel="noopener noreferrer" class="event-title"> #}
-          {% if overviewText %}
+          {% if ev.isNoEventMonth %}
+            <b>{{ ev.month }} {{ ev.year }}</b>
+          {% elif overviewText %}
             <b>{{ ev.displayDate }}: {{ ev.title }}</b>
           {% else %}
             <b>{{ ev.displayDate }}</b>
           {% endif %}
         {# </a> #}
-        {% if overviewText %}
+        {% if ev.isNoEventMonth %}
+          <p class="event-status event-status--no-event">☀️ We pause events in summer to give everyone a chance to touch grass. We will be back soon.</p>
+        {% elif overviewText %}
           <p class="event-overview">{{ overviewText }}</p>
         {% else %}
           <span class="event-speaker-wanted-inline">🎤 Speaker wanted: <a href="/call-for-speakers.html">submit a talk idea</a> or <a href="/contact-us.html">get in touch</a>.</span>
         {% endif %}
 
-        {% if assignedSpeakerCount == 1 %}
+        {% if (not ev.isNoEventMonth) and assignedSpeakerCount == 1 %}
           <p class="event-speaker-wanted-inline event-speaker-wanted-inline--highlight">🎤 Another speaker wanted for this event: <a href="/call-for-speakers.html">come and join us</a>.</p>
         {% endif %}
       </li>
