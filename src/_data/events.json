@@ -281,6 +281,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
+        "isCancelled": true,
         "sessionIDs": [
             39,
             40
@@ -297,6 +298,7 @@
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room PG22, Poole House",
+        "isCancelled": true,
         "sessionIDs": [
             38
         ],

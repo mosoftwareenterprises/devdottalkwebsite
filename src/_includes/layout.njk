@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles.css?v=1.0.62">
+    <link rel="stylesheet" href="/styles.css?v=1.0.63">
     <link rel="stylesheet" href="/speakers.css?v=1.0.6">
     <link rel="stylesheet" href="/featured-speaker-promo.css?v=1.0.3">
     <link rel="stylesheet" href="/bluesky.css?v=1.0.5">
@@ -23,6 +23,16 @@
     <meta name="author" content="{dev.talk}">
   </head>
   <body>
+    {% set currentPageEvent = null %}
+    {% if eventId and events and events.findById %}
+      {% set currentPageEvent = events.findById(eventId) %}
+    {% endif %}
+    {% set showCancelledBadge = false %}
+    {% if showCancelledLogoBadge is defined %}
+      {% set showCancelledBadge = showCancelledLogoBadge %}
+    {% elif currentPageEvent and currentPageEvent.isCancelled %}
+      {% set showCancelledBadge = true %}
+    {% endif %}
     <script src="/bluesky.js"></script>
     {% if includeBlueskyPosts %}
       <script>
@@ -37,7 +47,12 @@
         <div class="site-header-row">
           {% if hideMainLogo %}
             {% else %}
-              <a href="/" class="site-logo-link"><img alt="The devdottalk logo" src="/devtalk-wide.jpg" width="600" height="150" loading="lazy" class="site-logo"></a>
+              <div class="site-logo-frame{% if showCancelledBadge %} site-logo-frame--cancelled{% endif %}">
+                <a href="/" class="site-logo-link"><img alt="The devdottalk logo" src="/devtalk-wide.jpg" width="600" height="150" loading="lazy" class="site-logo"></a>
+                {% if showCancelledBadge %}
+                  <span class="site-logo-cancelled-badge" aria-hidden="true">Cancelled</span>
+                {% endif %}
+              </div>
           {% endif %}
           <div class="site-nav-bar" id="site-nav-bar">
             <button

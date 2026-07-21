@@ -7,13 +7,14 @@ import { readFileSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-function createLayoutDom() {
+function createLayoutDom(overrides = {}) {
   const env = createNunjucksEnv({
     content: '<p>Test content</p>',
     hideNextEventBanner: true,
     hideMainLogo: false,
     includeBlueskyPosts: false,
-    title: 'Test page'
+    title: 'Test page',
+    ...overrides
   });
   const templatePath = join(__dirname, '..', '..', 'src', '_includes', 'layout.njk');
   const templateContent = readFileSync(templatePath, 'utf8').replace(/{%\s*include\s+"[^"]+"\s*%}/g, '');
@@ -61,5 +62,32 @@ describe('layout navigation menu', () => {
 
     expect(navBar.classList.contains('is-open')).toBe(false);
     expect(navToggle.getAttribute('aria-expanded')).toBe('false');
+  });
+
+  it('shows cancelled badge over logo when current event is cancelled', () => {
+    const dom = createLayoutDom({
+      eventId: 19,
+      events: {
+        findById: () => ({ id: 19, isCancelled: true })
+      }
+    });
+    const { document } = dom.window;
+
+    const cancelledBadge = document.querySelector('.site-logo-cancelled-badge');
+    expect(cancelledBadge).not.toBeNull();
+    expect(cancelledBadge?.textContent?.trim()).toBe('Cancelled');
+  });
+
+  it('does not show cancelled badge when event is not cancelled', () => {
+    const dom = createLayoutDom({
+      eventId: 21,
+      events: {
+        findById: () => ({ id: 21, isCancelled: false })
+      }
+    });
+    const { document } = dom.window;
+
+    const cancelledBadge = document.querySelector('.site-logo-cancelled-badge');
+    expect(cancelledBadge).toBeNull();
   });
 });

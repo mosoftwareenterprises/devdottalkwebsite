@@ -1,7 +1,19 @@
 {% macro eventOverview(eventId, eventList) %}
   {% for ev in eventList %}
-    {% if ev.id == eventId and ev.overview %}
-      {{ ev.overview }}
+    {% if ev.id == eventId %}
+      {% if ev.isCancelled %}
+<section class="event-cancelled-notice">
+
+**Event Cancelled**
+
+Unfortunately, this event has been cancelled.
+If you have already reserved a ticket, please cancel it in the ticketing app or email [contactus@devdottalk.uk](mailto:contactus@devdottalk.uk) and we will help.
+
+</section>
+      {% endif %}
+      {% if ev.overview and not ev.isCancelled %}
+        {{ ev.overview }}
+      {% endif %}
     {% endif %}
   {% endfor %}
 {% endmacro %}

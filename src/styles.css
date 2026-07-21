@@ -164,6 +164,29 @@ main>h1 {
   margin: 0 auto;
 }
 
+.site-logo-frame {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.site-logo-cancelled-badge {
+  background: #b00020;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  left: 50%;
+  letter-spacing: 0.02em;
+  padding: 6px 12px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 10%;
+  transform: translateX(-50%) rotate(-8deg);
+  z-index: 5;
+}
 .site-logo {
   display: block;
   height: auto;
@@ -681,6 +704,36 @@ li p {
   margin: 10px 0 0;
 }
 
+.event-status {
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 10px 0 0;
+  padding: 10px 12px;
+}
+
+.event-status--cancelled {
+  background: #fff0f2;
+  border: 1px solid #e9a8b2;
+  border-left: 5px solid #b00020;
+  color: #7a0016;
+}
+
+.event-pill {
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-left: 8px;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.event-pill--cancelled {
+  background: #b00020;
+  color: #ffffff;
+}
 .event-speaker-wanted {
   line-height: 1.6;
   margin: 10px 0 0;
@@ -866,6 +919,14 @@ li p {
   border-radius: 4px;
 }
 
+.event-cancelled-notice {
+  background: #fff0f2;
+  border: 1px solid #e9a8b2;
+  border-left: 5px solid #b00020;
+  border-radius: 6px;
+  margin: 20px 0;
+  padding: 16px;
+}
 .toc-section {
   background-color: #f9f9f9;
   padding: 10px;
