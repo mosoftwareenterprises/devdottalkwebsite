@@ -247,7 +247,7 @@
         "date": "2026-09-16",
         "displayDate": "September 16th 2026",
         "url": "/2026-september-location-info.html",
-        "title": "{dev.talk} - The one after the holidays",
+        "title": "{dev.talk} - The one where we are all a bit rusty after the holidays",
         "photoUrl": "TODO",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
@@ -256,7 +256,7 @@
             43,
             44
         ],
-        "overview": "This event explores building a commercial-grade embedded Rust system on constrained ESP32 hardware, including async networking, memory and performance trade-offs, frontend delivery on-device, and real-world architectural lessons."
+        "overview": "This event explores real-world architectural lessons of building a commercial-grade Rust system on constrained hardware."
     },
     {
         "id": 20,
