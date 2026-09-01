@@ -253,8 +253,7 @@
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
         "sessionIDs": [
-            43,
-            44
+            43
         ],
         "overview": "This event explores real-world architectural lessons of building a commercial-grade Rust system on constrained hardware."
     },
