@@ -704,28 +704,6 @@
         "status": "upcoming"
     },
     {
-        "id": 44,
-        "eventID": 21,
-        "title": "Lean Coffee Session",
-        "duration": 45,
-        "description": "This is a Lean Coffee session hosted by Mark Oliver. Lean Coffee is a participant-led format where attendees suggest topics, vote on what matters most, and discuss them in focused, timed rounds. It is interactive by design, so your participation is what makes the session valuable. [Learn how Lean Coffee works](https://agilecoffee.com/leancoffee/).",
-        "firstSpeakerName": "Mark Oliver",
-        "firstSpeakerJobTitle": "Principal Software Engineer",
-        "firstSpeakerUrl": "https://www.linkedin.com/in/profileformarkoliver/",
-        "firstSpeakerBioPicUrl": "/images/speakers/markoliver.png",
-        "firstSpeakerTileImageLocation": "",
-        "firstSpeakerBio": "Mark Oliver is a seasoned Principal Software Engineer and Team Leader with over 25 years of experience in the software industry. Throughout his career, he has developed multi-million pound software solutions for the aerospace, e-commerce, and telephony sectors. With more than a decade of team leadership, Mark has successfully guided teams of various sizes, leaving a lasting impact on both his colleagues and the projects they have delivered. He is also the founder of the {dev.talk} community.",
-        "secondSpeakerName": "",
-        "secondSpeakerJobTitle": "",
-        "secondSpeakerUrl": "",
-        "secondSpeakerBioPicUrl": "",
-        "secondSpeakerTileImageLocation": "",
-        "secondSpeakerBio": "",
-        "videoUrl": "",
-        "slidesUrl": "",
-        "status": "upcoming"
-    },
-    {
         "id": 43,
         "eventID": 21,
         "title": "Embedded Development in Rust",
