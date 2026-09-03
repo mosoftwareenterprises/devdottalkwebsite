@@ -703,6 +703,28 @@
         "slidesUrl": "",
         "status": "upcoming"
     },
+       {
+        "id": 44,
+        "eventID": 22,
+        "title": "From Prototype to Production: Why Most AI Systems Fail and How to Build Ones That Don’t",
+        "duration": 30,
+        "description": "AI and machine learning have moved rapidly from experimentation into real-world deployment, yet a large percentage of projects still fail when transitioning from prototype to production.\n\nThis session explores the critical gap between building a working model and operating a reliable AI system at scale. Drawing from hands-on experience across mobile applications, data pipelines, and applied machine learning systems with measurable commercial impact, this talk focuses on the engineering challenges that are often overlooked.\n\nKey areas covered include:\n\nDesigning robust data pipelines and handling data drift in production\nMoving from notebooks to scalable, production-grade services\nMonitoring performance, cost, and reliability of deployed models\nTrade-offs between model complexity and system stability\nGovernance, explainability, and managing risk in real-world AI systems\n\nAttendees will gain a practical understanding of what it takes to build AI systems that are not only accurate, but reliable, maintainable, and capable of delivering consistent business value.\n\nThis session is designed for data scientists, engineers, and technical leaders who want to move beyond experimentation and build production-ready AI systems.",
+        "firstSpeakerName": "Harris Bashir",
+        "firstSpeakerJobTitle": "Data Engineer @ Kidoz",
+        "firstSpeakerUrl": "https://www.linkedin.com/in/harris-bashir-558a601a4/",
+        "firstSpeakerBioPicUrl": "/images/speakers/harrisbashir.jpg",
+        "firstSpeakerTileImageLocation": "/images/2026/april/Second Speaker image - September 2026.png",
+        "firstSpeakerBio": "Harris Bashir is a Full-Stack Data Engineer and Applied AI Engineer specialising in building and deploying production-grade AI systems across LLMs, computer vision, and reinforcement learning. He has worked on large-scale platforms at companies including Amazon and Kidoz, and currently focuses on developing AI governance, monitoring, and optimisation tools for SMEs. Harris holds an MSc in Computer Science with Distinction and has led and delivered multiple real-world AI products used in commercial environments. He is passionate about bridging the gap between research prototypes and reliable, scalable systems in production.",
+        "secondSpeakerName": "",
+        "secondSpeakerJobTitle": "",
+        "secondSpeakerUrl": "",
+        "secondSpeakerBioPicUrl": "",
+        "secondSpeakerTileImageLocation": "",
+        "secondSpeakerBio": "",
+        "videoUrl": "",
+        "slidesUrl": "",
+        "status": "upcoming"
+    },
     {
         "id": 43,
         "eventID": 21,
