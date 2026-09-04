@@ -68,7 +68,7 @@ This helps us to manage capacity more effectively.
 
 ---
 
-## Speakers
+## Lineup
 
 {% if currentEvent and currentEvent.sessionIDs and currentEvent.sessionIDs.length > 0 %}
 {% for sessionId in currentEvent.sessionIDs %}
