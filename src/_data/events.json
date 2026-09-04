@@ -208,7 +208,7 @@
             49,
             50
         ],
-        "overview": "This event combines a practical talk on using archetypes to recognise business patterns and improve modelling decisions, followed by an interactive Lean Coffee session where attendees suggest topics, vote, and discuss what matters most."
+        "overview": "This event combines a practical talk on using archetypes to recognise business patterns and improve modelling decisions, followed by a session in Flutter refactoring to promote better state architecture"
     },
     {
         "id": 23,
@@ -256,7 +256,7 @@
             43,
             44
         ],
-        "overview": "This event explores real-world architectural lessons of building a commercial-grade Rust system on constrained hardware."
+        "overview": "This event explores real-world architectural lessons of building a commercial-grade Rust system on constrained hardware, followed by a look at why most AI systems are failing, and how you can build one that won't."
     },
     {
         "id": 20,
