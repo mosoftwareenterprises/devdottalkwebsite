@@ -1,5 +1,6 @@
 {
     "chat.tools.terminal.autoApprove": {
         "mise": true
-    }
+    },
+    "vitest.nodeExecutable": "${userHome}\\AppData\\Local\\mise\\installs\\node\\24.15.0\\node.exe"
 }
