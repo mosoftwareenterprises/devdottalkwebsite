@@ -1,58 +1,102 @@
 ---
 layout: layout
 title: "{dev.talk} - Other Local Tech Events"
-description: "A list of other local tech based events in the Bournemouth area"
+description: "A list of other local tech based events in the local area"
 includeBlueskyPosts: true
 permalink: local-events.html
 ---
 
 
-<h2 id="local_events"><a href="#local_events">Other local tech based events</a></h2>
-<p>A list of regular tech based events within 1 hour drive of Bournemouth:</p>
-<h3>NEW events</h3>
+{% set newEvents = [
+    { name: "AI for Business", url: "https://www.eventbrite.co.uk/o/121620041333" },
+    { name: "Future Shapers - Silicon South", url: "https://www.eventbrite.co.uk/o/11180390704" }
+] %}
+{% set newPodcasts = [
+    { name: "The Sam &amp; Ray Podcast", url: "https://shows.acast.com/the-sam-ray-podcast" },
+    { name: "The Technology Show Podcast", url: "http://www.thetechnologyshow.uk/" }
+] %}
+{% set monthlyMeetups = [
+    { name: "Bournemouth Haskell", url: "https://chat.whatsapp.com/IWZ1qAoUuyWEAIfRSDScj8?mode=wwc" },
+    { name: "Creatives Coffee Club", url: "https://justpickoneuk.eventbrite.com" },
+    { name: "Bournemouth 2600", url: "https://www.bournemouth2600.org/" },
+    { name: "Things Connected", url: "https://www.eventbrite.co.uk/o/things-connected-34135748213" }
+] %}
+{% set irregularMeetups = [
+    { name: "TechTonic", url: "https://siliconsouth.org.uk/event/techtonic/" },
+    { name: "OWASP Dorset Chapter", url: "https://www.meetup.com/owasp-dorset-chapter/" },
+    { name: "Speak Easy - Digital, Tech, Creative", url: "https://www.linkedin.com/groups/12699869/" },
+    { name: "South Coast eCommerce Meet-Up", url: "https://www.eventbrite.co.uk/e/south-coast-ecommerce-meet-up-tickets-1086879629229" },
+    { name: "CoastalUX", url: "https://siliconsouth.org.uk/event/coastal-ux-launch-event/" },
+    { name: "CyberSecWomen", url: "https://www.linkedin.com/company/cybersecwomen/posts/?feedView=all" },
+    { name: "Dorset Digital Skills Workshops", url: "https://www.eventbrite.co.uk/o/dorset-digital-skills-workshops-106011585641?aff=ebeseaorganizationprofile" },
+    { name: "DevOps Exchange - Bournemouth", url: "https://www.meetup.com/bournemouth-devops/" },
+    { name: "Golang Dorset", url: "https://www.meetup.com/golang-dorset/" },
+    { name: "Azure Engineering Guild", url: "https://chat.whatsapp.com/LQNzwkDKG4ZH3NV0U1TiG4" }
+] %}
+{% set annualConferences = [
+    { name: "re:connect Conference", url: "https://reconnectconference.co.uk/" },
+    { name: "BSides Bournemouth Conference", url: "https://bsides-bournemouth.org/" }
+] %}
+{% set southamptonEvents = [
+    { name: "Solent Futurescape", url: "https://solentgrowthpartnership.co.uk/our-services/ai-skills-partnership/solentfuturescape/" },
+    { name: "Solent Video Game Developers Meetup", url: "https://www.eventbrite.com/o/antivenin-games-114833670961" },
+    { name: "Southern Creative Catalyst | MAKE", url: "https://www.linkedin.com/company/creative-catalyst-south/posts/?feedView=all" },
+    { name: "Southampton Microsoft Data Platform and Azure Cloud", url: "https://www.meetup.com/southampton-data-platform-and-cloud-group/" },
+    { name: "Developer South Coast", url: "https://www.meetup.com/developersouthcoast/" },
+    { name: "Women in Tech Hampshire", url: "https://www.linkedin.com/groups/12907369/" },
+    { name: "PHP Hants", url: "https://www.meetup.com/meetup-group-phphants/" },
+    { name: "PyData Southampton", url: "https://www.meetup.com/pydata-southampton/" },
+    { name: "Microsoft Cloud (South Coast) User Group", url: "https://www.meetup.com/MCSCUG/" },
+    { name: "Hampshire AI", url: "https://www.linkedin.com/groups/13054429/" },
+    { name: "South Coast Technology Leaders", url: "https://www.eventbrite.com/cc/south-coast-technology-leaders-4814936" }
+] %}
+{% set dorsetEvents = [
+    { name: "Dorset Umbraco Meetup", url: "https://www.meetup.com/dorset-umbraco-meetup/" },
+    { name: "Women In Tech Dorset", url: "https://www.linkedin.com/groups/12742155/" }
+] %}
+{% set localEventCount = newEvents.length + newPodcasts.length + monthlyMeetups.length + irregularMeetups.length + annualConferences.length + southamptonEvents.length + dorsetEvents.length %}
+
+<h2 id="local_events"><a href="#local_events">Other local tech based events ({{ localEventCount }})</a></h2>
+<p>A list of {{ localEventCount }} tech based events within 1 hour drive of Bournemouth:</p>
+<h3>New events</h3>
 <ul>
-    <li><a href="https://chat.whatsapp.com/LQNzwkDKG4ZH3NV0U1TiG4" target="_blank" rel="noopener noreferrer">Azure Engineering Guild</a></li>   
-    </ul>
+{% for event in newEvents %}
+    <li><a href="{{ event.url }}" target="_blank" rel="noopener noreferrer">{{ event.name }}</a></li>
+{% endfor %}
+</ul>
+<h3>New Local Podcasts</h3>
+<ul>
+{% for event in newPodcasts %}
+    <li><a href="{{ event.url }}" target="_blank" rel="noopener noreferrer">{{ event.name }}</a></li>
+{% endfor %}
+</ul>
 <h3>Bournemouth Area monthly meetups</h3>
 <ul>
-    <li><a href="https://chat.whatsapp.com/IWZ1qAoUuyWEAIfRSDScj8?mode=wwc" target="_blank" rel="noopener noreferrer">Bournemouth Haskell</a></li>
-    <li><a href="https://justpickoneuk.eventbrite.com" target="_blank" rel="noopener noreferrer">Creatives Coffee Club</a></li>
-    <li><a href="https://www.bournemouth2600.org/" target="_blank" rel="noopener noreferrer">Bournemouth 2600</a></li>
-    <li><a href="https://www.eventbrite.co.uk/o/things-connected-34135748213" target="_blank" rel="noopener noreferrer">Things Connected</a></li>
+{% for event in monthlyMeetups %}
+    <li><a href="{{ event.url }}" target="_blank" rel="noopener noreferrer">{{ event.name }}</a></li>
+{% endfor %}
 </ul>
 <h3>Bournemouth Area irregular meetups</h3>
 <ul>
-    <li><a href="https://siliconsouth.org.uk/event/techtonic/" target="_blank" rel="noopener noreferrer">TechTonic</a></li>
-    <li><a href="https://www.meetup.com/owasp-dorset-chapter/" target="_blank" rel="noopener noreferrer">OWASP Dorset Chapter</a></li>
-    <li><a href="https://www.linkedin.com/groups/12699869/" target="_blank" rel="noopener noreferrer">Speak Easy - Digital, Tech, Creative</a></li>
-    <li><a href="https://www.eventbrite.co.uk/e/south-coast-ecommerce-meet-up-tickets-1086879629229" target="_blank" rel="noopener noreferrer">South Coast eCommerce Meet-Up</a></li>
-    <li><a href="https://siliconsouth.org.uk/event/coastal-ux-launch-event/" target="_blank" rel="noopener noreferrer">CoastalUX</a></li>
-    <li><a href="https://www.linkedin.com/company/cybersecwomen/posts/?feedView=all" target="_blank" rel="noopener noreferrer">CyberSecWomen</a></li>
-    <li><a href="https://www.eventbrite.co.uk/o/dorset-digital-skills-workshops-106011585641?aff=ebeseaorganizationprofile" target="_blank" rel="noopener noreferrer">Dorset Digital Skills Workshops</a></li>
-    <li><a href="https://www.meetup.com/bournemouth-devops/" target="_blank" rel="noopener noreferrer">DevOps Exchange - Bournemouth</a></li>
-    <li><a href="https://www.meetup.com/golang-dorset/" target="_blank" rel="noopener noreferrer">Golang Dorset</a></li>
+{% for event in irregularMeetups %}
+    <li><a href="{{ event.url }}" target="_blank" rel="noopener noreferrer">{{ event.name }}</a></li>
+{% endfor %}
 </ul>
 <h3>Bournemouth Area annual Conferences</h3>
 <ul>
-    <li><a href="https://reconnectconference.co.uk/" target="_blank" rel="noopener noreferrer">re:connect Conference</a></li>
-    <li><a href="https://bsides-bournemouth.org/" target="_blank" rel="noopener noreferrer">BSides Bournemouth Conference</a></li>
+{% for event in annualConferences %}
+    <li><a href="{{ event.url }}" target="_blank" rel="noopener noreferrer">{{ event.name }}</a></li>
+{% endfor %}
 </ul>
 <h3>Southampton Area</h3>
 <ul>
-    <li><a href="https://solentgrowthpartnership.co.uk/our-services/ai-skills-partnership/solentfuturescape/" target="_blank" rel="noopener noreferrer">Solent Futurescape</a></li>
-    <li><a href="https://www.eventbrite.com/o/antivenin-games-114833670961" target="_blank" rel="noopener noreferrer">Solent Video Game Developers Meetup</a></li>
-    <li><a href="https://www.linkedin.com/company/creative-catalyst-south/posts/?feedView=all" target="_blank" rel="noopener noreferrer">Southern Creative Catalyst | MAKE</a></li>
-    <li><a href="https://www.meetup.com/southampton-data-platform-and-cloud-group/" target="_blank" rel="noopener noreferrer">Southampton Microsoft Data Platform and Azure Cloud</a></li>
-    <li><a href="https://www.meetup.com/developersouthcoast/" target="_blank" rel="noopener noreferrer">Developer South Coast</a></li>
-    <li><a href="https://www.linkedin.com/groups/12907369/" target="_blank" rel="noopener noreferrer">Women in Tech Hampshire</a></li>
-    <li><a href="https://www.meetup.com/meetup-group-phphants/" target="_blank" rel="noopener noreferrer">PHP Hants</a></li>
-    <li><a href="https://www.meetup.com/pydata-southampton/" target="_blank" rel="noopener noreferrer">PyData Southampton</a></li>
-    <li><a href="https://www.meetup.com/MCSCUG/" target="_blank" rel="noopener noreferrer">Microsoft Cloud (South Coast) User Group</a></li>
-    <li><a href="https://www.linkedin.com/groups/13054429/" target="_blank" rel="noopener noreferrer">Hampshire AI</a></li>
-    <li><a href="https://www.eventbrite.com/cc/south-coast-technology-leaders-4814936" target="_blank" rel="noopener noreferrer">South Coast Technology Leaders</a></li>
+{% for event in southamptonEvents %}
+    <li><a href="{{ event.url }}" target="_blank" rel="noopener noreferrer">{{ event.name }}</a></li>
+{% endfor %}
 </ul>
 <h3>Dorset based</h3>
 <ul>
-    <li><a href="https://www.meetup.com/dorset-umbraco-meetup/" target="_blank" rel="noopener noreferrer">Dorset Umbraco Meetup</a></li>
-    <li><a href="https://www.linkedin.com/groups/12742155/" target="_blank" rel="noopener noreferrer">Women In Tech Dorset</a></li>
+{% for event in dorsetEvents %}
+    <li><a href="{{ event.url }}" target="_blank" rel="noopener noreferrer">{{ event.name }}</a></li>
+{% endfor %}
 </ul>
