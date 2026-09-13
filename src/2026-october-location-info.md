@@ -1,14 +1,14 @@
 ---
 layout: layout
-title: "{dev.talk} - September 2026"
-description: "Event details for {dev.talk} July 2026 - {dev.talk} - The one where we are all a bit rusty after the holidays"
+title: "{dev.talk} - October 2026"
+description: "Event details for {dev.talk} October 2026 - {dev.talk} - The one where we are all a bit rusty after the holidays"
 includeBlueskyPosts: true
 hideNextEventBanner: true
 hideMainLogo: false
 templateEngineOverride: njk,md
-permalink: 2026-september-location-info.html
+permalink: 2026-october-location-info.html
 showVenueSection: false
-eventId: 21
+eventId: 22
 ---
 
 {% from "event-overview.njk" import eventOverview %}
