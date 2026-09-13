@@ -505,28 +505,7 @@
         "slidesUrl": "",
         "status": "upcoming"
     },
-    {
-        "id": 53,
-        "eventID": 26,
-        "title": "First February session",
-        "duration": 45,
-        "description": "We are looking for a speaker for this session. If you are interested in speaking at this event, please get in touch with us.",
-        "firstSpeakerName": "It could be you!",
-        "firstSpeakerJobTitle": "Your Job title here",
-        "firstSpeakerUrl": "",
-        "firstSpeakerBioPicUrl": "",
-        "firstSpeakerTileImageLocation": "",
-        "firstSpeakerBio": "Your bio would go here. This is a chance to tell the community about yourself and your work. You can talk about your background, your interests, and what you would like to share with the community.",
-        "secondSpeakerName": "",
-        "secondSpeakerJobTitle": "",
-        "secondSpeakerUrl": "",
-        "secondSpeakerBioPicUrl": "",
-        "secondSpeakerTileImageLocation": "",
-        "secondSpeakerBio": "",
-        "videoUrl": "",
-        "slidesUrl": "",
-        "status": "upcoming"
-    },
+
     {
         "id": 52,
         "eventID": 25,
@@ -815,7 +794,7 @@
     },
     {
         "id": 39,
-        "eventID": 19,
+        "eventID": 26,
         "title": "3D Asset Creation, Integration & Publishing for Games",
         "duration": 30,
         "description": "The session will explore the fundamentals of how to create 3D models and assets for games development in mind. We will be exploring creating assets based on your game engine of choice, in this session will be for Unity or Unreal Engine.\nThe modelling examples and tips will be using Autodesk's Maya 3D modelling software, where we will be diving through the fundamentals of workflow, UV's and exporting.\nWill then be taking a quick look when it comes to texturing models in mainstream software such as Adobe's Substance Painter and how to export your textures correctly here.\nAnd then will be deep diving into integrating game assets and textures into your game engine of choice, creating materials, and some of the engine technologies such as Unreal Engine's 'Nanite' to help with asset optimisation and performance.\nOnce asset integration has finished, will be talking about my experience publishing assets together into asset packs, and how to handle the corporate side of things with companies involved.",

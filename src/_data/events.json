@@ -173,10 +173,10 @@
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
         "venueName": "Room K101, Kimmeridge House",
         "sessionIDs": [
-            53,
+            39,
             54
         ],
-        "overview": ""
+        "overview": "This event features a practical talk on 3D game asset creation and a collaborative Lean Coffee session, where attendees can suggest topics, vote, and discuss what matters most to the community."
     },
     {
         "id": 25,
@@ -287,7 +287,6 @@
         "venueName": "Room K101, Kimmeridge House",
         "isCancelled": true,
         "sessionIDs": [
-            39,
             40
         ],
         "overview": "This event features a practical talk on 3D game asset creation and a collaborative Lean Coffee session, where attendees can suggest topics, vote, and discuss what matters most to the community."
