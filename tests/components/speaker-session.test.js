@@ -78,7 +78,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('Speaker Bio');
+      expect(html).toContain('Alice Fictional Developer Bio');
       expect(html).toContain('Alice specializes in testing methodologies and mock data generation');
     });
   });
@@ -137,7 +137,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('<h5>Speaker Bio</h5>');
+      expect(html).toContain('<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>');
     });
 
     it('should add formatted-description class to the session description', () => {
@@ -149,6 +149,45 @@ describe('speaker-session component', () => {
       );
 
       expect(html).toContain('<p class="formatted-description">');
+    });
+
+    it('should render the tile image, speaker list, description, and bios in order', () => {
+      const sessionWithTwoSpeakers = [{
+        ...mockSessions[0],
+        secondSpeakerName: 'Bob Co-Speaker',
+        secondSpeakerUrl: 'https://www.linkedin.com/in/bob-co-speaker/',
+        secondSpeakerJobTitle: 'Testing Partner',
+        secondSpeakerBio: 'Bob collaborates on practical testing patterns.'
+      }];
+
+      const html = renderMacro(
+        templatePath,
+        macroName,
+        [999, sessionWithTwoSpeakers],
+        { sessions: { allEvents: sessionWithTwoSpeakers } }
+      );
+
+      expect(html.indexOf('speaker-headshot')).toBeLessThan(html.indexOf('speaker-session-speakers'));
+      expect(html).toContain('<div class="speaker-session-speakers speaker-session-speakers--paired">');
+      expect(html.indexOf('speaker-session-speakers')).toBeLessThan(html.indexOf('<h4>'));
+      expect(html.indexOf('<h4>')).toBeLessThan(html.indexOf('<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>'));
+      expect(html).toContain('<h5 class="speaker-session-bio-heading">Bob Co-Speaker Bio</h5>');
+    });
+
+    it('should render only populated speaker links with secure new-tab attributes', () => {
+      const html = renderMacro(
+        templatePath,
+        macroName,
+        [999, mockSessions],
+        { sessions: { allEvents: mockSessions } }
+      );
+
+      expect(html).toContain('class="speaker-session-speaker-link"');
+      expect(html).not.toContain('speaker-session-speakers--paired');
+      expect(html).toContain('target="_blank"');
+      expect(html).toContain('rel="noopener noreferrer"');
+      expect(html).not.toContain('href=""');
+      expect(html).not.toContain('<h3></h3>');
     });
   });
 

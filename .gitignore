@@ -1,6 +1,7 @@
 node_modules/
 /test-results/
 /_site/
+.worktrees/
 .rodney/
 .unlighthouse/
 /.tilecache/
