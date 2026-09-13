@@ -52,13 +52,11 @@
                 <p class="formatted-description">{{ sessionRecord.description | markdownInline | safe }}</p>
                 {# Speaker Bio's #}
                 {% if sessionRecord.firstSpeakerBio %}
-                    <h5 class="speaker-session-bio-heading">{{ sessionRecord.firstSpeakerName }}
-                        Bio</h5>
+                    <h5 class="speaker-session-bio-heading">{{ sessionRecord.firstSpeakerName }} Bio</h5>
                     <p class="formatted-description">{{ sessionRecord.firstSpeakerBio }}</p>
                 {% endif %}
                 {% if sessionRecord.secondSpeakerBio %}
-                    <h5 class="speaker-session-bio-heading">{{ sessionRecord.secondSpeakerName }}
-                        Bio</h5>
+                    <h5 class="speaker-session-bio-heading">{{ sessionRecord.secondSpeakerName }} Bio</h5>
                     <p class="formatted-description">{{ sessionRecord.secondSpeakerBio }}</p>
                 {% endif %}
             {% endif %}

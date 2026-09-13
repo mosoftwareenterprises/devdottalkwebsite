@@ -167,7 +167,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: sessionWithTwoSpeakers } }
       );
 
-      expect(html.indexOf('speaker-headshot')).toBeLessThan(html.indexOf('speaker-session-speakers'));
+      expect(html.indexOf('speaker-session-speakers')).toBeLessThan(html.indexOf('speaker-headshot'));
       expect(html).toContain('<div class="speaker-session-speakers speaker-session-speakers--paired">');
       expect(html.indexOf('speaker-session-speakers')).toBeLessThan(html.indexOf('<h4>'));
       expect(html.indexOf('<h4>')).toBeLessThan(html.indexOf('<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>'));
