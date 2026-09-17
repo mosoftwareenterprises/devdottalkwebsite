@@ -84,7 +84,7 @@
             "route": "/2026-september-location-info.html",
             "redirect": "/2026-september-location-info.html",
             "statusCode": 301
-        }
+        },
         {
             "route": "/tickets",
             "redirect": "https://luma.com/8fa4y4he",
