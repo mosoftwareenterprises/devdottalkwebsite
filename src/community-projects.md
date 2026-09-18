@@ -18,7 +18,8 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 ## Blogs & Personal Sites
 
-- [Mark Oliver's Blog](https://blog.markoliver.website) — Technical articles, tutorials and community insights from {dev.talk}'s founder. *by [Mark Oliver](https://www.linkedin.com/in/profileformarkoliver/)*
+- [Mark Oliver's Blog](https://blog.markoliver.website) — Technical articles and general ramblings from {dev.talk}'s founder [Mark Oliver](https://www.linkedin.com/in/profileformarkoliver/)
+- [David Cropley's Blog](https://tauriemotum.uk/index.php/blog/) - Technical articles from [David Cropley](https://www.linkedin.com/in/david-cropley-aa23b629/)
 
 ---
 
