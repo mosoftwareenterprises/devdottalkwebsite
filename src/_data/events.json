@@ -167,7 +167,7 @@
         "date": "2027-02-24",
         "displayDate": "February 24th 2027",
         "url": "/2027-february-location-info.html",
-        "title": "{dev.talk} - The one in February",
+        "title": "{dev.talk} - The One With the Belts, the Bugs and the Boss Fights",
         "photoUrl": "TODO",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
@@ -176,7 +176,7 @@
             39,
             54
         ],
-        "overview": "This event features a practical talk on 3D game asset creation and a collaborative Lean Coffee session, where attendees can suggest topics, vote, and discuss what matters most to the community."
+        "overview": "This event brings together two practical and very different perspectives: Osama Okunbo explores impostor syndrome in tech through the lens of professional judo, offering strategies for building confidence and learning from failure, while Rhys Green covers the complete game-asset workflow, from 3D modelling and texturing to engine integration and publishing. Come for honest career insight, practical creative and technical knowledge, and ideas you can apply immediately."
     },
     {
         "id": 25,
@@ -192,14 +192,14 @@
             51,
             52
         ],
-        "overview": ""
+        "overview": "This event is currently being planned, with 2 speakers. Details forthcoming."
     },
     {
         "id": 24,
         "date": "2026-12-16",
         "displayDate": "December 16th 2026",
         "url": "/2026-december-location-info.html",
-        "title": "{dev.talk} - The one where we celebrate together",
+        "title": "{dev.talk} - The One With the Secret Superpowers and the State Boundaries",
         "photoUrl": "TODO",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
@@ -208,14 +208,14 @@
             49,
             50
         ],
-        "overview": "This event combines a practical talk on using archetypes to recognise business patterns and improve modelling decisions, followed by a session in Flutter refactoring to promote better state architecture"
+        "overview": "This event explores how developers can recognise patterns and make better decisions when designing software. Discover how archetypes can reveal business models and make complex problems feel surprisingly clear, then see how thoughtful state boundaries can transform a growing Flutter application. Come for practical ideas on modelling, architecture and avoiding overengineering, whether you work in mobile development or beyond."
     },
     {
         "id": 23,
         "date": "2026-11-25",
         "displayDate": "November 25th 2026",
         "url": "/2026-november-location-info.html",
-        "title": "{dev.talk} - The one where we all want to stay in doors",
+        "title": "{dev.talk} - The One With Jarvis, Knitting and the Tests That Don't Lie",
         "photoUrl": "TODO",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
@@ -224,7 +224,7 @@
             47,
             48
         ],
-        "overview": "This event features two sessions: a continuation of the JarvisOS journey, followed by \"Knit 1, Perl 1\", which explores the surprising overlap between knitting and programming."
+        "overview": "This event explores what happens when ambitious ideas meet the realities of building software. Hear how JarvisOS evolved from an offline AI concept into a more purposeful project, with lessons from experimentation, teamwork and setbacks. Katy Ereira then shares her experience as a software engineer and speaker, including the surprising connections between knitting, programming and the craft of writing reliable software."
     },
     {
         "id": 22,
