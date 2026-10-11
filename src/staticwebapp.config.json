@@ -41,6 +41,16 @@
             "statusCode": 302
         },
         {
+            "route": "/feedback",
+            "redirect": "https://forms.gle/kKaFN1HAUX6pNAtk6",
+            "statusCode": 302
+        },
+        {
+            "route": "/speakerfeedback",
+            "redirect": "https://forms.gle/BrHud1Nrt1exWJNm9",
+            "statusCode": 302
+        },
+        {
             "route": "/2026-february-location-info.html",
             "redirect": "/2026-february-location-info.html",
             "statusCode": 301
