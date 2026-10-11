@@ -1,0 +1,61 @@
+---
+layout: layout
+title: "{dev.talk} - Available Speaker Slots"
+description: "Dates and session slots still open for accepted {dev.talk} speakers."
+permalink: speaker-slots.html
+eleventyExcludeFromCollections: true
+includeBlueskyPosts: false
+includeSpeakerSlotsStyles: true
+---
+
+{% set allSessions = sessions.allEvents or [] %}
+
+<section class="speaker-slots">
+  <h1>Available speaker slots</h1>
+  <p>Pick a date below and press "I want this slot" to email us. Your name and session title are filled in from the link you were sent.</p>
+  <dl class="speaker-slots-who" data-speaker-summary hidden>
+    <dt>Speaker</dt>
+    <dd data-speaker-name></dd>
+    <dt>Session</dt>
+    <dd data-speaker-session></dd>
+  </dl>
+
+  <ul class="speaker-slots-list">
+    {% for ev in events.upcoming | rejectattr('isCancelled') %}
+      {% if not ev.isNoEventMonth %}
+        {% set assignedSpeakerCount = 0 %}
+        {% for sess in allSessions %}
+          {% set sessionTitle = (sess.title or "") | trim | lower %}
+          {# Lean Coffee is community-led and does not use a speaker slot. #}
+          {% if sessionTitle != "lean coffee session" %}
+            {% set sessionMatchesEvent = false %}
+            {% if ev.sessionIDs is defined and ev.sessionIDs and (sess.id in ev.sessionIDs) %}
+              {% set sessionMatchesEvent = true %}
+            {% elif sess.eventID is defined and sess.eventID == ev.id %}
+              {% set sessionMatchesEvent = true %}
+            {% endif %}
+            {% if sessionMatchesEvent %}
+              {% set firstSpeakerName = (sess.firstSpeakerName or "") | trim | lower %}
+              {% if firstSpeakerName and firstSpeakerName != "it could be you!" %}
+                {% set assignedSpeakerCount = assignedSpeakerCount + 1 %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% set openSlots = 2 - assignedSpeakerCount %}
+        {% if openSlots > 0 %}
+          <li class="speaker-slots-item">
+            <h2>{{ ev.fullDateLabel }}</h2>
+            <p>{{ openSlots }} of 2 session slots available</p>
+            {% for n in range(0, openSlots) %}
+              <a class="speaker-slots-button" href="mailto:speaker@devdottalk.uk" data-slot-date="{{ ev.fullDateLabel }}">I want this slot</a>
+            {% endfor %}
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+<script src="/speaker-slots.js"></script>

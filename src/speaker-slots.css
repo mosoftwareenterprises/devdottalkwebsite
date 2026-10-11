@@ -1,0 +1,39 @@
+.speaker-slots-list {
+  list-style: none;
+  padding: 0;
+}
+
+.speaker-slots-item {
+  margin-bottom: 1.5rem;
+}
+
+.speaker-slots-button {
+  display: inline-block;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: #0b5cad;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.speaker-slots-button:hover,
+.speaker-slots-button:focus {
+  background: #084680;
+}
+
+.speaker-slots-who {
+margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #0b5cad;
+    background: #f2f6fb;
+}
+
+.speaker-slots-who dt {
+  font-weight: bold;
+}
+
+.speaker-slots-who dd {
+    margin: 0 0 0.5rem;
+}

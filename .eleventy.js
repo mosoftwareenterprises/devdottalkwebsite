@@ -40,6 +40,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("src/bluesky.js");
+  eleventyConfig.addPassthroughCopy("src/speaker-slots.js");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/*.jpg");
   eleventyConfig.addPassthroughCopy("src/*.png");
