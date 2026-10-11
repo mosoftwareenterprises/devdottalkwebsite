@@ -65,6 +65,7 @@ describe('index upcoming events section', () => {
         expect(html).toContain('15 March 2026');
         expect(html).not.toContain('Mock Testing Mock Workshop');
         expect(html).toContain('class="event-speaker-wanted-inline"');
+        expect(html).toContain('<strong class="event-speaker-wanted-label">🎤 Speaker wanted:</strong>');
         expect(html).toContain('/call-for-speakers.html');
         expect(html).toContain('/contact-us.html');
     });
@@ -171,7 +172,7 @@ describe('index upcoming events section', () => {
         expect(html).not.toContain('15 March 2026');
         expect(html).toContain('event-item--no-event');
         expect(html).toContain('event-status--no-event');
-        expect(html).toContain('pause events in summer to give everyone a chance to touch grass');
+        expect(html).toMatch(/<b>July 2027<\/b>\s*<span class="event-status event-status--no-event">☀️ We pause events in summer to give everyone a chance to touch grass\.<\/span>/);
     });
 
     it('does not show speaker-wanted prompts for no-event months', () => {

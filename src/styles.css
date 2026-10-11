@@ -669,8 +669,8 @@ li p {
 }
 
 .event-item--no-event {
-  background: linear-gradient(180deg, #eef8f1 0%, #e1f1e7 100%);
-  border: 1px solid #b6d9c2;
+  background: linear-gradient(180deg, #f4f5f6 0%, #eceff1 100%);
+    border: 1px solid #d2d6da;
 }
 
 .event-item--speaker-wanted b {
@@ -683,6 +683,10 @@ li p {
   font-size: 0.9rem;
 }
 
+.event-speaker-wanted-label {
+  font-size: 1rem;
+  font-weight: 700;
+}
 .previous-events-year-list {
   list-style: none;
   margin: 0;
@@ -724,10 +728,11 @@ li p {
 }
 
 .event-status--no-event {
-  background: #edf8f1;
-  border: 1px solid #b9ddc6;
-  border-left: 5px solid #2f7a4a;
-  color: #184b2d;
+  display: inline;
+    color: #50565c;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-left: 8px;
 }
 
 .event-pill {
