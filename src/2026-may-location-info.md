@@ -157,6 +157,8 @@ For more on the event format, see our [Attending page](/attending.html) and [FAQ
 
 ## Important Notes
 
+By attending this event, you agree to our [Privacy Policy](/privacy-policy.html) and [Code of Conduct](/code-of-conduct.html).
+
 **Photography & Recording:**
 Please note that the event will be recorded and photographed. If you prefer not to be included in any photos or videos, kindly inform the camera operator. These materials will be used to promote future events and shared on platforms like YouTube.
 
