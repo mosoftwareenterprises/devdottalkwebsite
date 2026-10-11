@@ -1,7 +1,7 @@
 ---
 layout: layout
 title: "{dev.talk} - February 2027"
-description: "Event details for {dev.talk} February 2027 - The one in February"
+description: "Event details for {dev.talk} February 2027 - {dev.talk} - The One With the Belts, the Bugs and the Boss Fights"
 includeBlueskyPosts: true
 hideNextEventBanner: true
 hideMainLogo: false

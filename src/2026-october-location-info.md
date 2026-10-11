@@ -1,7 +1,7 @@
 ---
 layout: layout
 title: "{dev.talk} - October 2026"
-description: "Event details for {dev.talk} October 2026 - {dev.talk} - The one where we are all a bit rusty after the holidays"
+description: "Event details for {dev.talk} October 2026 - {dev.talk} - The One Where We Ask, \"Could This Be Any More Useful?\""
 includeBlueskyPosts: true
 hideNextEventBanner: true
 hideMainLogo: false
