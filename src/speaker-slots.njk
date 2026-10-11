@@ -11,14 +11,25 @@ includeSpeakerSlotsStyles: true
 {% set allSessions = sessions.allEvents or [] %}
 
 <section class="speaker-slots">
-  <h1>Available speaker slots</h1>
-  <p>Pick a date below and press "I want this slot" to email us. Your name and session title are filled in from the link you were sent.</p>
+  <h1 data-speaker-greeting>Thanks for volunteering to speak at {dev.talk}!</h1>
+  <p>We're really glad to have you. Have a look at the dates below, pick the one that suits you and press "I want this slot". It opens an email to our speaker team with your details already filled in, so just review it and hit send.</p>
   <dl class="speaker-slots-who" data-speaker-summary hidden>
     <dt>Speaker</dt>
     <dd data-speaker-name></dd>
     <dt>Session</dt>
     <dd data-speaker-session></dd>
   </dl>
+
+  <h2>Before you choose</h2>
+  <ul class="speaker-slots-help">
+    <li><a href="/attending.html">What to expect</a> when you come along</li>
+    <li><a href="/code-of-conduct.html">Code of conduct</a></li>
+    <li><a href="/previous-events.html">Previous events</a> to get a feel for the evening</li>
+    <li><a href="/speakers.html">Meet some of our past speakers</a></li>
+    <li><a href="/faqs.html">FAQs</a></li>
+  </ul>
+
+  <h2>Available dates</h2>
 
   <ul class="speaker-slots-list">
     {% for ev in events.upcoming | rejectattr('isCancelled') %}

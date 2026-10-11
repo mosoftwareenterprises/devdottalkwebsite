@@ -20,6 +20,9 @@ describe('speaker slots page', () => {
     expect(content).toContain('mailto:speaker@devdottalk.uk');
       expect(content).toContain('data-speaker-name');
       expect(content).toContain('data-speaker-session');
+    expect(content).toContain('/code-of-conduct.html');
+    expect(content).toContain('/previous-events.html');
+    expect(content).toContain('/attending.html');
   });
 
   it('builds a mailto with date, name and session', () => {

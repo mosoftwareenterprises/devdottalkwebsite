@@ -29,6 +29,10 @@
     });
 
     var summary = doc.querySelector('[data-speaker-summary]');
+    var greeting = doc.querySelector('[data-speaker-greeting]');
+    if (greeting && name) {
+      greeting.textContent = 'Hi ' + name + ', thanks for volunteering to speak at {dev.talk}!';
+    }
     if (summary && (name || session)) {
         summary.querySelector('[data-speaker-name]').textContent = name || 'Not provided';
         summary.querySelector('[data-speaker-session]').textContent = session || 'Not provided';
