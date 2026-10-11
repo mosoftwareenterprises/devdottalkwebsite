@@ -41,6 +41,10 @@
             "statusCode": 302
         },
         {
+            "route": "/links",
+            "rewrite": "/links.html"
+        },
+        {
             "route": "/feedback",
             "redirect": "https://forms.gle/kKaFN1HAUX6pNAtk6",
             "statusCode": 302

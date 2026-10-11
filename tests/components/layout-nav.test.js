@@ -47,6 +47,13 @@ describe('layout navigation menu', () => {
     expect(calendarLink?.textContent?.trim()).toBe('Events Calendar');
   });
 
+  it('keeps the standalone links page out of the primary navigation', () => {
+    const dom = createLayoutDom();
+    const linksPageLink = dom.window.document.querySelector('#primary-nav a[href="/links"]');
+
+    expect(linksPageLink).toBeNull();
+  });
+
   it('closes the menu when clicking outside the nav bar', () => {
     const dom = createLayoutDom();
     const { document } = dom.window;
