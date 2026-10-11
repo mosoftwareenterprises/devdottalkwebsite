@@ -15,7 +15,7 @@
         <p>Session not found.</p>
     {% else %}
         {# Speaker names and job titles #}
-        <div class="speaker-session-speakers{% if sessionRecord.secondSpeakerName %} speaker-session-speakers--paired{% endif %}">
+        <div class="speaker-session-speakers{% if sessionRecord.secondSpeakerName %} speaker-session-speakers--paired{% endif %}{% if sessionRecord.thirdSpeakerName %} speaker-session-speakers--triple{% endif %}">
             <div class="speaker-session-speaker">
                 {% set tileImage = sessionRecord.firstSpeakerTileImageLocation %}
                 {# Tile image #}
@@ -46,6 +46,21 @@
                             </a>
                         </div>
                     {% endif %}
+                {% if sessionRecord.thirdSpeakerName %}
+                    <div class="speaker-session-speaker">
+                        {% set tileImage3 = sessionRecord.thirdSpeakerTileImageLocation %}
+                        {% if tileImage3 %}
+                            <a href="{{ sessionRecord.thirdSpeakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-session-image-link" title="{{ sessionRecord.thirdSpeakerName }} profile">
+                                <img src="{{ tileImage3 }}" loading="lazy" class="speaker-headshot" alt="{{ sessionRecord.thirdSpeakerName }} speaker headshot"></a>
+                            {% endif %}
+                            <a href="{{ sessionRecord.thirdSpeakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-session-speaker-link" title="{{ sessionRecord.thirdSpeakerName }} profile">
+                                <h3>{{ sessionRecord.thirdSpeakerName }}</h3>
+                                {% if sessionRecord.thirdSpeakerJobTitle %}
+                                    <strong>{{ sessionRecord.thirdSpeakerJobTitle }}</strong>
+                                {% endif %}
+                            </a>
+                        </div>
+                    {% endif %}
                 </div>
                 {# Session title and description #}
                 <h4>{{ sessionRecord.title }}</h4>
@@ -58,6 +73,10 @@
                 {% if sessionRecord.secondSpeakerBio %}
                     <h5 class="speaker-session-bio-heading">{{ sessionRecord.secondSpeakerName }} Bio</h5>
                     <p class="formatted-description">{{ sessionRecord.secondSpeakerBio }}</p>
+                {% endif %}
+                {% if sessionRecord.thirdSpeakerBio %}
+                    <h5 class="speaker-session-bio-heading">{{ sessionRecord.thirdSpeakerName }} Bio</h5>
+                    <p class="formatted-description">{{ sessionRecord.thirdSpeakerBio }}</p>
                 {% endif %}
             {% endif %}
         {% endmacro %}

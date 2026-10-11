@@ -30,8 +30,12 @@
         {% endif %}
       </b>
       -
-      {# Display up to 2 speakers if present #}
-      {% if s.secondSpeakerName and s.secondSpeakerUrl %}
+      {# Display up to 3 speakers if present #}
+      {% if s.secondSpeakerName and s.secondSpeakerUrl and s.thirdSpeakerName and s.thirdSpeakerUrl %}
+        <a href="{{ s.firstSpeakerUrl }}" target="_blank" rel="noopener noreferrer">{{ s.firstSpeakerName }}</a>,
+        <a href="{{ s.secondSpeakerUrl }}" target="_blank" rel="noopener noreferrer">{{ s.secondSpeakerName }}</a>
+        &amp; <a href="{{ s.thirdSpeakerUrl }}" target="_blank" rel="noopener noreferrer">{{ s.thirdSpeakerName }}</a>
+      {% elif s.secondSpeakerName and s.secondSpeakerUrl %}
         <a href="{{ s.firstSpeakerUrl }}" target="_blank" rel="noopener noreferrer">{{ s.firstSpeakerName }}</a>
         &amp; <a href="{{ s.secondSpeakerUrl }}" target="_blank" rel="noopener noreferrer">{{ s.secondSpeakerName }}</a>
       {% else %}

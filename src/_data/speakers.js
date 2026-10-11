@@ -65,6 +65,17 @@ export default () => {
                 session
             );
         }
+        if (session.thirdSpeakerName) {
+            addSpeaker(
+                session.thirdSpeakerName,
+                session.thirdSpeakerJobTitle,
+                session.thirdSpeakerUrl,
+                session.thirdSpeakerBioPicUrl,
+                session.thirdSpeakerTileImageLocation,
+                session.thirdSpeakerBio,
+                session
+            );
+        }
     }
 
     // Sort alphabetically by last name

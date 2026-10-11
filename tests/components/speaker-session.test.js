@@ -174,6 +174,37 @@ describe('speaker-session component', () => {
       expect(html).toContain('<h5 class="speaker-session-bio-heading">Bob Co-Speaker Bio</h5>');
     });
 
+    it('should render a third speaker and bio only when provided', () => {
+      const sessionWithThree = [{
+        ...mockSessions[0],
+        secondSpeakerName: 'Bob Co-Speaker',
+        secondSpeakerUrl: 'https://www.linkedin.com/in/bob-co-speaker/',
+        thirdSpeakerName: 'Cara Third',
+        thirdSpeakerUrl: 'https://www.linkedin.com/in/cara-third/',
+        thirdSpeakerJobTitle: 'Tester',
+        thirdSpeakerBio: 'Cara tests things.'
+      }];
+
+      const html = renderMacro(
+        templatePath,
+        macroName,
+        [999, sessionWithThree],
+        { sessions: { allEvents: sessionWithThree } }
+      );
+
+      expect(html).toContain('speaker-session-speakers--triple');
+      expect(html).toContain('<h3>Cara Third</h3>');
+      expect(html).toContain('<h5 class="speaker-session-bio-heading">Cara Third Bio</h5>');
+
+      const twoOnly = renderMacro(
+        templatePath,
+        macroName,
+        [999, mockSessions],
+        { sessions: { allEvents: mockSessions } }
+      );
+      expect(twoOnly).not.toContain('speaker-session-speakers--triple');
+    });
+
     it('should render only populated speaker links with secure new-tab attributes', () => {
       const html = renderMacro(
         templatePath,

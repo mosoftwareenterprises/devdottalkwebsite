@@ -224,7 +224,7 @@
             47,
             48
         ],
-        "overview": "This event explores what happens when ambitious ideas meet the realities of building software. Hear how JarvisOS evolved from an offline AI concept into a more purposeful project, with lessons from experimentation, teamwork and setbacks. Katy Ereira then shares her experience as a software engineer and speaker, including the surprising connections between knitting, programming and the craft of writing reliable software."
+        "overview": "This event explores what happens when ambitious ideas meet the realities of building software. Hear how JarvisOS evolved from an offline AI concept into a more purposeful project, as a team of three speakers shares lessons from experimentation, teamwork and setbacks. Katy Ereira then shares her experience as a software engineer and speaker, including the surprising connections between knitting, programming and the craft of writing reliable software."
     },
     {
         "id": 22,
@@ -238,9 +238,10 @@
         "venueName": "Room K101, Kimmeridge House",
         "sessionIDs": [
             45,
-            46
+            46,
+            77
         ],
-        "overview": "Join us for an evening about turning good technology and strategy into outcomes that work for real people. Explore how making user needs visible can improve alignment, team design, and flow, then hear candid lessons from putting AI products in front of diverse users. Come for practical ideas on building technology that teams can organise around and people can genuinely understand, trust, and use."
+        "overview": "Join us for an evening about building technology that works for real people and stays safe to change. Explore how making user needs visible can improve alignment, team design, and flow, then hear candid lessons from putting AI products in front of diverse users. Finish with a short, honest talk on hidden technical debt, N+1 API calls, and designing software that remains easy to change as it scales."
     },
     {
         "id": 21,

@@ -108,6 +108,22 @@ describe('session-info-item component', () => {
       expect(html).toContain('&amp;');
     });
 
+    it('should show three speakers when a third is provided', () => {
+      const triple = {
+        ...mockSessions[0],
+        secondSpeakerName: 'John Doe',
+        secondSpeakerUrl: 'https://linkedin.com/in/johndoe',
+        thirdSpeakerName: 'Cara Third',
+        thirdSpeakerUrl: 'https://linkedin.com/in/cara'
+      };
+
+      const html = renderMacro(templatePath, macroName, [triple]);
+
+      expect(html).toContain('John Doe');
+      expect(html).toContain('Cara Third');
+      expect(html).toContain('&amp; <a href="https://linkedin.com/in/cara"');
+    });
+
     it('should not show second speaker link if only name exists', () => {
       const partialSecondSpeaker = {
         ...mockSessions[0],
