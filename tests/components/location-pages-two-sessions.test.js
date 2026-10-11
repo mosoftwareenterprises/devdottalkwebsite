@@ -23,6 +23,14 @@ const locationPagesFromMay2026 = [
 ];
 
 describe('location pages from May 2026 onward', () => {
+    it('states that October 2026 attendees agree to the linked policies', () => {
+        const pagePath = join(__dirname, '..', '..', 'src', '2026-october-location-info.md');
+        const content = readFileSync(pagePath, 'utf8');
+
+        expect(content).toContain('By attending this event, you agree to our [Privacy Policy](/privacy-policy.html)');
+        expect(content).toContain('[Code of Conduct](/code-of-conduct.html).');
+    });
+
     it('support rendering at least two speaker sessions', () => {
         for (const pageFile of locationPagesFromMay2026) {
             const pagePath = join(__dirname, '..', '..', 'src', pageFile);
