@@ -12,13 +12,7 @@ includeSpeakerSlotsStyles: true
 
 <section class="speaker-slots">
   <h1 data-speaker-greeting>Thanks for volunteering to speak at {dev.talk}!</h1>
-  <p>We're really glad to have you. Have a look at the dates below, pick the one that suits you and press "I want this slot". It opens an email to our speaker team with your details already filled in, so just review it and hit send.</p>
-  <dl class="speaker-slots-who" data-speaker-summary hidden>
-    <dt>Speaker</dt>
-    <dd data-speaker-name></dd>
-    <dt>Session</dt>
-    <dd data-speaker-session></dd>
-  </dl>
+  <p>We're really glad to have you. Have a look at the dates below, pick the one that suits you and press "I want this slot". It should open an email in your email client with your details already filled in, so just review it and hit send.</p>
 
   <h2>Before you choose</h2>
   <ul class="speaker-slots-help">
@@ -30,6 +24,12 @@ includeSpeakerSlotsStyles: true
   </ul>
 
   <h2>Available dates</h2>
+  <dl class="speaker-slots-who" data-speaker-summary hidden>
+    <dt>Speaker</dt>
+    <dd data-speaker-name></dd>
+    <dt>Session</dt>
+    <dd data-speaker-session></dd>
+  </dl>
 
   <ul class="speaker-slots-list">
     {% for ev in events.upcoming | rejectattr('isCancelled') %}
