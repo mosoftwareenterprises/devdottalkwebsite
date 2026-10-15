@@ -151,7 +151,7 @@
         "date": "2027-03-24",
         "displayDate": "March 24th 2027",
         "url": "/2027-march-location-info.html",
-        "title": "{dev.talk} - The one in March",
+        "title": "{dev.talk} - The One With Work That Waits and Software That Sells",
         "photoUrl": "TODO",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
@@ -160,7 +160,7 @@
             55,
             56
         ],
-        "overview": ""
+        "overview": "When a payment is waiting on a business event, replaying an old message can act on stale intent; learn how to persist deferred work in Kafka and re-decide it against current state. Then explore how to build software that sells now that LLMs have made building easier, with practical perspectives on reliable systems and commercial value."
     },
     {
         "id": 26,
