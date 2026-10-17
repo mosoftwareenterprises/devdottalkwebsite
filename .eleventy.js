@@ -6,7 +6,7 @@ import path from 'path';
 import { createHash } from 'crypto';
 import { mkdirSync, existsSync } from 'fs';
 import { readFileSync } from 'fs';
-
+import { openSpeakerSlots } from './lib/open-speaker-slots.js';
 // Map to store image attributes from markdown extended syntax
 const imageAttributesMap = new Map();
 
@@ -38,6 +38,8 @@ export default function (eleventyConfig) {
     }
     return markdownInline.renderInline(String(value));
   });
+
+  eleventyConfig.addNunjucksFilter('openSpeakerSlots', openSpeakerSlots);
 
   eleventyConfig.addPassthroughCopy("src/bluesky.js");
   eleventyConfig.addPassthroughCopy("src/speaker-slots.js");
