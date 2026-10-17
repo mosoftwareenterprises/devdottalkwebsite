@@ -16,13 +16,19 @@ describe('speaker slots page', () => {
   it('is hidden from collections and has a slot button', () => {
     expect(content).toContain('eleventyExcludeFromCollections: true');
     expect(content).toContain('permalink: speaker-slots.html');
-    expect(content).toContain('I want this slot');
+    expect(content).toContain('- I want this date');
+    expect(content).toContain('ev.date.slice(8, 10)');
     expect(content).toContain('mailto:speaker@devdottalk.uk');
       expect(content).toContain('data-speaker-name');
       expect(content).toContain('data-speaker-session');
     expect(content).toContain('/code-of-conduct.html');
     expect(content).toContain('/previous-events.html');
     expect(content).toContain('/attending.html');
+  });
+
+  it('renders a single slot button per event regardless of open slot count', () => {
+    expect(content).not.toMatch(/range\(0, openSlots\)/);
+    expect(content.match(/class="speaker-slots-button"/g)).toHaveLength(1);
   });
 
   it('builds a mailto with date, name and session', () => {

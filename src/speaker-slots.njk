@@ -61,9 +61,7 @@ includeSpeakerSlotsStyles: true
           <li class="speaker-slots-item">
             <h2>{{ ev.fullDateLabel }}</h2>
             <p>{{ openSlots }} of 2 session slots available</p>
-            {% for n in range(0, openSlots) %}
-              <a class="speaker-slots-button" href="mailto:speaker@devdottalk.uk" data-slot-date="{{ ev.fullDateLabel }}">I want this slot</a>
-            {% endfor %}
+            <a class="speaker-slots-button" href="mailto:speaker@devdottalk.uk" data-slot-date="{{ ev.fullDateLabel }}">{{ ev.date.slice(8, 10) }}/{{ ev.date.slice(5, 7) }}/{{ ev.date.slice(2, 4) }} - I want this date</a>
           </li>
         {% endif %}
       {% endif %}
