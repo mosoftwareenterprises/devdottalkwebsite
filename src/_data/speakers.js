@@ -9,6 +9,14 @@ const sessionsPath = path.join(__dirname, 'sessions.json');
 const raw = fs.readFileSync(sessionsPath, 'utf-8');
 const list = JSON.parse(raw);
 
+const sortSpeakers = (speakers) => {
+    return [...speakers].sort((a, b) => {
+        const lastA = a.name.replace(/\s*\([^)]*\)/g, '').trim().split(/\s+/).pop().toLowerCase();
+        const lastB = b.name.replace(/\s*\([^)]*\)/g, '').trim().split(/\s+/).pop().toLowerCase();
+        return lastA.localeCompare(lastB);
+    });
+};
+
 export default () => {
     const speakerMap = new Map();
     const pastSessions = list.filter((session) => session.status === 'past');
@@ -78,14 +86,8 @@ export default () => {
         }
     }
 
-    // Sort alphabetically by last name
-    const all = [...speakerMap.values()]
-        .map(({ profileSessionId, ...speaker }) => speaker)
-        .sort((a, b) => {
-            const lastA = a.name.trim().split(/\s+/).pop().toLowerCase();
-            const lastB = b.name.trim().split(/\s+/).pop().toLowerCase();
-            return lastA.localeCompare(lastB);
-        });
+    const all = sortSpeakers([...speakerMap.values()]
+        .map(({ profileSessionId, ...speaker }) => speaker));
 
     return { all };
 };

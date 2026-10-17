@@ -19,6 +19,28 @@ function normalize(value) {
 }
 
 describe('sessions speaker data quality', () => {
+    it('keeps generated speaker profiles ordered by surname without parenthetical details', () => {
+        const { all: speakerList } = loadSpeakers();
+        const lastNames = speakerList.map((speaker) => speaker.name
+            .replace(/\s*\([^)]*\)/g, '')
+            .trim()
+            .split(/\s+/)
+            .pop()
+            .toLowerCase());
+
+        expect(lastNames).toEqual([...lastNames].sort((a, b) => a.localeCompare(b)));
+    });
+
+    it('requires a substantive bio for every speaker with a bio picture', () => {
+        const { all: speakerList } = loadSpeakers();
+        const profilesWithBioPictures = speakerList.filter((speaker) => speaker.bioPicUrl);
+        const incompleteProfiles = profilesWithBioPictures
+            .filter((speaker) => normalize(speaker.bio).length < 80)
+            .map((speaker) => ({ name: speaker.name, bioLength: normalize(speaker.bio).length }));
+
+        expect(incompleteProfiles).toEqual([]);
+    });
+
     it('uses profile fields from the newest session id per speaker', () => {
         const sessions = readJson(sessionsPath);
         const pastSessions = sessions.filter((session) => session.status === 'past');
