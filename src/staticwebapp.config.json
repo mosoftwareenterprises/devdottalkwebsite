@@ -100,13 +100,18 @@
             "statusCode": 301
         },
         {
+            "route": "/2026-october-location-info.html",
+            "redirect": "/2026-october-location-info.html",
+            "statusCode": 301
+        },        
+        {
             "route": "/tickets",
-            "redirect": "https://luma.com/8fa4y4he",
+            "redirect": "https://luma.com/c91nh0vf",
             "statusCode": 302
         },
         {
             "route": "/next-event",
-            "redirect": "/2026-october-location-info.html",
+            "redirect": "/2026-november-location-info.html",
             "statusCode": 302
         }
     ],

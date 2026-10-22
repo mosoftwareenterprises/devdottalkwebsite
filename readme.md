@@ -56,7 +56,8 @@ Use this monthly checklist to keep event updates complete.
   - `ticketSystemEventId` in `src/_includes/layout.njk`
   - `/tickets` redirect in `src/staticwebapp.config.json`
   - `/next-event` redirect in `src/staticwebapp.config.json`
-- [ ] Retire old short links/redirects in `src/staticwebapp.config.json` (keep historical event links stable).
+- [ ] When an event becomes past, add its event-page URL to `src/staticwebapp.config.json` as a permanent self-redirect (`route` and `redirect` use the same URL, with status code `301`) so the historical link stays stable.
+- [ ] When promoting the next event, update `/next-event` in `src/staticwebapp.config.json` to the new upcoming event page; remove or update any outdated event-specific short links without removing historical event URLs.
 - [ ] Update `src/_data/kofiSupporters.json` if new supporters were received.
 - [ ] Optional polish: refresh images in `src/images/`, verify `hideMainLogo`/`hideNextEventBanner`, and check month/title/ticket wording.
 - [ ] Validate before commit:

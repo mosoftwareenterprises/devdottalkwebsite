@@ -19,7 +19,7 @@
         "secondSpeakerBio": "",
         "videoUrl": "",
         "slidesUrl": "",
-        "status": "upcoming"
+        "status": "past"
     },
     {
         "id": 76,
@@ -667,7 +667,7 @@
     },
     {
         "id": 46,
-        "eventID": 22,
+        "eventID": 0,
         "title": "What broke when we put our product in people’s hands",
         "duration": 20,
         "description": "The easy bit was building our AI prototype.\n\nIt’s another matter getting real people to actually start using it which is why for over a year now I have been working on and testing my AI tools with some pretty unusual users, by traditional product-testing standards at least.\n\nPeople whose level of English, digital skillsets, culture and understanding of AI all differ dramatically from one another.\n\nIn today’s session, I’m going to tell you what happened when our prototypes weren’t just prototypes anymore, but instead sat in front of actual users.\n\nThere were some surprises where everything went great… And there were lots more where nothing went great. Prompts that were obvious to us were confusing to everyone else. Technically correct AI answers that couldn’t help anyone in real life. Translation didn’t magically solve every language problem. And some folks had way too much faith in AI, others had zero.\n\nCome to this session if you want to hear some real-world experiences of how we developed our tools and programmes Newcomer Navigator, EduHub and our AI-supported employability work in Somerset.\n\nBut this is NOT going to be about how to create the smartest AI model. It will focus on what comes next once your techy thing actually works technically.\n\nHow did things break down as real users started using our product.\n\nWhat needed to change and which of my, and others’, assumptions were incorrect?\n\nCould I have fixed more earlier on by involving real users earlier?\n\nIn this talk, I'll discuss all these questions about our journey from what failed, to what was changed, to what surprised us – so that anyone building an AI product for real users can take something useful away from it.",
@@ -707,9 +707,9 @@
         "secondSpeakerBio": "",
         "videoUrl": "",
         "slidesUrl": "",
-        "status": "upcoming"
+        "status": "past"
     },
-       {
+    {
         "id": 44,
         "eventID": 21,
         "title": "From Prototype to Production: Why Most AI Systems Fail and How to Build Ones That Don’t",

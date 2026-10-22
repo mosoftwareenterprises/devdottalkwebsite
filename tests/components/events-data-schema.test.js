@@ -12,6 +12,15 @@ function readJson(filePath) {
 }
 
 describe('events.json schema', () => {
+    it('keeps the cancelled October session as an unassigned upcoming session', () => {
+        const sessions = readJson(sessionsPath);
+        const session = sessions.find((entry) => entry.id === 46);
+
+        expect(session.eventID).toBe(0);
+        expect(session.status).toBe('upcoming');
+        expect(session.isCancelled).toBeUndefined();
+    });
+
     it('includes sessionIDs array for every event', () => {
         const events = readJson(eventsPath);
 
