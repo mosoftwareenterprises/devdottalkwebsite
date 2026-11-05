@@ -11,13 +11,26 @@
 }
 
 .speaker-session-speakers--triple {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+        grid-template-columns: repeat(3, minmax(0, 30rem));
+        justify-content: center;
 }
 
 @media (max-width: 700px) {
     .speaker-session-speakers--triple {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 12rem);
     }
+}
+
+.speaker-session-speakers--triple .speaker-session-image-link {
+    display: block;
+    overflow: hidden;
+}
+
+.speaker-session-speakers--triple .speaker-headshot {
+    margin: 0 0 0 -50%;
+    max-width: none;
+    width: 200%;
 }
 
 .speaker-session-speakers--paired>p:empty {
