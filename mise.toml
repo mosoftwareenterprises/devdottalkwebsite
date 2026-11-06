@@ -1,6 +1,7 @@
 [tools]
 node = '24'
 gh = '2'
+"npm:@azure/static-web-apps-cli" = 'latest'
 
 [tasks.build]
 run = ["npm install", "npm run build"]
@@ -9,10 +10,10 @@ run = ["npm install", "npm run build"]
 run = "npm run test"
 
 [tasks.stop]
-run = ["npx kill-port 8080"]
+run = ["npx kill-port 8080 4280"]
 
 [tasks.start]
-run = ["npx kill-port 8080 || true", "npm start"]
+run = ["npx kill-port 8080 4280 || true", "swa start http://localhost:8080 --run \"npm start\" --swa-config-location src"]
 
 [tasks.audit]
 run = ["npx --yes unlighthouse --site devdottalk.uk --disable-dynamic-sampling"]

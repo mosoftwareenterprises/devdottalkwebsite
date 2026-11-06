@@ -10,8 +10,8 @@ includeSpeakerSlotsStyles: true
 
 <section class="speaker-slots">
   <h1 data-speaker-greeting>Thanks for volunteering to speak at {dev.talk}!</h1>
-  <p>We're really glad to have you. Have a look at the dates below, pick the one that suits you and press "I want this date". It should open an email in your email client with your details already filled in, so just review it and hit send.</p>
-<p>{dev.talk} events are held in the evening between 7pm-9pm at <a href="https://maps.app.goo.gl/T7gidKeBQcE1Cuvk7">Bournemouth University, Talbot Campus</a>.</p>
+  <p>Thanks so much for your time and for your interest in speaking at {dev.talk}. We really appreciate you being willing to share your experience with our community. When you're ready, choose an available date and select your preferred email option. A pre-filled email will open for you to review and send. Your date isn't confirmed until we reply.</p>
+<p>{dev.talk} events are held in person in the evening between 7pm-9pm at <a href="https://maps.app.goo.gl/T7gidKeBQcE1Cuvk7">Bournemouth University, Talbot Campus</a>.</p>
 <p>As we are a community group, we are unable to offer expenses to our speakers.</p>
   <h2>Before you choose</h2>
   <ul class="speaker-slots-help">
@@ -36,7 +36,37 @@ includeSpeakerSlotsStyles: true
       <li class="speaker-slots-item">
         <h2>{{ ev.fullDateLabel }}</h2>
         <p>{{ ev.openSlots }} of 2 session slots available</p>
-        <a class="speaker-slots-button" href="mailto:speaker@devdottalk.uk" data-slot-date="{{ ev.fullDateLabel }}">{{ ev.shortDate }} - I want this date</a>
+        <div class="speaker-slots-actions">
+          <a class="speaker-slots-button" href="mailto:speaker@devdottalk.uk" data-email-action="gmail" data-slot-date="{{ ev.fullDateLabel }}">
+            <svg class="speaker-slots-icon" data-button-icon="gmail" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#EA4335" d="M3 6.5a1.5 1.5 0 0 1 2.4-1.2L12 10l6.6-4.7A1.5 1.5 0 0 1 21 6.5V19h-5V10l-4 2.8L8 10v9H3z"/>
+            </svg>
+            <span>Gmail</span>
+          </a>
+          <a class="speaker-slots-button speaker-slots-button--outlook" href="mailto:speaker@devdottalk.uk" data-email-action="outlook" data-slot-date="{{ ev.fullDateLabel }}">
+            <svg class="speaker-slots-icon" data-button-icon="outlook" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#0078D4" d="M3 6h13a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+              <path fill="#fff" d="m2.5 8 7 5 7-5v2l-7 5-7-5z"/>
+              <rect x="14" y="2" width="9" height="13" rx="2" fill="#fff" stroke="#0078D4" stroke-width="1.5"/>
+              <text x="18.5" y="11.5" fill="#0078D4" font-family="Arial, sans-serif" font-size="8" font-weight="700" text-anchor="middle">O</text>
+            </svg>
+            <span>Outlook</span>
+          </a>
+          <a class="speaker-slots-button speaker-slots-button--other" href="mailto:speaker@devdottalk.uk" data-email-action="mailto" data-slot-date="{{ ev.fullDateLabel }}">
+            <svg class="speaker-slots-icon" data-button-icon="email" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M1.5 4h21A1.5 1.5 0 0 1 24 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-21A1.5 1.5 0 0 1 0 18.5v-13A1.5 1.5 0 0 1 1.5 4Zm0 2v.2l10.5 6.56L22.5 6.2V6h-21Zm21 2.55-10.1 6.31a.75.75 0 0 1-.8 0L1.5 8.55V18.5h21V8.55Z"/>
+            </svg>
+            <span>Other email app</span>
+          </a>
+          <button class="speaker-slots-button speaker-slots-button--copy" type="button" data-copy-slot-date="{{ ev.fullDateLabel }}">
+            <svg class="speaker-slots-icon" data-button-icon="copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 8V5.5A1.5 1.5 0 0 1 9.5 4h9A1.5 1.5 0 0 1 20 5.5v11a1.5 1.5 0 0 1-1.5 1.5H16M5.5 8h9A1.5 1.5 0 0 1 16 9.5v11a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 4 20.5v-11A1.5 1.5 0 0 1 5.5 8Z"/>
+            </svg>
+            <span>Copy details</span>
+          </button>
+        </div>
+        <p class="speaker-slots-copy-status" data-copy-status aria-live="polite"></p>
+        <textarea class="speaker-slots-copy-fallback" data-copy-fallback aria-label="Email details to copy" readonly hidden></textarea>
       </li>
     {% endfor %}
   </ul>
