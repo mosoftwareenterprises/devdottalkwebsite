@@ -7,9 +7,10 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  max-width: 527px;
+  max-width: 370px;
   aspect-ratio: 527 / 764;
   margin: 0 auto;
+  overflow: visible;
   font-family: "Poppins", "Montserrat", "Segoe UI", Arial, sans-serif;
   font-weight: 700;
 }
@@ -18,9 +19,9 @@
 .speaker-card::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 0 -2.5cqw;
   background: #fff;
-  border: 0.75cqw solid var(--sc-navy);
+  border: 1cqw solid var(--sc-navy);
   border-radius: 6cqw;
   pointer-events: none;
 }
@@ -49,8 +50,9 @@
 .speaker-card-brace {
   color: var(--sc-navy);
   font-size: 1.35em;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 0.8;
+  transform: scaleY(0.8);
 }
 
 .speaker-card-logo-dev {
@@ -78,16 +80,17 @@
 }
 
 .speaker-card-date {
-  top: 24cqw;
+  top: 26cqw;
   width: 75cqw;
   height: 10cqw;
   border-radius: 2cqw;
   color: var(--sc-cyan);
   font-size: 4.6cqw;
+  font-weight: bolder;
 }
 
 .speaker-card-title {
-  top: 36cqw;
+  top: 38cqw;
   width: 93cqw;
   height: 25.2cqw;
   padding: 0 2.5cqw;
@@ -95,10 +98,11 @@
   color: var(--sc-teal);
   font-size: 5.3cqw;
   line-height: 1.25;
+  font-weight: bolder;
 }
 
 .speaker-card-photo {
-  top: 63cqw;
+  top: 65cqw;
   width: 56.5cqw;
   height: 56.5cqw;
   display: flex;
@@ -108,7 +112,7 @@
   border-radius: 50% 50% 0 50%;
 }
 
-.speaker-card-image {
+.speaker-card-portrait {
   display: block;
   width: 50cqw;
   height: 50cqw;
@@ -121,17 +125,22 @@
 }
 
 .speaker-card-meta {
-  top: 121cqw;
-  width: 82.5cqw;
+  top: 123cqw;
+    width: 93cqw;
   height: 18.4cqw;
   border-radius: 2cqw;
-  font-size: 4.9cqw;
+  font-size: 5.5cqw;
   line-height: 1.3;
 }
 
 .speaker-card-name,
 .speaker-card-role {
+  display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
   margin: 0;
+  font-weight: 800;
 }
 
 .speaker-card-name {
