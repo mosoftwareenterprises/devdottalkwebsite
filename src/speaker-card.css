@@ -1,0 +1,145 @@
+/* Scales with its container width: 1cqw = 1% of card width (design width 527px) */
+.speaker-card {
+  --sc-navy: #455d7e;
+  --sc-cyan: #0cbde3;
+  --sc-teal: #1b9aa5;
+  container-type: inline-size;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 527px;
+  aspect-ratio: 527 / 764;
+  margin: 0 auto;
+  font-family: "Poppins", "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* Border, background and radius live here because cqw on the container itself resolves against its ancestor */
+.speaker-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  border: 0.75cqw solid var(--sc-navy);
+  border-radius: 6cqw;
+  pointer-events: none;
+}
+
+.speaker-card>* {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.speaker-card-logo {
+  top: 4cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 19.5cqw;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.speaker-card-brace {
+  color: var(--sc-navy);
+  font-size: 1.35em;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+.speaker-card-logo-dev {
+  color: var(--sc-cyan);
+}
+
+.speaker-card-logo-dot {
+  color: var(--sc-navy);
+}
+
+.speaker-card-logo-talk {
+  color: var(--sc-teal);
+}
+
+.speaker-card-date,
+.speaker-card-title,
+.speaker-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+  border: 0.6cqw solid var(--sc-navy);
+}
+
+.speaker-card-date {
+  top: 24cqw;
+  width: 75cqw;
+  height: 10cqw;
+  border-radius: 2cqw;
+  color: var(--sc-cyan);
+  font-size: 4.6cqw;
+}
+
+.speaker-card-title {
+  top: 36cqw;
+  width: 93cqw;
+  height: 25.2cqw;
+  padding: 0 2.5cqw;
+  border-radius: 2.4cqw;
+  color: var(--sc-teal);
+  font-size: 5.3cqw;
+  line-height: 1.25;
+}
+
+.speaker-card-photo {
+  top: 63cqw;
+  width: 56.5cqw;
+  height: 56.5cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sc-teal);
+  border-radius: 50% 50% 0 50%;
+}
+
+.speaker-card-image {
+  display: block;
+  width: 50cqw;
+  height: 50cqw;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.speaker-card-image-placeholder {
+  background: #cfd8dc;
+}
+
+.speaker-card-meta {
+  top: 121cqw;
+  width: 82.5cqw;
+  height: 18.4cqw;
+  border-radius: 2cqw;
+  font-size: 4.9cqw;
+  line-height: 1.3;
+}
+
+.speaker-card-name,
+.speaker-card-role {
+  margin: 0;
+}
+
+.speaker-card-name {
+  color: var(--sc-cyan);
+}
+
+.speaker-card-role {
+  color: var(--sc-navy);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}

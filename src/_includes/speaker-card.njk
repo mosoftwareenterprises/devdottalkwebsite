@@ -1,0 +1,24 @@
+{% macro speakerCard(date, title, name, role, image) %}
+  <figure class="speaker-card">
+    <div class="speaker-card-logo" role="img" aria-label="{dev.talk}">
+      <span class="speaker-card-brace" aria-hidden="true">{</span>
+      <span class="speaker-card-logo-dev" aria-hidden="true">dev</span>
+      <span class="speaker-card-logo-dot" aria-hidden="true">.</span>
+      <span class="speaker-card-logo-talk" aria-hidden="true">talk</span>
+      <span class="speaker-card-brace" aria-hidden="true">}</span>
+    </div>
+    <p class="speaker-card-date">{{- date }} Speaker</p>
+    <p class="speaker-card-title">{{ title }}</p>
+    <div class="speaker-card-photo">
+      {% if image %}
+        <img src="{{ image }}" alt="{{ name }}" loading="lazy" class="speaker-card-image">
+        {% else %}
+          <div class="speaker-card-image speaker-card-image-placeholder" aria-hidden="true"></div>
+        {% endif %}
+      </div>
+      <div class="speaker-card-meta">
+        <p class="speaker-card-name">{{ name }}</p>
+        <p class="speaker-card-role">{{ role }}</p>
+      </div>
+    </figure>
+  {% endmacro %}
