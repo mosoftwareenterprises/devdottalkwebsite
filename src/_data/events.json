@@ -364,7 +364,7 @@
         "photoUrl": "https://photos.app.goo.gl/p4WKcC8xL2bBZKEG6",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
+        "venueName": "Room PG22, Poole House",
         "sessionIDs": [
             28,
             27
@@ -427,7 +427,7 @@
         "photoUrl": "https://photos.app.goo.gl/2pGzP9X5vUcYsSBg9",
         "locationName": "Bournemouth University",
         "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
+        "venueName": "Room PG22, Poole House",
         "sessionIDs": [
             21,
             20,
@@ -521,8 +521,8 @@
         "title": "{dev.talk} - The one with Creatives & Coders at Cottonwood",
         "photoUrl": "https://photos.app.goo.gl/mVEhNfpd1fYcEMcs5",
         "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
+        "locationAddress": "81 Grove Road, Bournemouth, BH1 3AH",
+        "venueName": "Cottonwood Hotel, Bournemouth",
         "sessionIDs": [
             10,
             9,
