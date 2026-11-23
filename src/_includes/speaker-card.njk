@@ -1,4 +1,4 @@
-{% macro speakerCard(date, title, name, role, image) %}
+{% macro speakerCard(date, title, name, role, image, speakerUrl) %}
   <figure class="speaker-card">
     <div class="speaker-card-logo" role="img" aria-label="{dev.talk}">
       <span class="speaker-card-brace" aria-hidden="true">{</span>
@@ -7,7 +7,7 @@
       <span class="speaker-card-logo-talk" aria-hidden="true">talk</span>
       <span class="speaker-card-brace" aria-hidden="true">}</span>
     </div>
-    <p class="speaker-card-date">{{- date }} Speaker</p>
+    {% if date %}<p class="speaker-card-date">{{- date }} Speaker</p>{% endif %}
     <p class="speaker-card-title">{{ title }}</p>
     <div class="speaker-card-photo">
       {% if image %}
@@ -17,7 +17,7 @@
         {% endif %}
       </div>
       <div class="speaker-card-meta">
-        <p class="speaker-card-name">{{ name }}</p>
+        <p class="speaker-card-name">{% if speakerUrl %}<a href="{{ speakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-card-name-link">{{ name }}</a>{% else %}{{ name }}{% endif %}</p>
         <p class="speaker-card-role">{{ role }}</p>
       </div>
     </figure>

@@ -1,3 +1,5 @@
+{% from "speaker-card.njk" import speakerCard %}
+
 {% macro speakerSession(sessionId, sessionsList) %}
     {% set sessionRecord = null %}
     {# Try to use the helper function if available #}
@@ -14,57 +16,45 @@
     {% if not sessionRecord %}
         <p>Session not found.</p>
     {% else %}
-        {# Speaker names and job titles #}
-        <div class="speaker-session-speakers{% if sessionRecord.secondSpeakerName %} speaker-session-speakers--paired{% endif %}{% if sessionRecord.thirdSpeakerName %} speaker-session-speakers--triple{% endif %}">
-            <div class="speaker-session-speaker">
-                {% set tileImage = sessionRecord.firstSpeakerTileImageLocation %}
-                {# Tile image #}
-                {% if tileImage %}
-                    <a href="{{ sessionRecord.firstSpeakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-session-image-link" title="{{ sessionRecord.firstSpeakerName }} LinkedIn profile">
-                        <img src="{{ tileImage }}" loading="lazy" class="speaker-headshot" alt="{{ sessionRecord.firstSpeakerName }} speaker headshot"></a>
-                    {% endif %}
-                    <a href="{{ sessionRecord.firstSpeakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-session-speaker-link" title="{{ sessionRecord.firstSpeakerName }} LinkedIn profile">
-                        <h3>{{ sessionRecord.firstSpeakerName }}</h3>
-                        {% if sessionRecord.firstSpeakerJobTitle %}
-                            <strong>{{ sessionRecord.firstSpeakerJobTitle }}</strong>
-                        {% endif %}
-                    </a>
-                </div>
-                {% if sessionRecord.secondSpeakerName %}
-                    <div class="speaker-session-speaker">
-                        {% set tileImage2 = sessionRecord.secondSpeakerTileImageLocation %}
-                        {# Tile image #}
-                        {% if tileImage2 %}
-                            <a href="{{ sessionRecord.secondSpeakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-session-image-link" title="{{ sessionRecord.secondSpeakerName }} LinkedIn profile">
-                                <img src="{{ tileImage2 }}" loading="lazy" class="speaker-headshot" alt="{{ sessionRecord.secondSpeakerName }} speaker headshot"></a>
+        {% set sessionDate = "" %}
+        {% if events is defined and events.all %}
+            {% for event in events.all %}
+                {% if event.id == sessionRecord.eventID and event.displayDate %}
+                    {% set dateParts = event.displayDate.split(" ") %}
+                    {% set sessionDate = dateParts[0] ~ " " ~ dateParts[1] %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% set speakers = [
+            { name: sessionRecord.firstSpeakerName, role: sessionRecord.firstSpeakerJobTitle, image: sessionRecord.firstSpeakerBioPicUrl or sessionRecord.firstSpeakerTileImageLocation, url: sessionRecord.firstSpeakerUrl },
+            { name: sessionRecord.secondSpeakerName, role: sessionRecord.secondSpeakerJobTitle, image: sessionRecord.secondSpeakerBioPicUrl or sessionRecord.secondSpeakerTileImageLocation, url: sessionRecord.secondSpeakerUrl },
+            { name: sessionRecord.thirdSpeakerName, role: sessionRecord.thirdSpeakerJobTitle, image: sessionRecord.thirdSpeakerBioPicUrl or sessionRecord.thirdSpeakerTileImageLocation, url: sessionRecord.thirdSpeakerUrl }
+        ] %}
+        <div class="speaker-session-cards{% if sessionRecord.thirdSpeakerName %} speaker-session-cards--triple{% elif sessionRecord.secondSpeakerName %} speaker-session-cards--paired{% endif %}">
+            {% for speaker in speakers %}
+                {% if speaker.name %}
+                    {{ speakerCard(sessionDate, sessionRecord.title, speaker.name, speaker.role, speaker.image, speaker.url) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="speaker-session-copy">
+            <h4>{{ sessionRecord.title }}</h4>
+            <div class="speaker-session-copy-speakers{% if sessionRecord.secondSpeakerName %} speaker-session-copy-speakers--paired{% endif %}{% if sessionRecord.thirdSpeakerName %} speaker-session-copy-speakers--triple{% endif %}">
+                {% for speaker in speakers %}
+                    {% if speaker.name %}
+                        <div class="speaker-session-copy-speaker">
+                            {% if speaker.url %}
+                                <h3><a href="{{ speaker.url }}" target="_blank" rel="noopener noreferrer" class="speaker-session-speaker-link">{{ speaker.name }}</a></h3>
+                            {% else %}
+                                <h3>{{ speaker.name }}</h3>
                             {% endif %}
-                            <a href="{{ sessionRecord.secondSpeakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-session-speaker-link" title="{{ sessionRecord.secondSpeakerName }} LinkedIn profile">
-                                <h3>{{ sessionRecord.secondSpeakerName }}</h3>
-                                {% if sessionRecord.secondSpeakerJobTitle %}
-                                    <strong>{{ sessionRecord.secondSpeakerJobTitle }}</strong>
-                                {% endif %}
-                            </a>
+                            {% if speaker.role %}<strong>{{ speaker.role }}</strong>{% endif %}
                         </div>
                     {% endif %}
-                {% if sessionRecord.thirdSpeakerName %}
-                    <div class="speaker-session-speaker">
-                        {% set tileImage3 = sessionRecord.thirdSpeakerTileImageLocation %}
-                        {% if tileImage3 %}
-                            <a href="{{ sessionRecord.thirdSpeakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-session-image-link" title="{{ sessionRecord.thirdSpeakerName }} profile">
-                                <img src="{{ tileImage3 }}" loading="lazy" class="speaker-headshot" alt="{{ sessionRecord.thirdSpeakerName }} speaker headshot"></a>
-                            {% endif %}
-                            <a href="{{ sessionRecord.thirdSpeakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-session-speaker-link" title="{{ sessionRecord.thirdSpeakerName }} profile">
-                                <h3>{{ sessionRecord.thirdSpeakerName }}</h3>
-                                {% if sessionRecord.thirdSpeakerJobTitle %}
-                                    <strong>{{ sessionRecord.thirdSpeakerJobTitle }}</strong>
-                                {% endif %}
-                            </a>
-                        </div>
-                    {% endif %}
-                </div>
-                {# Session title and description #}
-                <h4>{{ sessionRecord.title }}</h4>
-                <p class="formatted-description">{{ sessionRecord.description | markdownInline | safe }}</p>
+                {% endfor %}
+            </div>
+            <p class="formatted-description">{{ sessionRecord.description | markdownInline | safe }}</p>
+        </div>
                 {# Speaker Bio's #}
                 {% if sessionRecord.firstSpeakerBio %}
                     <h5 class="speaker-session-bio-heading">{{ sessionRecord.firstSpeakerName }} Bio</h5>

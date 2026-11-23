@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { renderMacro } from '../helpers/nunjucks.js';
-import { mockSessions } from '../fixtures/data.js';
+import { mockEvents, mockSessions } from '../fixtures/data.js';
 
 describe('speaker-session component', () => {
   const templatePath = '_includes/speaker-session.njk';
@@ -37,7 +37,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('Testing Quantum Debugging Techniques');
+      expect(html).toContain('class="speaker-card-title">Testing Quantum Debugging Techniques</p>');
     });
 
     it('should render session description', () => {
@@ -84,6 +84,17 @@ describe('speaker-session component', () => {
   });
 
   describe('renders HTML structure correctly', () => {
+    it('uses the linked event date on the speaker card', () => {
+      const html = renderMacro(
+        templatePath,
+        macroName,
+        [999, mockSessions],
+        { sessions: { allEvents: mockSessions }, events: { all: mockEvents } }
+      );
+
+      expect(html).toContain('15 March Speaker');
+    });
+
     it('should contain speaker headshot image', () => {
       const html = renderMacro(
         templatePath,
@@ -92,7 +103,8 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('img src="/images/test/alice-tile.png"');
+      expect(html).toContain('src="/images/test/alice-tile.png"');
+      expect(html).toContain('class="speaker-card-portrait"');
       expect(html).toContain('loading="lazy"');
     });
 
@@ -105,6 +117,7 @@ describe('speaker-session component', () => {
       );
 
       expect(html).toContain('href="https://www.linkedin.com/in/alice-fictional-test/"');
+      expect(html).toContain('class="speaker-card-name-link"');
     });
 
     it('should render h3 for speaker name', () => {
@@ -115,7 +128,8 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('<h3>Alice Fictional Developer</h3>');
+      expect(html).toContain('class="speaker-card-name-link"');
+      expect(html).toContain('Alice Fictional Developer</a>');
     });
 
     it('should render h4 for session title', () => {
@@ -126,7 +140,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('<h4>Testing Quantum Debugging Techniques</h4>');
+      expect(html).toContain('class="speaker-card-title">Testing Quantum Debugging Techniques</p>');
     });
 
     it('should render h5 for Speaker Bio header', () => {
@@ -151,7 +165,7 @@ describe('speaker-session component', () => {
       expect(html).toContain('<p class="formatted-description">');
     });
 
-    it('should render the tile image, speaker list, description, and bios in order', () => {
+    it('should render one card per speaker, then description and bios', () => {
       const sessionWithTwoSpeakers = [{
         ...mockSessions[0],
         secondSpeakerName: 'Bob Co-Speaker',
@@ -167,10 +181,18 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: sessionWithTwoSpeakers } }
       );
 
-      expect(html.indexOf('speaker-session-speakers')).toBeLessThan(html.indexOf('speaker-headshot'));
-      expect(html).toContain('<div class="speaker-session-speakers speaker-session-speakers--paired">');
-      expect(html.indexOf('speaker-session-speakers')).toBeLessThan(html.indexOf('<h4>'));
-      expect(html.indexOf('<h4>')).toBeLessThan(html.indexOf('<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>'));
+      expect((html.match(/class="speaker-card"/g) || []).length).toBe(2);
+      expect(html).toContain('speaker-session-cards--paired');
+      expect(html).toContain('class="speaker-session-copy"');
+      expect(html).toContain('<h3><a href="https://www.linkedin.com/in/alice-fictional-test/"');
+      expect(html).toContain('>Alice Fictional Developer</a></h3>');
+      expect(html).toContain('<strong>Test Framework Architect</strong>');
+      expect(html).toContain('<h4>Testing Quantum Debugging Techniques</h4>');
+      expect(html.indexOf('speaker-session-copy')).toBeGreaterThan(html.lastIndexOf('</figure>'));
+      expect(html.indexOf('speaker-session-cards')).toBeLessThan(html.indexOf('formatted-description'));
+      expect(html.indexOf('<h4>Testing Quantum Debugging Techniques</h4>')).toBeLessThan(html.indexOf('speaker-session-copy-speakers'));
+      expect(html.indexOf('speaker-session-copy-speakers')).toBeLessThan(html.indexOf('formatted-description'));
+      expect(html.indexOf('formatted-description')).toBeLessThan(html.indexOf('<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>'));
       expect(html).toContain('<h5 class="speaker-session-bio-heading">Bob Co-Speaker Bio</h5>');
     });
 
@@ -192,8 +214,9 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: sessionWithThree } }
       );
 
-      expect(html).toContain('speaker-session-speakers--triple');
-      expect(html).toContain('<h3>Cara Third</h3>');
+      expect((html.match(/class="speaker-card"/g) || []).length).toBe(3);
+      expect(html).toContain('speaker-session-cards--triple');
+      expect(html).toContain('Cara Third</a>');
       expect(html).toContain('<h5 class="speaker-session-bio-heading">Cara Third Bio</h5>');
 
       const twoOnly = renderMacro(
@@ -202,7 +225,7 @@ describe('speaker-session component', () => {
         [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
-      expect(twoOnly).not.toContain('speaker-session-speakers--triple');
+      expect((twoOnly.match(/class="speaker-card"/g) || []).length).toBe(1);
     });
 
     it('should render only populated speaker links with secure new-tab attributes', () => {
@@ -213,12 +236,12 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('class="speaker-session-speaker-link"');
-      expect(html).not.toContain('speaker-session-speakers--paired');
+      expect(html).toContain('class="speaker-card-name-link"');
+      expect(html).not.toContain('speaker-session-speakers');
       expect(html).toContain('target="_blank"');
       expect(html).toContain('rel="noopener noreferrer"');
       expect(html).not.toContain('href=""');
-      expect(html).not.toContain('<h3></h3>');
+      expect(html).not.toContain('class="speaker-card-name-link"></a>');
     });
   });
 

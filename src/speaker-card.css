@@ -92,8 +92,9 @@
 .speaker-card-title {
   top: 38cqw;
   width: 93cqw;
-  height: 25.2cqw;
-  padding: 0 2.5cqw;
+  height: auto;
+    min-height: 10cqw;
+    padding: 0.5cqw 2.5cqw;
   border-radius: 2.4cqw;
   color: var(--sc-teal);
   font-size: 5.3cqw;
@@ -127,7 +128,9 @@
 .speaker-card-meta {
   top: 123cqw;
     width: 93cqw;
-  height: 18.4cqw;
+  height: auto;
+    min-height: 18.4cqw;
+    padding: 1cqw 1.5cqw;
   border-radius: 2cqw;
   font-size: 5.5cqw;
   line-height: 1.3;
@@ -147,6 +150,24 @@
   color: var(--sc-cyan);
 }
 
+.speaker-card-name-link {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.speaker-card .speaker-card-name-link {
+  color: var(--sc-cyan);
+}
+
+.speaker-card-name-link:hover,
+.speaker-card-name-link:focus-visible {
+  text-decoration: underline;
+}
 .speaker-card-role {
   color: var(--sc-navy);
   text-decoration: underline;

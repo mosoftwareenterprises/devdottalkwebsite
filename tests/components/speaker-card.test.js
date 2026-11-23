@@ -37,9 +37,12 @@ describe('speaker-card component', () => {
         expect(css).toMatch(/\.speaker-card-brace\s*\{[^}]*transform:\s*scaleY\(0\.8\);/s);
         expect(css).toMatch(/\.speaker-card-photo\s*\{[^}]*border-radius:\s*50% 50% 0 50%;/s);
         expect(css).toMatch(/\.speaker-card-portrait\s*\{[^}]*border-radius:\s*50%;/s);
+        expect(css).toMatch(/\.speaker-card \.speaker-card-name-link\s*\{[^}]*color:\s*var\(--sc-cyan\);/s);
         expect(css).toMatch(/\.speaker-card-name,\s*\.speaker-card-role\s*\{[^}]*flex:\s*1;[^}]*font-weight:\s*800;/s);
         expect(css).toMatch(/\.speaker-card-title\s*\{[^}]*width:\s*93cqw;/s);
         expect(css).toMatch(/\.speaker-card-meta\s*\{[^}]*width:\s*93cqw;/s);
+        expect(css).toMatch(/\.speaker-card-title\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*10cqw;[^}]*padding:\s*0\.5cqw 2\.5cqw;/s);
+        expect(css).toMatch(/\.speaker-card-meta\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*18\.4cqw;[^}]*padding:\s*1cqw 1\.5cqw;/s);
         expect(css).toContain('max-width: 370px');
         expect(layout).toContain('/speaker-card.css');
     });
