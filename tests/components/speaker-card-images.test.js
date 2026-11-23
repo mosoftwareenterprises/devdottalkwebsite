@@ -23,7 +23,7 @@ const sessions = [{
     secondSpeakerTileImageLocation: ''
 }];
 
-const events = [{ id: 23, displayDate: 'November 25th 2026' }];
+const events = [{ id: 23, displayDate: 'November 25th 2026', sessionIDs: [47] }];
 
 describe('speaker-card PNG generator', () => {
     it('creates one record per populated speaker with the event date', () => {
@@ -33,9 +33,15 @@ describe('speaker-card PNG generator', () => {
         expect(records[0]).toMatchObject({
             sessionId: 47,
             date: 'November 25th',
-            name: 'Alex Example'
+            name: 'Alex Example',
+            speakerPosition: 'First',
+            monthFolder: 'november',
+            year: '2026'
         });
-        expect(records[1].name).toBe('Sam Example');
+        expect(records[1]).toMatchObject({
+            name: 'Sam Example',
+            speakerPosition: 'Second'
+        });
     });
 
     it('ignores placeholder speakers', () => {
@@ -75,6 +81,8 @@ describe('speaker-card PNG generator', () => {
         const metadata = await sharp(path.join(outputRoot, files[0])).metadata();
 
         expect(files).toHaveLength(2);
+        expect(files[0]).toContain('images/2026/november/First Speaker image - November 2026.png');
+        expect(files[1]).toContain('images/2026/november/Second Speaker image - November 2026.png');
         expect(metadata.width).toBe(583);
         expect(metadata.height).toBe(792);
     });

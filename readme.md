@@ -65,6 +65,8 @@ Use this monthly checklist to keep event updates complete.
   - run `mise run build`
   - spot-check with `mise start`: new event page, `/next-event`, `/tickets`, floating ticket button
 - [ ] Final sanity check: upcoming lists look right, speaker cards render correctly (or "coming soon" intentionally), venue visibility toggles with `showVenueSection`, and no broken links remain.
+- [ ] Ensure all speakers for the event have a Bio, A Bio Pic Url, and a Url.
+- [ ] Add the event photo url
 
 ### Test Structure
 

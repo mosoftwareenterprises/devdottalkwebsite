@@ -92,7 +92,7 @@ export default function (eleventyConfig) {
       sessions,
       events,
       sourceRoot: path.resolve('src'),
-      outputRoot: path.resolve(dir.output)
+      outputRoot: path.resolve('src')
     });
   });
 
