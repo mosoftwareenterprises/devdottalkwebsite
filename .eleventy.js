@@ -86,6 +86,8 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.on('eleventy.after', async ({ dir }) => {
+    if (process.env.GENERATE_SPEAKER_CARD_IMAGES !== 'true') return;
+
     const sessions = JSON.parse(readFileSync('./src/_data/sessions.json', 'utf-8'));
     const events = JSON.parse(readFileSync('./src/_data/events.json', 'utf-8'));
     await generateSpeakerCardImages({
