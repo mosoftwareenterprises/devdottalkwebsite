@@ -13,7 +13,7 @@ showVenueSection: true
 {% from "event-overview.njk" import eventOverview %}
 {% from "event-details.njk" import eventDate, eventTitle, eventVenueName, floatingVenueLink %}
 {% from "locationMapAndOverlay.njk" import locationMapAndOverlay %}
-{% from "speaker-session.njk" import speakerSession %}
+{% from "speaker-session.njk" import speakerSession with context %}
 
 {% set mayEvent = events.findById(17) %}
 

@@ -12,7 +12,7 @@ showVenueSection: true
 
 {% from "event-overview.njk" import eventOverview %}
 {% from "locationMapAndOverlay.njk" import locationMapAndOverlay %}
-{% from "speaker-session.njk" import speakerSession %}
+{% from "speaker-session.njk" import speakerSession with context %}
 
 {% if showVenueSection %}
 <a id="floating-venue" href="#venue">

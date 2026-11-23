@@ -59,7 +59,7 @@ permalink: 2026-january-location-info.html
 <h2>Important Notes</h2>
 <p><strong>Photography and Recording:</strong> Please note that the event will be recorded and photographed. If you prefer not to be included in any photos or videos, kindly inform the camera operator. These materials will be used to promote future events and shared on platforms like YouTube.</p>
 <h2 id="event-speakers"><a href="#event-speakers">Speakers</a></h2>
-{% from "speaker-session.njk" import speakerSession %}
+{% from "speaker-session.njk" import speakerSession with context %}
 
 {{ speakerSession(25, sessions.allEvents) }}
 <hr>

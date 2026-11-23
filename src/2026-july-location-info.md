@@ -13,7 +13,7 @@ eventId: 19
 
 {% from "event-overview.njk" import eventOverview %}
 {% from "event-details.njk" import eventDate, eventTitle, floatingVenueLink %}
-{% from "speaker-session.njk" import speakerSession %}
+{% from "speaker-session.njk" import speakerSession with context %}
 {% from "venue-details.njk" import renderVenueDetails %}
 
 {% set currentEvent = events.findById(eventId) %}

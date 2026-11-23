@@ -47,7 +47,7 @@ permalink: 2026-february-location-info.html
 </ul>
 <section>
     <h2 id="event-speakers"><a href="#event-speakers">Speakers</a></h2>
-    {% from "speaker-session.njk" import speakerSession %}
+    {% from "speaker-session.njk" import speakerSession with context %}
     {{ speakerSession(28, sessions.allEvents) }}
     <hr>
     {{ speakerSession(27, sessions.allEvents) }}
