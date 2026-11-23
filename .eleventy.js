@@ -7,6 +7,7 @@ import { createHash } from 'crypto';
 import { mkdirSync, existsSync } from 'fs';
 import { readFileSync } from 'fs';
 import { openSpeakerSlots } from './lib/open-speaker-slots.js';
+import { generateSpeakerCardImages } from './lib/generate-speaker-card-images.js';
 // Map to store image attributes from markdown extended syntax
 const imageAttributesMap = new Map();
 
@@ -82,6 +83,17 @@ export default function (eleventyConfig) {
           .toFile(outputPath);
       }
     }
+  });
+
+  eleventyConfig.on('eleventy.after', async ({ dir }) => {
+    const sessions = JSON.parse(readFileSync('./src/_data/sessions.json', 'utf-8'));
+    const events = JSON.parse(readFileSync('./src/_data/events.json', 'utf-8'));
+    await generateSpeakerCardImages({
+      sessions,
+      events,
+      sourceRoot: path.resolve('src'),
+      outputRoot: path.resolve(dir.output)
+    });
   });
 
   // Synchronous global usable inside Nunjucks macros — returns the cropped image URL.
