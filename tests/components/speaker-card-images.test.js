@@ -67,7 +67,7 @@ describe('speaker-card PNG generator', () => {
         expect(html).toContain('A Talk About Local AI');
         expect(html).toContain('Alex Example');
         expect(html).toContain('November 25th Speaker');
-        expect(html).toContain('class="speaker-card-logo"');
+        expect(html).toContain('class="event-speaker-card-logo"');
     });
 
     it('writes padded PNG files that include the extended frame border', async () => {
