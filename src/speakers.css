@@ -97,6 +97,7 @@
 .speaker-card-headshot {
     aspect-ratio: 1 / 1;
     display: block;
+    margin: 0 auto;
     max-width: 100%;
     object-fit: cover;
     width: min(220px, 100%);

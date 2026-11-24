@@ -1,24 +1,24 @@
 {% macro speakerCard(date, title, name, role, image, speakerUrl) %}
-  <figure class="speaker-card">
-    <div class="speaker-card-logo" role="img" aria-label="{dev.talk}">
-      <span class="speaker-card-brace" aria-hidden="true">{</span>
-      <span class="speaker-card-logo-dev" aria-hidden="true">dev</span>
-      <span class="speaker-card-logo-dot" aria-hidden="true">.</span>
-      <span class="speaker-card-logo-talk" aria-hidden="true">talk</span>
-      <span class="speaker-card-brace" aria-hidden="true">}</span>
+  <figure class="event-speaker-card">
+    <div class="event-speaker-card-logo" role="img" aria-label="{dev.talk}">
+      <span class="event-speaker-card-brace" aria-hidden="true">{</span>
+      <span class="event-speaker-card-logo-dev" aria-hidden="true">dev</span>
+      <span class="event-speaker-card-logo-dot" aria-hidden="true">.</span>
+      <span class="event-speaker-card-logo-talk" aria-hidden="true">talk</span>
+      <span class="event-speaker-card-brace" aria-hidden="true">}</span>
     </div>
-    {% if date %}<p class="speaker-card-date">{{- date }} Speaker</p>{% endif %}
-    <p class="speaker-card-title">{{ title }}</p>
-    <div class="speaker-card-photo">
+    {% if date %}<p class="event-speaker-card-date">{{- date }} Speaker</p>{% endif %}
+    <p class="event-speaker-card-title">{{ title }}</p>
+    <div class="event-speaker-card-photo">
       {% if image %}
-        <img src="{{ image }}" alt="{{ name }}" loading="lazy" class="speaker-card-portrait">
+        <img src="{{ image }}" alt="{{ name }}" loading="lazy" class="event-speaker-card-portrait">
         {% else %}
-          <div class="speaker-card-image speaker-card-image-placeholder" aria-hidden="true"></div>
+          <div class="event-speaker-card-image event-speaker-card-image-placeholder" aria-hidden="true"></div>
         {% endif %}
       </div>
-      <div class="speaker-card-meta">
-        <p class="speaker-card-name">{% if speakerUrl %}<a href="{{ speakerUrl }}" target="_blank" rel="noopener noreferrer" class="speaker-card-name-link">{{ name }}</a>{% else %}{{ name }}{% endif %}</p>
-        <p class="speaker-card-role">{{ role }}</p>
+      <div class="event-speaker-card-meta">
+        <p class="event-speaker-card-name">{% if speakerUrl %}<a href="{{ speakerUrl }}" target="_blank" rel="noopener noreferrer" class="event-speaker-card-name-link">{{ name }}</a>{% else %}{{ name }}{% endif %}</p>
+        <p class="event-speaker-card-role">{{ role }}</p>
       </div>
     </figure>
   {% endmacro %}

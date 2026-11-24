@@ -1,5 +1,5 @@
 /* Scales with its container width: 1cqw = 1% of card width (design width 527px) */
-.speaker-card {
+.event-speaker-card {
   --sc-navy: #455d7e;
   --sc-cyan: #0cbde3;
   --sc-teal: #1b9aa5;
@@ -16,7 +16,7 @@
 }
 
 /* Border, background and radius live here because cqw on the container itself resolves against its ancestor */
-.speaker-card::before {
+.event-speaker-card::before {
   content: "";
   position: absolute;
   inset: 0 -2.5cqw;
@@ -26,7 +26,8 @@
   pointer-events: none;
 }
 
-.speaker-card>* {
+/* Only apply absolute positioning to the decorative macro-based speaker cards */
+.event-speaker-card > * {
   position: absolute;
   left: 50%;
   margin: 0;
@@ -34,7 +35,7 @@
   box-sizing: border-box;
 }
 
-.speaker-card-logo {
+.event-speaker-card-logo {
   top: 4cqw;
   display: flex;
   align-items: center;
@@ -47,7 +48,7 @@
   white-space: nowrap;
 }
 
-.speaker-card-brace {
+.event-speaker-card-brace {
   color: var(--sc-navy);
   font-size: 1.35em;
   font-weight: 700;
@@ -55,21 +56,21 @@
   transform: scaleY(0.8);
 }
 
-.speaker-card-logo-dev {
+.event-speaker-card-logo-dev {
   color: var(--sc-cyan);
 }
 
-.speaker-card-logo-dot {
+.event-speaker-card-logo-dot {
   color: var(--sc-navy);
 }
 
-.speaker-card-logo-talk {
+.event-speaker-card-logo-talk {
   color: var(--sc-teal);
 }
 
-.speaker-card-date,
-.speaker-card-title,
-.speaker-card-meta {
+.event-speaker-card-date,
+.event-speaker-card-title,
+.event-speaker-card-meta {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +80,7 @@
   border: 0.6cqw solid var(--sc-navy);
 }
 
-.speaker-card-date {
+.event-speaker-card-date {
   top: 26cqw;
   width: 75cqw;
   height: 10cqw;
@@ -89,7 +90,7 @@
   font-weight: bolder;
 }
 
-.speaker-card-title {
+.event-speaker-card-title {
   top: 38cqw;
   width: 93cqw;
   height: auto;
@@ -102,7 +103,7 @@
   font-weight: bolder;
 }
 
-.speaker-card-photo {
+.event-speaker-card-photo {
   top: 65cqw;
   width: 56.5cqw;
   height: 56.5cqw;
@@ -113,7 +114,7 @@
   border-radius: 50% 50% 0 50%;
 }
 
-.speaker-card-portrait {
+.event-speaker-card-portrait {
   display: block;
   width: 50cqw;
   height: 50cqw;
@@ -121,11 +122,11 @@
   border-radius: 50%;
 }
 
-.speaker-card-image-placeholder {
+.event-speaker-card-image-placeholder {
   background: #cfd8dc;
 }
 
-.speaker-card-meta {
+.event-speaker-card-meta {
   top: 123cqw;
     width: 93cqw;
   height: auto;
@@ -136,8 +137,8 @@
   line-height: 1.3;
 }
 
-.speaker-card-name,
-.speaker-card-role {
+.event-speaker-card-name,
+.event-speaker-card-role {
   display: flex;
     flex: 1;
     align-items: center;
@@ -146,11 +147,11 @@
   font-weight: 800;
 }
 
-.speaker-card-name {
+.event-speaker-card-name {
   color: var(--sc-cyan);
 }
 
-.speaker-card-name-link {
+.event-speaker-card-name-link {
   align-items: center;
   color: inherit;
   display: flex;
@@ -160,15 +161,15 @@
   width: 100%;
 }
 
-.speaker-card .speaker-card-name-link {
+.event-speaker-card .event-speaker-card-name-link {
   color: var(--sc-cyan);
 }
 
-.speaker-card-name-link:hover,
-.speaker-card-name-link:focus-visible {
+.event-speaker-card-name-link:hover,
+.event-speaker-card-name-link:focus-visible {
   text-decoration: underline;
 }
-.speaker-card-role {
+.event-speaker-card-role {
   color: var(--sc-navy);
   text-decoration: underline;
   text-underline-offset: 0.15em;
