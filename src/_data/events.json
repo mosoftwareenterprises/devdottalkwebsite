@@ -208,6 +208,7 @@
             49,
             50
         ],
+        "lumaEventId": "evt-2RJGN81UiIB7HHn",
         "overview": "This event explores how developers can recognise patterns and make better decisions when designing software. Discover how archetypes can reveal business models and make complex problems feel surprisingly clear, then see how thoughtful state boundaries can transform a growing Flutter application. Come for practical ideas on modelling, architecture and avoiding overengineering, whether you work in mobile development or beyond."
     },
     {

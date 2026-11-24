@@ -88,7 +88,12 @@
           </div>
         </div>
 
-        {% set ticketSystemEventId = 'evt-HFAyGDcyiCI74cO' %}
+        {% set defaultEventId = 'evt-2RJGN81UiIB7HHn' %}
+        {% if currentPageEvent and currentPageEvent.lumaEventId %}
+          {% set ticketSystemEventId = currentPageEvent.lumaEventId %}
+        {% else %}
+          {% set ticketSystemEventId = defaultEventId %}
+        {% endif %}
         {% include "floating-register-button.njk" %}
     
         {% if hideNextEventBanner %}
