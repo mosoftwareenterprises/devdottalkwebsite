@@ -37,7 +37,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('class="speaker-card-title">Testing Quantum Debugging Techniques</p>');
+      expect(html).toContain('class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>');
     });
 
     it('should render session description', () => {
@@ -104,7 +104,7 @@ describe('speaker-session component', () => {
       );
 
       expect(html).toContain('src="/images/test/alice-tile.png"');
-      expect(html).toContain('class="speaker-card-portrait"');
+      expect(html).toContain('class="event-speaker-card-portrait"');
       expect(html).toContain('loading="lazy"');
     });
 
@@ -117,7 +117,7 @@ describe('speaker-session component', () => {
       );
 
       expect(html).toContain('href="https://www.linkedin.com/in/alice-fictional-test/"');
-      expect(html).toContain('class="speaker-card-name-link"');
+      expect(html).toContain('class="event-speaker-card-name-link"');
     });
 
     it('should render h3 for speaker name', () => {
@@ -128,7 +128,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('class="speaker-card-name-link"');
+      expect(html).toContain('class="event-speaker-card-name-link"');
       expect(html).toContain('Alice Fictional Developer</a>');
     });
 
@@ -140,7 +140,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('class="speaker-card-title">Testing Quantum Debugging Techniques</p>');
+      expect(html).toContain('class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>');
     });
 
     it('should render h5 for Speaker Bio header', () => {
@@ -181,7 +181,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: sessionWithTwoSpeakers } }
       );
 
-      expect((html.match(/class="speaker-card"/g) || []).length).toBe(2);
+      expect((html.match(/class="event-speaker-card"/g) || []).length).toBe(2);
       expect(html).toContain('speaker-session-cards--paired');
       expect(html).toContain('class="speaker-session-copy"');
       expect(html).toContain('<h3><a href="https://www.linkedin.com/in/alice-fictional-test/"');
@@ -214,7 +214,7 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: sessionWithThree } }
       );
 
-      expect((html.match(/class="speaker-card"/g) || []).length).toBe(3);
+      expect((html.match(/class="event-speaker-card"/g) || []).length).toBe(3);
       expect(html).toContain('speaker-session-cards--triple');
       expect(html).toContain('Cara Third</a>');
       expect(html).toContain('<h5 class="speaker-session-bio-heading">Cara Third Bio</h5>');
@@ -225,7 +225,7 @@ describe('speaker-session component', () => {
         [999, mockSessions],
         { sessions: { allEvents: mockSessions } }
       );
-      expect((twoOnly.match(/class="speaker-card"/g) || []).length).toBe(1);
+      expect((twoOnly.match(/class="event-speaker-card"/g) || []).length).toBe(1);
     });
 
     it('should render only populated speaker links with secure new-tab attributes', () => {
@@ -236,12 +236,12 @@ describe('speaker-session component', () => {
         { sessions: { allEvents: mockSessions } }
       );
 
-      expect(html).toContain('class="speaker-card-name-link"');
+      expect(html).toContain('class="event-speaker-card-name-link"');
       expect(html).not.toContain('speaker-session-speakers');
       expect(html).toContain('target="_blank"');
       expect(html).toContain('rel="noopener noreferrer"');
       expect(html).not.toContain('href=""');
-      expect(html).not.toContain('class="speaker-card-name-link"></a>');
+      expect(html).not.toContain('class="event-speaker-card-name-link"></a>');
     });
   });
 
