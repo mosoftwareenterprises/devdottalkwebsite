@@ -7,7 +7,7 @@ import loadSpeakers from '../../src/_data/speakers.js';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const sessionsPath = join(__dirname, '..', '..', 'src', '_data', 'sessions.json');
 
-const speakerRoles = ['first', 'second'];
+const speakerRoles = ['first', 'second', 'third'];
 const speakerFields = ['JobTitle', 'Url', 'BioPicUrl', 'TileImageLocation', 'Bio'];
 
 function readJson(filePath) {

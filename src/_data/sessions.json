@@ -635,7 +635,7 @@
         "secondSpeakerBio": "",
         "videoUrl": "",
         "slidesUrl": "",
-        "status": "upcoming"
+        "status": "past"
     },
     {
         "id": 47,
@@ -663,7 +663,7 @@
         "thirdSpeakerBio": "Desmond is an AI engineer at 3 Sided Cube, where he turns complex ideas into production-ready AI products. He has spent 6+ years shipping software across startups and holds an MSc in Cybersecurity and Human Factors. That background shapes how he builds: practical, secure, and designed around real people. Lately, he's been trying to fit a whole AI into a phone.",
         "videoUrl": "",
         "slidesUrl": "",
-        "status": "upcoming"
+        "status": "past"
     },
     {
         "id": 46,
