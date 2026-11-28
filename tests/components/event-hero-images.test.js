@@ -51,7 +51,7 @@ describe('event hero image generator', () => {
     it('names files with the event month and year', () => {
         const [record] = getEventHeroRecords(sessions, events);
 
-        expect(eventHeroFileName(record)).toBe('Event Hero image - November 2026.png');
+        expect(eventHeroFileName(record)).toBe('Hero image - November 2026.png');
     });
 
     it('renders the logo, date and one banner per session', async () => {
@@ -67,6 +67,14 @@ describe('event hero image generator', () => {
         expect(html.indexOf('Sam Example')).toBeLessThan(html.indexOf('A Solo Talk'));
     });
 
+    it('keeps hyphenated names together so they only wrap at spaces', async () => {
+        const hyphenated = [{ id: 1, title: 'Talk', firstSpeakerName: 'Mary Smith-Jones', firstSpeakerJobTitle: 'Dev' }];
+        const [record] = getEventHeroRecords(hyphenated, [{ id: 1, displayDate: 'May 6th 2026', sessionIDs: [1] }]);
+        const html = await eventHeroHtml(record, process.cwd());
+
+        expect(html).toContain('Mary <span class="hero-nowrap">Smith-Jones</span>');
+    });
+
     it('writes a landscape A4 PNG and skips unchanged files on the next run', async () => {
         const outputRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'event-hero-'));
         try {
@@ -75,7 +83,7 @@ describe('event hero image generator', () => {
             const outputFile = path.join(outputRoot, files[0]);
             const metadata = await sharp(outputFile).metadata();
 
-            expect(files).toEqual(['images/2026/november/Event Hero image - November 2026.png']);
+            expect(files).toEqual(['images/2026/november/Hero image - November 2026.png']);
             expect(metadata.width / metadata.height).toBeCloseTo(297 / 210, 2);
 
             const oldTime = new Date('2020-01-01T00:00:00Z');

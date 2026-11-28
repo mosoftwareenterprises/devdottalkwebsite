@@ -119,39 +119,14 @@ body {
 }
 
 .hero-meta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    margin-top: 12px;
-}
-
-.hero-meta-text {
     min-width: 0;
+    margin-top: 12px;
     text-align: center;
 }
 
-.hero-frame-brace {
-    transform: scaleY(0.8);
-    flex: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px; 
-    height: 84px;
-    font-size: 90px;
-    font-weight: 700;
-    line-height: 0.8;
-    color: #455d7e;
-    opacity: 0.85;
-    -webkit-text-stroke: 0.0224em #455d7e;
+.hero-nowrap {
+    white-space: nowrap;
 }
-
-.hero-frame-brace span {
-    display: block;
-    transform: translateY(-2em);
-}
-
 .hero-portrait {
     display: block;
     width: var(--pic);
@@ -175,6 +150,6 @@ body {
 
 .hero-role {
     margin: 6px 0 0;
-    font-size: 24px;
+    font-size: 20px;
     color: #1b9aa5;
 }
