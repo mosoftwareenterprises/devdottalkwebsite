@@ -32,10 +32,13 @@ jobs:
           mise install
       - name: Install dependencies
         run: |
-          mise run build
+          mise exec -- npm ci
       - name: Install Playwright Chromium
         run: |
           mise exec -- npx playwright install --with-deps chromium
+      - name: Build site
+        run: |
+          mise run build
       - name: Run tests
         run: |
           mise run test

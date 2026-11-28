@@ -27,10 +27,10 @@ const sessions = [{
 const events = [{ id: 23, displayDate: 'November 25th 2026', sessionIDs: [47] }];
 
 describe('speaker-card PNG generator', () => {
-    it('installs Chromium in CI before running tests', async () => {
+    it('installs dependencies and Chromium in CI before building and testing', async () => {
         const workflow = await fs.readFile('.github/workflows/azure-static-web-apps-yellow-plant-0da666103.yml', 'utf8');
 
-        expect(workflow).toMatch(/mise run build[\s\S]*playwright install --with-deps chromium[\s\S]*mise run test/);
+        expect(workflow).toMatch(/mise exec -- npm ci[\s\S]*playwright install --with-deps chromium[\s\S]*mise run build[\s\S]*mise run test/);
     });
 
     it('creates one record per populated speaker with the event date', () => {

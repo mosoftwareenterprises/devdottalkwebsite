@@ -1,7 +1,7 @@
 ---
 layout: layout
 title: "{dev.talk} - January 2027"
-description: "Event details for {dev.talk} January 2027 - The one in January"
+description: "Event details for {dev.talk} - The One Where AI Agents Ship and Interfaces Stay Accessible"
 includeBlueskyPosts: true
 hideNextEventBanner: true
 hideMainLogo: false
