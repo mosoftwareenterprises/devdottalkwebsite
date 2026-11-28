@@ -176,14 +176,14 @@
       39,
       54
     ],
-    "overview": "This event brings together two practical and very different perspectives: Osama Okunbo explores impostor syndrome in tech through the lens of professional judo, offering strategies for building confidence and learning from failure, while Rhys Green covers the complete game-asset workflow, from 3D modelling and texturing to engine integration and publishing. Come for honest career insight, practical creative and technical knowledge, and ideas you can apply immediately."
+    "overview": "What can judo teach us about handling setbacks and impostor syndrome in tech? Alongside that fresh perspective, follow the journey of a 3D game asset from modelling and texturing in Maya and Substance Painter to integration in Unity or Unreal Engine—and publishing as an asset pack."
   },
   {
     "id": 25,
     "date": "2027-01-27",
     "displayDate": "January 27th 2027",
     "url": "/2027-january-location-info.html",
-    "title": "{dev.talk} - The one in January",
+    "title": "{dev.talk} - The One Where AI Agents Ship and Interfaces Stay Accessible",
     "photoUrl": "TODO",
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
@@ -192,7 +192,7 @@
       51,
       52
     ],
-    "overview": "This event is currently being planned, with 2 speakers. Details forthcoming."
+    "overview": "Explore what it takes to move multi-agent LLM systems from prototype to production, including LangGraph, debuggability and graceful failure handling. Then uncover accessibility pitfalls in AI-generated frontend code and practical ways to review and test interfaces so they remain usable."
   },
   {
     "id": 24,
