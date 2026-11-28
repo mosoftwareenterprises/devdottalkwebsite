@@ -18,12 +18,12 @@ describe("links page", () => {
 
     const template = readFileSync(templatePath, "utf8").replace(
       /^---\r?\n[\s\S]*?\r?\n---\r?\n?/,
-      "",
+      ""
     );
     const html = createNunjucksEnv().renderString(template);
     const { document } = new JSDOM(html).window;
     const actualLinks = Array.from(document.querySelectorAll("ul a")).map(
-      (anchor) => [anchor.textContent.trim(), anchor.getAttribute("href")],
+      (anchor) => [anchor.textContent.trim(), anchor.getAttribute("href")]
     );
 
     expect(document.querySelector("h1")?.textContent.trim()).toBe("Links");

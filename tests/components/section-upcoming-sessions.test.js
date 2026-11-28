@@ -39,7 +39,7 @@ describe("index upcoming sessions section", () => {
     expect(html).toContain("<summary>Session description</summary>");
     expect(html).toContain('<p class="formatted-description">');
     expect(html).toContain(
-      "Discover advanced techniques for debugging quantum-inspired testing frameworks",
+      "Discover advanced techniques for debugging quantum-inspired testing frameworks"
     );
     expect(html).toContain("</details>");
   });

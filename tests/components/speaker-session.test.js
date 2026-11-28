@@ -47,7 +47,7 @@ describe("speaker-session component", () => {
       });
 
       expect(html).toContain(
-        'class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>',
+        'class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>'
       );
     });
 
@@ -57,7 +57,7 @@ describe("speaker-session component", () => {
       });
 
       expect(html).toContain(
-        "Discover advanced techniques for debugging quantum-inspired testing frameworks",
+        "Discover advanced techniques for debugging quantum-inspired testing frameworks"
       );
     });
 
@@ -75,11 +75,11 @@ describe("speaker-session component", () => {
         templatePath,
         macroName,
         [777, markdownSessions],
-        { sessions: { allEvents: markdownSessions } },
+        { sessions: { allEvents: markdownSessions } }
       );
 
       expect(html).toContain(
-        '<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>',
+        '<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>'
       );
     });
 
@@ -90,7 +90,7 @@ describe("speaker-session component", () => {
 
       expect(html).toContain("Alice Fictional Developer Bio");
       expect(html).toContain(
-        "Alice specializes in testing methodologies and mock data generation",
+        "Alice specializes in testing methodologies and mock data generation"
       );
     });
   });
@@ -121,7 +121,7 @@ describe("speaker-session component", () => {
       });
 
       expect(html).toContain(
-        'href="https://www.linkedin.com/in/alice-fictional-test/"',
+        'href="https://www.linkedin.com/in/alice-fictional-test/"'
       );
       expect(html).toContain('class="event-speaker-card-name-link"');
     });
@@ -141,7 +141,7 @@ describe("speaker-session component", () => {
       });
 
       expect(html).toContain(
-        'class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>',
+        'class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>'
       );
     });
 
@@ -151,7 +151,7 @@ describe("speaker-session component", () => {
       });
 
       expect(html).toContain(
-        '<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>',
+        '<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>'
       );
     });
 
@@ -178,37 +178,37 @@ describe("speaker-session component", () => {
         templatePath,
         macroName,
         [999, sessionWithTwoSpeakers],
-        { sessions: { allEvents: sessionWithTwoSpeakers } },
+        { sessions: { allEvents: sessionWithTwoSpeakers } }
       );
 
       expect((html.match(/class="event-speaker-card"/g) || []).length).toBe(2);
       expect(html).toContain("speaker-session-cards--paired");
       expect(html).toContain('class="speaker-session-copy"');
       expect(html).toContain(
-        '<h3><a href="https://www.linkedin.com/in/alice-fictional-test/"',
+        '<h3><a href="https://www.linkedin.com/in/alice-fictional-test/"'
       );
       expect(html).toContain(">Alice Fictional Developer</a></h3>");
       expect(html).toContain("<strong>Test Framework Architect</strong>");
       expect(html).toContain("<h4>Testing Quantum Debugging Techniques</h4>");
       expect(html.indexOf("speaker-session-copy")).toBeGreaterThan(
-        html.lastIndexOf("</figure>"),
+        html.lastIndexOf("</figure>")
       );
       expect(html.indexOf("speaker-session-cards")).toBeLessThan(
-        html.indexOf("formatted-description"),
+        html.indexOf("formatted-description")
       );
       expect(
-        html.indexOf("<h4>Testing Quantum Debugging Techniques</h4>"),
+        html.indexOf("<h4>Testing Quantum Debugging Techniques</h4>")
       ).toBeLessThan(html.indexOf("speaker-session-copy-speakers"));
       expect(html.indexOf("speaker-session-copy-speakers")).toBeLessThan(
-        html.indexOf("formatted-description"),
+        html.indexOf("formatted-description")
       );
       expect(html.indexOf("formatted-description")).toBeLessThan(
         html.indexOf(
-          '<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>',
-        ),
+          '<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>'
+        )
       );
       expect(html).toContain(
-        '<h5 class="speaker-session-bio-heading">Bob Co-Speaker Bio</h5>',
+        '<h5 class="speaker-session-bio-heading">Bob Co-Speaker Bio</h5>'
       );
     });
 
@@ -229,24 +229,24 @@ describe("speaker-session component", () => {
         templatePath,
         macroName,
         [999, sessionWithThree],
-        { sessions: { allEvents: sessionWithThree } },
+        { sessions: { allEvents: sessionWithThree } }
       );
 
       expect((html.match(/class="event-speaker-card"/g) || []).length).toBe(3);
       expect(html).toContain("speaker-session-cards--triple");
       expect(html).toContain("Cara Third</a>");
       expect(html).toContain(
-        '<h5 class="speaker-session-bio-heading">Cara Third Bio</h5>',
+        '<h5 class="speaker-session-bio-heading">Cara Third Bio</h5>'
       );
 
       const twoOnly = renderMacro(
         templatePath,
         macroName,
         [999, mockSessions],
-        { sessions: { allEvents: mockSessions } },
+        { sessions: { allEvents: mockSessions } }
       );
       expect((twoOnly.match(/class="event-speaker-card"/g) || []).length).toBe(
-        1,
+        1
       );
     });
 
@@ -323,7 +323,7 @@ describe("speaker-session component", () => {
         templatePath,
         macroName,
         [999, sessionsWithoutTitle],
-        { sessions: { allEvents: sessionsWithoutTitle } },
+        { sessions: { allEvents: sessionsWithoutTitle } }
       );
 
       // Speaker name should still be there
@@ -341,7 +341,7 @@ describe("speaker-session component", () => {
         templatePath,
         macroName,
         [31, sessionsWithoutBio],
-        { sessions: { allEvents: sessionsWithoutBio } },
+        { sessions: { allEvents: sessionsWithoutBio } }
       );
 
       expect(html).not.toContain("Speaker Bio");
@@ -367,7 +367,7 @@ describe("speaker-session component", () => {
         templatePath,
         macroName,
         [31, customSessions],
-        { sessions: { allEvents: mockSessions } }, // Different global data
+        { sessions: { allEvents: mockSessions } } // Different global data
       );
 
       expect(html).toContain("Custom Title");

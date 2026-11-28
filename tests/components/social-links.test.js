@@ -12,63 +12,61 @@ describe("social links component", () => {
     const links = [...document.querySelectorAll(".site-social-link")];
 
     expect(
-      document.querySelector(".site-social-links.test-social-links"),
+      document.querySelector(".site-social-links.test-social-links")
     ).not.toBeNull();
     expect(links).toHaveLength(6);
 
     expect(
-      document.querySelector(".site-social-link-youtube")?.getAttribute("href"),
+      document.querySelector(".site-social-link-youtube")?.getAttribute("href")
     ).toBe("/youtube");
     expect(
-      document.querySelector(".site-social-link-discord")?.getAttribute("href"),
+      document.querySelector(".site-social-link-discord")?.getAttribute("href")
     ).toBe("/discord");
     expect(
-      document
-        .querySelector(".site-social-link-linkedin")
-        ?.getAttribute("href"),
+      document.querySelector(".site-social-link-linkedin")?.getAttribute("href")
     ).toBe("/linkedin");
     expect(
-      document.querySelector(".site-social-link-bluesky")?.getAttribute("href"),
+      document.querySelector(".site-social-link-bluesky")?.getAttribute("href")
     ).toBe("/bluesky");
     expect(
-      document.querySelector(".site-social-link-kofi")?.getAttribute("href"),
+      document.querySelector(".site-social-link-kofi")?.getAttribute("href")
     ).toBe("/support-us");
     expect(
-      document.querySelector(".site-social-link-email")?.getAttribute("href"),
+      document.querySelector(".site-social-link-email")?.getAttribute("href")
     ).toBe("mailto:contactus@devdottalk.uk");
 
     expect(
-      document.querySelector(".site-social-link-email")?.getAttribute("target"),
+      document.querySelector(".site-social-link-email")?.getAttribute("target")
     ).toBeNull();
     expect(
       document
         .querySelector(".site-social-link-youtube")
-        ?.getAttribute("aria-label"),
+        ?.getAttribute("aria-label")
     ).toBe("Visit the devdottalk YouTube channel");
     expect(
       document
         .querySelector(".site-social-link-discord")
-        ?.getAttribute("aria-label"),
+        ?.getAttribute("aria-label")
     ).toBe("Join the devdottalk Discord server");
     expect(
       document
         .querySelector(".site-social-link-linkedin")
-        ?.getAttribute("aria-label"),
+        ?.getAttribute("aria-label")
     ).toBe("Visit the devdottalk LinkedIn page");
     expect(
       document
         .querySelector(".site-social-link-bluesky")
-        ?.getAttribute("aria-label"),
+        ?.getAttribute("aria-label")
     ).toBe("Follow devdottalk on Bluesky");
     expect(
       document
         .querySelector(".site-social-link-kofi")
-        ?.getAttribute("aria-label"),
+        ?.getAttribute("aria-label")
     ).toBe("Support devdottalk on Ko-fi");
     expect(
       document
         .querySelector(".site-social-link-email")
-        ?.getAttribute("aria-label"),
+        ?.getAttribute("aria-label")
     ).toBe("Email the devdottalk team");
   });
 });

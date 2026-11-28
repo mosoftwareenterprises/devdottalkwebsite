@@ -11,7 +11,7 @@ const sessionsPath = join(
   "..",
   "src",
   "_data",
-  "sessions.json",
+  "sessions.json"
 );
 
 const speakerRoles = ["first", "second", "third"];
@@ -40,18 +40,18 @@ describe("sessions speaker data quality", () => {
         .trim()
         .split(/\s+/)
         .pop()
-        .toLowerCase(),
+        .toLowerCase()
     );
 
     expect(lastNames).toEqual(
-      [...lastNames].sort((a, b) => a.localeCompare(b)),
+      [...lastNames].sort((a, b) => a.localeCompare(b))
     );
   });
 
   it("requires a substantive bio for every speaker with a bio picture", () => {
     const { all: speakerList } = loadSpeakers();
     const profilesWithBioPictures = speakerList.filter(
-      (speaker) => speaker.bioPicUrl,
+      (speaker) => speaker.bioPicUrl
     );
     const incompleteProfiles = profilesWithBioPictures
       .filter((speaker) => normalize(speaker.bio).length < 80)
@@ -67,11 +67,11 @@ describe("sessions speaker data quality", () => {
     const sessions = readJson(sessionsPath);
     const pastSessions = sessions.filter(
       (session) =>
-        session.status === "past" && !session.title.startsWith("ALLOCATED"),
+        session.status === "past" && !session.title.startsWith("ALLOCATED")
     );
     const { all: speakerList } = loadSpeakers();
     const speakerByName = new Map(
-      speakerList.map((speaker) => [speaker.name, speaker]),
+      speakerList.map((speaker) => [speaker.name, speaker])
     );
     const speakerOccurrences = new Map();
 
@@ -88,7 +88,7 @@ describe("sessions speaker data quality", () => {
 
     for (const [name, records] of speakerOccurrences) {
       const newest = records.reduce((acc, cur) =>
-        cur.sessionId > acc.sessionId ? cur : acc,
+        cur.sessionId > acc.sessionId ? cur : acc
       );
       const output = speakerByName.get(name);
 

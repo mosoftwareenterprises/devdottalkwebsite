@@ -29,7 +29,7 @@ describe("session-info-item component", () => {
       const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
 
       expect(html).toContain(
-        "Discover advanced techniques for debugging quantum-inspired testing frameworks",
+        "Discover advanced techniques for debugging quantum-inspired testing frameworks"
       );
     });
 
@@ -43,7 +43,7 @@ describe("session-info-item component", () => {
       const html = renderMacro(templatePath, macroName, [markdownSession]);
 
       expect(html).toContain(
-        '<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>',
+        '<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>'
       );
     });
 
@@ -98,7 +98,7 @@ describe("session-info-item component", () => {
       const html = renderMacro(templatePath, macroName, [mockSessions[0]]);
 
       expect(html).toContain(
-        'href="https://www.linkedin.com/in/alice-fictional-test/"',
+        'href="https://www.linkedin.com/in/alice-fictional-test/"'
       );
       expect(html).toContain('target="_blank"');
       expect(html).toContain("Alice Fictional Developer");

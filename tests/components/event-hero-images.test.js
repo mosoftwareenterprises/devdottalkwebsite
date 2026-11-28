@@ -93,10 +93,10 @@ describe("event hero image generator", () => {
     expect(html).toContain("A Talk About Local AI");
     expect(html).toContain("Sam Example");
     expect(html.indexOf("A Talk About Local AI")).toBeLessThan(
-      html.indexOf("Alex Example"),
+      html.indexOf("Alex Example")
     );
     expect(html.indexOf("Sam Example")).toBeLessThan(
-      html.indexOf("A Solo Talk"),
+      html.indexOf("A Solo Talk")
     );
   });
 
@@ -117,7 +117,7 @@ describe("event hero image generator", () => {
     expect(html).toContain('Mary <span class="hero-nowrap">Smith-Jones</span>');
   });
 
-  it("writes a landscape A4 PNG and skips unchanged files on the next run", async () => {
+  it("writes a 16:9 PNG and skips unchanged files on the next run", async () => {
     const outputRoot = await fs.mkdtemp(path.join(os.tmpdir(), "event-hero-"));
     try {
       const options = {
@@ -133,7 +133,7 @@ describe("event hero image generator", () => {
       expect(files).toEqual([
         "images/2026/november/Hero image - November 2026.png",
       ]);
-      expect(metadata.width / metadata.height).toBeCloseTo(297 / 210, 2);
+      expect(metadata.width / metadata.height).toBeCloseTo(16 / 9, 3);
 
       const oldTime = new Date("2020-01-01T00:00:00Z");
       await fs.utimes(outputFile, oldTime, oldTime);

@@ -18,7 +18,7 @@ describe("index upcoming events section", () => {
     expect(html).toContain("15 March 2026: Mock Testing Mock Workshop");
     expect(html).toContain('href="/calendar"');
     expect(html).not.toContain(
-      'href="https://test.meetup.local/test-events/example-mock"',
+      'href="https://test.meetup.local/test-events/example-mock"'
     );
   });
 
@@ -33,7 +33,7 @@ describe("index upcoming events section", () => {
     });
 
     expect(html).toContain(
-      "A practical meetup focused on testing patterns and debugging workflows.",
+      "A practical meetup focused on testing patterns and debugging workflows."
     );
     expect(html).toContain('class="event-overview"');
   });
@@ -70,7 +70,7 @@ describe("index upcoming events section", () => {
     expect(html).not.toContain("Mock Testing Mock Workshop");
     expect(html).toContain('class="event-speaker-wanted-inline"');
     expect(html).toContain(
-      '<strong class="event-speaker-wanted-label">🎤 Speaker wanted:</strong>',
+      '<strong class="event-speaker-wanted-label">🎤 Speaker wanted:</strong>'
     );
     expect(html).toContain("/call-for-speakers.html");
     expect(html).toContain("/contact-us.html");
@@ -154,7 +154,7 @@ describe("index upcoming events section", () => {
 
       expect(html).not.toContain("event-speaker-wanted-label");
       expect(html).not.toContain("Another speaker wanted for this event");
-    },
+    }
   );
 
   it("counts an allocated session as exactly one slot even with multiple speaker names", () => {
@@ -260,7 +260,7 @@ describe("index upcoming events section", () => {
     expect(html).toContain("event-item--no-event");
     expect(html).toContain("event-status--no-event");
     expect(html).toMatch(
-      /<b>July 2027<\/b>\s*<span class="event-status event-status--no-event">☀️ We pause events in summer to give everyone a chance to touch grass\.<\/span>/,
+      /<b>July 2027<\/b>\s*<span class="event-status event-status--no-event">☀️ We pause events in summer to give everyone a chance to touch grass\.<\/span>/
     );
   });
 

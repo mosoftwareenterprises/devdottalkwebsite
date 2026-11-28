@@ -9,7 +9,7 @@ describe("local events page", () => {
     expect(eventCount).toBeGreaterThanOrEqual(33);
     expect(html).toContain(`Other local tech based events (${eventCount})`);
     expect(html).toContain(
-      `A list of ${eventCount} tech based events within 1 hour drive of Bournemouth:`,
+      `A list of ${eventCount} tech based events within 1 hour drive of Bournemouth:`
     );
   });
 });

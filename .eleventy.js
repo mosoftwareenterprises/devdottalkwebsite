@@ -63,7 +63,7 @@ export default function (eleventyConfig) {
   // Before each build, crop all tile images from sessions data and cache them.
   eleventyConfig.on("eleventy.before", async () => {
     const sessions = JSON.parse(
-      readFileSync("./src/_data/sessions.json", "utf-8"),
+      readFileSync("./src/_data/sessions.json", "utf-8")
     );
     const tilePaths = [
       ...new Set(
@@ -72,7 +72,7 @@ export default function (eleventyConfig) {
             s.firstSpeakerTileImageLocation,
             s.secondSpeakerTileImageLocation,
           ])
-          .filter(Boolean),
+          .filter(Boolean)
       ),
     ];
 
@@ -104,7 +104,7 @@ export default function (eleventyConfig) {
     if (process.env.GENERATE_SPEAKER_CARD_IMAGES !== "true") return;
 
     const sessions = JSON.parse(
-      readFileSync("./src/_data/sessions.json", "utf-8"),
+      readFileSync("./src/_data/sessions.json", "utf-8")
     );
     const events = JSON.parse(readFileSync("./src/_data/events.json", "utf-8"));
     await generateSpeakerCardImages({
@@ -162,7 +162,7 @@ export default function (eleventyConfig) {
           /!\[([^\]]*)\]\(([^)]*\s[^)]*)\)/g,
           (match, alt, url) => {
             return `![${alt}](${url.replace(/ /g, "%20")})`;
-          },
+          }
         );
 
         return originalParse(src, env);
@@ -212,7 +212,7 @@ export default function (eleventyConfig) {
       } else {
         return content;
       }
-    },
+    }
   );
 
   eleventyConfig.addTransform("external-links", (content, outputPath) => {

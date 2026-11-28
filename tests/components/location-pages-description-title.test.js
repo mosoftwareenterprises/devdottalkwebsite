@@ -6,7 +6,7 @@ import { dirname, join } from "path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const srcDir = join(__dirname, "..", "..", "src");
 const events = JSON.parse(
-  readFileSync(join(srcDir, "_data", "events.json"), "utf8"),
+  readFileSync(join(srcDir, "_data", "events.json"), "utf8")
 );
 
 function getFrontmatterValue(content, key) {
@@ -46,7 +46,7 @@ describe("location page descriptions", () => {
 
       expect(
         event,
-        `event ${page.eventId} not found in events.json`,
+        `event ${page.eventId} not found in events.json`
       ).toBeDefined();
       const tagline = event.title.replace(/^\{dev\.talk\}\s*-\s*/, "");
 

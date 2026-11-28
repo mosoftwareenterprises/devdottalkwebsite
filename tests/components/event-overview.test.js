@@ -13,7 +13,7 @@ describe("event-overview component", () => {
     ]);
 
     expect(html).toContain(
-      "A practical meetup focused on testing patterns and debugging workflows.",
+      "A practical meetup focused on testing patterns and debugging workflows."
     );
     expect(html).not.toContain("event-cancelled-notice");
   });
@@ -34,7 +34,7 @@ describe("event-overview component", () => {
     expect(html).toContain("Event Cancelled");
     expect(html).toContain("Unfortunately, this event has been cancelled.");
     expect(html).not.toContain(
-      "This overview should not be shown for cancelled events.",
+      "This overview should not be shown for cancelled events."
     );
   });
 });

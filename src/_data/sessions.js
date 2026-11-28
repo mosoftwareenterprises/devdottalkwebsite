@@ -33,7 +33,7 @@ export default () => {
       (s) =>
         s.status === "upcoming" &&
         s.title !== "Lean Coffee Session" &&
-        !isAllocatedSession(s),
+        !isAllocatedSession(s)
     ),
   ].sort((a, b) => {
     const aHasMarkOliver = hasMarkOliverFirstSpeaker(a);

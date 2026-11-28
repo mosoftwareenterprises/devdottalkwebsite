@@ -40,7 +40,7 @@ describe("event-list-item component", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
 
       expect(html).toContain(
-        '<a href="#test-event-march-2026"  class="event-title">',
+        '<a href="#test-event-march-2026"  class="event-title">'
       );
     });
 
@@ -70,7 +70,7 @@ describe("event-list-item component", () => {
       const html = renderMacro(templatePath, macroName, [eventWithoutPhotos]);
 
       expect(html).not.toContain(
-        '<span class="event-link-label">Photos</span>',
+        '<span class="event-link-label">Photos</span>'
       );
     });
 
@@ -79,7 +79,7 @@ describe("event-list-item component", () => {
       const html = renderMacro(templatePath, macroName, [eventWithoutPhotos]);
 
       expect(html).not.toContain(
-        '<span class="event-link-label">Photos</span>',
+        '<span class="event-link-label">Photos</span>'
       );
     });
   });
@@ -217,7 +217,7 @@ describe("event-list-item component", () => {
 
       expect(html).toContain('class="event-overview-heading"');
       expect(html).toContain(
-        "A practical meetup focused on testing patterns and debugging workflows.",
+        "A practical meetup focused on testing patterns and debugging workflows."
       );
     });
 

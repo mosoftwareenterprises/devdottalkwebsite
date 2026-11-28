@@ -1,7 +1,7 @@
 async function fetchBlueskyPosts(handle, limit = 10) {
   try {
     const response = await fetch(
-      `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=${limit}`,
+      `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=${limit}`
     );
 
     if (!response.ok) {
@@ -31,7 +31,7 @@ async function fetchBlueskyPosts(handle, limit = 10) {
 
           // Try to get parent post text from the feed item
           const parentPost = data.feed.find(
-            (feedItem) => feedItem.post.uri === post.record.reply.parent.uri,
+            (feedItem) => feedItem.post.uri === post.record.reply.parent.uri
           );
 
           parentText = parentPost

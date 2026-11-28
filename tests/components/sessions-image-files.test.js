@@ -6,7 +6,7 @@ import { readFileSync, existsSync } from "fs";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const srcDir = join(__dirname, "..", "..", "src");
 const sessions = JSON.parse(
-  readFileSync(join(srcDir, "_data", "sessions.json"), "utf8"),
+  readFileSync(join(srcDir, "_data", "sessions.json"), "utf8")
 );
 
 const imageFields = ["BioPicUrl", "TileImageLocation"];
@@ -34,7 +34,7 @@ describe("sessions image files", () => {
     const missing = references
       .filter(
         ({ value }) =>
-          !existsSync(join(srcDir, decodeURI(value.replace(/^\//, "")))),
+          !existsSync(join(srcDir, decodeURI(value.replace(/^\//, ""))))
       )
       .map(({ id, key, value }) => `session ${id} ${key}: ${value}`);
 

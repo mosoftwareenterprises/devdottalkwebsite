@@ -11,7 +11,7 @@ const sessionsPath = join(
   "..",
   "src",
   "_data",
-  "sessions.json",
+  "sessions.json"
 );
 
 function readJson(filePath) {

@@ -1,14 +1,12 @@
 #!/bin/bash
-# Pre-commit hook: Run format and tests
+# Pre-commit hook: Run format and tests with Node 24 (via mise tasks)
 #
-# This hook requires Node 24+ (provided by mise).
-# If you encounter errors, run: mise exec -- git commit
-# (This ensures the correct Node version is used)
+# This hook:
+# 1. Formats all staged files (mise run format)
+# 2. Runs the full test suite (mise run test)
 #
-# What this does:
-# 1. Formats all staged files with Prettier
-# 2. Runs full test suite
+# Uses mise tasks which automatically ensure Node 24 is available.
 
-npx prettier --ignore-unknown --write $(git diff --cached --name-only 2>/dev/null || echo "")
-npm run test
+mise run format
+mise run test
 

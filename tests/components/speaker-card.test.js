@@ -38,36 +38,36 @@ describe("speaker-card component", () => {
     expect(css).toContain(".event-speaker-card");
     expect(css).toMatch(/\.event-speaker-card\s*\{[^}]*overflow:\s*visible;/s);
     expect(css).toMatch(
-      /\.event-speaker-card::before\s*\{[^}]*inset:\s*0 -2\.5cqw;/s,
+      /\.event-speaker-card::before\s*\{[^}]*inset:\s*0 -2\.5cqw;/s
     );
     expect(css).toMatch(
-      /\.event-speaker-card::before\s*\{[^}]*border:\s*1cqw solid/s,
+      /\.event-speaker-card::before\s*\{[^}]*border:\s*1cqw solid/s
     );
     expect(css).toMatch(
-      /\.event-speaker-card-brace\s*\{[^}]*font-weight:\s*700;/s,
+      /\.event-speaker-card-brace\s*\{[^}]*font-weight:\s*700;/s
     );
     expect(css).toMatch(
-      /\.event-speaker-card-brace\s*\{[^}]*transform:\s*scaleY\(0\.8\);/s,
+      /\.event-speaker-card-brace\s*\{[^}]*transform:\s*scaleY\(0\.8\);/s
     );
     expect(css).toMatch(
-      /\.event-speaker-card-photo\s*\{[^}]*border-radius:\s*50% 50% 0 50%;/s,
+      /\.event-speaker-card-photo\s*\{[^}]*border-radius:\s*50% 50% 0 50%;/s
     );
     expect(css).toMatch(
-      /\.event-speaker-card-portrait\s*\{[^}]*border-radius:\s*50%;/s,
+      /\.event-speaker-card-portrait\s*\{[^}]*border-radius:\s*50%;/s
     );
     expect(css).toMatch(
-      /\.event-speaker-card \.event-speaker-card-name-link\s*\{[^}]*color:\s*var\(--sc-cyan\);/s,
+      /\.event-speaker-card \.event-speaker-card-name-link\s*\{[^}]*color:\s*var\(--sc-cyan\);/s
     );
     expect(css).toMatch(
-      /\.event-speaker-card-name,\s*\.event-speaker-card-role\s*\{[^}]*flex:\s*1;[^}]*font-weight:\s*800;/s,
+      /\.event-speaker-card-name,\s*\.event-speaker-card-role\s*\{[^}]*flex:\s*1;[^}]*font-weight:\s*800;/s
     );
     expect(css).toMatch(/\.event-speaker-card-title\s*\{[^}]*width:\s*93cqw;/s);
     expect(css).toMatch(/\.event-speaker-card-meta\s*\{[^}]*width:\s*93cqw;/s);
     expect(css).toMatch(
-      /\.event-speaker-card-title\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*10cqw;[^}]*padding:\s*0\.5cqw 2\.5cqw;/s,
+      /\.event-speaker-card-title\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*10cqw;[^}]*padding:\s*0\.5cqw 2\.5cqw;/s
     );
     expect(css).toMatch(
-      /\.event-speaker-card-meta\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*18\.4cqw;[^}]*padding:\s*1cqw 1\.5cqw;/s,
+      /\.event-speaker-card-meta\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*18\.4cqw;[^}]*padding:\s*1cqw 1\.5cqw;/s
     );
     expect(css).toContain("max-width: 370px");
     expect(layout).toContain("/speaker-card.css");

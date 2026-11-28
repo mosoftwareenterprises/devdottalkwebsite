@@ -12,7 +12,7 @@ describe("site footer", () => {
     const dom = new JSDOM(html);
     const { document } = dom.window;
     const calendarLink = document.querySelector(
-      '.site-footer-meta a[href="/calendar"]',
+      '.site-footer-meta a[href="/calendar"]'
     );
 
     expect(calendarLink).not.toBeNull();

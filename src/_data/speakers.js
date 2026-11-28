@@ -31,7 +31,7 @@ const sortSpeakers = (speakers) => {
 export default () => {
   const speakerMap = new Map();
   const pastSessions = list.filter(
-    (session) => session.status === "past" && !isAllocatedSession(session),
+    (session) => session.status === "past" && !isAllocatedSession(session)
   );
 
   const addSpeaker = (
@@ -41,7 +41,7 @@ export default () => {
     bioPicUrl,
     tileImageLocation,
     bio,
-    session,
+    session
   ) => {
     if (!name) return;
     if (!speakerMap.has(name)) {
@@ -86,7 +86,7 @@ export default () => {
       session.firstSpeakerBioPicUrl,
       session.firstSpeakerTileImageLocation,
       session.firstSpeakerBio,
-      session,
+      session
     );
     if (session.secondSpeakerName) {
       addSpeaker(
@@ -96,7 +96,7 @@ export default () => {
         session.secondSpeakerBioPicUrl,
         session.secondSpeakerTileImageLocation,
         session.secondSpeakerBio,
-        session,
+        session
       );
     }
     if (session.thirdSpeakerName) {
@@ -107,13 +107,13 @@ export default () => {
         session.thirdSpeakerBioPicUrl,
         session.thirdSpeakerTileImageLocation,
         session.thirdSpeakerBio,
-        session,
+        session
       );
     }
   }
 
   const all = sortSpeakers(
-    [...speakerMap.values()].map(({ profileSessionId, ...speaker }) => speaker),
+    [...speakerMap.values()].map(({ profileSessionId, ...speaker }) => speaker)
   );
 
   return { all };

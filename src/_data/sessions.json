@@ -448,7 +448,7 @@
     "firstSpeakerName": "Hammed Ajibade",
     "firstSpeakerJobTitle": "Head of Engineering",
     "firstSpeakerUrl": "",
-    "firstSpeakerBioPicUrl": "",
+    "firstSpeakerBioPicUrl": "/images/speakers/hammedajibade.jpg",
     "firstSpeakerTileImageLocation": "",
     "firstSpeakerBio": "Hammed Ajibade is Head of Engineering at Thankyu Ltd, working on Pulse, a UK care-technology product. He has 7+ years of experience building and running production systems across care technology, national-scale payments (Remita) and smart-meter operations. At ThankYu he introduced AI-native engineering workflows that make AI part of day-to-day investigation, coding and review while keeping verification and engineering judgement in the loop. He also builds Ubriot, a mobile release platform with signing, OTA updates, approval boundaries, audit trails and AI-assisted failure diagnosis, and FlowProof, an open-source tool for reproducible bioinformatics pipelines with exact provenance. He holds an MSc in Advanced Computer Science (Distinction) from the University of Hull and is a Chartered IT Professional (CITP, BCS). His focus is making software teams faster without making their systems more fragile.",
     "secondSpeakerName": "",
@@ -1240,7 +1240,7 @@
   {
     "id": 20,
     "eventID": 10,
-    "title": "Domain-Specific Languages in Action: Why, When, and How — Experiences from Medical and Veterinary, Data science, and Legal domains",
+    "title": "Domain-Specific Languages in Action: Why, When, and How",
     "duration": 15,
     "description": "This talk will introduce Domain-Specific Languages (DSLs) — what they are, why they represent a promising software engineering solution, and where they are best applied.\nWe will explore the kinds of problems that benefit most from DSLs and why developers and organizations should consider them.\nI will also share our real-world experiences applying DSLs in several domains:\n• Medical and veterinary practice\n• Data science and analytics\n• Legal documents and compliance\nThese case studies will demonstrate how DSLs can simplify complexity, improve communication with domain experts, and deliver practical, impactful solutions across industries.",
     "firstSpeakerName": "Dr Sofia Meacham",

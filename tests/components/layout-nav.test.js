@@ -22,16 +22,16 @@ function createLayoutDom(overrides = {}) {
     "..",
     "src",
     "_includes",
-    "layout.njk",
+    "layout.njk"
   );
   const templateContent = readFileSync(templatePath, "utf8").replace(
     /{%\s*include\s+"[^"]+"\s*%}/g,
-    "",
+    ""
   );
   const html = env.renderString(templateContent);
 
   const scriptMatch = html.match(
-    /<script>\s*document\.addEventListener\('DOMContentLoaded', \(\) => \{[\s\S]*?\}\);\s*<\/script>/,
+    /<script>\s*document\.addEventListener\('DOMContentLoaded', \(\) => \{[\s\S]*?\}\);\s*<\/script>/
   );
 
   if (!scriptMatch) {
@@ -45,7 +45,7 @@ function createLayoutDom(overrides = {}) {
   const dom = new JSDOM(html, { runScripts: "outside-only" });
   dom.window.eval(scriptContent);
   dom.window.document.dispatchEvent(
-    new dom.window.Event("DOMContentLoaded", { bubbles: true }),
+    new dom.window.Event("DOMContentLoaded", { bubbles: true })
   );
 
   return dom;
@@ -56,7 +56,7 @@ describe("layout navigation menu", () => {
     const dom = createLayoutDom();
     const { document } = dom.window;
     const calendarLink = document.querySelector(
-      '#primary-nav a[href="/calendar"]',
+      '#primary-nav a[href="/calendar"]'
     );
 
     expect(calendarLink).not.toBeNull();
@@ -66,7 +66,7 @@ describe("layout navigation menu", () => {
   it("keeps the standalone links page out of the primary navigation", () => {
     const dom = createLayoutDom();
     const linksPageLink = dom.window.document.querySelector(
-      '#primary-nav a[href="/links"]',
+      '#primary-nav a[href="/links"]'
     );
 
     expect(linksPageLink).toBeNull();
@@ -84,7 +84,7 @@ describe("layout navigation menu", () => {
     expect(navToggle.getAttribute("aria-expanded")).toBe("true");
 
     document.body.dispatchEvent(
-      new dom.window.MouseEvent("click", { bubbles: true }),
+      new dom.window.MouseEvent("click", { bubbles: true })
     );
 
     expect(navBar.classList.contains("is-open")).toBe(false);

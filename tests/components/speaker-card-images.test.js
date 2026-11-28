@@ -34,11 +34,11 @@ describe("speaker-card PNG generator", () => {
   it("installs dependencies and Chromium in CI before building and testing", async () => {
     const workflow = await fs.readFile(
       ".github/workflows/azure-static-web-apps-yellow-plant-0da666103.yml",
-      "utf8",
+      "utf8"
     );
 
     expect(workflow).toMatch(
-      /mise exec -- npm ci[\s\S]*playwright install --with-deps chromium[\s\S]*mise run build[\s\S]*mise run test/,
+      /mise exec -- npm ci[\s\S]*playwright install --with-deps chromium[\s\S]*mise run build[\s\S]*mise run test/
     );
   });
 
@@ -63,7 +63,7 @@ describe("speaker-card PNG generator", () => {
   it("ignores placeholder speakers", () => {
     const records = getSpeakerCardRecords(
       [{ ...sessions[0], firstSpeakerName: "It could be you!" }],
-      events,
+      events
     );
 
     expect(records).toHaveLength(1);
@@ -73,7 +73,7 @@ describe("speaker-card PNG generator", () => {
   it("ignores Lean Coffee sessions", () => {
     const records = getSpeakerCardRecords(
       [{ ...sessions[0], title: "Lean Coffee Session" }],
-      events,
+      events
     );
 
     expect(records).toHaveLength(0);
@@ -82,7 +82,7 @@ describe("speaker-card PNG generator", () => {
   it("does not generate speaker cards for allocated sessions", () => {
     const records = getSpeakerCardRecords(
       [{ ...sessions[0], title: "ALLOCATED - details to follow" }],
-      events,
+      events
     );
 
     expect(records).toHaveLength(0);
@@ -91,7 +91,7 @@ describe("speaker-card PNG generator", () => {
   it("renders reusable card content with the real card markup", async () => {
     const html = await speakerCardHtml(
       getSpeakerCardRecords(sessions, events)[0],
-      process.cwd(),
+      process.cwd()
     );
 
     expect(html).toContain("A Talk About Local AI");
@@ -105,7 +105,7 @@ describe("speaker-card PNG generator", () => {
     const html = await speakerCardHtml(
       getSpeakerCardRecords(sessions, events)[0],
       process.cwd(),
-      css,
+      css
     );
     const browser = await chromium.launch({ headless: true });
     try {
@@ -127,7 +127,7 @@ describe("speaker-card PNG generator", () => {
 
   it("writes padded PNG files that include the extended frame border", async () => {
     const outputRoot = await fs.mkdtemp(
-      path.join(os.tmpdir(), "speaker-cards-"),
+      path.join(os.tmpdir(), "speaker-cards-")
     );
     const files = await generateSpeakerCardImages({
       sessions,
@@ -139,10 +139,10 @@ describe("speaker-card PNG generator", () => {
 
     expect(files).toHaveLength(2);
     expect(files[0]).toContain(
-      "images/2026/november/First Speaker image - November 2026.png",
+      "images/2026/november/First Speaker image - November 2026.png"
     );
     expect(files[1]).toContain(
-      "images/2026/november/Second Speaker image - November 2026.png",
+      "images/2026/november/Second Speaker image - November 2026.png"
     );
     expect(metadata.width).toBe(583);
     expect(metadata.height).toBe(792);
@@ -150,7 +150,7 @@ describe("speaker-card PNG generator", () => {
 
   it("does not rewrite unchanged images on subsequent builds", async () => {
     const outputRoot = await fs.mkdtemp(
-      path.join(os.tmpdir(), "speaker-cards-watch-"),
+      path.join(os.tmpdir(), "speaker-cards-watch-")
     );
     try {
       const options = {
@@ -177,7 +177,7 @@ describe("speaker-card PNG generator", () => {
       });
 
       expect((await fs.stat(outputFile)).mtimeMs).toBeGreaterThan(
-        oldTime.getTime(),
+        oldTime.getTime()
       );
     } finally {
       await fs.rm(outputRoot, { recursive: true, force: true });

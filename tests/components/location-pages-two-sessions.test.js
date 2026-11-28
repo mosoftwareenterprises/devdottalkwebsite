@@ -29,12 +29,12 @@ describe("location pages from May 2026 onward", () => {
       "..",
       "..",
       "src",
-      "2026-october-location-info.md",
+      "2026-october-location-info.md"
     );
     const content = readFileSync(pagePath, "utf8");
 
     expect(content).toContain(
-      "By attending this event, you agree to our [Privacy Policy](/privacy-policy.html)",
+      "By attending this event, you agree to our [Privacy Policy](/privacy-policy.html)"
     );
     expect(content).toContain("[Code of Conduct](/code-of-conduct.html).");
   });
@@ -48,12 +48,12 @@ describe("location pages from May 2026 onward", () => {
         content.match(/\{\{\s*speakerSession\(/g) || []
       ).length;
       const usesSessionLoop = content.includes(
-        "{% for sessionId in currentEvent.sessionIDs %}",
+        "{% for sessionId in currentEvent.sessionIDs %}"
       );
 
       expect(
         speakerSessionCallCount >= 2 || usesSessionLoop,
-        `${pageFile} should include at least two speakerSession blocks or loop over sessionIDs`,
+        `${pageFile} should include at least two speakerSession blocks or loop over sessionIDs`
       ).toBe(true);
     }
   });

@@ -29,7 +29,7 @@ describe("openSpeakerSlots", () => {
   it("keeps the original event fields", () => {
     const [result] = openSpeakerSlots(
       [event({ fullDateLabel: "Wednesday" })],
-      [],
+      []
     );
     expect(result.id).toBe(1);
     expect(result.fullDateLabel).toBe("Wednesday");
@@ -38,7 +38,7 @@ describe("openSpeakerSlots", () => {
   it("counts a session linked by sessionIDs", () => {
     const [result] = openSpeakerSlots(
       [event({ sessionIDs: [100] })],
-      [session()],
+      [session()]
     );
     expect(result.openSlots).toBe(1);
   });
@@ -51,7 +51,7 @@ describe("openSpeakerSlots", () => {
   it("does not double count a session matched both ways", () => {
     const [result] = openSpeakerSlots(
       [event({ sessionIDs: [100] })],
-      [session({ eventID: 1 })],
+      [session({ eventID: 1 })]
     );
     expect(result.openSlots).toBe(1);
   });
@@ -59,7 +59,7 @@ describe("openSpeakerSlots", () => {
   it("ignores sessions belonging to other events", () => {
     const [result] = openSpeakerSlots(
       [event()],
-      [session({ id: 5, eventID: 2 })],
+      [session({ id: 5, eventID: 2 })]
     );
     expect(result.openSlots).toBe(2);
   });
@@ -70,7 +70,7 @@ describe("openSpeakerSlots", () => {
       [
         session({ firstSpeakerName: "  It Could Be You! " }),
         session({ id: 101, firstSpeakerName: "" }),
-      ],
+      ]
     );
     expect(result.openSlots).toBe(2);
   });
@@ -78,7 +78,7 @@ describe("openSpeakerSlots", () => {
   it("ignores Lean Coffee sessions", () => {
     const [result] = openSpeakerSlots(
       [event({ sessionIDs: [100] })],
-      [session({ title: " Lean Coffee Session " })],
+      [session({ title: " Lean Coffee Session " })]
     );
     expect(result.openSlots).toBe(2);
   });
@@ -91,7 +91,7 @@ describe("openSpeakerSlots", () => {
           title: "ALLOCATED - details to follow",
           firstSpeakerName: "",
         }),
-      ],
+      ]
     );
     expect(result.openSlots).toBe(1);
   });
@@ -102,7 +102,7 @@ describe("openSpeakerSlots", () => {
       [
         session(),
         session({ id: 101, title: "ALLOCATED", firstSpeakerName: "" }),
-      ],
+      ]
     );
     expect(result).toEqual([]);
   });
@@ -110,7 +110,7 @@ describe("openSpeakerSlots", () => {
   it("omits events that are full", () => {
     const result = openSpeakerSlots(
       [event({ sessionIDs: [100, 101] })],
-      [session(), session({ id: 101, firstSpeakerName: "John Doe" })],
+      [session(), session({ id: 101, firstSpeakerName: "John Doe" })]
     );
     expect(result).toEqual([]);
   });
@@ -118,7 +118,7 @@ describe("openSpeakerSlots", () => {
   it("omits cancelled and no-event months", () => {
     const result = openSpeakerSlots(
       [event({ isCancelled: true }), event({ id: 2, isNoEventMonth: true })],
-      [],
+      []
     );
     expect(result).toEqual([]);
   });

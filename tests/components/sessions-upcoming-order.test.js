@@ -19,16 +19,14 @@ describe("upcoming sessions ordering", () => {
     const { upcomingEvents } = loadSessions();
 
     expect(
-      upcomingEvents.every(
-        (session) => session.title !== "Lean Coffee Session",
-      ),
+      upcomingEvents.every((session) => session.title !== "Lean Coffee Session")
     ).toBe(true);
   });
 
   it("pushes Mark Oliver first-speaker sessions to the bottom of the upcoming list", () => {
     const { upcomingEvents } = loadSessions();
     const firstMarkOliverIndex = upcomingEvents.findIndex(
-      hasMarkOliverFirstSpeaker,
+      hasMarkOliverFirstSpeaker
     );
     const nonMarkOliverFirstSpeakerCount = upcomingEvents.filter((session) => {
       return !hasMarkOliverFirstSpeaker(session);
@@ -43,12 +41,12 @@ describe("upcoming sessions ordering", () => {
       upcomingEvents.slice(firstMarkOliverIndex);
 
     expect(sessionsAfterFirstMarkOliver.every(hasMarkOliverFirstSpeaker)).toBe(
-      true,
+      true
     );
     expect(
       upcomingEvents
         .slice(0, firstMarkOliverIndex)
-        .every((session) => !hasMarkOliverFirstSpeaker(session)),
+        .every((session) => !hasMarkOliverFirstSpeaker(session))
     ).toBe(true);
   });
 });

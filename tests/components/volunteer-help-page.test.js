@@ -14,7 +14,7 @@ describe("volunteer help page", () => {
     expect(content).toContain("permalink: volunteer-help.html");
 
     expect(content).toContain(
-      "https://help.luma.com/p/check-in-guests-for-in-person-events",
+      "https://help.luma.com/p/check-in-guests-for-in-person-events"
     );
   });
 });

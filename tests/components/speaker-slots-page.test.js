@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // The browser script is plain JS; evaluate it with a fake CommonJS module to reach its exports.
 const scriptSource = readFileSync(
   join(__dirname, "..", "..", "src", "speaker-slots.js"),
-  "utf8",
+  "utf8"
 );
 const fakeModule = { exports: {} };
 new Function("module", scriptSource)(fakeModule);
@@ -22,11 +22,11 @@ const {
 describe("speaker slots page", () => {
   const content = readFileSync(
     join(__dirname, "..", "..", "src", "speaker-slots.njk"),
-    "utf8",
+    "utf8"
   );
   const styles = readFileSync(
     join(__dirname, "..", "..", "src", "speaker-slots.css"),
-    "utf8",
+    "utf8"
   );
 
   it("is hidden from collections and has a slot button", () => {
@@ -51,7 +51,7 @@ describe("speaker slots page", () => {
 
   it("explains that email buttons send a request and the team confirms the date", () => {
     expect(content).toContain(
-      "Thanks so much for your time and for your interest in speaking at {dev.talk}. We really appreciate you being willing to share your experience with our community. When you're ready, choose an available date and select your preferred email option. A pre-filled email will open for you to review and send. Your date isn't confirmed until we reply.",
+      "Thanks so much for your time and for your interest in speaking at {dev.talk}. We really appreciate you being willing to share your experience with our community. When you're ready, choose an available date and select your preferred email option. A pre-filled email will open for you to review and send. Your date isn't confirmed until we reply."
     );
   });
 
@@ -62,24 +62,24 @@ describe("speaker slots page", () => {
     expect(content).toContain('data-button-icon="email"');
     expect(content).toContain('data-button-icon="copy"');
     expect(content.match(/aria-hidden="true" focusable="false"/g)).toHaveLength(
-      4,
+      4
     );
     expect(content).toContain(">Gmail</span>");
     expect(content).toContain(">Outlook</span>");
     expect(content).toContain(">Other email app</span>");
     expect(content).toContain(">Copy details</span>");
     expect(styles).toMatch(
-      /\.speaker-slots-icon\s*{[^}]*height:\s*1\.2rem[^}]*width:\s*1\.2rem/,
+      /\.speaker-slots-icon\s*{[^}]*height:\s*1\.2rem[^}]*width:\s*1\.2rem/
     );
   });
 
   it("gives each open date a clear panel and action hierarchy", () => {
     expect(styles).toMatch(
-      /\.speaker-slots-item\s*{[^}]*background:[^}]*border:[^}]*border-left:[^}]*border-radius:/,
+      /\.speaker-slots-item\s*{[^}]*background:[^}]*border:[^}]*border-left:[^}]*border-radius:/
     );
     expect(styles).toMatch(/\.speaker-slots-item\s*>\s*h2\s*{[^}]*color:/);
     expect(styles).toMatch(
-      /\.speaker-slots-item\s*>\s*p:not\(\.speaker-slots-copy-status\)\s*{[^}]*background:/,
+      /\.speaker-slots-item\s*>\s*p:not\(\.speaker-slots-copy-status\)\s*{[^}]*background:/
     );
     expect(styles).toMatch(/\.speaker-slots-button\s*{[^}]*background:/);
     expect(styles).toMatch(/\.speaker-slots-button--copy\s*{[^}]*background:/);
@@ -87,7 +87,7 @@ describe("speaker slots page", () => {
 
   it("lays out email actions in two columns on narrow screens", () => {
     expect(styles).toMatch(
-      /@media\s*\(max-width:\s*600px\)[\s\S]*?\.speaker-slots-actions\s*{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\)/,
+      /@media\s*\(max-width:\s*600px\)[\s\S]*?\.speaker-slots-actions\s*{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\)/
     );
   });
 
@@ -95,7 +95,7 @@ describe("speaker slots page", () => {
     const url = buildMailto(
       "Thursday, 5th November 2026",
       "Jane Doe",
-      "Cool Talk",
+      "Cool Talk"
     );
     expect(url.startsWith("mailto:speaker@devdottalk.uk?subject=")).toBe(true);
     const decoded = decodeURIComponent(url);
@@ -108,11 +108,11 @@ describe("speaker slots page", () => {
     const draft = buildEmailDraft(
       "Thursday, 5th November 2026",
       "Jane Doe",
-      "Cool Talk",
+      "Cool Talk"
     );
 
     expect(draft.subject).toBe(
-      "Speaker slot request: Thursday, 5th November 2026 - Jane Doe",
+      "Speaker slot request: Thursday, 5th November 2026 - Jane Doe"
     );
     expect(draft.body).toContain("Speaker: Jane Doe");
     expect(draft.body).toContain("Session: Cool Talk");
@@ -123,22 +123,22 @@ describe("speaker slots page", () => {
       buildGmailComposeUrl(
         "Thursday, 5th November 2026",
         "Jane Doe",
-        "Cool Talk",
-      ),
+        "Cool Talk"
+      )
     );
     const outlook = new URL(
       buildOutlookComposeUrl(
         "Thursday, 5th November 2026",
         "Jane Doe",
-        "Cool Talk",
-      ),
+        "Cool Talk"
+      )
     );
 
     expect(gmail.origin).toBe("https://mail.google.com");
     expect(gmail.searchParams.get("to")).toBe("speaker@devdottalk.uk");
     expect(gmail.searchParams.get("su")).toContain("Jane Doe");
     expect(gmail.searchParams.get("body")).toContain(
-      "Thursday, 5th November 2026",
+      "Thursday, 5th November 2026"
     );
     expect(outlook.origin).toBe("https://outlook.office.com");
     expect(outlook.searchParams.get("to")).toBe("speaker@devdottalk.uk");
@@ -174,7 +174,7 @@ describe("speaker slots page", () => {
     await copyHandler();
 
     expect(copiedText).toContain(
-      "Subject: Speaker slot request: Thursday, 5th November 2026 - Jane Doe",
+      "Subject: Speaker slot request: Thursday, 5th November 2026 - Jane Doe"
     );
     expect(copiedText).toContain("Session: Cool Talk");
     expect(status.textContent).toBe("Email details copied.");
@@ -210,7 +210,7 @@ describe("speaker slots page", () => {
 
     expect(fallback.hidden).toBe(false);
     expect(fallback.value).toContain(
-      "Subject: Speaker slot request: Thursday, 5th November 2026 - Jane Doe",
+      "Subject: Speaker slot request: Thursday, 5th November 2026 - Jane Doe"
     );
     expect(status.textContent).toContain("Select and copy");
   });
