@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { isAllocatedSession } from '../../lib/allocated-session.js';
 
 // Derive a unique speakers list from sessions.json, deduplicating by name
 // and merging session history for speakers who have presented multiple times.
@@ -19,7 +20,7 @@ const sortSpeakers = (speakers) => {
 
 export default () => {
     const speakerMap = new Map();
-    const pastSessions = list.filter((session) => session.status === 'past');
+    const pastSessions = list.filter((session) => session.status === 'past' && !isAllocatedSession(session));
 
     const addSpeaker = (name, jobTitle, url, bioPicUrl, tileImageLocation, bio, session) => {
         if (!name) return;

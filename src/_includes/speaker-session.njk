@@ -15,7 +15,7 @@
     {% endif %}
     {% if not sessionRecord %}
         <p>Session not found.</p>
-    {% else %}
+    {% elif not (sessionRecord | isAllocatedSession) %}
         {% set sessionDate = "" %}
         {% if events is defined and events.all %}
             {% for event in events.all %}

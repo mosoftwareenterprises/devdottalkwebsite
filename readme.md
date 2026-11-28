@@ -46,6 +46,7 @@ Use this monthly checklist to keep event updates complete.
 - [ ] Create the event page in `src/` (copy the previous month), then set frontmatter: `permalink`, `title`, `description`, `eventId`, `showVenueSection`.
 - [ ] Add or update the event in `src/_data/events.json` with `id`, date/display fields, URL/title, location fields, `overview`, and `sessionIDs`.
 - [ ] Add or update talks in `src/_data/sessions.json` with unique session `id`, matching `eventID`, speaker/title/description, `status`, `videoUrl`, and `slidesUrl`.
+- [ ] To reserve an undisclosed speaker slot, start the session title with uppercase `ALLOCATED`. The session is hidden from public listings and counts as one filled slot, even without a speaker name.
 - [ ] Keep event/session links in sync:
   - every `sessionIDs` entry must exist in sessions
   - every session with `eventID = X` must be listed in event `id = X` `sessionIDs`

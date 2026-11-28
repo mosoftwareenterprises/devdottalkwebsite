@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { isAllocatedSession } from '../../lib/allocated-session.js';
 
 // load raw array from JSON so that editors can easily read/write the file
 // __dirname equivalent in ESM, ensures Windows paths are handled correctly.
@@ -19,14 +20,14 @@ export default () => {
         };
     });
 
-    const pastEvents = enriched.filter(s => s.status === 'past').sort((a, b) => a.id - b.id);
+    const pastEvents = enriched.filter(s => s.status === 'past' && !isAllocatedSession(s)).sort((a, b) => a.id - b.id);
 
 
     const hasMarkOliverFirstSpeaker = (session) => {
         return session.firstSpeakerName === 'Mark Oliver';
     };
 
-    const upcomingEvents = [...enriched.filter(s => s.status === 'upcoming' && s.title !== 'Lean Coffee Session')].sort((a, b) => {
+    const upcomingEvents = [...enriched.filter(s => s.status === 'upcoming' && s.title !== 'Lean Coffee Session' && !isAllocatedSession(s))].sort((a, b) => {
         const aHasMarkOliver = hasMarkOliverFirstSpeaker(a);
         const bHasMarkOliver = hasMarkOliverFirstSpeaker(b);
 

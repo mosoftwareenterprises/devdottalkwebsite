@@ -3,6 +3,7 @@ import MarkdownIt from 'markdown-it';
 import { fileURLToPath } from 'url';
 import { dirname, join, resolve } from 'path';
 import { readFileSync } from 'fs';
+import { isAllocatedSession } from '../../lib/allocated-session.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(join(__dirname, '..', '..'));
@@ -21,6 +22,8 @@ export function createNunjucksEnv(data = {}) {
     lstripBlocks: true,
     noCache: true
   });
+
+  env.addFilter('isAllocatedSession', isAllocatedSession);
 
   // Register custom filters that Eleventy might provide
     // selectattr filter mimics Jinja2's selectattr(attr, test, value) format

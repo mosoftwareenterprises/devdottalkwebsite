@@ -6,6 +6,22 @@ describe('speaker-session component', () => {
   const templatePath = '_includes/speaker-session.njk';
   const macroName = 'speakerSession';
 
+  it('hides allocated session details without reporting a missing session', () => {
+    const allocated = [{ ...mockSessions[0], title: 'ALLOCATED - details to follow' }];
+    const html = renderMacro(templatePath, macroName, [999, allocated], {
+      sessions: { findById: () => allocated[0] }
+    });
+
+    expect(html.trim()).toBe('');
+  });
+
+  it('does not hide lowercase allocated titles', () => {
+    const allocated = [{ ...mockSessions[0], title: 'allocated talk' }];
+    const html = renderMacro(templatePath, macroName, [999, allocated]);
+
+    expect(html).toContain('allocated talk');
+  });
+
   describe('renders speaker information correctly', () => {
     it('should render speaker name', () => {
       const html = renderMacro(

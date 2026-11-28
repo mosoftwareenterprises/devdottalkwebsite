@@ -31,22 +31,26 @@
           {% endif %}
 
           {% if sessionMatchesEvent %}
-            {% set firstSpeakerName = (sess.firstSpeakerName or "") | trim | lower %}
-            {# Ignore placeholder names used to represent open speaker slots. #}
-            {% if firstSpeakerName and firstSpeakerName != "it could be you!" %}
+            {% if sess | isAllocatedSession %}
               {% set assignedSpeakerCount = assignedSpeakerCount + 1 %}
-            {% endif %}
+            {% else %}
+              {% set firstSpeakerName = (sess.firstSpeakerName or "") | trim | lower %}
+              {# Ignore placeholder names used to represent open speaker slots. #}
+              {% if firstSpeakerName and firstSpeakerName != "it could be you!" %}
+                {% set assignedSpeakerCount = assignedSpeakerCount + 1 %}
+              {% endif %}
 
-            {% set secondSpeakerName = (sess.secondSpeakerName or "") | trim | lower %}
-            {% if secondSpeakerName and secondSpeakerName != "it could be you!" %}
-              {% set assignedSpeakerCount = assignedSpeakerCount + 1 %}
+              {% set secondSpeakerName = (sess.secondSpeakerName or "") | trim | lower %}
+              {% if secondSpeakerName and secondSpeakerName != "it could be you!" %}
+                {% set assignedSpeakerCount = assignedSpeakerCount + 1 %}
+              {% endif %}
             {% endif %}
           {% endif %}
         {% endif %}
       {% endfor %}
 
       {% set overviewText = (ev.overview or "") | trim %}
-      <li class="event-item{% if ev.isNoEventMonth %} event-item--no-event{% elif not overviewText %} event-item--speaker-wanted{% endif %}"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
+      <li class="event-item{% if ev.isNoEventMonth %} event-item--no-event{% elif not overviewText and assignedSpeakerCount < 2 %} event-item--speaker-wanted{% endif %}"{% if ev.id is defined and ev.id %} id="{{ ev.id }}"{% endif %}>
         {# <a href="{{ ev.url }}" target="_blank" rel="noopener noreferrer" class="event-title"> #}
           {% if ev.isNoEventMonth %}
             <b>{{ ev.month }} {{ ev.year }}</b>
@@ -60,7 +64,7 @@
           <span class="event-status event-status--no-event">☀️ We pause events in summer to give everyone a chance to touch grass.</span>
         {% elif overviewText %}
           <p class="event-overview">{{ overviewText }}</p>
-        {% elif assignedSpeakerCount != 1 %}
+        {% elif assignedSpeakerCount == 0 %}
           <span class="event-speaker-wanted-inline"><strong class="event-speaker-wanted-label">🎤 Speaker wanted:</strong> <a href="/call-for-speakers.html">submit a talk idea</a> or <a href="/contact-us.html">get in touch</a>.</span>
         {% endif %}
 

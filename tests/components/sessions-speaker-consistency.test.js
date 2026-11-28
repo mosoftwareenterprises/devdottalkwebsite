@@ -43,7 +43,7 @@ describe('sessions speaker data quality', () => {
 
     it('uses profile fields from the newest session id per speaker', () => {
         const sessions = readJson(sessionsPath);
-        const pastSessions = sessions.filter((session) => session.status === 'past');
+        const pastSessions = sessions.filter((session) => session.status === 'past' && !session.title.startsWith('ALLOCATED'));
         const { all: speakerList } = loadSpeakers();
         const speakerByName = new Map(speakerList.map((speaker) => [speaker.name, speaker]));
         const speakerOccurrences = new Map();
@@ -81,7 +81,7 @@ describe('sessions speaker data quality', () => {
         const speakerNames = new Set(speakerList.map((speaker) => speaker.name));
 
         for (const session of sessions) {
-            if (session.status !== 'past') continue;
+            if (session.status !== 'past' || session.title.startsWith('ALLOCATED')) continue;
 
             for (const role of speakerRoles) {
                 const name = normalize(session[`${role}SpeakerName`]);

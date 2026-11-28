@@ -6,6 +6,15 @@ describe('event-list-item component', () => {
   const templatePath = '_includes/event-list-item.njk';
   const macroName = 'eventItem';
 
+  it('does not show an empty sessions heading for an allocated session', () => {
+    const html = renderMacro(templatePath, macroName, [
+      mockEvents[0], [{ ...mockSessions[0], title: 'ALLOCATED' }]
+    ]);
+
+    expect(html).not.toContain('ALLOCATED');
+    expect(html).not.toContain('Sessions and speakers');
+  });
+
   describe('renders event information (new object style)', () => {
     it('should render event title', () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);

@@ -5,6 +5,17 @@ import { mockSessions } from '../fixtures/data.js';
 describe('index upcoming sessions section', () => {
     const templatePath = '_includes/index/section-upcoming-sessions.njk';
 
+    it('does not display allocated session details', () => {
+        const html = renderTemplate(templatePath, {
+            sessions: {
+                upcomingEvents: [{ ...mockSessions[0], title: 'ALLOCATED - reserved' }]
+            }
+        });
+
+        expect(html).not.toContain('ALLOCATED');
+        expect(html).not.toContain('Alice Fictional Developer');
+    });
+
     it('should render title, duration, and speaker in the visible summary line', () => {
         const html = renderTemplate(templatePath, {
             sessions: {

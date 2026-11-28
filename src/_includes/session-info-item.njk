@@ -11,7 +11,7 @@
   {% set titleLower = s.title | trim | lower %}
   {% set isPlaceholderSession = s.title and (titleLower.startsWith("first") or titleLower.startsWith("second")) and titleLower.endsWith("session") %}
 
-  {% if not isPlaceholderSession %}
+  {% if not isPlaceholderSession and not (s | isAllocatedSession) %}
   <li class="session-info-item">
     <p>
       <b>

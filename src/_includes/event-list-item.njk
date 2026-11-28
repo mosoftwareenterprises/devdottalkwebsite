@@ -35,7 +35,7 @@
 
       {% set renderedSessionCount = 0 %}
       {% for sess in allSessions %}
-        {% if sess.eventID == ev.id %}
+        {% if sess.eventID == ev.id and not (sess | isAllocatedSession) %}
           {% if renderedSessionCount == 0 %}
             <h3>Sessions and speakers</h3>
             <ul class="event-sessions">

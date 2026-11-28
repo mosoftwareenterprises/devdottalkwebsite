@@ -56,7 +56,7 @@ describe('index upcoming events section', () => {
                 upcoming: [{ ...mockEvents[0], overview: '' }]
             },
             sessions: {
-                allEvents: [mockSessions[0], mockSessions[1]]
+                allEvents: []
             }
         });
 
@@ -120,6 +120,35 @@ describe('index upcoming events section', () => {
 
         expect(html).toContain('event-speaker-wanted-label');
         expect(html).not.toContain('Another speaker wanted for this event');
+    });
+
+    it.each(['', 'An event overview'])('counts an allocated session as one filled slot with overview %j', (overview) => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [{ ...mockEvents[0], overview, sessionIDs: [999, 998] }]
+            },
+            sessions: {
+                allEvents: [
+                    mockSessions[0],
+                    { ...mockSessions[1], title: 'ALLOCATED - details to follow', firstSpeakerName: '', secondSpeakerName: '' }
+                ]
+            }
+        });
+
+        expect(html).not.toContain('event-speaker-wanted-label');
+        expect(html).not.toContain('Another speaker wanted for this event');
+    });
+
+    it('counts an allocated session as exactly one slot even with multiple speaker names', () => {
+        const html = renderTemplate(templatePath, {
+            events: { upcoming: [{ ...mockEvents[0], overview: '' }] },
+            sessions: {
+                allEvents: [{ ...mockSessions[0], title: 'ALLOCATED', secondSpeakerName: 'Another Name' }]
+            }
+        });
+
+        expect(html).toContain('Another speaker wanted for this event');
+        expect(html).not.toContain('event-speaker-wanted-label');
     });
 
     it('does not render another-speaker prompt when two speakers are assigned', () => {

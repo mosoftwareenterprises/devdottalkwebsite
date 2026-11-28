@@ -60,6 +60,22 @@ describe('openSpeakerSlots', () => {
         expect(result.openSlots).toBe(2);
     });
 
+    it('counts an allocated session without a speaker as one filled slot', () => {
+        const [result] = openSpeakerSlots(
+            [event({ sessionIDs: [100] })],
+            [session({ title: 'ALLOCATED - details to follow', firstSpeakerName: '' })]
+        );
+        expect(result.openSlots).toBe(1);
+    });
+
+    it('omits an event with one confirmed and one allocated session', () => {
+        const result = openSpeakerSlots(
+            [event({ sessionIDs: [100, 101] })],
+            [session(), session({ id: 101, title: 'ALLOCATED', firstSpeakerName: '' })]
+        );
+        expect(result).toEqual([]);
+    });
+
     it('omits events that are full', () => {
         const result = openSpeakerSlots(
             [event({ sessionIDs: [100, 101] })],
