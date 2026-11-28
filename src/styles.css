@@ -678,7 +678,7 @@ li p {
   margin-right: 6px;
 }
 
-.event-item--speaker-wanted .event-speaker-wanted-inline {
+.event-item--speaker-wanted .event-speaker-wanted-inline:not(.event-speaker-wanted-inline--highlight) {
   display: inline;
   font-size: 0.9rem;
 }

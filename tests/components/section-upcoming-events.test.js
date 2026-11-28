@@ -89,6 +89,39 @@ describe('index upcoming events section', () => {
         expect(html).toContain('/call-for-speakers.html');
     });
 
+    it('replaces the generic prompt when one speaker is assigned and the overview is empty', () => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [{ ...mockEvents[0], overview: '', sessionIDs: [999, 997] }]
+            },
+            sessions: {
+                allEvents: [
+                    mockSessions[0],
+                    { ...mockSessions[2], title: 'Lean Coffee Session' }
+                ]
+            }
+        });
+
+        expect(html).toContain('event-speaker-wanted-inline--highlight');
+        expect(html).toContain('Another speaker wanted for this event');
+        expect(html).not.toContain('event-speaker-wanted-label');
+        expect(html).not.toContain('submit a talk idea');
+    });
+
+    it('renders the generic prompt when there is no assigned speaker', () => {
+        const html = renderTemplate(templatePath, {
+            events: {
+                upcoming: [{ ...mockEvents[0], overview: '' }]
+            },
+            sessions: {
+                allEvents: [{ ...mockSessions[0], firstSpeakerName: 'It could be you!' }]
+            }
+        });
+
+        expect(html).toContain('event-speaker-wanted-label');
+        expect(html).not.toContain('Another speaker wanted for this event');
+    });
+
     it('does not render another-speaker prompt when two speakers are assigned', () => {
         const html = renderTemplate(templatePath, {
             events: {

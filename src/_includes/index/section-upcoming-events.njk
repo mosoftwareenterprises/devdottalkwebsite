@@ -60,7 +60,7 @@
           <span class="event-status event-status--no-event">☀️ We pause events in summer to give everyone a chance to touch grass.</span>
         {% elif overviewText %}
           <p class="event-overview">{{ overviewText }}</p>
-        {% else %}
+        {% elif assignedSpeakerCount != 1 %}
           <span class="event-speaker-wanted-inline"><strong class="event-speaker-wanted-label">🎤 Speaker wanted:</strong> <a href="/call-for-speakers.html">submit a talk idea</a> or <a href="/contact-us.html">get in touch</a>.</span>
         {% endif %}
 
