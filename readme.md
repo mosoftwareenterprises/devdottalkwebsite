@@ -12,8 +12,69 @@ Production website at [https://devdottalk.uk](https://devdottalk.uk)
 mise run build       # Build: npm install → npm ci → npm run build
 mise run test        # Run tests: npm run test
 mise run test-watch  # Run tests in watch mode: npm run test:watch
+mise run format      # Format all files with Prettier
 mise start           # Start dev: build → test → npm start (watch)
 ```
+
+## Code Quality & Pre-commit Hooks
+
+This project uses **Husky** pre-commit hooks to automatically run formatting and tests on every commit.
+
+### What Runs On Commit
+
+When you commit, the following automatically execute:
+1. **Prettier** - Formats all staged files
+2. **Test suite** - Runs `npm run test`
+
+The commit will be **blocked** if tests fail, ensuring no broken code is committed.
+
+### Using Pre-commit Hooks
+
+#### Normal Git Commits (Recommended)
+
+```bash
+git commit -m "Your message"
+# Husky automatically runs format + tests
+```
+
+If the pre-commit hook fails:
+- Fix the failing tests
+- Stage the changes: `git add .`
+- Run: `git commit -m "Your message"`
+
+#### Bypass Hooks (If Needed)
+
+```bash
+git commit --no-verify -m "Skip pre-commit hooks"
+```
+
+#### Using Mise (Ensures Correct Node Version)
+
+For guaranteed Node 24 compatibility:
+
+```bash
+mise exec -- git commit -m "Your message"
+```
+
+### Manual Formatting & Testing
+
+```bash
+# Format all files
+mise run format
+
+# Run tests
+mise run test
+
+# Format + test together
+mise run format && mise run test
+```
+
+### Configuration Files
+
+- **[.prettierrc](.prettierrc)** - Prettier formatting rules
+- **[.prettierignore](.prettierignore)** - Files to skip during formatting
+- **[.lintstagedrc](.lintstagedrc)** - Lint-staged configuration
+- **[.husky/pre-commit](.husky/pre-commit)** - Pre-commit hook script
 
 ## Testing Guide
 
