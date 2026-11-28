@@ -1,12 +1,12 @@
-import nunjucks from 'nunjucks';
-import MarkdownIt from 'markdown-it';
-import { fileURLToPath } from 'url';
-import { dirname, join, resolve } from 'path';
-import { readFileSync } from 'fs';
-import { isAllocatedSession } from '../../lib/allocated-session.js';
+import nunjucks from "nunjucks";
+import MarkdownIt from "markdown-it";
+import { fileURLToPath } from "url";
+import { dirname, join, resolve } from "path";
+import { readFileSync } from "fs";
+import { isAllocatedSession } from "../../lib/allocated-session.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const projectRoot = resolve(join(__dirname, '..', '..'));
+const projectRoot = resolve(join(__dirname, "..", ".."));
 
 /**
  * Creates a Nunjucks environment configured for testing components
@@ -14,73 +14,73 @@ const projectRoot = resolve(join(__dirname, '..', '..'));
  * @returns {nunjucks.Environment} Configured Nunjucks environment
  */
 export function createNunjucksEnv(data = {}) {
-  const srcPath = join(projectRoot, 'src');
-  const includesPath = join(srcPath, '_includes');
+  const srcPath = join(projectRoot, "src");
+  const includesPath = join(srcPath, "_includes");
   const env = nunjucks.configure([srcPath, includesPath], {
     autoescape: false,
     trimBlocks: true,
     lstripBlocks: true,
-    noCache: true
+    noCache: true,
   });
 
-  env.addFilter('isAllocatedSession', isAllocatedSession);
+  env.addFilter("isAllocatedSession", isAllocatedSession);
 
   // Register custom filters that Eleventy might provide
-    // selectattr filter mimics Jinja2's selectattr(attr, test, value) format
-    // When called as: arr | selectattr("id", "equalto", 31)
-    // The Nunjucks runtime passes it as: selectattr(arr, "id", "equalto", 31)
-    env.addFilter('selectattr', (arr, attr, testName, value) => {
+  // selectattr filter mimics Jinja2's selectattr(attr, test, value) format
+  // When called as: arr | selectattr("id", "equalto", 31)
+  // The Nunjucks runtime passes it as: selectattr(arr, "id", "equalto", 31)
+  env.addFilter("selectattr", (arr, attr, testName, value) => {
     if (!Array.isArray(arr)) return [];
 
-      // If only 3 args passed, assume simple equality check (backwards compat)
-      if (value === undefined) {
-          value = testName;
-          testName = 'equalto';
+    // If only 3 args passed, assume simple equality check (backwards compat)
+    if (value === undefined) {
+      value = testName;
+      testName = "equalto";
+    }
+
+    return arr.filter((item) => {
+      const itemValue = item[attr];
+
+      if (testName === "equalto") {
+        // Use == for loose comparison to handle numeric/string comparisons
+        return itemValue == value; // eslint-disable-line eqeqeq
+      } else if (testName === "ne" || testName === "notequalto") {
+        return itemValue != value; // eslint-disable-line eqeqeq
+      } else if (testName === "gt" || testName === "greaterthan") {
+        return itemValue > value;
+      } else if (testName === "lt" || testName === "lessthan") {
+        return itemValue < value;
+      } else if (testName === "ge" || testName === "greaterthanorequalto") {
+        return itemValue >= value;
+      } else if (testName === "le" || testName === "lessthanorequalto") {
+        return itemValue <= value;
+      } else if (testName === "in") {
+        return String(itemValue).includes(String(value));
+      } else if (testName === "string") {
+        return typeof itemValue === "string";
+      } else {
+        // Default to equality
+        return itemValue == value; // eslint-disable-line eqeqeq
       }
-
-    return arr.filter(item => {
-        const itemValue = item[attr];
-
-        if (testName === 'equalto') {
-            // Use == for loose comparison to handle numeric/string comparisons
-            return itemValue == value; // eslint-disable-line eqeqeq
-        } else if (testName === 'ne' || testName === 'notequalto') {
-            return itemValue != value; // eslint-disable-line eqeqeq
-        } else if (testName === 'gt' || testName === 'greaterthan') {
-            return itemValue > value;
-        } else if (testName === 'lt' || testName === 'lessthan') {
-            return itemValue < value;
-        } else if (testName === 'ge' || testName === 'greaterthanorequalto') {
-            return itemValue >= value;
-        } else if (testName === 'le' || testName === 'lessthanorequalto') {
-            return itemValue <= value;
-        } else if (testName === 'in') {
-            return String(itemValue).includes(String(value));
-        } else if (testName === 'string') {
-            return typeof itemValue === 'string';
-        } else {
-            // Default to equality
-            return itemValue == value; // eslint-disable-line eqeqeq
-        }
     });
   });
 
-  env.addFilter('first', (arr) => {
+  env.addFilter("first", (arr) => {
     return arr ? arr[0] : null;
   });
 
-  env.addFilter('merge', (obj, updates) => {
+  env.addFilter("merge", (obj, updates) => {
     return { ...obj, ...updates };
   });
 
   const markdownInline = new MarkdownIt({
     html: false,
-    linkify: true
+    linkify: true,
   });
 
-  env.addFilter('markdownInline', (value) => {
+  env.addFilter("markdownInline", (value) => {
     if (value === null || value === undefined) {
-      return '';
+      return "";
     }
     return markdownInline.renderInline(String(value));
   });
@@ -101,23 +101,23 @@ export function createNunjucksEnv(data = {}) {
  */
 export function renderMacro(templatePath, macroName, args = [], data = {}) {
   const env = createNunjucksEnv(data);
-  
+
   // Read the template file from src/ directory
-  const fullPath = join(projectRoot, 'src', templatePath);
-  const templateContent = readFileSync(fullPath, 'utf8');
-  
+  const fullPath = join(projectRoot, "src", templatePath);
+  const templateContent = readFileSync(fullPath, "utf8");
+
   // Create a wrapper template that imports and calls the macro
   const argsStr = args
-    .map(arg => {
-      if (typeof arg === 'string') {
+    .map((arg) => {
+      if (typeof arg === "string") {
         return `"${arg}"`;
       } else if (arg === null || arg === undefined) {
-        return 'none';
+        return "none";
       } else {
         return JSON.stringify(arg);
       }
     })
-    .join(', ');
+    .join(", ");
 
   const wrapperTemplate = `
 ${templateContent}
@@ -136,10 +136,10 @@ ${templateContent}
  */
 export function renderTemplate(templatePath, data = {}) {
   const env = createNunjucksEnv(data);
-  
-  const fullPath = join(projectRoot, 'src', templatePath);
-  const templateContent = readFileSync(fullPath, 'utf8');
-  
+
+  const fullPath = join(projectRoot, "src", templatePath);
+  const templateContent = readFileSync(fullPath, "utf8");
+
   return env.renderString(templateContent);
 }
 
@@ -150,9 +150,9 @@ export function renderTemplate(templatePath, data = {}) {
  */
 export function extractText(html) {
   return html
-    .replace(/<[^>]*>/g, '')
+    .replace(/<[^>]*>/g, "")
     .trim()
-    .replace(/\s+/g, ' ');
+    .replace(/\s+/g, " ");
 }
 
 /**
@@ -174,12 +174,12 @@ export function htmlContains(html, text) {
 export function extractElements(html, selector) {
   const matches = [];
   const pattern = selector.match(/^([a-z]+)/i)?.[1] || selector;
-  const regex = new RegExp(`<${pattern}[^>]*>([^<]*)</${pattern}>`, 'gi');
-  
+  const regex = new RegExp(`<${pattern}[^>]*>([^<]*)</${pattern}>`, "gi");
+
   let match;
   while ((match = regex.exec(html)) !== null) {
     matches.push(match[1].trim());
   }
-  
+
   return matches;
 }

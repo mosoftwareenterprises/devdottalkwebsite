@@ -3,8 +3,14 @@ node = '24'
 gh = '2'
 "npm:@azure/static-web-apps-cli" = 'latest'
 
+[env]
+GENERATE_SPEAKER_CARD_IMAGES = 'true'
+
 [tasks.build]
 run = ["npm install", "npm run build"]
+
+[tasks.format]
+run = "npm run format"
 
 [tasks.test]
 run = "npm run test"

@@ -1,1 +1,6 @@
 **/*.njk
+_site/
+node_modules/
+.worktrees/
+.rodney/
+.unlighthouse/

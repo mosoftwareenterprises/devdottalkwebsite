@@ -44,7 +44,7 @@ main {
   }
 }
 
-main>h1 {
+main > h1 {
   text-align: center;
   font-size: 3.5em;
 }
@@ -105,7 +105,10 @@ main>h1 {
   font-weight: bold;
   white-space: nowrap;
   box-shadow: 0 4px 12px rgba(8, 54, 58, 0.35);
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s;
 }
 
 #floating-register .luma-checkout--button:hover,
@@ -301,7 +304,10 @@ main>h1 {
   min-height: 44px;
   min-width: 44px;
   text-decoration: none;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .site-social-link svg {
@@ -527,8 +533,16 @@ h6 a {
 
 .site-footer {
   background:
-    radial-gradient(circle at 15% 20%, rgba(122, 179, 223, 0.18), transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(129, 191, 141, 0.14), transparent 48%),
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(122, 179, 223, 0.18),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(129, 191, 141, 0.14),
+      transparent 48%
+    ),
     linear-gradient(180deg, #112236 0%, #0a1623 100%);
   border-top: 3px solid #5a89b0;
   color: #eef5fc;
@@ -670,7 +684,7 @@ li p {
 
 .event-item--no-event {
   background: linear-gradient(180deg, #f4f5f6 0%, #eceff1 100%);
-    border: 1px solid #d2d6da;
+  border: 1px solid #d2d6da;
 }
 
 .event-item--speaker-wanted b {
@@ -678,7 +692,8 @@ li p {
   margin-right: 6px;
 }
 
-.event-item--speaker-wanted .event-speaker-wanted-inline:not(.event-speaker-wanted-inline--highlight) {
+.event-item--speaker-wanted
+  .event-speaker-wanted-inline:not(.event-speaker-wanted-inline--highlight) {
   display: inline;
   font-size: 0.9rem;
 }
@@ -729,10 +744,10 @@ li p {
 
 .event-status--no-event {
   display: inline;
-    color: #50565c;
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin-left: 8px;
+  color: #50565c;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-left: 8px;
 }
 
 .event-pill {

@@ -31,8 +31,6 @@ Unfortunately, this event has been cancelled. We will see you in July!
 
 </section>
 
-
-
 <a href="/"><img alt="The devdottalk logo" src="/images/2026/june/Hero image - June 2026.png" loading="lazy" class="center" style="width:100%"></a>
 
 ## {{ eventTitle(currentEvent) }}

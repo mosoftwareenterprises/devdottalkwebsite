@@ -11,7 +11,7 @@ Turn supplied session descriptions into concise event copy with the rhythm of a 
 
 Return exactly:
 
-**Event title:** *The One With/Where [specific shared theme or situation]*
+**Event title:** _The One With/Where [specific shared theme or situation]_
 
 **Overview:** One short paragraph, usually 2-4 sentences.
 

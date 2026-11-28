@@ -1,259 +1,262 @@
-import { describe, it, expect } from 'vitest';
-import { renderMacro } from '../helpers/nunjucks.js';
-import { mockEvents, mockSessions } from '../fixtures/data.js';
+import { describe, it, expect } from "vitest";
+import { renderMacro } from "../helpers/nunjucks.js";
+import { mockEvents, mockSessions } from "../fixtures/data.js";
 
-describe('speaker-session component', () => {
-  const templatePath = '_includes/speaker-session.njk';
-  const macroName = 'speakerSession';
+describe("speaker-session component", () => {
+  const templatePath = "_includes/speaker-session.njk";
+  const macroName = "speakerSession";
 
-  it('hides allocated session details without reporting a missing session', () => {
-    const allocated = [{ ...mockSessions[0], title: 'ALLOCATED - details to follow' }];
+  it("hides allocated session details without reporting a missing session", () => {
+    const allocated = [
+      { ...mockSessions[0], title: "ALLOCATED - details to follow" },
+    ];
     const html = renderMacro(templatePath, macroName, [999, allocated], {
-      sessions: { findById: () => allocated[0] }
+      sessions: { findById: () => allocated[0] },
     });
 
-    expect(html.trim()).toBe('');
+    expect(html.trim()).toBe("");
   });
 
-  it('does not hide lowercase allocated titles', () => {
-    const allocated = [{ ...mockSessions[0], title: 'allocated talk' }];
+  it("does not hide lowercase allocated titles", () => {
+    const allocated = [{ ...mockSessions[0], title: "allocated talk" }];
     const html = renderMacro(templatePath, macroName, [999, allocated]);
 
-    expect(html).toContain('allocated talk');
+    expect(html).toContain("allocated talk");
   });
 
-  describe('renders speaker information correctly', () => {
-    it('should render speaker name', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+  describe("renders speaker information correctly", () => {
+    it("should render speaker name", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('Alice Fictional Developer');
+      expect(html).toContain("Alice Fictional Developer");
     });
 
-    it('should render speaker job title', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render speaker job title", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('Test Framework Architect');
+      expect(html).toContain("Test Framework Architect");
     });
 
-    it('should render session title', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render session title", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>');
+      expect(html).toContain(
+        'class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>',
+      );
     });
 
-    it('should render session description', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render session description", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('Discover advanced techniques for debugging quantum-inspired testing frameworks');
+      expect(html).toContain(
+        "Discover advanced techniques for debugging quantum-inspired testing frameworks",
+      );
     });
 
-    it('should render markdown links in session description', () => {
+    it("should render markdown links in session description", () => {
       const markdownSessions = [
         {
           ...mockSessions[0],
           id: 777,
-          description: 'Learn more in the [Lean Coffee guide](https://agilecoffee.com/leancoffee/).'
-        }
+          description:
+            "Learn more in the [Lean Coffee guide](https://agilecoffee.com/leancoffee/).",
+        },
       ];
 
       const html = renderMacro(
         templatePath,
         macroName,
         [777, markdownSessions],
-        { sessions: { allEvents: markdownSessions } }
+        { sessions: { allEvents: markdownSessions } },
       );
 
-      expect(html).toContain('<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>');
+      expect(html).toContain(
+        '<a href="https://agilecoffee.com/leancoffee/">Lean Coffee guide</a>',
+      );
     });
 
-    it('should render speaker bio', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render speaker bio", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('Alice Fictional Developer Bio');
-      expect(html).toContain('Alice specializes in testing methodologies and mock data generation');
+      expect(html).toContain("Alice Fictional Developer Bio");
+      expect(html).toContain(
+        "Alice specializes in testing methodologies and mock data generation",
+      );
     });
   });
 
-  describe('renders HTML structure correctly', () => {
-    it('uses the linked event date on the speaker card', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions }, events: { all: mockEvents } }
-      );
+  describe("renders HTML structure correctly", () => {
+    it("uses the linked event date on the speaker card", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+        events: { all: mockEvents },
+      });
 
-      expect(html).toContain('15 March Speaker');
+      expect(html).toContain("15 March Speaker");
     });
 
-    it('should contain speaker headshot image', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should contain speaker headshot image", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
       expect(html).toContain('src="/images/test/alice-tile.png"');
       expect(html).toContain('class="event-speaker-card-portrait"');
       expect(html).toContain('loading="lazy"');
     });
 
-    it('should link to speaker LinkedIn profile', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should link to speaker LinkedIn profile", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('href="https://www.linkedin.com/in/alice-fictional-test/"');
+      expect(html).toContain(
+        'href="https://www.linkedin.com/in/alice-fictional-test/"',
+      );
       expect(html).toContain('class="event-speaker-card-name-link"');
     });
 
-    it('should render h3 for speaker name', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render h3 for speaker name", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
       expect(html).toContain('class="event-speaker-card-name-link"');
-      expect(html).toContain('Alice Fictional Developer</a>');
+      expect(html).toContain("Alice Fictional Developer</a>");
     });
 
-    it('should render h4 for session title', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render h4 for session title", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>');
+      expect(html).toContain(
+        'class="event-speaker-card-title">Testing Quantum Debugging Techniques</p>',
+      );
     });
 
-    it('should render h5 for Speaker Bio header', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render h5 for Speaker Bio header", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>');
+      expect(html).toContain(
+        '<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>',
+      );
     });
 
-    it('should add formatted-description class to the session description', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should add formatted-description class to the session description", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
       expect(html).toContain('<p class="formatted-description">');
     });
 
-    it('should render one card per speaker, then description and bios', () => {
-      const sessionWithTwoSpeakers = [{
-        ...mockSessions[0],
-        secondSpeakerName: 'Bob Co-Speaker',
-        secondSpeakerUrl: 'https://www.linkedin.com/in/bob-co-speaker/',
-        secondSpeakerJobTitle: 'Testing Partner',
-        secondSpeakerBio: 'Bob collaborates on practical testing patterns.'
-      }];
+    it("should render one card per speaker, then description and bios", () => {
+      const sessionWithTwoSpeakers = [
+        {
+          ...mockSessions[0],
+          secondSpeakerName: "Bob Co-Speaker",
+          secondSpeakerUrl: "https://www.linkedin.com/in/bob-co-speaker/",
+          secondSpeakerJobTitle: "Testing Partner",
+          secondSpeakerBio: "Bob collaborates on practical testing patterns.",
+        },
+      ];
 
       const html = renderMacro(
         templatePath,
         macroName,
         [999, sessionWithTwoSpeakers],
-        { sessions: { allEvents: sessionWithTwoSpeakers } }
+        { sessions: { allEvents: sessionWithTwoSpeakers } },
       );
 
       expect((html.match(/class="event-speaker-card"/g) || []).length).toBe(2);
-      expect(html).toContain('speaker-session-cards--paired');
+      expect(html).toContain("speaker-session-cards--paired");
       expect(html).toContain('class="speaker-session-copy"');
-      expect(html).toContain('<h3><a href="https://www.linkedin.com/in/alice-fictional-test/"');
-      expect(html).toContain('>Alice Fictional Developer</a></h3>');
-      expect(html).toContain('<strong>Test Framework Architect</strong>');
-      expect(html).toContain('<h4>Testing Quantum Debugging Techniques</h4>');
-      expect(html.indexOf('speaker-session-copy')).toBeGreaterThan(html.lastIndexOf('</figure>'));
-      expect(html.indexOf('speaker-session-cards')).toBeLessThan(html.indexOf('formatted-description'));
-      expect(html.indexOf('<h4>Testing Quantum Debugging Techniques</h4>')).toBeLessThan(html.indexOf('speaker-session-copy-speakers'));
-      expect(html.indexOf('speaker-session-copy-speakers')).toBeLessThan(html.indexOf('formatted-description'));
-      expect(html.indexOf('formatted-description')).toBeLessThan(html.indexOf('<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>'));
-      expect(html).toContain('<h5 class="speaker-session-bio-heading">Bob Co-Speaker Bio</h5>');
+      expect(html).toContain(
+        '<h3><a href="https://www.linkedin.com/in/alice-fictional-test/"',
+      );
+      expect(html).toContain(">Alice Fictional Developer</a></h3>");
+      expect(html).toContain("<strong>Test Framework Architect</strong>");
+      expect(html).toContain("<h4>Testing Quantum Debugging Techniques</h4>");
+      expect(html.indexOf("speaker-session-copy")).toBeGreaterThan(
+        html.lastIndexOf("</figure>"),
+      );
+      expect(html.indexOf("speaker-session-cards")).toBeLessThan(
+        html.indexOf("formatted-description"),
+      );
+      expect(
+        html.indexOf("<h4>Testing Quantum Debugging Techniques</h4>"),
+      ).toBeLessThan(html.indexOf("speaker-session-copy-speakers"));
+      expect(html.indexOf("speaker-session-copy-speakers")).toBeLessThan(
+        html.indexOf("formatted-description"),
+      );
+      expect(html.indexOf("formatted-description")).toBeLessThan(
+        html.indexOf(
+          '<h5 class="speaker-session-bio-heading">Alice Fictional Developer Bio</h5>',
+        ),
+      );
+      expect(html).toContain(
+        '<h5 class="speaker-session-bio-heading">Bob Co-Speaker Bio</h5>',
+      );
     });
 
-    it('should render a third speaker and bio only when provided', () => {
-      const sessionWithThree = [{
-        ...mockSessions[0],
-        secondSpeakerName: 'Bob Co-Speaker',
-        secondSpeakerUrl: 'https://www.linkedin.com/in/bob-co-speaker/',
-        thirdSpeakerName: 'Cara Third',
-        thirdSpeakerUrl: 'https://www.linkedin.com/in/cara-third/',
-        thirdSpeakerJobTitle: 'Tester',
-        thirdSpeakerBio: 'Cara tests things.'
-      }];
+    it("should render a third speaker and bio only when provided", () => {
+      const sessionWithThree = [
+        {
+          ...mockSessions[0],
+          secondSpeakerName: "Bob Co-Speaker",
+          secondSpeakerUrl: "https://www.linkedin.com/in/bob-co-speaker/",
+          thirdSpeakerName: "Cara Third",
+          thirdSpeakerUrl: "https://www.linkedin.com/in/cara-third/",
+          thirdSpeakerJobTitle: "Tester",
+          thirdSpeakerBio: "Cara tests things.",
+        },
+      ];
 
       const html = renderMacro(
         templatePath,
         macroName,
         [999, sessionWithThree],
-        { sessions: { allEvents: sessionWithThree } }
+        { sessions: { allEvents: sessionWithThree } },
       );
 
       expect((html.match(/class="event-speaker-card"/g) || []).length).toBe(3);
-      expect(html).toContain('speaker-session-cards--triple');
-      expect(html).toContain('Cara Third</a>');
-      expect(html).toContain('<h5 class="speaker-session-bio-heading">Cara Third Bio</h5>');
+      expect(html).toContain("speaker-session-cards--triple");
+      expect(html).toContain("Cara Third</a>");
+      expect(html).toContain(
+        '<h5 class="speaker-session-bio-heading">Cara Third Bio</h5>',
+      );
 
       const twoOnly = renderMacro(
         templatePath,
         macroName,
         [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
+        { sessions: { allEvents: mockSessions } },
       );
-      expect((twoOnly.match(/class="event-speaker-card"/g) || []).length).toBe(1);
+      expect((twoOnly.match(/class="event-speaker-card"/g) || []).length).toBe(
+        1,
+      );
     });
 
-    it('should render only populated speaker links with secure new-tab attributes', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [999, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render only populated speaker links with secure new-tab attributes", () => {
+      const html = renderMacro(templatePath, macroName, [999, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
       expect(html).toContain('class="event-speaker-card-name-link"');
-      expect(html).not.toContain('speaker-session-speakers');
+      expect(html).not.toContain("speaker-session-speakers");
       expect(html).toContain('target="_blank"');
       expect(html).toContain('rel="noopener noreferrer"');
       expect(html).not.toContain('href=""');
@@ -261,129 +264,114 @@ describe('speaker-session component', () => {
     });
   });
 
-  describe('handles missing sessions gracefully', () => {
+  describe("handles missing sessions gracefully", () => {
     it('should show "Session not found" for invalid session ID', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [555, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+      const html = renderMacro(templatePath, macroName, [555, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('Session not found');
+      expect(html).toContain("Session not found");
     });
 
-    it('should not render speaker details when session not found', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [555, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should not render speaker details when session not found", () => {
+      const html = renderMacro(templatePath, macroName, [555, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).not.toContain('LinkedIn Profile');
-      expect(html).not.toContain('Speaker headshot');
+      expect(html).not.toContain("LinkedIn Profile");
+      expect(html).not.toContain("Speaker headshot");
     });
   });
 
-  describe('supports multiple sessions', () => {
-    it('should render different speaker for ID 998', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [998, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+  describe("supports multiple sessions", () => {
+    it("should render different speaker for ID 998", () => {
+      const html = renderMacro(templatePath, macroName, [998, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('Bob Test Sample');
-      expect(html).toContain('Mock Data Specialist');
-      expect(html).not.toContain('Alice Fictional Developer');
+      expect(html).toContain("Bob Test Sample");
+      expect(html).toContain("Mock Data Specialist");
+      expect(html).not.toContain("Alice Fictional Developer");
     });
 
-    it('should render speaker 997 correctly', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [997, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render speaker 997 correctly", () => {
+      const html = renderMacro(templatePath, macroName, [997, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('Charlie Testington');
-      expect(html).toContain('Containerized Testing: Isolation Strategies');
+      expect(html).toContain("Charlie Testington");
+      expect(html).toContain("Containerized Testing: Isolation Strategies");
     });
 
-    it('should render speaker 996 correctly', () => {
-      const html = renderMacro(
-        templatePath,
-        macroName,
-        [996, mockSessions],
-        { sessions: { allEvents: mockSessions } }
-      );
+    it("should render speaker 996 correctly", () => {
+      const html = renderMacro(templatePath, macroName, [996, mockSessions], {
+        sessions: { allEvents: mockSessions },
+      });
 
-      expect(html).toContain('Diana Mock Expert');
-      expect(html).toContain('Mocking Module Redux: Advanced Patterns');
+      expect(html).toContain("Diana Mock Expert");
+      expect(html).toContain("Mocking Module Redux: Advanced Patterns");
     });
   });
 
-  describe('handles optional fields', () => {
-    it('should not show job title if not present', () => {
+  describe("handles optional fields", () => {
+    it("should not show job title if not present", () => {
       const sessionsWithoutTitle = [
-        { ...mockSessions[0], firstSpeakerJobTitle: null }
+        { ...mockSessions[0], firstSpeakerJobTitle: null },
       ];
 
       const html = renderMacro(
         templatePath,
         macroName,
         [999, sessionsWithoutTitle],
-        { sessions: { allEvents: sessionsWithoutTitle } }
+        { sessions: { allEvents: sessionsWithoutTitle } },
       );
 
       // Speaker name should still be there
-      expect(html).toContain('Alice Fictional Developer');
+      expect(html).toContain("Alice Fictional Developer");
       // But not wrapped in <strong>
-      expect(html).not.toContain('<strong>null</strong>');
+      expect(html).not.toContain("<strong>null</strong>");
     });
 
-    it('should not show bio if not present', () => {
+    it("should not show bio if not present", () => {
       const sessionsWithoutBio = [
-        { ...mockSessions[0], firstSpeakerBio: null }
+        { ...mockSessions[0], firstSpeakerBio: null },
       ];
 
       const html = renderMacro(
         templatePath,
         macroName,
         [31, sessionsWithoutBio],
-        { sessions: { allEvents: sessionsWithoutBio } }
+        { sessions: { allEvents: sessionsWithoutBio } },
       );
 
-      expect(html).not.toContain('Speaker Bio');
+      expect(html).not.toContain("Speaker Bio");
     });
   });
 
-  describe('parameter passing', () => {
-    it('should use explicitly passed sessions list over global', () => {
+  describe("parameter passing", () => {
+    it("should use explicitly passed sessions list over global", () => {
       const customSessions = [
         {
           id: 31,
-          title: 'Custom Title',
-          firstSpeakerName: 'Custom Name',
-          firstSpeakerUrl: 'https://custom.url',
-          firstSpeakerTileImageLocation: '/images/test/custom-tile.png',
-          firstSpeakerJobTitle: 'Custom Job',
-          description: 'Custom description',
-          firstSpeakerBio: 'Custom bio'
-        }
+          title: "Custom Title",
+          firstSpeakerName: "Custom Name",
+          firstSpeakerUrl: "https://custom.url",
+          firstSpeakerTileImageLocation: "/images/test/custom-tile.png",
+          firstSpeakerJobTitle: "Custom Job",
+          description: "Custom description",
+          firstSpeakerBio: "Custom bio",
+        },
       ];
 
       const html = renderMacro(
         templatePath,
         macroName,
         [31, customSessions],
-        { sessions: { allEvents: mockSessions } } // Different global data
+        { sessions: { allEvents: mockSessions } }, // Different global data
       );
 
-      expect(html).toContain('Custom Title');
-      expect(html).toContain('Custom Name');
+      expect(html).toContain("Custom Title");
+      expect(html).toContain("Custom Name");
     });
   });
 });

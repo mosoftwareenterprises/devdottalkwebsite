@@ -1,259 +1,286 @@
-import { describe, it, expect } from 'vitest';
-import { renderTemplate } from '../helpers/nunjucks.js';
-import { mockEvents, mockSessions } from '../fixtures/data.js';
+import { describe, it, expect } from "vitest";
+import { renderTemplate } from "../helpers/nunjucks.js";
+import { mockEvents, mockSessions } from "../fixtures/data.js";
 
-describe('index upcoming events section', () => {
-    const templatePath = '_includes/index/section-upcoming-events.njk';
+describe("index upcoming events section", () => {
+  const templatePath = "_includes/index/section-upcoming-events.njk";
 
-    it('renders date and title for upcoming events', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [mockEvents[0]]
+  it("renders date and title for upcoming events", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [mockEvents[0]],
+      },
+      sessions: {
+        upcomingEvents: [mockSessions[0]],
+      },
+    });
+
+    expect(html).toContain("15 March 2026: Mock Testing Mock Workshop");
+    expect(html).toContain('href="/calendar"');
+    expect(html).not.toContain(
+      'href="https://test.meetup.local/test-events/example-mock"',
+    );
+  });
+
+  it("renders overview for upcoming events", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [mockEvents[0]],
+      },
+      sessions: {
+        allEvents: [mockSessions[0], mockSessions[1]],
+      },
+    });
+
+    expect(html).toContain(
+      "A practical meetup focused on testing patterns and debugging workflows.",
+    );
+    expect(html).toContain('class="event-overview"');
+  });
+
+  it("does not render photos or sessions sections", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [mockEvents[0]],
+      },
+      sessions: {
+        upcomingEvents: [mockSessions[0]],
+      },
+    });
+
+    expect(html).not.toContain("📸 Photos");
+    expect(html).not.toContain("Sessions and speakers");
+    expect(html).not.toContain('class="event-links"');
+    expect(html).not.toContain('class="event-sessions"');
+  });
+
+  it("renders compact speaker-wanted line when overview is empty", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [{ ...mockEvents[0], overview: "" }],
+      },
+      sessions: {
+        allEvents: [],
+      },
+    });
+
+    expect(html).not.toContain('class="event-overview"');
+    expect(html).toContain("event-item--speaker-wanted");
+    expect(html).toContain("15 March 2026");
+    expect(html).not.toContain("Mock Testing Mock Workshop");
+    expect(html).toContain('class="event-speaker-wanted-inline"');
+    expect(html).toContain(
+      '<strong class="event-speaker-wanted-label">🎤 Speaker wanted:</strong>',
+    );
+    expect(html).toContain("/call-for-speakers.html");
+    expect(html).toContain("/contact-us.html");
+  });
+
+  it("renders another-speaker prompt when exactly one speaker is assigned", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [
+          {
+            ...mockEvents[0],
+            sessionIDs: [999, 123456],
+          },
+        ],
+      },
+      sessions: {
+        allEvents: [mockSessions[0]],
+      },
+    });
+
+    expect(html).toContain("Another speaker wanted for this event");
+    expect(html).toContain("come and join us");
+    expect(html).toContain("event-speaker-wanted-inline--highlight");
+    expect(html).toContain("/call-for-speakers.html");
+  });
+
+  it("replaces the generic prompt when one speaker is assigned and the overview is empty", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [{ ...mockEvents[0], overview: "", sessionIDs: [999, 997] }],
+      },
+      sessions: {
+        allEvents: [
+          mockSessions[0],
+          { ...mockSessions[2], title: "Lean Coffee Session" },
+        ],
+      },
+    });
+
+    expect(html).toContain("event-speaker-wanted-inline--highlight");
+    expect(html).toContain("Another speaker wanted for this event");
+    expect(html).not.toContain("event-speaker-wanted-label");
+    expect(html).not.toContain("submit a talk idea");
+  });
+
+  it("renders the generic prompt when there is no assigned speaker", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [{ ...mockEvents[0], overview: "" }],
+      },
+      sessions: {
+        allEvents: [
+          { ...mockSessions[0], firstSpeakerName: "It could be you!" },
+        ],
+      },
+    });
+
+    expect(html).toContain("event-speaker-wanted-label");
+    expect(html).not.toContain("Another speaker wanted for this event");
+  });
+
+  it.each(["", "An event overview"])(
+    "counts an allocated session as one filled slot with overview %j",
+    (overview) => {
+      const html = renderTemplate(templatePath, {
+        events: {
+          upcoming: [{ ...mockEvents[0], overview, sessionIDs: [999, 998] }],
+        },
+        sessions: {
+          allEvents: [
+            mockSessions[0],
+            {
+              ...mockSessions[1],
+              title: "ALLOCATED - details to follow",
+              firstSpeakerName: "",
+              secondSpeakerName: "",
             },
-            sessions: {
-                upcomingEvents: [mockSessions[0]]
-            }
-        });
+          ],
+        },
+      });
 
-        expect(html).toContain('15 March 2026: Mock Testing Mock Workshop');
-        expect(html).toContain('href="/calendar"');
-        expect(html).not.toContain('href="https://test.meetup.local/test-events/example-mock"');
+      expect(html).not.toContain("event-speaker-wanted-label");
+      expect(html).not.toContain("Another speaker wanted for this event");
+    },
+  );
+
+  it("counts an allocated session as exactly one slot even with multiple speaker names", () => {
+    const html = renderTemplate(templatePath, {
+      events: { upcoming: [{ ...mockEvents[0], overview: "" }] },
+      sessions: {
+        allEvents: [
+          {
+            ...mockSessions[0],
+            title: "ALLOCATED",
+            secondSpeakerName: "Another Name",
+          },
+        ],
+      },
     });
 
-    it('renders overview for upcoming events', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [mockEvents[0]]
-            },
-            sessions: {
-                allEvents: [mockSessions[0], mockSessions[1]]
-            }
-        });
+    expect(html).toContain("Another speaker wanted for this event");
+    expect(html).not.toContain("event-speaker-wanted-label");
+  });
 
-        expect(html).toContain('A practical meetup focused on testing patterns and debugging workflows.');
-        expect(html).toContain('class="event-overview"');
+  it("does not render another-speaker prompt when two speakers are assigned", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [
+          {
+            ...mockEvents[0],
+            sessionIDs: [999, 998],
+          },
+        ],
+      },
+      sessions: {
+        allEvents: [mockSessions[0], mockSessions[1]],
+      },
     });
 
-    it('does not render photos or sessions sections', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [mockEvents[0]]
-            },
-            sessions: {
-                upcomingEvents: [mockSessions[0]]
-            }
-        });
+    expect(html).not.toContain("Another speaker wanted for this event");
+  });
 
-        expect(html).not.toContain('📸 Photos');
-        expect(html).not.toContain('Sessions and speakers');
-        expect(html).not.toContain('class="event-links"');
-        expect(html).not.toContain('class="event-sessions"');
+  it("renders another-speaker prompt when the second matched session is Lean Coffee", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [
+          {
+            ...mockEvents[0],
+            sessionIDs: [999, 997],
+          },
+        ],
+      },
+      sessions: {
+        allEvents: [
+          mockSessions[0],
+          {
+            ...mockSessions[2],
+            id: 997,
+            title: "Lean Coffee Session",
+            eventID: "test-event-march-2026",
+            firstSpeakerName: "Someone Placeholder",
+          },
+        ],
+      },
     });
 
-    it('renders compact speaker-wanted line when overview is empty', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [{ ...mockEvents[0], overview: '' }]
-            },
-            sessions: {
-                allEvents: []
-            }
-        });
+    expect(html).toContain("Another speaker wanted for this event");
+  });
 
-        expect(html).not.toContain('class="event-overview"');
-        expect(html).toContain('event-item--speaker-wanted');
-        expect(html).toContain('15 March 2026');
-        expect(html).not.toContain('Mock Testing Mock Workshop');
-        expect(html).toContain('class="event-speaker-wanted-inline"');
-        expect(html).toContain('<strong class="event-speaker-wanted-label">🎤 Speaker wanted:</strong>');
-        expect(html).toContain('/call-for-speakers.html');
-        expect(html).toContain('/contact-us.html');
+  it("does not render cancelled events", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [{ ...mockEvents[0], isCancelled: true }, mockEvents[1]],
+      },
+      sessions: {
+        allEvents: [mockSessions[0], mockSessions[1]],
+      },
     });
 
-    it('renders another-speaker prompt when exactly one speaker is assigned', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [{
-                    ...mockEvents[0],
-                    sessionIDs: [999, 123456]
-                }]
-            },
-            sessions: {
-                allEvents: [mockSessions[0]]
-            }
-        });
+    expect(html).not.toContain("Mock Testing Mock Workshop");
+    expect(html).toContain("Fictional Meetup Experience");
+  });
 
-        expect(html).toContain('Another speaker wanted for this event');
-        expect(html).toContain('come and join us');
-        expect(html).toContain('event-speaker-wanted-inline--highlight');
-        expect(html).toContain('/call-for-speakers.html');
+  it("renders no-event months with summer break messaging", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [
+          {
+            ...mockEvents[0],
+            date: "2027-07-21",
+            month: "July",
+            year: 2027,
+            title: "NO EVENT IN JULY",
+            isNoEventMonth: true,
+            overview: "",
+          },
+        ],
+      },
+      sessions: {
+        allEvents: [mockSessions[0]],
+      },
     });
 
-    it('replaces the generic prompt when one speaker is assigned and the overview is empty', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [{ ...mockEvents[0], overview: '', sessionIDs: [999, 997] }]
-            },
-            sessions: {
-                allEvents: [
-                    mockSessions[0],
-                    { ...mockSessions[2], title: 'Lean Coffee Session' }
-                ]
-            }
-        });
+    expect(html).toContain("July 2027");
+    expect(html).not.toContain("NO EVENT IN JULY");
+    expect(html).not.toContain("15 March 2026");
+    expect(html).toContain("event-item--no-event");
+    expect(html).toContain("event-status--no-event");
+    expect(html).toMatch(
+      /<b>July 2027<\/b>\s*<span class="event-status event-status--no-event">☀️ We pause events in summer to give everyone a chance to touch grass\.<\/span>/,
+    );
+  });
 
-        expect(html).toContain('event-speaker-wanted-inline--highlight');
-        expect(html).toContain('Another speaker wanted for this event');
-        expect(html).not.toContain('event-speaker-wanted-label');
-        expect(html).not.toContain('submit a talk idea');
+  it("does not show speaker-wanted prompts for no-event months", () => {
+    const html = renderTemplate(templatePath, {
+      events: {
+        upcoming: [
+          {
+            ...mockEvents[0],
+            isNoEventMonth: true,
+            overview: "",
+          },
+        ],
+      },
+      sessions: {
+        allEvents: [mockSessions[0]],
+      },
     });
 
-    it('renders the generic prompt when there is no assigned speaker', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [{ ...mockEvents[0], overview: '' }]
-            },
-            sessions: {
-                allEvents: [{ ...mockSessions[0], firstSpeakerName: 'It could be you!' }]
-            }
-        });
-
-        expect(html).toContain('event-speaker-wanted-label');
-        expect(html).not.toContain('Another speaker wanted for this event');
-    });
-
-    it.each(['', 'An event overview'])('counts an allocated session as one filled slot with overview %j', (overview) => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [{ ...mockEvents[0], overview, sessionIDs: [999, 998] }]
-            },
-            sessions: {
-                allEvents: [
-                    mockSessions[0],
-                    { ...mockSessions[1], title: 'ALLOCATED - details to follow', firstSpeakerName: '', secondSpeakerName: '' }
-                ]
-            }
-        });
-
-        expect(html).not.toContain('event-speaker-wanted-label');
-        expect(html).not.toContain('Another speaker wanted for this event');
-    });
-
-    it('counts an allocated session as exactly one slot even with multiple speaker names', () => {
-        const html = renderTemplate(templatePath, {
-            events: { upcoming: [{ ...mockEvents[0], overview: '' }] },
-            sessions: {
-                allEvents: [{ ...mockSessions[0], title: 'ALLOCATED', secondSpeakerName: 'Another Name' }]
-            }
-        });
-
-        expect(html).toContain('Another speaker wanted for this event');
-        expect(html).not.toContain('event-speaker-wanted-label');
-    });
-
-    it('does not render another-speaker prompt when two speakers are assigned', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [{
-                    ...mockEvents[0],
-                    sessionIDs: [999, 998]
-                }]
-            },
-            sessions: {
-                allEvents: [mockSessions[0], mockSessions[1]]
-            }
-        });
-
-        expect(html).not.toContain('Another speaker wanted for this event');
-    });
-
-    it('renders another-speaker prompt when the second matched session is Lean Coffee', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [{
-                    ...mockEvents[0],
-                    sessionIDs: [999, 997]
-                }]
-            },
-            sessions: {
-                allEvents: [
-                    mockSessions[0],
-                    {
-                        ...mockSessions[2],
-                        id: 997,
-                        title: 'Lean Coffee Session',
-                        eventID: 'test-event-march-2026',
-                        firstSpeakerName: 'Someone Placeholder'
-                    }
-                ]
-            }
-        });
-
-        expect(html).toContain('Another speaker wanted for this event');
-    });
-
-    it('does not render cancelled events', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [
-                    { ...mockEvents[0], isCancelled: true },
-                    mockEvents[1]
-                ]
-            },
-            sessions: {
-                allEvents: [mockSessions[0], mockSessions[1]]
-            }
-        });
-
-        expect(html).not.toContain('Mock Testing Mock Workshop');
-        expect(html).toContain('Fictional Meetup Experience');
-    });
-
-    it('renders no-event months with summer break messaging', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [
-                    {
-                        ...mockEvents[0],
-                        date: '2027-07-21',
-                        month: 'July',
-                        year: 2027,
-                        title: 'NO EVENT IN JULY',
-                        isNoEventMonth: true,
-                        overview: ''
-                    }
-                ]
-            },
-            sessions: {
-                allEvents: [mockSessions[0]]
-            }
-        });
-
-        expect(html).toContain('July 2027');
-        expect(html).not.toContain('NO EVENT IN JULY');
-        expect(html).not.toContain('15 March 2026');
-        expect(html).toContain('event-item--no-event');
-        expect(html).toContain('event-status--no-event');
-        expect(html).toMatch(/<b>July 2027<\/b>\s*<span class="event-status event-status--no-event">☀️ We pause events in summer to give everyone a chance to touch grass\.<\/span>/);
-    });
-
-    it('does not show speaker-wanted prompts for no-event months', () => {
-        const html = renderTemplate(templatePath, {
-            events: {
-                upcoming: [
-                    {
-                        ...mockEvents[0],
-                        isNoEventMonth: true,
-                        overview: ''
-                    }
-                ]
-            },
-            sessions: {
-                allEvents: [mockSessions[0]]
-            }
-        });
-
-        expect(html).not.toContain('Speaker wanted');
-        expect(html).not.toContain('Another speaker wanted for this event');
-    });
+    expect(html).not.toContain("Speaker wanted");
+    expect(html).not.toContain("Another speaker wanted for this event");
+  });
 });

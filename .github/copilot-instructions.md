@@ -9,6 +9,7 @@ Static community website built with **Eleventy (11ty)** and **Nunjucks templates
 ## Architecture & Core Concepts
 
 ### Content Structure
+
 - **No data files** – all content embedded inline in templates using Nunjucks macros
 - **YAML frontmatter** defines each page: layout, title, description, includeBlueskyPosts, permalink
 - **Base layout** (`src/_includes/layout.njk`) provides HTML scaffold with header, footer, favicon, OG tags
@@ -17,20 +18,23 @@ Static community website built with **Eleventy (11ty)** and **Nunjucks templates
 ### Component Patterns
 
 **Reusable macros** (`src/_includes/*.njk`) define repeating content blocks:
-- `eventItem(...)` – renders event cards.  It now accepts **either** a legacy parameter list or an `event` object from the shared data file.
-- `sessionInfoItem(...)` – renders session entries.  It now accepts **either** a legacy parameter list or a `session` object from the shared data file.
+
+- `eventItem(...)` – renders event cards. It now accepts **either** a legacy parameter list or an `event` object from the shared data file.
+- `sessionInfoItem(...)` – renders session entries. It now accepts **either** a legacy parameter list or a `session` object from the shared data file.
 
 **Data sources:**
-- Events data is stored centrally in `src/_data/events.json` with helper logic in `src/_data/events.js` that exposes `events.all`, `events.past`, and `events.upcoming`.  Templates control which set to render via frontmatter field `eventScope` (`past`, `upcoming` or `all`).
-- Sessions data is stored centrally in `src/_data/sessions.json` with helper logic in `src/_data/sessions.js` that exposes `sessions.allEvents`, `sessions.pastEvents`, and `sessions.upcomingEvents`.  Templates control which set to render via frontmatter field `sessionScope` (`pastEvents`, `upcomingEvents` or `allEvents`).
+
+- Events data is stored centrally in `src/_data/events.json` with helper logic in `src/_data/events.js` that exposes `events.all`, `events.past`, and `events.upcoming`. Templates control which set to render via frontmatter field `eventScope` (`past`, `upcoming` or `all`).
+- Sessions data is stored centrally in `src/_data/sessions.json` with helper logic in `src/_data/sessions.js` that exposes `sessions.allEvents`, `sessions.pastEvents`, and `sessions.upcomingEvents`. Templates control which set to render via frontmatter field `sessionScope` (`pastEvents`, `upcomingEvents` or `allEvents`).
 
 Page templates invoke macros: `{% import "session-info-item.njk" as session %}`  
-then call: `{{ session.sessionInfoItem(sess) }}`  with a session object from the data file.  
+then call: `{{ session.sessionInfoItem(sess) }}` with a session object from the data file.  
 See [src/previous-sessions.njk](src/previous-sessions.njk) for examples.
 
 ### Image Handling
 
 Custom Eleventy config (`.eleventy.js`) processes markdown images with extended attributes:
+
 ```markdown
 ![alt text](image.jpg){loading=lazy width=100%}
 ```
@@ -40,6 +44,7 @@ Transform extracts `{...}` attributes, encodes spaces in URLs, applies attribute
 ### Passthrough & Output
 
 Eleventy copies static assets explicitly:
+
 - CSS, JS, images, favicons, manifest → passed through to `_site/`
 - Output location: `_site/` (configured in CI/CD)
 - SWA config in `src/staticwebapp.config.json` routes redirects (e.g., `/next-event` → `/2026-march-location-info.html`)
@@ -47,6 +52,7 @@ Eleventy copies static assets explicitly:
 ## Development Workflow
 
 ### Setup
+
 - **Runtime requirement**: Node 24 (enforced via `mise.toml`)
 - **Tool**: [mise](https://mise.jdx.dev/) manages node/tooling and wraps npm commands
 - **Install dependencies**: `mise install`
@@ -60,36 +66,38 @@ Eleventy copies static assets explicitly:
 (The tasks are defined in `mise.toml` and mirror the npm scripts found in package.json.)
 
 ### Git Workflow
+
 - Main branch auto-deploys via GitHub Actions → Azure Static Web Apps
 - PR workflow: opens staging environment, closes on merge
 - Merge strategy: standard (no special rebasing rules)
 
 ## Key Files & Directories
 
-| Path | Purpose |
-|------|---------|
-| [src/*.njk](src/) | Page templates (index, previous-sessions, call-for-speakers, etc.) |
-| [src/_includes/layout.njk](src/_includes/layout.njk) | Base HTML template with logo, styles, OG tags |
-| [src/_includes/*.njk](src/_includes/) | Reusable macros (eventItem, sessionInfoItem, floating-register-button) |
-| [src/_includes/index/](src/_includes/index/) | Index page sections (section-welcome.njk, section-venues.njk, etc.) |
-| [.eleventy.js](.eleventy.js) | Config: image processing, markdown anchors, passthrough copy |
-| [src/styles.css](src/styles.css) | Main stylesheet |
-| [src/bluesky.js](src/bluesky.js) | Bluesky social feed embed script |
-| [staticwebapp.config.json](src/staticwebapp.config.json) | Azure SWA redirects & SPA fallback |
+| Path                                                     | Purpose                                                                |
+| -------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [src/*.njk](src/)                                        | Page templates (index, previous-sessions, call-for-speakers, etc.)     |
+| [src/_includes/layout.njk](src/_includes/layout.njk)     | Base HTML template with logo, styles, OG tags                          |
+| [src/_includes/*.njk](src/_includes/)                    | Reusable macros (eventItem, sessionInfoItem, floating-register-button) |
+| [src/_includes/index/](src/_includes/index/)             | Index page sections (section-welcome.njk, section-venues.njk, etc.)    |
+| [.eleventy.js](.eleventy.js)                             | Config: image processing, markdown anchors, passthrough copy           |
+| [src/styles.css](src/styles.css)                         | Main stylesheet                                                        |
+| [src/bluesky.js](src/bluesky.js)                         | Bluesky social feed embed script                                       |
+| [staticwebapp.config.json](src/staticwebapp.config.json) | Azure SWA redirects & SPA fallback                                     |
 
 ## Common Tasks
 
 **Add a new page**: Create `src/new-page.njk` with frontmatter + content  
 **Add index section**: Create `src/_includes/index/section-name.njk`, include in [src/index.njk](src/index.njk)  
 **Add session/event**: Call macro in template (see [previous-sessions.njk](src/previous-sessions.njk) line 14+)  
-**Update redirect**: Edit [staticwebapp.config.json](src/staticwebapp.config.json) routes  
+**Update redirect**: Edit [staticwebapp.config.json](src/staticwebapp.config.json) routes
 
-> ⚠️ When running any of the above locally, use `mise` commands (`mise run build`, `mise start`, etc.) rather than invoking `npm` directly.  This ensures the correct Node version and environment flags are applied.
+> ⚠️ When running any of the above locally, use `mise` commands (`mise run build`, `mise start`, etc.) rather than invoking `npm` directly. This ensures the correct Node version and environment flags are applied.
 
 ## Deployment
 
 **CI/CD trigger**: Push to `main` branch  
 **Pipeline**: `.github/workflows/azure-static-web-apps-*.yml`
+
 - Installs mise + node 24
 - Runs `npm ci` + `npm run build`
 - Deploys `_site/` to Azure Static Web Apps
@@ -113,11 +121,11 @@ Eleventy copies static assets explicitly:
 
 ## Tools & Dependencies
 
-| Package | Role |
-|---------|------|
-| @11ty/eleventy | SSG core |
-| @11ty/eleventy-img | Image optimization |
-| jsdom | DOM manipulation for image transforms |
-| markdown-it-anchor | Auto heading anchors |
+| Package            | Role                                  |
+| ------------------ | ------------------------------------- |
+| @11ty/eleventy     | SSG core                              |
+| @11ty/eleventy-img | Image optimization                    |
+| jsdom              | DOM manipulation for image transforms |
+| markdown-it-anchor | Auto heading anchors                  |
 
 No TypeScript, linting, or unit tests in project.

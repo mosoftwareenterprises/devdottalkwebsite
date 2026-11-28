@@ -1,130 +1,127 @@
 {
-    "routes": [
-        {
-            "route": "/reconnect",
-            "redirect": "https://reconnectconference.co.uk/programme/",
-            "statusCode": 302
-        },
-        {
-            "route": "/legoqr",
-            "redirect": "https://blog.markoliver.website/About-Me",
-            "statusCode": 302
-        },
-        {
-            "route": "/discord",
-            "redirect": "https://discord.gg/N4JGyRthDt",
-            "statusCode": 302
-        },
-        {
-            "route": "/linkedin",
-            "redirect": "https://www.linkedin.com/company/dev-talk",
-            "statusCode": 302
-        },
-        {
-            "route": "/bluesky",
-            "redirect": "https://bsky.app/profile/devdottalk.uk",
-            "statusCode": 302
-        },
-        {
-            "route": "/youtube",
-            "redirect": "https://www.youtube.com/@devdottalk",
-            "statusCode": 302
-        },
-        {
-            "route": "/support-us",
-            "redirect": "https://ko-fi.com/devdottalk",
-            "statusCode": 302
-        },
-        {
-            "route": "/calendar",
-            "redirect": "https://luma.com/devdottalk",
-            "statusCode": 302
-        },
-        {
-            "route": "/links",
-            "rewrite": "/links.html"
-        },
-        {
-            "route": "/feedback",
-            "redirect": "https://forms.gle/kKaFN1HAUX6pNAtk6",
-            "statusCode": 302
-        },
-        {
-            "route": "/speakerfeedback",
-            "redirect": "https://forms.gle/BrHud1Nrt1exWJNm9",
-            "statusCode": 302
-        },
-        {
-            "route": "/2026-february-location-info.html",
-            "redirect": "/2026-february-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-january-location-info.html",
-            "redirect": "/2026-january-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-march-location-info.html",
-            "redirect": "/2026-march-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-april-location-info.html",
-            "redirect": "/2026-april-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-may-location-info.html",
-            "redirect": "/2026-may-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-june-location-info.html",
-            "redirect": "/2026-june-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-july-location-info.html",
-            "redirect": "/2026-july-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-august-location-info.html",
-            "redirect": "/2026-august-location-info.html",
-            "statusCode": 301
-        },        
-        {
-            "route": "/2026-september-location-info.html",
-            "redirect": "/2026-september-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-october-location-info.html",
-            "redirect": "/2026-october-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/2026-november-location-info.html",
-            "redirect": "/2026-november-location-info.html",
-            "statusCode": 301
-        },
-        {
-            "route": "/tickets",
-            "redirect": "https://lu.ma/r4s310vc",
-            "statusCode": 302
-        },
-        {
-            "route": "/next-event",
-            "redirect": "/2026-december-location-info.html",
-            "statusCode": 302
-        }
-    ],
-    "navigationFallback": {
-        "rewrite": "/index.html",
-        "exclude": [
-            "/*.{png,jpg,gif,jpeg,xml,txt,md}",
-            "/css/*"
-        ]
+  "routes": [
+    {
+      "route": "/reconnect",
+      "redirect": "https://reconnectconference.co.uk/programme/",
+      "statusCode": 302
+    },
+    {
+      "route": "/legoqr",
+      "redirect": "https://blog.markoliver.website/About-Me",
+      "statusCode": 302
+    },
+    {
+      "route": "/discord",
+      "redirect": "https://discord.gg/N4JGyRthDt",
+      "statusCode": 302
+    },
+    {
+      "route": "/linkedin",
+      "redirect": "https://www.linkedin.com/company/dev-talk",
+      "statusCode": 302
+    },
+    {
+      "route": "/bluesky",
+      "redirect": "https://bsky.app/profile/devdottalk.uk",
+      "statusCode": 302
+    },
+    {
+      "route": "/youtube",
+      "redirect": "https://www.youtube.com/@devdottalk",
+      "statusCode": 302
+    },
+    {
+      "route": "/support-us",
+      "redirect": "https://ko-fi.com/devdottalk",
+      "statusCode": 302
+    },
+    {
+      "route": "/calendar",
+      "redirect": "https://luma.com/devdottalk",
+      "statusCode": 302
+    },
+    {
+      "route": "/links",
+      "rewrite": "/links.html"
+    },
+    {
+      "route": "/feedback",
+      "redirect": "https://forms.gle/kKaFN1HAUX6pNAtk6",
+      "statusCode": 302
+    },
+    {
+      "route": "/speakerfeedback",
+      "redirect": "https://forms.gle/BrHud1Nrt1exWJNm9",
+      "statusCode": 302
+    },
+    {
+      "route": "/2026-february-location-info.html",
+      "redirect": "/2026-february-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-january-location-info.html",
+      "redirect": "/2026-january-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-march-location-info.html",
+      "redirect": "/2026-march-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-april-location-info.html",
+      "redirect": "/2026-april-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-may-location-info.html",
+      "redirect": "/2026-may-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-june-location-info.html",
+      "redirect": "/2026-june-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-july-location-info.html",
+      "redirect": "/2026-july-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-august-location-info.html",
+      "redirect": "/2026-august-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-september-location-info.html",
+      "redirect": "/2026-september-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-october-location-info.html",
+      "redirect": "/2026-october-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/2026-november-location-info.html",
+      "redirect": "/2026-november-location-info.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/tickets",
+      "redirect": "https://lu.ma/r4s310vc",
+      "statusCode": 302
+    },
+    {
+      "route": "/next-event",
+      "redirect": "/2026-december-location-info.html",
+      "statusCode": 302
     }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/*.{png,jpg,gif,jpeg,xml,txt,md}", "/css/*"]
+  }
 }

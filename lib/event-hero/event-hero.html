@@ -1,23 +1,31 @@
 <!doctype html>
 <html style="--hero-width: {{width}}px; --hero-height: {{height}}px">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      {{css}}
+    </style>
+  </head>
 
-    <head>
-        <meta charset="utf-8">
-        <style>
-            {{css}}
-        </style>
-    </head>
-
-    <body>
-        <div class="hero" style="--pic: {{portraitSize}}px">
-            <header class="hero-header">
-                <div class="hero-logo" role="img" aria-label="{dev.talk}"><span class="hero-brace">{</span><span class="hero-logo-dev">dev</span><span class="hero-logo-dot">.</span><span class="hero-logo-talk">talk</span><span class="hero-brace">}</span></div>
-                <p class="hero-date">{{date}}</p>
-            </header>
-            <main class="hero-sessions">
-                <div class="hero-sessions-row" style="grid-template-columns: {{columns}}">{{sessions}}</div>
-            </main>
+  <body>
+    <div class="hero" style="--pic: {{portraitSize}}px">
+      <header class="hero-header">
+        <div class="hero-logo" role="img" aria-label="{dev.talk}">
+          <span class="hero-brace">{</span><span class="hero-logo-dev">dev</span
+          ><span class="hero-logo-dot">.</span
+          ><span class="hero-logo-talk">talk</span
+          ><span class="hero-brace">}</span>
         </div>
-    </body>
-
+        <p class="hero-date">{{date}}</p>
+      </header>
+      <main class="hero-sessions">
+        <div
+          class="hero-sessions-row"
+          style="grid-template-columns: {{columns}}"
+        >
+          {{sessions}}
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

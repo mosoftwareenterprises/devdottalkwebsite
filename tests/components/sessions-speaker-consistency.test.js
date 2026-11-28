@@ -1,109 +1,139 @@
-import { describe, it, expect } from 'vitest';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import { readFileSync } from 'fs';
-import loadSpeakers from '../../src/_data/speakers.js';
+import { describe, it, expect } from "vitest";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+import { readFileSync } from "fs";
+import loadSpeakers from "../../src/_data/speakers.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const sessionsPath = join(__dirname, '..', '..', 'src', '_data', 'sessions.json');
+const sessionsPath = join(
+  __dirname,
+  "..",
+  "..",
+  "src",
+  "_data",
+  "sessions.json",
+);
 
-const speakerRoles = ['first', 'second', 'third'];
-const speakerFields = ['JobTitle', 'Url', 'BioPicUrl', 'TileImageLocation', 'Bio'];
+const speakerRoles = ["first", "second", "third"];
+const speakerFields = [
+  "JobTitle",
+  "Url",
+  "BioPicUrl",
+  "TileImageLocation",
+  "Bio",
+];
 
 function readJson(filePath) {
-    return JSON.parse(readFileSync(filePath, 'utf8'));
+  return JSON.parse(readFileSync(filePath, "utf8"));
 }
 
 function normalize(value) {
-    return (value || '').trim();
+  return (value || "").trim();
 }
 
-describe('sessions speaker data quality', () => {
-    it('keeps generated speaker profiles ordered by surname without parenthetical details', () => {
-        const { all: speakerList } = loadSpeakers();
-        const lastNames = speakerList.map((speaker) => speaker.name
-            .replace(/\s*\([^)]*\)/g, '')
-            .trim()
-            .split(/\s+/)
-            .pop()
-            .toLowerCase());
+describe("sessions speaker data quality", () => {
+  it("keeps generated speaker profiles ordered by surname without parenthetical details", () => {
+    const { all: speakerList } = loadSpeakers();
+    const lastNames = speakerList.map((speaker) =>
+      speaker.name
+        .replace(/\s*\([^)]*\)/g, "")
+        .trim()
+        .split(/\s+/)
+        .pop()
+        .toLowerCase(),
+    );
 
-        expect(lastNames).toEqual([...lastNames].sort((a, b) => a.localeCompare(b)));
-    });
+    expect(lastNames).toEqual(
+      [...lastNames].sort((a, b) => a.localeCompare(b)),
+    );
+  });
 
-    it('requires a substantive bio for every speaker with a bio picture', () => {
-        const { all: speakerList } = loadSpeakers();
-        const profilesWithBioPictures = speakerList.filter((speaker) => speaker.bioPicUrl);
-        const incompleteProfiles = profilesWithBioPictures
-            .filter((speaker) => normalize(speaker.bio).length < 80)
-            .map((speaker) => ({ name: speaker.name, bioLength: normalize(speaker.bio).length }));
+  it("requires a substantive bio for every speaker with a bio picture", () => {
+    const { all: speakerList } = loadSpeakers();
+    const profilesWithBioPictures = speakerList.filter(
+      (speaker) => speaker.bioPicUrl,
+    );
+    const incompleteProfiles = profilesWithBioPictures
+      .filter((speaker) => normalize(speaker.bio).length < 80)
+      .map((speaker) => ({
+        name: speaker.name,
+        bioLength: normalize(speaker.bio).length,
+      }));
 
-        expect(incompleteProfiles).toEqual([]);
-    });
+    expect(incompleteProfiles).toEqual([]);
+  });
 
-    it('uses profile fields from the newest session id per speaker', () => {
-        const sessions = readJson(sessionsPath);
-        const pastSessions = sessions.filter((session) => session.status === 'past' && !session.title.startsWith('ALLOCATED'));
-        const { all: speakerList } = loadSpeakers();
-        const speakerByName = new Map(speakerList.map((speaker) => [speaker.name, speaker]));
-        const speakerOccurrences = new Map();
+  it("uses profile fields from the newest session id per speaker", () => {
+    const sessions = readJson(sessionsPath);
+    const pastSessions = sessions.filter(
+      (session) =>
+        session.status === "past" && !session.title.startsWith("ALLOCATED"),
+    );
+    const { all: speakerList } = loadSpeakers();
+    const speakerByName = new Map(
+      speakerList.map((speaker) => [speaker.name, speaker]),
+    );
+    const speakerOccurrences = new Map();
 
-        for (const session of pastSessions) {
-            for (const role of speakerRoles) {
-                const name = normalize(session[`${role}SpeakerName`]);
-                if (!name) continue;
+    for (const session of pastSessions) {
+      for (const role of speakerRoles) {
+        const name = normalize(session[`${role}SpeakerName`]);
+        if (!name) continue;
 
-                const records = speakerOccurrences.get(name) || [];
-                records.push({ sessionId: session.id, role, session });
-                speakerOccurrences.set(name, records);
-            }
-        }
+        const records = speakerOccurrences.get(name) || [];
+        records.push({ sessionId: session.id, role, session });
+        speakerOccurrences.set(name, records);
+      }
+    }
 
-        for (const [name, records] of speakerOccurrences) {
-            const newest = records.reduce((acc, cur) => (cur.sessionId > acc.sessionId ? cur : acc));
-            const output = speakerByName.get(name);
+    for (const [name, records] of speakerOccurrences) {
+      const newest = records.reduce((acc, cur) =>
+        cur.sessionId > acc.sessionId ? cur : acc,
+      );
+      const output = speakerByName.get(name);
 
-            expect(output).toBeDefined();
+      expect(output).toBeDefined();
 
-            for (const field of speakerFields) {
-                const source = newest.session[`${newest.role}Speaker${field}`];
-                const outputField = field.charAt(0).toLowerCase() + field.slice(1);
-                expect(normalize(output[outputField])).toBe(normalize(source));
-            }
-        }
-    });
+      for (const field of speakerFields) {
+        const source = newest.session[`${newest.role}Speaker${field}`];
+        const outputField = field.charAt(0).toLowerCase() + field.slice(1);
+        expect(normalize(output[outputField])).toBe(normalize(source));
+      }
+    }
+  });
 
-    it('omits speakers who only appear in upcoming sessions', () => {
-        const sessions = readJson(sessionsPath);
-        const pastSpeakerNames = new Set();
-        const upcomingOnlySpeakerNames = new Set();
-        const { all: speakerList } = loadSpeakers();
-        const speakerNames = new Set(speakerList.map((speaker) => speaker.name));
+  it("omits speakers who only appear in upcoming sessions", () => {
+    const sessions = readJson(sessionsPath);
+    const pastSpeakerNames = new Set();
+    const upcomingOnlySpeakerNames = new Set();
+    const { all: speakerList } = loadSpeakers();
+    const speakerNames = new Set(speakerList.map((speaker) => speaker.name));
 
-        for (const session of sessions) {
-            if (session.status !== 'past' || session.title.startsWith('ALLOCATED')) continue;
+    for (const session of sessions) {
+      if (session.status !== "past" || session.title.startsWith("ALLOCATED"))
+        continue;
 
-            for (const role of speakerRoles) {
-                const name = normalize(session[`${role}SpeakerName`]);
-                if (!name) continue;
+      for (const role of speakerRoles) {
+        const name = normalize(session[`${role}SpeakerName`]);
+        if (!name) continue;
 
-                pastSpeakerNames.add(name);
-            }
-        }
+        pastSpeakerNames.add(name);
+      }
+    }
 
-        for (const session of sessions) {
-            if (session.status !== 'upcoming') continue;
+    for (const session of sessions) {
+      if (session.status !== "upcoming") continue;
 
-            for (const role of speakerRoles) {
-                const name = normalize(session[`${role}SpeakerName`]);
-                if (!name || pastSpeakerNames.has(name)) continue;
+      for (const role of speakerRoles) {
+        const name = normalize(session[`${role}SpeakerName`]);
+        if (!name || pastSpeakerNames.has(name)) continue;
 
-                upcomingOnlySpeakerNames.add(name);
-            }
-        }
+        upcomingOnlySpeakerNames.add(name);
+      }
+    }
 
-        for (const name of upcomingOnlySpeakerNames) {
-            expect(speakerNames.has(name)).toBe(false);
-        }
-    });
+    for (const name of upcomingOnlySpeakerNames) {
+      expect(speakerNames.has(name)).toBe(false);
+    }
+  });
 });

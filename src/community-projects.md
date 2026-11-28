@@ -27,7 +27,7 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 <!-- Add links to written articles published by community members (Dev.to, Medium, personal blogs, etc.) -->
 
-*No articles listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projects)*
+_No articles listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projects)_
 
 ---
 
@@ -35,7 +35,7 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 <!-- Add links to YouTube videos, conference recordings, screencasts or demos made by community members. -->
 
-*No videos listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projects)*
+_No videos listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projects)_
 
 ---
 
@@ -43,7 +43,7 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 <!-- Add links to open source projects, tools, libraries or repositories from community members. -->
 
-*No repos listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projects)*
+_No repos listed yet — [add yours!](https://github.com/mosoftwareenterprises/devdottalkwebsite/tree/main?tab=readme-ov-file#community-projects)_
 
 ---
 
@@ -51,7 +51,7 @@ Want to add your own work? See the [contributing guide in the repository readme]
 
 <!-- Add links to live websites, apps or tools built by community members. -->
 
-- [It's grammar time](https://itsgrammartime.markoliver.website/) — An 11plus practice website. *by [Mark Oliver](https://www.linkedin.com/in/profileformarkoliver/)*
+- [It's grammar time](https://itsgrammartime.markoliver.website/) — An 11plus practice website. _by [Mark Oliver](https://www.linkedin.com/in/profileformarkoliver/)_
 
 ---
 

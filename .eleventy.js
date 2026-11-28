@@ -1,27 +1,27 @@
 import markdownItAnchor from "markdown-it-anchor";
-import MarkdownIt from 'markdown-it';
-import { JSDOM } from 'jsdom';
-import sharp from 'sharp';
-import path from 'path';
-import { createHash } from 'crypto';
-import { mkdirSync, existsSync } from 'fs';
-import { readFileSync } from 'fs';
-import { openSpeakerSlots } from './lib/open-speaker-slots.js';
-import { isAllocatedSession } from './lib/allocated-session.js';
-import { generateSpeakerCardImages } from './lib/generate-speaker-card-images.js';
-import { generateEventHeroImages } from './lib/generate-event-hero-images.js';
+import MarkdownIt from "markdown-it";
+import { JSDOM } from "jsdom";
+import sharp from "sharp";
+import path from "path";
+import { createHash } from "crypto";
+import { mkdirSync, existsSync } from "fs";
+import { readFileSync } from "fs";
+import { openSpeakerSlots } from "./lib/open-speaker-slots.js";
+import { isAllocatedSession } from "./lib/allocated-session.js";
+import { generateSpeakerCardImages } from "./lib/generate-speaker-card-images.js";
+import { generateEventHeroImages } from "./lib/generate-event-hero-images.js";
 // Map to store image attributes from markdown extended syntax
 const imageAttributesMap = new Map();
 
-const TILE_CACHE_DIR = '.tilecache';
+const TILE_CACHE_DIR = ".tilecache";
 const TILE_CROP_FRACTION = 0.5;
 
 function getTileCropFilename(srcPath) {
-  const hash = createHash('md5')
+  const hash = createHash("md5")
     .update(`${srcPath}|${TILE_CROP_FRACTION}`)
-    .digest('hex')
+    .digest("hex")
     .slice(0, 10);
-  const ext = path.extname(srcPath).toLowerCase().replace('.', '');
+  const ext = path.extname(srcPath).toLowerCase().replace(".", "");
   return `tile-${hash}.${ext}`;
 }
 
@@ -32,18 +32,18 @@ function serializeDom(dom) {
 export default function (eleventyConfig) {
   const markdownInline = new MarkdownIt({
     html: false,
-    linkify: true
+    linkify: true,
   });
 
-  eleventyConfig.addNunjucksFilter('markdownInline', (value) => {
+  eleventyConfig.addNunjucksFilter("markdownInline", (value) => {
     if (value === null || value === undefined) {
-      return '';
+      return "";
     }
     return markdownInline.renderInline(String(value));
   });
 
-  eleventyConfig.addNunjucksFilter('openSpeakerSlots', openSpeakerSlots);
-  eleventyConfig.addNunjucksFilter('isAllocatedSession', isAllocatedSession);
+  eleventyConfig.addNunjucksFilter("openSpeakerSlots", openSpeakerSlots);
+  eleventyConfig.addNunjucksFilter("isAllocatedSession", isAllocatedSession);
 
   eleventyConfig.addPassthroughCopy("src/bluesky.js");
   eleventyConfig.addPassthroughCopy("src/speaker-slots.js");
@@ -61,13 +61,20 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ [TILE_CACHE_DIR]: "images/cropped" });
 
   // Before each build, crop all tile images from sessions data and cache them.
-  eleventyConfig.on('eleventy.before', async () => {
-    const sessions = JSON.parse(readFileSync('./src/_data/sessions.json', 'utf-8'));
-    const tilePaths = [...new Set(
-      sessions
-        .flatMap(s => [s.firstSpeakerTileImageLocation, s.secondSpeakerTileImageLocation])
-        .filter(Boolean)
-    )];
+  eleventyConfig.on("eleventy.before", async () => {
+    const sessions = JSON.parse(
+      readFileSync("./src/_data/sessions.json", "utf-8"),
+    );
+    const tilePaths = [
+      ...new Set(
+        sessions
+          .flatMap((s) => [
+            s.firstSpeakerTileImageLocation,
+            s.secondSpeakerTileImageLocation,
+          ])
+          .filter(Boolean),
+      ),
+    ];
 
     if (!existsSync(TILE_CACHE_DIR)) {
       mkdirSync(TILE_CACHE_DIR, { recursive: true });
@@ -77,39 +84,46 @@ export default function (eleventyConfig) {
       const filename = getTileCropFilename(tilePath);
       const outputPath = path.join(TILE_CACHE_DIR, filename);
       if (!existsSync(outputPath)) {
-        const srcFilePath = path.join('src', tilePath);
+        const srcFilePath = path.join("src", tilePath);
         const metadata = await sharp(srcFilePath).metadata();
         const cropWidth = Math.round(metadata.width * TILE_CROP_FRACTION);
         const cropLeft = Math.round((metadata.width - cropWidth) / 2);
         await sharp(srcFilePath)
-          .extract({ left: cropLeft, top: 0, width: cropWidth, height: metadata.height })
+          .extract({
+            left: cropLeft,
+            top: 0,
+            width: cropWidth,
+            height: metadata.height,
+          })
           .toFile(outputPath);
       }
     }
   });
 
-  eleventyConfig.on('eleventy.after', async ({ dir }) => {
-    if (process.env.GENERATE_SPEAKER_CARD_IMAGES !== 'true') return;
+  eleventyConfig.on("eleventy.after", async ({ dir }) => {
+    if (process.env.GENERATE_SPEAKER_CARD_IMAGES !== "true") return;
 
-    const sessions = JSON.parse(readFileSync('./src/_data/sessions.json', 'utf-8'));
-    const events = JSON.parse(readFileSync('./src/_data/events.json', 'utf-8'));
+    const sessions = JSON.parse(
+      readFileSync("./src/_data/sessions.json", "utf-8"),
+    );
+    const events = JSON.parse(readFileSync("./src/_data/events.json", "utf-8"));
     await generateSpeakerCardImages({
       sessions,
       events,
-      sourceRoot: path.resolve('src'),
-      outputRoot: path.resolve('src')
+      sourceRoot: path.resolve("src"),
+      outputRoot: path.resolve("src"),
     });
     await generateEventHeroImages({
       sessions,
       events,
-      sourceRoot: path.resolve('src'),
-      outputRoot: path.resolve('src')
+      sourceRoot: path.resolve("src"),
+      outputRoot: path.resolve("src"),
     });
   });
 
   // Synchronous global usable inside Nunjucks macros — returns the cropped image URL.
-  eleventyConfig.addNunjucksGlobal('tileImagePath', (srcPath) => {
-    if (!srcPath) return '';
+  eleventyConfig.addNunjucksGlobal("tileImagePath", (srcPath) => {
+    if (!srcPath) return "";
     return `/images/cropped/${getTileCropFilename(srcPath)}`;
   });
 
@@ -123,13 +137,13 @@ export default function (eleventyConfig) {
         const attrRegex = /!\[([^\]]*)\]\(([^)]+)\)\{([^}]+)\}/g;
         src = src.replace(attrRegex, (match, alt, url, attrString) => {
           // Encode spaces in URL
-          const encodedUrl = url.replace(/ /g, '%20');
+          const encodedUrl = url.replace(/ /g, "%20");
 
           // Parse attributes from the string (e.g., "loading=lazy width=100%")
           const attrs = {};
           const attrPairs = attrString.split(/\s+/);
-          attrPairs.forEach(pair => {
-            const [key, value] = pair.split('=');
+          attrPairs.forEach((pair) => {
+            const [key, value] = pair.split("=");
             if (key) {
               attrs[key.trim()] = value ? value.trim() : true;
             }
@@ -144,9 +158,12 @@ export default function (eleventyConfig) {
         });
 
         // Encode spaces in image URLs without extended attributes
-        src = src.replace(/!\[([^\]]*)\]\(([^)]*\s[^)]*)\)/g, (match, alt, url) => {
-          return `![${alt}](${url.replace(/ /g, '%20')})`;
-        });
+        src = src.replace(
+          /!\[([^\]]*)\]\(([^)]*\s[^)]*)\)/g,
+          (match, alt, url) => {
+            return `![${alt}](${url.replace(/ /g, "%20")})`;
+          },
+        );
 
         return originalParse(src, env);
       };
@@ -158,17 +175,17 @@ export default function (eleventyConfig) {
 
   // Transform to apply stored attributes to img tags
   eleventyConfig.addTransform(
-    'apply-image-attributes',
+    "apply-image-attributes",
     (content, outputPath) => {
-      if (outputPath.endsWith('.html')) {
+      if (outputPath.endsWith(".html")) {
         const dom = new JSDOM(content);
         const document = dom.window.document;
 
-        const [...images] = document.getElementsByTagName('img');
+        const [...images] = document.getElementsByTagName("img");
 
         images.forEach((image) => {
-          const alt = image.getAttribute('alt');
-          const src = image.getAttribute('src');
+          const alt = image.getAttribute("alt");
+          const src = image.getAttribute("src");
           const attrKey = `${alt}|${src}`;
 
           // Check if we have stored attributes for this image
@@ -178,15 +195,15 @@ export default function (eleventyConfig) {
             // Apply each attribute to the img tag
             Object.entries(attrs).forEach(([key, value]) => {
               if (value === true) {
-                image.setAttribute(key, '');
+                image.setAttribute(key, "");
               } else {
                 image.setAttribute(key, value);
               }
             });
           } else {
             // Default: add lazy loading if no attributes specified
-            if (!image.hasAttribute('loading')) {
-              image.setAttribute('loading', 'lazy');
+            if (!image.hasAttribute("loading")) {
+              image.setAttribute("loading", "lazy");
             }
           }
         });
@@ -195,33 +212,30 @@ export default function (eleventyConfig) {
       } else {
         return content;
       }
-    }
+    },
   );
 
-  eleventyConfig.addTransform(
-    'external-links',
-    (content, outputPath) => {
-      if (outputPath.endsWith('.html')) {
-        const dom = new JSDOM(content);
-        const document = dom.window.document;
+  eleventyConfig.addTransform("external-links", (content, outputPath) => {
+    if (outputPath.endsWith(".html")) {
+      const dom = new JSDOM(content);
+      const document = dom.window.document;
 
-        document.querySelectorAll('a[href^="http"]').forEach((link) => {
-          link.setAttribute('target', '_blank');
-          link.setAttribute('rel', 'noopener noreferrer');
-        });
+      document.querySelectorAll('a[href^="http"]').forEach((link) => {
+        link.setAttribute("target", "_blank");
+        link.setAttribute("rel", "noopener noreferrer");
+      });
 
-        return serializeDom(dom);
-      } else {
-        return content;
-      }
+      return serializeDom(dom);
+    } else {
+      return content;
     }
-  );
+  });
 
   return {
     dir: {
       input: "src",
       includes: "_includes",
-      output: "_site"
-    }
+      output: "_site",
+    },
   };
 }

@@ -70,11 +70,11 @@ Bournemouth University, Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB
 
 ### Maps & Directions
 
-- 🅿️ **If driving, head to the visitors car park:** [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8)  (Parking marked with a **P** pin on the campus map below)
+- 🅿️ **If driving, head to the visitors car park:** [Parking Location](https://maps.app.goo.gl/Sx6j1kpMzQjpCWCg8) (Parking marked with a **P** pin on the campus map below)
 - 🎥 **Watch the video showing how to get from the car park to Kimmeridge house:** [Car park to Kimmeridge house Video](https://youtu.be/fYq5pReMZWs)
-- 📍 **Navigate to Kimmeridge House entrance:** [Google Maps pin for Room K101](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush)  (Kimmeridge House marked with a **KH** pin on campus map below)
+- 📍 **Navigate to Kimmeridge House entrance:** [Google Maps pin for Room K101](https://maps.app.goo.gl/CA4HfSixgjCeSfjJ9) or [what3words](https://w3w.co/orange.narrow.crush) (Kimmeridge House marked with a **KH** pin on campus map below)
 - More directions on the [BU website](https://www.bournemouth.ac.uk/about/contact-us/directions-maps/directions-our-talbot-campus) & official [Talbot Campus map](https://www.bournemouth.ac.uk/sites/default/files/asset/document/talbot-campus-map-jan2024.pdf)
-{% set mapPins = [
+  {% set mapPins = [
   {
     left: "64%",
     top: "53%",
@@ -115,7 +115,7 @@ Bournemouth University, Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB
     color: "#2753b4",
     ariaLabel: "Bus Stop"
   }
-] %}
+  ] %}
 {{ locationMapAndOverlay("/images/talbotcampus.svg", mapPins) }}
 
 **Building Entrance:** Kimmeridge House has one entrance, accessed via the courtyard in the middle of campus **(CY pin on Campus map)**. The room is on the first floor — take the stairs or lift, then turn left from the stairs or right from the lift.

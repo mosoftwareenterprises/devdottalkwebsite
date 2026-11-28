@@ -1,143 +1,165 @@
-import { describe, it, expect } from 'vitest';
-import { renderMacro } from '../helpers/nunjucks.js';
-import { mockEvents, mockSessions } from '../fixtures/data.js';
+import { describe, it, expect } from "vitest";
+import { renderMacro } from "../helpers/nunjucks.js";
+import { mockEvents, mockSessions } from "../fixtures/data.js";
 
-describe('event-list-item component', () => {
-  const templatePath = '_includes/event-list-item.njk';
-  const macroName = 'eventItem';
+describe("event-list-item component", () => {
+  const templatePath = "_includes/event-list-item.njk";
+  const macroName = "eventItem";
 
-  it('does not show an empty sessions heading for an allocated session', () => {
+  it("does not show an empty sessions heading for an allocated session", () => {
     const html = renderMacro(templatePath, macroName, [
-      mockEvents[0], [{ ...mockSessions[0], title: 'ALLOCATED' }]
+      mockEvents[0],
+      [{ ...mockSessions[0], title: "ALLOCATED" }],
     ]);
 
-    expect(html).not.toContain('ALLOCATED');
-    expect(html).not.toContain('Sessions and speakers');
+    expect(html).not.toContain("ALLOCATED");
+    expect(html).not.toContain("Sessions and speakers");
   });
 
-  describe('renders event information (new object style)', () => {
-    it('should render event title', () => {
+  describe("renders event information (new object style)", () => {
+    it("should render event title", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
-      expect(html).toContain('Mock Testing Mock Workshop');
+
+      expect(html).toContain("Mock Testing Mock Workshop");
     });
 
-    it('should render event display date', () => {
+    it("should render event display date", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
-      expect(html).toContain('15 March 2026');
+
+      expect(html).toContain("15 March 2026");
     });
 
-    it('should render event in list item', () => {
+    it("should render event in list item", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
-      expect(html).toContain('<li>');
-      expect(html).toContain('</li>');
+
+      expect(html).toContain("<li>");
+      expect(html).toContain("</li>");
     });
 
-    it('should link to event URL', () => {
+    it("should link to event URL", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
-      expect(html).toContain('<a href="#test-event-march-2026"  class="event-title">');
+
+      expect(html).toContain(
+        '<a href="#test-event-march-2026"  class="event-title">',
+      );
     });
 
-    it('should render related sessions when session collection is provided', () => {
-      const html = renderMacro(templatePath, macroName, [mockEvents[0], mockSessions]);
+    it("should render related sessions when session collection is provided", () => {
+      const html = renderMacro(templatePath, macroName, [
+        mockEvents[0],
+        mockSessions,
+      ]);
 
-      expect(html).toContain('Sessions and speakers');
-      expect(html).toContain('Fictional Frameworks: Not Your Regular Stack');
-      expect(html).toContain('Alice Fictional Developer');
+      expect(html).toContain("Sessions and speakers");
+      expect(html).toContain("Fictional Frameworks: Not Your Regular Stack");
+      expect(html).toContain("Alice Fictional Developer");
       expect(html).toContain('class="event-sessions"');
     });
   });
 
-  describe('renders photos link', () => {
-    it('should show photos link when photoUrl exists', () => {
+  describe("renders photos link", () => {
+    it("should show photos link when photoUrl exists", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
+
       expect(html).toContain('<span class="event-link-label">Photos</span>');
       expect(html).toContain('href="https://test-photos.local/march-mock"');
     });
 
-    it('should not show photos link when photoUrl is TODO', () => {
-      const eventWithoutPhotos = { ...mockEvents[0], photoUrl: 'TODO' };
+    it("should not show photos link when photoUrl is TODO", () => {
+      const eventWithoutPhotos = { ...mockEvents[0], photoUrl: "TODO" };
       const html = renderMacro(templatePath, macroName, [eventWithoutPhotos]);
-      
-      expect(html).not.toContain('<span class="event-link-label">Photos</span>');
+
+      expect(html).not.toContain(
+        '<span class="event-link-label">Photos</span>',
+      );
     });
 
-    it('should not show photos link when photoUrl is empty', () => {
-      const eventWithoutPhotos = { ...mockEvents[0], photoUrl: '' };
+    it("should not show photos link when photoUrl is empty", () => {
+      const eventWithoutPhotos = { ...mockEvents[0], photoUrl: "" };
       const html = renderMacro(templatePath, macroName, [eventWithoutPhotos]);
-      
-      expect(html).not.toContain('<span class="event-link-label">Photos</span>');
+
+      expect(html).not.toContain(
+        '<span class="event-link-label">Photos</span>',
+      );
     });
   });
 
-  describe('renders video links', () => {
-    it('should render multiple video links', () => {
-      const html = renderMacro(templatePath, macroName, [mockEvents[0], mockSessions]);
-      
-      expect(html).toContain('Testing Quantum Debugging Techniques');
-      expect(html).toContain('Fictional Frameworks: Not Your Regular Stack');
+  describe("renders video links", () => {
+    it("should render multiple video links", () => {
+      const html = renderMacro(templatePath, macroName, [
+        mockEvents[0],
+        mockSessions,
+      ]);
+
+      expect(html).toContain("Testing Quantum Debugging Techniques");
+      expect(html).toContain("Fictional Frameworks: Not Your Regular Stack");
       expect(html).toContain('href="https://test-youtube.local/mock-video-1"');
       expect(html).toContain('href="https://test-youtube.local/mock-qa-1"');
     });
 
-    it('should render session video links for each valid video URL', () => {
-      const html = renderMacro(templatePath, macroName, [mockEvents[0], mockSessions]);
-      
+    it("should render session video links for each valid video URL", () => {
+      const html = renderMacro(templatePath, macroName, [
+        mockEvents[0],
+        mockSessions,
+      ]);
+
       const videoLinks = html.match(/class="session-video-link"/g) || [];
       expect(videoLinks).toHaveLength(2);
     });
 
-    it('should not render video links when sessions have no video URLs', () => {
+    it("should not render video links when sessions have no video URLs", () => {
       const sessionsWithoutVideos = mockSessions.map((session) => ({
         ...session,
-        videoUrl: session.eventID === mockEvents[0].id ? '' : session.videoUrl
+        videoUrl: session.eventID === mockEvents[0].id ? "" : session.videoUrl,
       }));
-      const html = renderMacro(templatePath, macroName, [mockEvents[0], sessionsWithoutVideos]);
-      
+      const html = renderMacro(templatePath, macroName, [
+        mockEvents[0],
+        sessionsWithoutVideos,
+      ]);
+
       expect(html).not.toContain('class="session-video-link"');
     });
 
-    it('should skip session videos with TODO URLs', () => {
+    it("should skip session videos with TODO URLs", () => {
       const sessionsWithTodoVideo = [
         {
           ...mockSessions[0],
-          title: 'Main Session',
-          videoUrl: 'TODO'
+          title: "Main Session",
+          videoUrl: "TODO",
         },
         {
           ...mockSessions[1],
-          title: 'Valid Video',
-          videoUrl: 'https://youtube.com/valid'
-        }
+          title: "Valid Video",
+          videoUrl: "https://youtube.com/valid",
+        },
       ];
-      const html = renderMacro(templatePath, macroName, [mockEvents[0], sessionsWithTodoVideo]);
-      
+      const html = renderMacro(templatePath, macroName, [
+        mockEvents[0],
+        sessionsWithTodoVideo,
+      ]);
+
       expect(html).not.toContain('href="TODO"');
       expect(html).toContain('href="https://youtube.com/valid"');
-      expect(html).toContain('Valid Video (45 mins)');
+      expect(html).toContain("Valid Video (45 mins)");
     });
   });
 
-  describe('HTML structure', () => {
-    it('should have event-item div class', () => {
+  describe("HTML structure", () => {
+    it("should have event-item div class", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
+
       expect(html).toContain('class="event-item"');
     });
 
-    it('should add anchor id based on event id', () => {
+    it("should add anchor id based on event id", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
 
       expect(html).toContain('id="test-event-march-2026"');
     });
 
-    it('should not add anchor id when event id is missing', () => {
+    it("should not add anchor id when event id is missing", () => {
       const eventWithoutId = {
-        ...mockEvents[0]
+        ...mockEvents[0],
       };
       delete eventWithoutId.id;
 
@@ -146,79 +168,85 @@ describe('event-list-item component', () => {
       expect(html).not.toContain('id="test-event-march-2026"');
     });
 
-    it('should have event-title class on title link', () => {
+    it("should have event-title class on title link", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
+
       expect(html).toContain('class="event-title"');
     });
 
-    it('should have event-link classes on video/photo links', () => {
+    it("should have event-link classes on video/photo links", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
+
       expect(html).toContain('class="event-link');
     });
 
-    it('should render nested ul for links', () => {
+    it("should render nested ul for links", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
-      
+
       expect(html).toContain('class="event-links"');
     });
   });
 
-  describe('handles different events', () => {
-    it('should render January event', () => {
+  describe("handles different events", () => {
+    it("should render January event", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[1]]);
-      
-      expect(html).toContain('20 January 2026');
-      expect(html).toContain('Fictional Meetup Experience');
+
+      expect(html).toContain("20 January 2026");
+      expect(html).toContain("Fictional Meetup Experience");
     });
 
-    it('should render February event with single video', () => {
-      const html = renderMacro(templatePath, macroName, [mockEvents[2], mockSessions]);
-      
-      expect(html).toContain('17 February 2026');
-      expect(html).toContain('Test Data Deep Dive');
-      expect(html).toContain('Test Framework Overview');
-      
-      const videoCount = (html.match(/class="session-video-link"/g) || []).length;
+    it("should render February event with single video", () => {
+      const html = renderMacro(templatePath, macroName, [
+        mockEvents[2],
+        mockSessions,
+      ]);
+
+      expect(html).toContain("17 February 2026");
+      expect(html).toContain("Test Data Deep Dive");
+      expect(html).toContain("Test Framework Overview");
+
+      const videoCount = (html.match(/class="session-video-link"/g) || [])
+        .length;
       expect(videoCount).toBe(1);
     });
   });
 
-  describe('renders event overview or speaker wanted message', () => {
-    it('should render overview when event has overview text', () => {
+  describe("renders event overview or speaker wanted message", () => {
+    it("should render overview when event has overview text", () => {
       const html = renderMacro(templatePath, macroName, [mockEvents[0]]);
 
       expect(html).toContain('class="event-overview-heading"');
-      expect(html).toContain('A practical meetup focused on testing patterns and debugging workflows.');
+      expect(html).toContain(
+        "A practical meetup focused on testing patterns and debugging workflows.",
+      );
     });
 
-    it('should render speaker-wanted message when event has no overview', () => {
+    it("should render speaker-wanted message when event has no overview", () => {
       const eventWithoutOverview = {
-        id: 'test-event-no-overview',
-        displayDate: '10 June 2026',
-        url: 'https://test.meetup.local/event-no-overview',
-        title: 'Event Without Overview',
-        photoUrl: 'https://test-photos.local/june-mock',
-        overview: ''
+        id: "test-event-no-overview",
+        displayDate: "10 June 2026",
+        url: "https://test.meetup.local/event-no-overview",
+        title: "Event Without Overview",
+        photoUrl: "https://test-photos.local/june-mock",
+        overview: "",
       };
 
       const html = renderMacro(templatePath, macroName, [eventWithoutOverview]);
 
       expect(html).toContain('class="event-speaker-wanted"');
-      expect(html).toContain('Speaker wanted');
-      expect(html).toContain('/call-for-speakers.html');
-      expect(html).toContain('/contact-us.html');
+      expect(html).toContain("Speaker wanted");
+      expect(html).toContain("/call-for-speakers.html");
+      expect(html).toContain("/contact-us.html");
     });
 
-    it('should not render overview heading when event has no overview', () => {
+    it("should not render overview heading when event has no overview", () => {
       const eventWithoutOverview = {
-        id: 'test-event-no-overview',
-        displayDate: '10 June 2026',
-        url: 'https://test.meetup.local/event-no-overview',
-        title: 'Event Without Overview',
-        photoUrl: 'https://test-photos.local/june-mock',
-        overview: ''
+        id: "test-event-no-overview",
+        displayDate: "10 June 2026",
+        url: "https://test.meetup.local/event-no-overview",
+        title: "Event Without Overview",
+        photoUrl: "https://test-photos.local/june-mock",
+        overview: "",
       };
 
       const html = renderMacro(templatePath, macroName, [eventWithoutOverview]);
@@ -226,48 +254,51 @@ describe('event-list-item component', () => {
       expect(html).not.toContain('class="event-overview-heading"');
     });
 
-    it('should handle whitespace-only overview as empty', () => {
+    it("should handle whitespace-only overview as empty", () => {
       const eventWithWhitespaceOverview = {
-        id: 'test-event-whitespace',
-        displayDate: '15 July 2026',
-        url: 'https://test.meetup.local/event-whitespace',
-        title: 'Event With Whitespace Overview',
-        photoUrl: 'https://test-photos.local/july-mock',
-        overview: '   \n\t   '
+        id: "test-event-whitespace",
+        displayDate: "15 July 2026",
+        url: "https://test.meetup.local/event-whitespace",
+        title: "Event With Whitespace Overview",
+        photoUrl: "https://test-photos.local/july-mock",
+        overview: "   \n\t   ",
       };
 
-      const html = renderMacro(templatePath, macroName, [eventWithWhitespaceOverview]);
+      const html = renderMacro(templatePath, macroName, [
+        eventWithWhitespaceOverview,
+      ]);
 
       expect(html).toContain('class="event-speaker-wanted"');
       expect(html).not.toContain('class="event-overview-heading"');
     });
   });
 
-  describe('edge cases', () => {
-    it('should handle event with no videos or photos', () => {
+  describe("edge cases", () => {
+    it("should handle event with no videos or photos", () => {
       const minimalEvent = {
-        displayDate: '25 April 2026',
-        url: 'https://test.meetup.local/event',
-        title: 'Test Minimal Event',
-        photoUrl: ''
+        displayDate: "25 April 2026",
+        url: "https://test.meetup.local/event",
+        title: "Test Minimal Event",
+        photoUrl: "",
       };
 
       const html = renderMacro(templatePath, macroName, [minimalEvent]);
 
-      expect(html).toContain('25 April 2026');
-      expect(html).toContain('Test Minimal Event');
-      expect(html).not.toContain('event-links'); // No links section
+      expect(html).toContain("25 April 2026");
+      expect(html).toContain("Test Minimal Event");
+      expect(html).not.toContain("event-links"); // No links section
     });
 
-    it('should handle very long event titles', () => {
+    it("should handle very long event titles", () => {
       const longTitleEvent = {
         ...mockEvents[0],
-        title: 'This is a very long test event title that discusses multiple testing topics and might wrap to multiple lines in the UI'
+        title:
+          "This is a very long test event title that discusses multiple testing topics and might wrap to multiple lines in the UI",
       };
 
       const html = renderMacro(templatePath, macroName, [longTitleEvent]);
 
-      expect(html).toContain('This is a very long test event title');
+      expect(html).toContain("This is a very long test event title");
     });
   });
 });

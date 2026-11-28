@@ -1,49 +1,75 @@
-import { describe, it, expect } from 'vitest';
-import { readFileSync } from 'fs';
-import { renderMacro } from '../helpers/nunjucks.js';
+import { describe, it, expect } from "vitest";
+import { readFileSync } from "fs";
+import { renderMacro } from "../helpers/nunjucks.js";
 
-describe('speaker-card component', () => {
-    const templatePath = '_includes/speaker-card.njk';
-    const macroName = 'speakerCard';
-    const args = ['November 25th', 'My Talk', 'Kevin Ocansey', 'AI Engineer', '/img/kevin.jpg'];
+describe("speaker-card component", () => {
+  const templatePath = "_includes/speaker-card.njk";
+  const macroName = "speakerCard";
+  const args = [
+    "November 25th",
+    "My Talk",
+    "Kevin Ocansey",
+    "AI Engineer",
+    "/img/kevin.jpg",
+  ];
 
-    it('renders date, title, name, role and image', () => {
-        const html = renderMacro(templatePath, macroName, args);
+  it("renders date, title, name, role and image", () => {
+    const html = renderMacro(templatePath, macroName, args);
 
-        expect(html).toContain('November 25th Speaker');
-        expect(html).toContain('My Talk');
-        expect(html).toContain('Kevin Ocansey');
-        expect(html).toContain('AI Engineer');
-        expect(html).toContain('src="/img/kevin.jpg"');
-        expect(html).toContain('class="event-speaker-card-portrait"');
-    });
+    expect(html).toContain("November 25th Speaker");
+    expect(html).toContain("My Talk");
+    expect(html).toContain("Kevin Ocansey");
+    expect(html).toContain("AI Engineer");
+    expect(html).toContain('src="/img/kevin.jpg"');
+    expect(html).toContain('class="event-speaker-card-portrait"');
+  });
 
-    it('renders a placeholder when no image is given', () => {
-        const html = renderMacro(templatePath, macroName, [...args.slice(0, 4)]);
+  it("renders a placeholder when no image is given", () => {
+    const html = renderMacro(templatePath, macroName, [...args.slice(0, 4)]);
 
-        expect(html).toContain('event-speaker-card-image-placeholder');
-        expect(html).not.toContain('<img');
-    });
+    expect(html).toContain("event-speaker-card-image-placeholder");
+    expect(html).not.toContain("<img");
+  });
 
-    it('ships a stylesheet linked from the layout', () => {
-        const css = readFileSync('src/speaker-card.css', 'utf8');
-        const layout = readFileSync('src/_includes/layout.njk', 'utf8');
+  it("ships a stylesheet linked from the layout", () => {
+    const css = readFileSync("src/speaker-card.css", "utf8");
+    const layout = readFileSync("src/_includes/layout.njk", "utf8");
 
-        expect(css).toContain('.event-speaker-card');
-        expect(css).toMatch(/\.event-speaker-card\s*\{[^}]*overflow:\s*visible;/s);
-        expect(css).toMatch(/\.event-speaker-card::before\s*\{[^}]*inset:\s*0 -2\.5cqw;/s);
-        expect(css).toMatch(/\.event-speaker-card::before\s*\{[^}]*border:\s*1cqw solid/s);
-        expect(css).toMatch(/\.event-speaker-card-brace\s*\{[^}]*font-weight:\s*700;/s);
-        expect(css).toMatch(/\.event-speaker-card-brace\s*\{[^}]*transform:\s*scaleY\(0\.8\);/s);
-        expect(css).toMatch(/\.event-speaker-card-photo\s*\{[^}]*border-radius:\s*50% 50% 0 50%;/s);
-        expect(css).toMatch(/\.event-speaker-card-portrait\s*\{[^}]*border-radius:\s*50%;/s);
-        expect(css).toMatch(/\.event-speaker-card \.event-speaker-card-name-link\s*\{[^}]*color:\s*var\(--sc-cyan\);/s);
-        expect(css).toMatch(/\.event-speaker-card-name,\s*\.event-speaker-card-role\s*\{[^}]*flex:\s*1;[^}]*font-weight:\s*800;/s);
-        expect(css).toMatch(/\.event-speaker-card-title\s*\{[^}]*width:\s*93cqw;/s);
-        expect(css).toMatch(/\.event-speaker-card-meta\s*\{[^}]*width:\s*93cqw;/s);
-        expect(css).toMatch(/\.event-speaker-card-title\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*10cqw;[^}]*padding:\s*0\.5cqw 2\.5cqw;/s);
-        expect(css).toMatch(/\.event-speaker-card-meta\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*18\.4cqw;[^}]*padding:\s*1cqw 1\.5cqw;/s);
-        expect(css).toContain('max-width: 370px');
-        expect(layout).toContain('/speaker-card.css');
-    });
+    expect(css).toContain(".event-speaker-card");
+    expect(css).toMatch(/\.event-speaker-card\s*\{[^}]*overflow:\s*visible;/s);
+    expect(css).toMatch(
+      /\.event-speaker-card::before\s*\{[^}]*inset:\s*0 -2\.5cqw;/s,
+    );
+    expect(css).toMatch(
+      /\.event-speaker-card::before\s*\{[^}]*border:\s*1cqw solid/s,
+    );
+    expect(css).toMatch(
+      /\.event-speaker-card-brace\s*\{[^}]*font-weight:\s*700;/s,
+    );
+    expect(css).toMatch(
+      /\.event-speaker-card-brace\s*\{[^}]*transform:\s*scaleY\(0\.8\);/s,
+    );
+    expect(css).toMatch(
+      /\.event-speaker-card-photo\s*\{[^}]*border-radius:\s*50% 50% 0 50%;/s,
+    );
+    expect(css).toMatch(
+      /\.event-speaker-card-portrait\s*\{[^}]*border-radius:\s*50%;/s,
+    );
+    expect(css).toMatch(
+      /\.event-speaker-card \.event-speaker-card-name-link\s*\{[^}]*color:\s*var\(--sc-cyan\);/s,
+    );
+    expect(css).toMatch(
+      /\.event-speaker-card-name,\s*\.event-speaker-card-role\s*\{[^}]*flex:\s*1;[^}]*font-weight:\s*800;/s,
+    );
+    expect(css).toMatch(/\.event-speaker-card-title\s*\{[^}]*width:\s*93cqw;/s);
+    expect(css).toMatch(/\.event-speaker-card-meta\s*\{[^}]*width:\s*93cqw;/s);
+    expect(css).toMatch(
+      /\.event-speaker-card-title\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*10cqw;[^}]*padding:\s*0\.5cqw 2\.5cqw;/s,
+    );
+    expect(css).toMatch(
+      /\.event-speaker-card-meta\s*\{[^}]*height:\s*auto;[^}]*min-height:\s*18\.4cqw;[^}]*padding:\s*1cqw 1\.5cqw;/s,
+    );
+    expect(css).toContain("max-width: 370px");
+    expect(layout).toContain("/speaker-card.css");
+  });
 });

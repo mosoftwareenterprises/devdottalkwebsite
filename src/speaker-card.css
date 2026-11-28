@@ -94,8 +94,8 @@
   top: 38cqw;
   width: 93cqw;
   height: auto;
-    min-height: 10cqw;
-    padding: 0.5cqw 2.5cqw;
+  min-height: 10cqw;
+  padding: 0.5cqw 2.5cqw;
   border-radius: 2.4cqw;
   color: var(--sc-teal);
   font-size: 5.3cqw;
@@ -128,10 +128,10 @@
 
 .event-speaker-card-meta {
   top: 123cqw;
-    width: 93cqw;
+  width: 93cqw;
   height: auto;
-    min-height: 18.4cqw;
-    padding: 1cqw 1.5cqw;
+  min-height: 18.4cqw;
+  padding: 1cqw 1.5cqw;
   border-radius: 2cqw;
   font-size: 5.5cqw;
   line-height: 1.3;
@@ -140,9 +140,9 @@
 .event-speaker-card-name,
 .event-speaker-card-role {
   display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   font-weight: 800;
 }

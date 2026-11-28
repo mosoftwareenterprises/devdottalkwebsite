@@ -8,10 +8,12 @@
     "@vitest/ui": "^1.6.1",
     "nunjucks": "^3.2.4",
     "playwright": "^1.65.1",
+    "prettier": "^3.3.3",
     "vitest": "^1.6.1"
   },
   "scripts": {
     "build": "npx @11ty/eleventy",
+    "format": "prettier --write .",
     "start": "npx @11ty/eleventy --serve",
     "preview": "sirv _site --single --cors --no-clear --port 8080",
     "test": "vitest run",

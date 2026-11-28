@@ -74,7 +74,6 @@
 }
 /* Ensure BlueSky feed fills the sidebar width on tablets and stacks full-width on phones. */
 @media screen and (max-width: 1024px) {
-
   #bluesky-posts-header,
   #bluesky-posts {
     width: 100%;
@@ -98,10 +97,10 @@
     width: 100%;
     max-height: none;
     overflow-y: visible;
-  
+  }
 
-    #bluesky-posts-header,
-    #bluesky-posts {
+  #bluesky-posts-header,
+  #bluesky-posts {
     width: 100%;
     max-width: 100%;
     max-height: none;
@@ -138,5 +137,5 @@
     margin-bottom: 10px;
     font-size: 16px;
     overflow-wrap: anywhere;
-  
+  }
 }

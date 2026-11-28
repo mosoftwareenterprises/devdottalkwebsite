@@ -9,10 +9,7 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      73,
-      74
-    ],
+    "sessionIDs": [73, 74],
     "overview": ""
   },
   {
@@ -25,10 +22,7 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      71,
-      72
-    ],
+    "sessionIDs": [71, 72],
     "overview": ""
   },
   {
@@ -41,10 +35,7 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      69,
-      70
-    ],
+    "sessionIDs": [69, 70],
     "overview": ""
   },
   {
@@ -57,10 +48,7 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      67,
-      68
-    ],
+    "sessionIDs": [67, 68],
     "overview": ""
   },
   {
@@ -74,10 +62,7 @@
     "locationAddress": "Hopefully somewhere nice!",
     "venueName": "Your favourite holiday spot",
     "isNoEventMonth": true,
-    "sessionIDs": [
-      65,
-      66
-    ],
+    "sessionIDs": [65, 66],
     "overview": "We are not having an event in August as we know many people will be on holiday - we hope you have a great break and we'll see you at the next one in September!"
   },
   {
@@ -91,10 +76,7 @@
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
     "isNoEventMonth": true,
-    "sessionIDs": [
-      63,
-      64
-    ],
+    "sessionIDs": [63, 64],
     "overview": ""
   },
   {
@@ -108,10 +90,7 @@
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
     "isNoEventMonth": true,
-    "sessionIDs": [
-      61,
-      62
-    ],
+    "sessionIDs": [61, 62],
     "overview": ""
   },
   {
@@ -124,10 +103,7 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      59,
-      60
-    ],
+    "sessionIDs": [59, 60],
     "overview": ""
   },
   {
@@ -140,10 +116,7 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      57,
-      58
-    ],
+    "sessionIDs": [57, 58],
     "overview": "This event is in planning. We have 2 speakers lined up. Details will be announced soon."
   },
   {
@@ -156,10 +129,7 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      55,
-      56
-    ],
+    "sessionIDs": [55, 56],
     "overview": "When a payment is waiting on a business event, replaying an old message can act on stale intent; learn how to persist deferred work in Kafka and re-decide it against current state. Then explore how to build software that sells now that LLMs have made building easier, with practical perspectives on reliable systems and commercial value."
   },
   {
@@ -172,10 +142,7 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      39,
-      54
-    ],
+    "sessionIDs": [39, 54],
     "overview": "What can judo teach us about handling setbacks and impostor syndrome in tech? Alongside that fresh perspective, follow the journey of a 3D game asset from modelling and texturing in Maya and Substance Painter to integration in Unity or Unreal Engine—and publishing as an asset pack."
   },
   {
@@ -188,10 +155,8 @@
     "locationName": "Bournemouth University",
     "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
     "venueName": "Room K101, Kimmeridge House",
-    "sessionIDs": [
-      51,
-      52
-    ],
+    "sessionIDs": [51, 52],
+    "lumaEventId": "evt-qWhmAIRv3KXkHdo",
     "overview": "Explore what it takes to move multi-agent LLM systems from prototype to production, including LangGraph, debuggability and graceful failure handling. Then uncover accessibility pitfalls in AI-generated frontend code and practical ways to review and test interfaces so they remain usable."
   },
   {
@@ -201,383 +166,313 @@
     "url": "/2026-december-location-info.html",
     "title": "{dev.talk} - The One With the Secret Superpowers and the State Boundaries",
     "photoUrl": "https://photos.app.goo.gl/ihNjtTrBf7vXKnSR8",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            49,
-            50
-        ],
-        "lumaEventId": "evt-2RJGN81UiIB7HHn",
-        "overview": "This event explores how developers can recognise patterns and make better decisions when designing software. Discover how archetypes can reveal business models and make complex problems feel surprisingly clear, then see how thoughtful state boundaries can transform a growing Flutter application. Come for practical ideas on modelling, architecture and avoiding overengineering, whether you work in mobile development or beyond."
-    },
-    {
-        "id": 23,
-        "date": "2026-11-25",
-        "displayDate": "November 25th 2026",
-        "url": "/2026-november-location-info.html",
-        "title": "{dev.talk} - The One With Jarvis, Knitting and the Tests That Don't Lie",
-        "photoUrl": "https://photos.app.goo.gl/CHAvnXKVHg4NLjHJ9",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            48,
-            47
-        ],
-        "overview": "This event explores what happens when ambitious ideas meet the realities of building software. Hear how JarvisOS evolved from an offline AI concept into a more purposeful project, as a team of three speakers shares lessons from experimentation, teamwork and setbacks. Katy Ereira then shares her experience as a software engineer and speaker, including the surprising connections between knitting, programming and the craft of writing reliable software."
-    },
-    {
-        "id": 22,
-        "date": "2026-10-21",
-        "displayDate": "October 21st 2026",
-        "url": "/2026-october-location-info.html",
-        "title": "{dev.talk} - The One Where We Ask, \"Could This Be Any More Useful?\"",
-        "photoUrl": "https://photos.app.goo.gl/CHAvnXKVHg4NLjHJ9",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            45,
-            77
-        ],
-        "overview": "Join us for an evening about building technology that works for real people and stays safe to change. Explore how making user needs visible can improve alignment, team design, and flow, then hear candid lessons from putting AI products in front of diverse users. Finish with a short, honest talk on hidden technical debt, N+1 API calls, and designing software that remains easy to change as it scales."
-    },
-    {
-        "id": 21,
-        "date": "2026-09-16",
-        "displayDate": "September 16th 2026",
-        "url": "/2026-september-location-info.html",
-        "title": "{dev.talk} - The One Where We Are All a Bit Rusty After the Holidays",
-        "photoUrl": "https://photos.app.goo.gl/T2PijAqSeELdLoTPA",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            43,
-            44
-        ],
-        "overview": "This event explores real-world architectural lessons of building a commercial-grade Rust system on constrained hardware, followed by a look at why most AI systems are failing, and how you can build one that won't."
-    },
-    {
-        "id": 20,
-        "date": "2026-08-31",
-        "displayDate": "August 31st 2026",
-        "url": "/2026-august-location-info.html",
-        "title": "NO EVENT IN AUGUST - The one where we all go on holiday",
-        "photoUrl": "TODO",
-        "locationName": "Holidays",
-        "locationAddress": "Hopefully somewhere nice!",
-        "venueName": "Your favourite holiday spot",
-        "isNoEventMonth": true,
-        "sessionIDs": [
-            41,
-            42
-        ],
-        "overview": "We are not having an event in August as we know many people will be on holiday - we hope you have a great break and we'll see you at the next one in September!"
-    },
-    {
-        "id": 19,
-        "date": "2026-07-22",
-        "displayDate": "July 22nd 2026",
-        "url": "/2026-july-location-info.html",
-        "title": "{dev.talk} - The One where Assets are king",
-        "photoUrl": "https://photos.app.goo.gl/VNjeKGtwic7RbLYW9",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "isCancelled": true,
-        "sessionIDs": [
-            40
-        ],
-        "overview": "This event features a practical talk on 3D game asset creation and a collaborative Lean Coffee session, where attendees can suggest topics, vote, and discuss what matters most to the community."
-    },
-    {
-        "id": 18,
-        "date": "2026-06-24",
-        "displayDate": "June 24th 2026",
-        "url": "/2026-june-location-info.html",
-        "title": "{dev.talk} - The One with the Cybersecurity hack",
-        "photoUrl": "TODO",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room PG22, Poole House",
-        "isCancelled": true,
-        "sessionIDs": [
-            38
-        ],
-        "overview": "This is a collab with the [B2600 Cybersecurity community](https://www.bournemouth2600.org/).\n\nAttendees will participate in a no pressure, hands-on cybersecurity AI vibe coding challenge. No experience of cybersecurity or software development is required.\n\nHowever if you do have experience in either, we would love to have you there to help mentor and support others as they learn and explore the challenge. The event will be a fun and relaxed way to learn about cybersecurity concepts and how AI can be used in this space.\n\n**If you have access to a laptop, please bring it along to participate in the coding challenge. If not, don't worry - you can still join in and learn!**"
-    },
-    {
-        "id": 17,
-        "date": "2026-05-20",
-        "displayDate": "May 20th 2026",
-        "url": "/2026-may-location-info.html",
-        "title": "{dev.talk} - The One with the Cliffhanger",
-        "photoUrl": "https://photos.app.goo.gl/t7Cd5dAEFKdAP3Y76",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            36,
-            37
-        ],
-        "overview": "This event explores how AI can accelerate learning and skill growth in teams, alongside practical ways to simplify day-to-day developer setup. Attendees will gain real examples of AI-supported development and a clear approach to managing tools, tasks, and runtimes consistently across projects."
-    },
-    {
-        "id": 16,
-        "date": "2026-04-29",
-        "displayDate": "April 29th 2026",
-        "url": "/2026-april-location-info.html",
-        "title": "{dev.talk} - The One with Geospatial Clues and Post-Incident Truths",
-        "photoUrl": "https://photos.app.goo.gl/38R6zWyon8pjEJpP7",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            35,
-            34
-        ],
-        "overview": "Attendees will explore practical geospatial concepts and tools, then see a real incident case study showing how teams can prepare, respond, and improve after major production issues."
-    },
-    {
-        "id": 15,
-        "date": "2026-03-25",
-        "displayDate": "March 25th 2026",
-        "url": "/2026-march-location-info.html",
-        "title": "{dev.talk} - The One Where JARVIS Fits in Your Pocket and the IC Grows Up",
-        "photoUrl": "https://photos.app.goo.gl/vXHKGzFiWxys9Ndi9",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            33,
-            32
-        ],
-        "overview": "This event covers building a privacy-first agentic mobile OS and shares practical lessons on how management experience can help you grow as an engineer."
-    },
-    {
-        "id": 14,
-        "date": "2026-02-25",
-        "displayDate": "February 25th 2026",
-        "url": "/2026-february-location-info.html",
-        "title": "{dev.talk} - The One With The Gaming Collab",
-        "photoUrl": "https://photos.app.goo.gl/p4WKcC8xL2bBZKEG6",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room PG22, Poole House",
-        "sessionIDs": [
-            28,
-            27
-        ],
-        "overview": "This event is packed with practical game development advice, from the key decisions that help you finish game jams faster to smart ways to build an audience and work with marketing while you ship."
-    },
-    {
-        "id": 13,
-        "date": "2026-01-28",
-        "displayDate": "January 28th 2026",
-        "url": "/2026-january-location-info.html",
-        "title": "{dev.talk} - The One Where We Don't Break the Platform (or Believe the Hype)",
-        "photoUrl": "https://photos.app.goo.gl/mp4ADmBaMfJvTnxs5",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            26,
-            25
-        ],
-        "overview": "In this event, attendees will hear how to cut through AI hype with a practical automation framework, plus how to make websites easier to evolve using feature isolation without a full rebuild."
-    },
-    {
-        "id": 12,
-        "date": "2025-12-17",
-        "displayDate": "December 17th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-something-different-tickets-1730678890149?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one with something different",
-        "photoUrl": "https://photos.app.goo.gl/aNzK9Rjqgg29pwx68",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            24
-        ],
-        "overview": "A fun and social end-of-year session where everyone can take part in a general knowledge quiz and celebrate together."
-    },
-    {
-        "id": 11,
-        "date": "2025-11-26",
-        "displayDate": "November 26th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-our-birthday-tickets-1730677285349?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one with our Birthday",
-        "photoUrl": "https://photos.app.goo.gl/WDLzshsGGfxUYB8w9",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            23,
-            22
-        ],
-        "overview": "This event blends humour and hard lessons, exploring the human side of software engineering through a sitcom lens and reflecting on bugs from the Post Office Horizon system and what teams can learn from them."
-    },
-    {
-        "id": 10,
-        "date": "2025-10-22",
-        "displayDate": "October 22nd 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-pms-ask-designers-imagine-and-devs-improvise-tickets-1730652110049?aff=oddtdtcreator",
-        "title": "{dev.talk} - The One Where PMs Ask, Designers Imagine, and Devs Improvise",
-        "photoUrl": "https://photos.app.goo.gl/2pGzP9X5vUcYsSBg9",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room PG22, Poole House",
-        "sessionIDs": [
-            21,
-            20,
-            19
-        ],
-        "overview": "Attendees will hear short, practical talks on improving developer environments with Nix, using domain-specific languages to simplify complex problems, and building better collaboration between product managers and developers."
-    },
-    {
-        "id": 9,
-        "date": "2025-09-24",
-        "displayDate": "September 24th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-learn-to-level-up-our-devex-tickets-1666958901949?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we learn to Level Up Our DevEx",
-        "photoUrl": "https://photos.app.goo.gl/3jbDBpeiCG1fSQme8",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            18
-        ],
-        "overview": "A deep dive into developer experience, covering how to test complex end-to-end flows effectively and how .NET Aspire and OpenTelemetry can make integration testing and local development smoother."
-    },
-    {
-        "id": 8,
-        "date": "2025-07-23",
-        "displayDate": "July 23rd 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-the-conference-come-down-tickets-1383069260389",
-        "title": "{dev.talk} - The one with the conference come down",
-        "photoUrl": "https://photos.app.goo.gl/nBgagTf8GmauaGyz8",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            17,
-            16
-        ],
-        "overview": "This event focuses on managing change and growth, with insights on helping people adopt new tools and a real-world case study on evolving service boundaries and architecture over time."
-    },
-    {
-        "id": 7,
-        "date": "2025-06-25",
-        "displayDate": "June 25th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-connect-before-reconnect-tickets-1335283451749?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we connect before re:connect",
-        "photoUrl": "https://photos.app.goo.gl/fiZCvRTvUaFsgU6r9",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            15
-        ],
-        "overview": "A collaborative and relaxed community night featuring a fun general knowledge quiz with the Re:connect conference."
-    },
-    {
-        "id": 6,
-        "date": "2025-05-21",
-        "displayDate": "May 21st 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-open-source-ai-tries-to-break-into-tech-tickets-1312789481679?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where Open Source AI tries to break into Tech",
-        "photoUrl": "https://photos.app.goo.gl/vJcDBSHSBBs9cHNe6",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            14,
-            13
-        ],
-        "overview": "Attendees will explore the current open-source AI landscape and hear real stories and advice on pathways into the tech industry."
-    },
-    {
-        "id": 5,
-        "date": "2025-04-23",
-        "displayDate": "April 23rd 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-will-see-you-at-bu-tickets-1292820513959?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we will see you at BU",
-        "photoUrl": "https://photos.app.goo.gl/1C7HXnTU2NarS4X88",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            12,
-            11
-        ],
-        "overview": "This event highlights practical engineering approaches, from applying Clean Architecture in Salesforce to using OpenTelemetry to make application observability easier."
-    },
-    {
-        "id": 4,
-        "date": "2025-03-26",
-        "displayDate": "March 26th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-creatives-coders-at-cottonwood-tickets-1261177177889?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one with Creatives & Coders at Cottonwood",
-        "photoUrl": "https://photos.app.goo.gl/mVEhNfpd1fYcEMcs5",
-        "locationName": "Bournemouth University",
-        "locationAddress": "81 Grove Road, Bournemouth, BH1 3AH",
-        "venueName": "Cottonwood Hotel, Bournemouth",
-        "sessionIDs": [
-            10,
-            9,
-            8
-        ],
-        "overview": "A varied event covering modern PHP, the real ups and downs of building a YouTube channel, and practical strategies for landing a tech role without a computer science degree."
-    },
-    {
-        "id": 3,
-        "date": "2025-02-26",
-        "displayDate": "February 26th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-forged-friendships-at-the-foundry-tickets-1132558205079?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we forged friendships at the FOUNDRY",
-        "photoUrl": "https://photos.app.goo.gl/q9C4RTZuFEgwcZqU6",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            7,
-            6
-        ],
-        "overview": "In this event, attendees will hear how agentic AI is shaping the future of automation and get practical guidance on navigating today’s changing tech hiring market."
-    },
-    {
-        "id": 2,
-        "date": "2025-01-30",
-        "displayDate": "January 30th 2025",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator",
-        "title": "{dev.talk} - The one where we deployed our first PATCH",
-        "photoUrl": "https://photos.app.goo.gl/65mdTC2EFAhdmWYb6",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            5,
-            4
-        ],
-        "overview": "This event shares lessons from building a city-based maze game with open tools, alongside a candid look at scaling teams and systems through a domain-driven design transformation."
-    },
-    {
-        "id": 1,
-        "date": "2024-11-27",
-        "displayDate": "November 27th 2024",
-        "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator",
-        "title": "{dev.talk} - the one where we got started",
-        "photoUrl": "https://photos.app.goo.gl/V8GmT5GTm1BS9VUc6",
-        "locationName": "Bournemouth University",
-        "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
-        "venueName": "Room K101, Kimmeridge House",
-        "sessionIDs": [
-            3,
-            2,
-            1
-        ],
-        "overview": "A strong kickoff event featuring a student perspective on breaking into tech, practical microservice design with REPR, and lessons learned from building a vertiport automation platform."
-    }
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [49, 50],
+    "lumaEventId": "evt-2RJGN81UiIB7HHn",
+    "overview": "This event explores how developers can recognise patterns and make better decisions when designing software. Discover how archetypes can reveal business models and make complex problems feel surprisingly clear, then see how thoughtful state boundaries can transform a growing Flutter application. Come for practical ideas on modelling, architecture and avoiding over-engineering, whether you work in mobile development or beyond."
+  },
+  {
+    "id": 23,
+    "date": "2026-11-25",
+    "displayDate": "November 25th 2026",
+    "url": "/2026-november-location-info.html",
+    "title": "{dev.talk} - The One With Jarvis, Knitting and the Tests That Don't Lie",
+    "photoUrl": "https://photos.app.goo.gl/CHAvnXKVHg4NLjHJ9",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [48, 47],
+    "overview": "This event explores what happens when ambitious ideas meet the realities of building software. Hear how JarvisOS evolved from an offline AI concept into a more purposeful project, as a team of three speakers shares lessons from experimentation, teamwork and setbacks. Katy Ereira then shares her experience as a software engineer and speaker, including the surprising connections between knitting, programming and the craft of writing reliable software."
+  },
+  {
+    "id": 22,
+    "date": "2026-10-21",
+    "displayDate": "October 21st 2026",
+    "url": "/2026-october-location-info.html",
+    "title": "{dev.talk} - The One Where We Ask, \"Could This Be Any More Useful?\"",
+    "photoUrl": "https://photos.app.goo.gl/CHAvnXKVHg4NLjHJ9",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [45, 77],
+    "overview": "Join us for an evening about building technology that works for real people and stays safe to change. Explore how making user needs visible can improve alignment, team design, and flow, then hear candid lessons from putting AI products in front of diverse users. Finish with a short, honest talk on hidden technical debt, N+1 API calls, and designing software that remains easy to change as it scales."
+  },
+  {
+    "id": 21,
+    "date": "2026-09-16",
+    "displayDate": "September 16th 2026",
+    "url": "/2026-september-location-info.html",
+    "title": "{dev.talk} - The One Where We Are All a Bit Rusty After the Holidays",
+    "photoUrl": "https://photos.app.goo.gl/T2PijAqSeELdLoTPA",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [43, 44],
+    "overview": "This event explores real-world architectural lessons of building a commercial-grade Rust system on constrained hardware, followed by a look at why most AI systems are failing, and how you can build one that won't."
+  },
+  {
+    "id": 20,
+    "date": "2026-08-31",
+    "displayDate": "August 31st 2026",
+    "url": "/2026-august-location-info.html",
+    "title": "NO EVENT IN AUGUST - The one where we all go on holiday",
+    "photoUrl": "TODO",
+    "locationName": "Holidays",
+    "locationAddress": "Hopefully somewhere nice!",
+    "venueName": "Your favourite holiday spot",
+    "isNoEventMonth": true,
+    "sessionIDs": [41, 42],
+    "overview": "We are not having an event in August as we know many people will be on holiday - we hope you have a great break and we'll see you at the next one in September!"
+  },
+  {
+    "id": 19,
+    "date": "2026-07-22",
+    "displayDate": "July 22nd 2026",
+    "url": "/2026-july-location-info.html",
+    "title": "{dev.talk} - The One where Assets are king",
+    "photoUrl": "https://photos.app.goo.gl/VNjeKGtwic7RbLYW9",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "isCancelled": true,
+    "sessionIDs": [40],
+    "overview": "This event features a practical talk on 3D game asset creation and a collaborative Lean Coffee session, where attendees can suggest topics, vote, and discuss what matters most to the community."
+  },
+  {
+    "id": 18,
+    "date": "2026-06-24",
+    "displayDate": "June 24th 2026",
+    "url": "/2026-june-location-info.html",
+    "title": "{dev.talk} - The One with the Cybersecurity hack",
+    "photoUrl": "TODO",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room PG22, Poole House",
+    "isCancelled": true,
+    "sessionIDs": [38],
+    "overview": "This is a collab with the [B2600 Cybersecurity community](https://www.bournemouth2600.org/).\n\nAttendees will participate in a no pressure, hands-on cybersecurity AI vibe coding challenge. No experience of cybersecurity or software development is required.\n\nHowever if you do have experience in either, we would love to have you there to help mentor and support others as they learn and explore the challenge. The event will be a fun and relaxed way to learn about cybersecurity concepts and how AI can be used in this space.\n\n**If you have access to a laptop, please bring it along to participate in the coding challenge. If not, don't worry - you can still join in and learn!**"
+  },
+  {
+    "id": 17,
+    "date": "2026-05-20",
+    "displayDate": "May 20th 2026",
+    "url": "/2026-may-location-info.html",
+    "title": "{dev.talk} - The One with the Cliffhanger",
+    "photoUrl": "https://photos.app.goo.gl/t7Cd5dAEFKdAP3Y76",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [36, 37],
+    "overview": "This event explores how AI can accelerate learning and skill growth in teams, alongside practical ways to simplify day-to-day developer setup. Attendees will gain real examples of AI-supported development and a clear approach to managing tools, tasks, and runtimes consistently across projects."
+  },
+  {
+    "id": 16,
+    "date": "2026-04-29",
+    "displayDate": "April 29th 2026",
+    "url": "/2026-april-location-info.html",
+    "title": "{dev.talk} - The One with Geospatial Clues and Post-Incident Truths",
+    "photoUrl": "https://photos.app.goo.gl/38R6zWyon8pjEJpP7",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [35, 34],
+    "overview": "Attendees will explore practical geospatial concepts and tools, then see a real incident case study showing how teams can prepare, respond, and improve after major production issues."
+  },
+  {
+    "id": 15,
+    "date": "2026-03-25",
+    "displayDate": "March 25th 2026",
+    "url": "/2026-march-location-info.html",
+    "title": "{dev.talk} - The One Where JARVIS Fits in Your Pocket and the IC Grows Up",
+    "photoUrl": "https://photos.app.goo.gl/vXHKGzFiWxys9Ndi9",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [33, 32],
+    "overview": "This event covers building a privacy-first agentic mobile OS and shares practical lessons on how management experience can help you grow as an engineer."
+  },
+  {
+    "id": 14,
+    "date": "2026-02-25",
+    "displayDate": "February 25th 2026",
+    "url": "/2026-february-location-info.html",
+    "title": "{dev.talk} - The One With The Gaming Collab",
+    "photoUrl": "https://photos.app.goo.gl/p4WKcC8xL2bBZKEG6",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room PG22, Poole House",
+    "sessionIDs": [28, 27],
+    "overview": "This event is packed with practical game development advice, from the key decisions that help you finish game jams faster to smart ways to build an audience and work with marketing while you ship."
+  },
+  {
+    "id": 13,
+    "date": "2026-01-28",
+    "displayDate": "January 28th 2026",
+    "url": "/2026-january-location-info.html",
+    "title": "{dev.talk} - The One Where We Don't Break the Platform (or Believe the Hype)",
+    "photoUrl": "https://photos.app.goo.gl/mp4ADmBaMfJvTnxs5",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [26, 25],
+    "overview": "In this event, attendees will hear how to cut through AI hype with a practical automation framework, plus how to make websites easier to evolve using feature isolation without a full rebuild."
+  },
+  {
+    "id": 12,
+    "date": "2025-12-17",
+    "displayDate": "December 17th 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-something-different-tickets-1730678890149?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one with something different",
+    "photoUrl": "https://photos.app.goo.gl/aNzK9Rjqgg29pwx68",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [24],
+    "overview": "A fun and social end-of-year session where everyone can take part in a general knowledge quiz and celebrate together."
+  },
+  {
+    "id": 11,
+    "date": "2025-11-26",
+    "displayDate": "November 26th 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-our-birthday-tickets-1730677285349?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one with our Birthday",
+    "photoUrl": "https://photos.app.goo.gl/WDLzshsGGfxUYB8w9",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [23, 22],
+    "overview": "This event blends humour and hard lessons, exploring the human side of software engineering through a sitcom lens and reflecting on bugs from the Post Office Horizon system and what teams can learn from them."
+  },
+  {
+    "id": 10,
+    "date": "2025-10-22",
+    "displayDate": "October 22nd 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-pms-ask-designers-imagine-and-devs-improvise-tickets-1730652110049?aff=oddtdtcreator",
+    "title": "{dev.talk} - The One Where PMs Ask, Designers Imagine, and Devs Improvise",
+    "photoUrl": "https://photos.app.goo.gl/2pGzP9X5vUcYsSBg9",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room PG22, Poole House",
+    "sessionIDs": [21, 20, 19],
+    "overview": "Attendees will hear short, practical talks on improving developer environments with Nix, using domain-specific languages to simplify complex problems, and building better collaboration between product managers and developers."
+  },
+  {
+    "id": 9,
+    "date": "2025-09-24",
+    "displayDate": "September 24th 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-learn-to-level-up-our-devex-tickets-1666958901949?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one where we learn to Level Up Our DevEx",
+    "photoUrl": "https://photos.app.goo.gl/3jbDBpeiCG1fSQme8",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [18],
+    "overview": "A deep dive into developer experience, covering how to test complex end-to-end flows effectively and how .NET Aspire and OpenTelemetry can make integration testing and local development smoother."
+  },
+  {
+    "id": 8,
+    "date": "2025-07-23",
+    "displayDate": "July 23rd 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-the-conference-come-down-tickets-1383069260389",
+    "title": "{dev.talk} - The one with the conference come down",
+    "photoUrl": "https://photos.app.goo.gl/nBgagTf8GmauaGyz8",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [17, 16],
+    "overview": "This event focuses on managing change and growth, with insights on helping people adopt new tools and a real-world case study on evolving service boundaries and architecture over time."
+  },
+  {
+    "id": 7,
+    "date": "2025-06-25",
+    "displayDate": "June 25th 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-connect-before-reconnect-tickets-1335283451749?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one where we connect before re:connect",
+    "photoUrl": "https://photos.app.goo.gl/fiZCvRTvUaFsgU6r9",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [15],
+    "overview": "A collaborative and relaxed community night featuring a fun general knowledge quiz with the Re:connect conference."
+  },
+  {
+    "id": 6,
+    "date": "2025-05-21",
+    "displayDate": "May 21st 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-open-source-ai-tries-to-break-into-tech-tickets-1312789481679?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one where Open Source AI tries to break into Tech",
+    "photoUrl": "https://photos.app.goo.gl/vJcDBSHSBBs9cHNe6",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [14, 13],
+    "overview": "Attendees will explore the current open-source AI landscape and hear real stories and advice on pathways into the tech industry."
+  },
+  {
+    "id": 5,
+    "date": "2025-04-23",
+    "displayDate": "April 23rd 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-will-see-you-at-bu-tickets-1292820513959?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one where we will see you at BU",
+    "photoUrl": "https://photos.app.goo.gl/1C7HXnTU2NarS4X88",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [12, 11],
+    "overview": "This event highlights practical engineering approaches, from applying Clean Architecture in Salesforce to using OpenTelemetry to make application observability easier."
+  },
+  {
+    "id": 4,
+    "date": "2025-03-26",
+    "displayDate": "March 26th 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-with-creatives-coders-at-cottonwood-tickets-1261177177889?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one with Creatives & Coders at Cottonwood",
+    "photoUrl": "https://photos.app.goo.gl/mVEhNfpd1fYcEMcs5",
+    "locationName": "Bournemouth University",
+    "locationAddress": "81 Grove Road, Bournemouth, BH1 3AH",
+    "venueName": "Cottonwood Hotel, Bournemouth",
+    "sessionIDs": [10, 9, 8],
+    "overview": "A varied event covering modern PHP, the real ups and downs of building a YouTube channel, and practical strategies for landing a tech role without a computer science degree."
+  },
+  {
+    "id": 3,
+    "date": "2025-02-26",
+    "displayDate": "February 26th 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-forged-friendships-at-the-foundry-tickets-1132558205079?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one where we forged friendships at the FOUNDRY",
+    "photoUrl": "https://photos.app.goo.gl/q9C4RTZuFEgwcZqU6",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [7, 6],
+    "overview": "In this event, attendees will hear how agentic AI is shaping the future of automation and get practical guidance on navigating today’s changing tech hiring market."
+  },
+  {
+    "id": 2,
+    "date": "2025-01-30",
+    "displayDate": "January 30th 2025",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-deployed-our-first-patch-tickets-1132458165859?aff=oddtdtcreator",
+    "title": "{dev.talk} - The one where we deployed our first PATCH",
+    "photoUrl": "https://photos.app.goo.gl/65mdTC2EFAhdmWYb6",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [5, 4],
+    "overview": "This event shares lessons from building a city-based maze game with open tools, alongside a candid look at scaling teams and systems through a domain-driven design transformation."
+  },
+  {
+    "id": 1,
+    "date": "2024-11-27",
+    "displayDate": "November 27th 2024",
+    "url": "https://www.eventbrite.co.uk/e/devtalk-the-one-where-we-got-started-tickets-1058163327999?aff=oddtdtcreator",
+    "title": "{dev.talk} - the one where we got started",
+    "photoUrl": "https://photos.app.goo.gl/V8GmT5GTm1BS9VUc6",
+    "locationName": "Bournemouth University",
+    "locationAddress": "Talbot Campus, Fern Barrow, Poole, Dorset, BH12 5BB",
+    "venueName": "Room K101, Kimmeridge House",
+    "sessionIDs": [3, 2, 1],
+    "overview": "A strong kickoff event featuring a student perspective on breaking into tech, practical microservice design with REPR, and lessons learned from building a vertiport automation platform."
+  }
 ]

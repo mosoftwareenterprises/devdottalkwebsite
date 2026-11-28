@@ -1,7 +1,7 @@
 export default {
   test: {
     globals: true,
-    environment: 'node',
-    include: ['tests/**/*.test.js']
-  }
+    environment: "node",
+    include: ["tests/**/*.test.js"],
+  },
 };
