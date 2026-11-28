@@ -49,6 +49,7 @@ const events = [
   {
     id: 23,
     displayDate: "November 25th 2026",
+    title: "{dev.talk} - The one in November",
     sessionIDs: [47, 48, 49, 50, 51],
   },
   { id: 24, displayDate: "December 16th 2026", sessionIDs: [49, 51] },
@@ -89,6 +90,12 @@ describe("event hero image generator", () => {
 
     expect(html).toContain("November 25th 2026");
     expect(html).toContain("hero-logo");
+    expect(html).toContain(
+      '<p class="hero-event-title">The one in November</p>'
+    );
+    expect(html.indexOf("The one in November")).toBeLessThan(
+      html.indexOf("November 25th 2026")
+    );
     expect(html.match(/class="hero-session"/g) || []).toHaveLength(2);
     expect(html).toContain("A Talk About Local AI");
     expect(html).toContain("Sam Example");
@@ -98,6 +105,15 @@ describe("event hero image generator", () => {
     expect(html.indexOf("Sam Example")).toBeLessThan(
       html.indexOf("A Solo Talk")
     );
+  });
+
+  it("omits the event title line when the event has no title", async () => {
+    const [record] = getEventHeroRecords(sessions, [
+      { id: 25, displayDate: "May 6th 2026", sessionIDs: [48] },
+    ]);
+    const html = await eventHeroHtml(record, process.cwd());
+
+    expect(html).not.toContain('<p class="hero-event-title">');
   });
 
   it("keeps hyphenated names together so they only wrap at spaces", async () => {

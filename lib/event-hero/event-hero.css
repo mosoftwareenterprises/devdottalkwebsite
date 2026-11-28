@@ -59,12 +59,18 @@ body {
 }
 
 .hero-date {
-  margin: 10px 0 0;
+  margin: 4px 0 0;
   font-size: 34px;
   font-weight: 700;
   color: #455d7e;
 }
 
+.hero-event-title {
+  margin: 10px 0 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1b9aa5;
+}
 .hero-sessions {
   flex: 1 1 auto;
   display: flex;

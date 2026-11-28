@@ -23,6 +23,7 @@ This project uses **Husky** pre-commit hooks to automatically run formatting and
 ### What Runs On Commit
 
 When you commit, the following automatically execute:
+
 1. **Prettier** - Formats all staged files
 2. **Test suite** - Runs `npm run test`
 
@@ -38,6 +39,7 @@ git commit -m "Your message"
 ```
 
 If the pre-commit hook fails:
+
 - Fix the failing tests
 - Stage the changes: `git add .`
 - Run: `git commit -m "Your message"`
