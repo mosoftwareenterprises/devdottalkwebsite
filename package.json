@@ -6,6 +6,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@vitest/ui": "^1.6.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.3",
     "nunjucks": "^3.2.4",
     "playwright": "^1.65.1",
     "prettier": "^3.3.3",
@@ -17,7 +19,8 @@
     "start": "npx @11ty/eleventy --serve",
     "preview": "sirv _site --single --cors --no-clear --port 8080",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepare": "husky"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^6.0.4",
